@@ -8,6 +8,8 @@
 // Base url id $config["urls"]["baseUrl"];
 // Facebook app secret $config["fbApp"]["appSecret"];
  
+ 
+ 
 $config = array(
     "db" => array(
         "fanbot" => array(
