@@ -17,11 +17,12 @@
 				break;
 		    case 2:
 		    	if(isset($_GET["code"])){
-			    	$_SESSION['pageNumber'] = 3;
+			    	$_SESSION['pageNumber'] = 2;
 			    	getUserFbInfo($_GET["code"]);
 					require_once("resources/library/mid1.php");
 
 		    	} else if(isset($_GET["error"])) {
+			    	$_SESSION['pageNumber'] = 3;
 			    	require_once("resources/library/last2.php");
 					}
 				break;
