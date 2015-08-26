@@ -129,14 +129,13 @@
 		$ip = 'api.particle.io';
 		$ch = curl_init("https://". $ip ."/v1/devices/". $deviceId.  "/?access_token=". $accesToken);
 		curl_setopt($ch, CURLOPT_FRESH_CONNECT, 1);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		$output = curl_exec($ch);
 		curl_close($ch);
 		
 	
 	
 		$curloutput = json_decode($output, true);
-		print_r($curloutput);
 		$connectedSpark = $curloutput["connected"];
 	
 	
@@ -148,7 +147,7 @@
 				curl_setopt($ch, CURLOPT_POST, 1);
 				curl_setopt($ch, CURLOPT_POSTFIELDS, "params=D7,HIGH");
 				curl_setopt($ch, CURLOPT_FRESH_CONNECT, 1);
-				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 				$output = curl_exec($ch);
 				curl_close($ch);
 		}
