@@ -6,7 +6,7 @@
 			switch ($_SESSION['pageNumber']) {
 		    case 1:
 		    	$fnbtName  = htmlspecialchars($_GET["name"]);
-				if (findFnbt($fnbtName) == TRUE) { 	
+				if (findFnbt($fnbtName)) { 	
 					$_SESSION['pageNumber'] = 2;				
 					require_once("resources/library/action.php");
 					} else {
