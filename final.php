@@ -6,11 +6,15 @@
 	if (checkForDuplucatedLike()){
 		$deviceId = $_SESSION["deviceId"];
 		$accesToken = $_SESSION['accesToken'];
-		saveUserDataToDB();
-		saveInteractionToDB();	
-		fanbotAction( $deviceId, $accesToken);
-		require_once("resources/library/last1.php");
+		if(fanbotAction( $deviceId, $accesToken)){
+			saveUserDataToDB();
+			saveInteractionToDB();			
+			require_once("resources/library/success.php");
+		} else {
+			$_SESSION['error'] = 2;
+			require_once("resources/library/error.php");			
+		}
 	} else {
-		
-		require_once("resources/library/last2.php");
+		$_SESSION['error'] = 1;
+		require_once("resources/library/error.php");
 	}

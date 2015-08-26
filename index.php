@@ -53,7 +53,7 @@
 	    <div class="col-xs-1" ></div>
 	    <div class="col-xs-10" >
 
-			<form class="form" action="fb_login.php" method="get">
+			<form class="form" action="node.php" method="get">
 				<div class="input-group square-box">
 	      			<input type="text" class="form-control input-lg text-center lead text-lowercase inline-text square-box" name="name">
 	      			<span class="input-group-btn">

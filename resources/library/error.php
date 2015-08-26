@@ -31,7 +31,17 @@
 		<div class="row mid-row">
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10" >
-		    	<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">!Upss¡, Esta Fanbot nos<br>dice  que ya te dio un<br>premio.</p>
+			<?php switch ($_SESSION['error']){
+				case 0:
+		    	   echo '<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">!Upss¡, Esta Fanbot nos<br>dice  que no tienes <br>los permisos de Facebook.</p>';
+				   break;
+				case 1:
+					echo '<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">!Upss¡, Esta Fanbot nos<br>dice  que ya te dio un<br>premio.</p>';
+					break;
+				}
+			?>
+				
+		    	
 		    </div>
 		    <div class="col-xs-1" ></div>
 		</div>
