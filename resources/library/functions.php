@@ -124,6 +124,30 @@
 				$conn->close();
 		}
 
+	function fanbotStatus($deviceId, $accesToken){
+		
+		$ip = 'api.particle.io';
+		$ch = curl_init("https://". $ip ."/v1/devices/". $deviceId.  "/?access_token=". $accesToken);
+		curl_setopt($ch, CURLOPT_FRESH_CONNECT, 1);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		$output = curl_exec($ch);
+		curl_close($ch);
+		
+	
+	
+		$curloutput = json_decode($output, true);
+		$connectedSpark = $curloutput["connected"];
+	
+	
+	
+			if($connectedSpark){
+				return 1;
+		} else{
+			return 0;
+		} 
+	
+	}
+
 	function fanbotAction($deviceId, $accesToken){
 		
 		$ip = 'api.particle.io';
@@ -187,9 +211,13 @@
 		        $_SESSION['deviceId'] = $row["deviceId"];
 
 			    }
-			    return TRUE;	
+			    if(fanbotStatus($_SESSION['deviceId'], $_SESSION['accesToken'])){
+			    	return 1;
+			    } else {
+				    return 0;
+			    }
 			} else {
-				return FALSE;
+				return 0;
 
 			}
 		$conn->close();

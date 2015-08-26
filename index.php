@@ -37,7 +37,7 @@
 						if(isset($_SESSION['nameErr'])){
 						if ($_SESSION['nameErr']){
 							$_SESSION['nameErr'] = FALSE;
-							echo ('<div class="alert alert-danger text-center text-nowrap" role="alert">Vuelve a escribir el nombre.</div>');
+							echo ('<div class="alert alert-danger text-center text-nowrap" role="alert">La Fanbot que buscas no existe o se encuentra apagada.</div>');
 				}
 				}
 				?>
