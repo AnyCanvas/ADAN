@@ -213,11 +213,8 @@
 		        $_SESSION['deviceId'] = $row["deviceId"];
 
 			    }
-			    if(fanbotStatus($_SESSION['deviceId'], $_SESSION['accesToken'])){
-			    	return 1;
-			    } else {
-				    return 0;
-			    }
+				return 1;
+			    
 			} else {
 				return 0;
 
