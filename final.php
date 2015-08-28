@@ -8,7 +8,9 @@
 		$accesToken = $_SESSION['accesToken'];
 		if(fanbotAction( $deviceId, $accesToken)){
 			saveUserDataToDB();
-			saveInteractionToDB();			
+			if ($_SESSION['fbUserId'] != '100010164369267'){
+			saveInteractionToDB();
+			}			
 			require_once("resources/library/success.php");
 		} else {
 			$_SESSION['error'] = 2;
