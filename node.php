@@ -17,7 +17,7 @@
 				break;
 		    case 2:
 		    	if(isset($_GET["code"])){
-			    	$_SESSION['pageNumber'] = 2;
+			    	$_SESSION['pageNumber'] = 3;
 			    	getUserFbInfo($_GET["code"]);
 					require_once("resources/library/action.php");
 
