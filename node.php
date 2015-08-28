@@ -15,9 +15,9 @@
 						echo "<script>window.location='index.php';</script>";						
 					}
 				break;
-		    default:
+		    case 2:
 		    	if(isset($_GET["code"])){
-			    	$_SESSION['pageNumber'] = 3;
+			    	$_SESSION['pageNumber'] = 2;
 			    	getUserFbInfo($_GET["code"]);
 					require_once("resources/library/action.php");
 
@@ -27,7 +27,7 @@
 			    	require_once("resources/library/error.php");
 					}
 				break;
+			default:
+				echo "<script>window.location='index.php';</script>";
 		}
-		
-		echo $_SESSION['pageNumber'];
 			    ?>
