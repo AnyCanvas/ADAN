@@ -30,4 +30,6 @@
 			default:
 				echo "<script>window.location='index.php';</script>";
 		}
+		
+		echo $_SESSION['pageNumber'];
 			    ?>
