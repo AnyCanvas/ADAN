@@ -19,7 +19,6 @@
 						} else {
 
 							$_SESSION['nameErr'] = TRUE;
-							echo "<script>window.location='index.php';</script>";	
 							
 						}					
 					}
