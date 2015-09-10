@@ -215,11 +215,9 @@
 		        $_SESSION['status'] = $row["estatus"];
 
 			    }
-			    if ($_SESSION['status'] == 1){
+
 					return 1;
-			    } else {
-				    return 0;
-			    }
+
 			} else {
 				return 0;
 
