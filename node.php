@@ -7,20 +7,20 @@
 		    case 1:
 		    	$fnbtName  = htmlspecialchars($_GET["name"]);
 				if (findFnbt($fnbtName)) { 	
+					if($_SESSION['status'] == 0){
+						$_SESSION['pageNumber'] = 1;
+						$_SESSION['error'] = 2;
+						echo "<script>window.location='resources/library/error.php';</script>";	
+						$_SESSION['pageNumber'] = 1;
+
+					} else {
+
 					$_SESSION['pageNumber'] = 2;				
 					require_once("resources/library/action.php");
+					}
 					} else {
-						if($_SESSION['status'] == 0){
-							$_SESSION['pageNumber'] = 1;
-							$_SESSION['error'] = 2;
-							echo "<script>window.location='resources/library/error.php';</script>";	
-							$_SESSION['pageNumber'] = 1;
 
-						} else {
-
-							$_SESSION['nameErr'] = TRUE;
-							
-						}					
+							$_SESSION['nameErr'] = TRUE;							
 					}
 				break;
 		    case 2:
