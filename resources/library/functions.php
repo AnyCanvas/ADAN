@@ -215,7 +215,7 @@
 		        $_SESSION['status'] = $row["status"];
 
 			    }
-			    if ($_SESSION['status']){
+			    if ($_SESSION['status'] == 1){
 					return 1;
 			    } else {
 				    return 0;
