@@ -15,7 +15,7 @@
 						echo "<script>window.location='index.php';</script>";						
 					}
 				break;
-		    default:
+		    case 2:
 		    	if(isset($_GET["code"])){
 			    	$_SESSION['pageNumber'] = 3;
 			    	getUserFbInfo($_GET["code"]);
