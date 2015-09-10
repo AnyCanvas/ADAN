@@ -212,7 +212,7 @@
 		        $_SESSION['accesToken'] = $row["accesToken"];
 		        $_SESSION['deviceId'] = $row["deviceId"];
 		        $_SESSION['deviceId'] = $row["deviceId"];
-		        $_SESSION['status'] = $row["status"];
+		        $_SESSION['status'] = $row["estatus"];
 
 			    }
 			    if ($_SESSION['status'] == 1){
