@@ -1,5 +1,6 @@
 <?php
-	$_SESSION['pageNumber'] = 3;
+	session_start();
+	$_SESSION['pageNumber'] = 1;
 ?>
 <!DOCTYPE html>
 <html>
