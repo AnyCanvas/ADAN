@@ -211,10 +211,15 @@
 		        $_SESSION['fbPage'] = $row["fbPage"];
 		        $_SESSION['accesToken'] = $row["accesToken"];
 		        $_SESSION['deviceId'] = $row["deviceId"];
+		        $_SESSION['deviceId'] = $row["deviceId"];
+		        $_SESSION['status'] = $row["status"];
 
 			    }
-				return 1;
-			    
+			    if ($_SESSION['status']){
+					return 1;
+			    } else {
+				    return 0;
+			    }
 			} else {
 				return 0;
 
