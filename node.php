@@ -17,8 +17,8 @@
 							
 						} else {
 							$_SESSION['pageNumber'] = 1;
-							$_SESSION['nameErr'] = TRUE;
-							echo "<script>window.location='index.php';</script>";	
+							$_SESSION['error'] = 2;
+							echo "<script>window.location='resources/library/error.php';</script>";	
 							
 						}					
 					}

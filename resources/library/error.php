@@ -38,8 +38,8 @@
 				case 1:
 					echo '<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">!Upss¡, Esta Fanbot nos<br>dice  que ya te dio un<br>premio.</p>';
 					break;
-				case 1:
-					echo '<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">!Upss¡, Esta Fanbot no<br>esta conectada</p>';
+				case 2:
+					echo '<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">!Upss¡, Esta Fanbot esta<br>suspendida.</p>';
 					break;
 
 				}
