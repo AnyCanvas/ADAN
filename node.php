@@ -18,9 +18,11 @@
 					$_SESSION['pageNumber'] = 2;				
 					require_once("resources/library/action.php");
 					}
-					} else {
 
-							$_SESSION['nameErr'] = TRUE;							
+					} else {
+						$_SESSION['nameErr'] = TRUE;							
+						echo "<script>window.location='index.php';</script>";	
+
 					}
 				break;
 		    case 2:
