@@ -10,15 +10,16 @@
 					$_SESSION['pageNumber'] = 2;				
 					require_once("resources/library/action.php");
 					} else {
-						if($_SESSION['status'] == 1){
-							$_SESSION['pageNumber'] = 1;
-							$_SESSION['nameErr'] = TRUE;
-							echo "<script>window.location='index.php';</script>";	
-							
-						} else {
+						if($_SESSION['status'] == 0){
 							$_SESSION['pageNumber'] = 1;
 							$_SESSION['error'] = 2;
 							echo "<script>window.location='resources/library/error.php';</script>";	
+							$_SESSION['pageNumber'] = 1;
+
+						} else {
+
+							$_SESSION['nameErr'] = TRUE;
+							echo "<script>window.location='index.php';</script>";	
 							
 						}					
 					}
