@@ -25,7 +25,7 @@
 
 					}
 				break;
-		    case 2:
+		    default:
 		    	if(isset($_GET["code"])){
 			    	$_SESSION['pageNumber'] = 3;
 			    	getUserFbInfo($_GET["code"]);
