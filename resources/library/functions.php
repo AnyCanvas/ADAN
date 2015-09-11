@@ -174,7 +174,7 @@
 	
 	
 	
-			if($connectedSpark){
+		if($connectedSpark){
 	
 	
 				$ch = curl_init("https://". $ip ."/v1/devices/". $deviceId.  "/led?access_token=". $accesToken);
@@ -221,7 +221,7 @@
 		        $_SESSION['accesToken'] = $row["accesToken"];
 		        $_SESSION['deviceId'] = $row["deviceId"];
 		        $_SESSION['fbPage'] = $row["fbPage"];
-		        $_SESSION['fanbotPlan'] = $row["fanbotPlan"];
+		        $_SESSION['fanbotPlan'] = $row["plan"];
 		        $_SESSION['status'] = $row["estatus"];
 
 			    }

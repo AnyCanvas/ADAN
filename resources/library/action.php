@@ -47,7 +47,7 @@
 		});		
 
     <?php
-    if ($_SESSION['pageNumber'] == 3){ $_SESSION['pageNumber'] = 3;?>
+    if ($_SESSION['pageNumber'] == 3){?>
      
      $(window).load(function(){$('#likePopup').modal('show');});
     <?php } ?>
