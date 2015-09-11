@@ -125,12 +125,18 @@
 
 					$sql = "UPDATE fanbot SET credit = credit - 1 WHERE id = '". $_SESSION['id'] ."'";
 					
+					if ($conn->query($sql) === TRUE) {
+					} else {
+					    echo "Error: " . $sql . "<br>" . $conn->error;
+					}
+
 					$sql = "UPDATE fanbot SET estatus = 0 WHERE credit = 0 AND id = '". $_SESSION['id'] ."'";
 
 					if ($conn->query($sql) === TRUE) {
 					} else {
 					    echo "Error: " . $sql . "<br>" . $conn->error;
 					}
+
 				}
 				
 				$conn->close();
