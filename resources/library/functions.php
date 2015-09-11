@@ -115,10 +115,20 @@
 				} 
 
 				$sql = "INSERT INTO interactions  (fanbotId, userId, clientId, fbPage) VALUES ( '". $_SESSION['id']. "','".  $_SESSION['fbUserId']. "','". $_SESSION['clientId']. "','". $_SESSION['fbPage']. "')";
-				
+							
 				if ($conn->query($sql) === TRUE) {
 				} else {
 				    echo "Error: " . $sql . "<br>" . $conn->error;
+				}
+				
+				if($_SESSION['fanbotPlan'] == 1 || $_SESSION['fanbotPlan'] == 2){
+
+					$sql = "UPDATE fanbot SET credit = credit - 1 WHERE id = '". $_SESSION['deviceId'] ."'";
+
+					if ($conn->query($sql) === TRUE) {
+					} else {
+					    echo "Error: " . $sql . "<br>" . $conn->error;
+					}
 				}
 				
 				$conn->close();
@@ -208,10 +218,10 @@
 			    			        
 		        $_SESSION['id'] = $row["id"];
 		        $_SESSION['clientId'] = $row["clientId"];
-		        $_SESSION['fbPage'] = $row["fbPage"];
 		        $_SESSION['accesToken'] = $row["accesToken"];
 		        $_SESSION['deviceId'] = $row["deviceId"];
-		        $_SESSION['deviceId'] = $row["deviceId"];
+		        $_SESSION['fbPage'] = $row["fbPage"];
+		        $_SESSION['fanbotPlan'] = $row["fanbotPlan"];
 		        $_SESSION['status'] = $row["estatus"];
 
 			    }
