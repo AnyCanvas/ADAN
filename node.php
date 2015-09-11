@@ -32,7 +32,6 @@
 					require_once("resources/library/action.php");
 
 		    	} else if(isset($_GET["error"])) {
-			    	$_SESSION['pageNumber'] = 3;
 			    	$_SESSION['error'] = 0;
 			    	require_once("resources/library/error.php");
 					}

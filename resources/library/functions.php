@@ -124,6 +124,8 @@
 				if($_SESSION['fanbotPlan'] == 1 || $_SESSION['fanbotPlan'] == 2){
 
 					$sql = "UPDATE fanbot SET credit = credit - 1 WHERE id = '". $_SESSION['id'] ."'";
+					
+					$sql = "UPDATE fanbot SET estatus = 0 WHERE credit = 0 AND id = '". $_SESSION['id'] ."'";
 
 					if ($conn->query($sql) === TRUE) {
 					} else {
