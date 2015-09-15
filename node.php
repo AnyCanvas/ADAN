@@ -21,5 +21,8 @@
 			    $_SESSION['pageNumber'] = 3;
 			    $_SESSION['error'] = 0;
 			    require_once("resources/library/error.php");
+			} else {
+				header("location: ./index.php");
+				
 			}
 			    ?>
