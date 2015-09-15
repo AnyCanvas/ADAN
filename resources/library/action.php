@@ -56,7 +56,7 @@
 		});		
 
     <?php
-    if ($_SESSION['pageNumber'] == 3){?>
+    if (isset($_GET["code"])){?>
      
      $(window).load(function(){$('#likePopup').modal('show');});
     <?php } ?>
