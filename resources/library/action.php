@@ -87,10 +87,24 @@
 	<div class ="container-fluid">
 		
 		<!-- Fanbot logo columns-->
-		  <div class="row top-row">
+<!--		  <div class="row top-row">
 		    <div class="col-xs-2" ></div>
 		    <div class="col-xs-8" >
-		    	<img class="img-responsive" alt="Fanbot" src="media/clients/
+		    	<img class="img-responsive" alt="Fanbot" src="media/images/clients/
+			<?php 
+						echo 'fanbot.png'; 
+			?>">
+		    </div>
+		    <div class="col-xs-2" ></div>
+		  </div>
+
+		<div class="clearfix visible-xs-block"></div> -->
+
+		<!-- Informative image Columns-->
+		  <div class="row mid-row">
+		    <div class="col-xs-2" ></div>
+		    <div class="col-xs-8" >
+		    	<img class="img-responsive" alt="Name help image" src="media/images/clients/
 			<?php 
 						echo 'fanbot.png'; 
 			?>">
@@ -99,20 +113,6 @@
 		  </div>
 
 		<div class="clearfix visible-xs-block"></div>
-
-		<!-- Informative image Columns-->
-<!--		  <div class="row mid-row">
-		    <div class="col-xs-2" ></div>
-		    <div class="col-xs-8" >
-		    	<img class="img-responsive" alt="Name help image" src="media/images/
-			<?php 
-						echo 'texto_fanbot_expo.png'; 
-			?>">
-		    </div>
-		    <div class="col-xs-2" ></div>
-		  </div>
-
-		<div class="clearfix visible-xs-block"></div> -->
 
 		<div class="row mid-row">
 		    <div class="col-xs-2" ></div>
