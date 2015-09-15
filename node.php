@@ -4,22 +4,18 @@
 			
 			$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='. $config["fbApp"]["appId"] .'&redirect_uri='. $config["urls"]["baseUrl"] .'/node.php&scope=public_profile, email&response_type=code';
 			if(isset($_GET["name"])){
-				$_SESSION['pageNumber'] = 1;
-			} else {
-				echo "<script>window.location='index.php';</script>";										
-			}
-			switch ($_SESSION['pageNumber']) {
-		    case 1:
 		    	$fnbtName  = htmlspecialchars($_GET["name"]);
 				if (findFnbt($fnbtName)) { 	
 					$_SESSION['pageNumber'] = 2;				
 					require_once("resources/library/action.php");
 					} else {
-						$_SESSION['pageNumber'] = 1;
 						$_SESSION['nameErr'] = TRUE;
-						echo "<script>window.location='index.php';</script>";						
-					}
-				break;
+						header("location: ./index.php");
+					}			
+			} else {
+				header("location: ./index.php");
+			}
+			switch ($_SESSION['pageNumber']) {
 		    case 2:
 		    	if(isset($_GET["code"])){
 			    	$_SESSION['pageNumber'] = 3;
@@ -33,6 +29,4 @@
 					}
 				break;
 		}
-		
-		echo $_SESSION['pageNumber'];
 			    ?>
