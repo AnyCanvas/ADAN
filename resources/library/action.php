@@ -101,7 +101,7 @@
 		<div class="clearfix visible-xs-block"></div> -->
 
 		<!-- Informative image Columns-->
-		  <div class="row mid-row">
+		  <div class="row brand-row">
 		    <div class="col-xs-2" ></div>
 		    <div class="col-xs-8" >
 		    	<img class="img-responsive" alt="Name help image" src="media/clients/
