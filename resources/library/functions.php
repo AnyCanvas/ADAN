@@ -228,10 +228,15 @@
 		        $_SESSION['clientId'] = $row["clientId"];
 		        $_SESSION['accesToken'] = $row["accesToken"];
 		        $_SESSION['deviceId'] = $row["deviceId"];
+<<<<<<< HEAD
 		        $_SESSION['fbPage'] = $row["fbPage"];
 		        $_SESSION['fanbotPlan'] = $row["plan"];
 		        $_SESSION['status'] = $row["estatus"];
 
+=======
+		        $_SESSION['pageImage'] = $row["pageImage"];
+		        $_SESSION['pageColor'] = $row["pageColor"];
+>>>>>>> image_changer
 			    }
 
 					return 1;
