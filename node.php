@@ -3,6 +3,9 @@
 	include 'resources/library/functions.php'; 
 			
 			$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='. $config["fbApp"]["appId"] .'&redirect_uri='. $config["urls"]["baseUrl"] .'/node.php&scope=public_profile, email&response_type=code';
+			if(isset($_GET["name"])){
+				$_SESSION['pageNumber'] = 1;
+			}
 			switch ($_SESSION['pageNumber']) {
 		    case 1:
 		    	$fnbtName  = htmlspecialchars($_GET["name"]);
