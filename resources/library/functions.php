@@ -116,6 +116,7 @@
 
 				$sql = "INSERT INTO interactions  (fanbotId, userId, clientId, fbPage) VALUES ( '". $_SESSION['id']. "','".  $_SESSION['fbUserId']. "','". $_SESSION['clientId']. "','". $_SESSION['fbPage']. "')";
 							
+				
 				if ($conn->query($sql) === TRUE) {
 				} else {
 				    echo "Error: " . $sql . "<br>" . $conn->error;
