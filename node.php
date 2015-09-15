@@ -21,8 +21,6 @@
 					header("location: ./index.php");
 				}			
 			} else if(isset($_GET["code"])){
-				echo 'Code readed';
-				$_SESSION['pageNumber'] == 3;
 			    getUserFbInfo($_GET["code"]);
 				require_once("resources/library/action.php");
 
