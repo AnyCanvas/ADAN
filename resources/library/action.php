@@ -104,7 +104,7 @@
 		  <div class="row mid-row">
 		    <div class="col-xs-2" ></div>
 		    <div class="col-xs-8" >
-		    	<img class="img-responsive" alt="Name help image" src="media/images/clients/
+		    	<img class="img-responsive" alt="Name help image" src="media/clients/
 			<?php 
 						echo 'fanbot.png'; 
 			?>">
