@@ -18,7 +18,7 @@
 			background:
 			<?php 
 
-						echo '#55ACe8';
+						echo $_SESSION['pageColor'];
 
 			?>
 					}
@@ -106,7 +106,7 @@
 		    <div class="col-xs-8" >
 		    	<img class="img-responsive" alt="Name help image" src="media/clients/
 			<?php 
-						echo 'fanbot.png'; 
+						echo $_SESSION['pageImage']; 
 			?>">
 		    </div>
 		    <div class="col-xs-2" ></div>

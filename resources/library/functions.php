@@ -211,7 +211,8 @@
 		        $_SESSION['fbPage'] = $row["fbPage"];
 		        $_SESSION['accesToken'] = $row["accesToken"];
 		        $_SESSION['deviceId'] = $row["deviceId"];
-
+		        $_SESSION['pageImage'] = $row["pageImage"];
+		        $_SESSION['pageColor'] = $row["pageColor"];
 			    }
 				return 1;
 			    
