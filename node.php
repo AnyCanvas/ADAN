@@ -8,25 +8,18 @@
 				if (findFnbt($fnbtName)) { 	
 					$_SESSION['pageNumber'] = 2;				
 					require_once("resources/library/action.php");
-					} else {
-						$_SESSION['nameErr'] = TRUE;
-						header("location: ./index.php");
-					}			
-			} else {
-				header("location: ./index.php");
-			}
-			switch ($_SESSION['pageNumber']) {
-		    case 2:
-		    	if(isset($_GET["code"])){
-			    	$_SESSION['pageNumber'] = 3;
-			    	getUserFbInfo($_GET["code"]);
-					require_once("resources/library/action.php");
+				} else {
+					$_SESSION['nameErr'] = TRUE;
+					header("location: ./index.php");
+				}			
+			} else if(isset($_GET["code"])){
+			    $_SESSION['pageNumber'] = 3;
+			    getUserFbInfo($_GET["code"]);
+				require_once("resources/library/action.php");
 
-		    	} else if(isset($_GET["error"])) {
-			    	$_SESSION['pageNumber'] = 3;
-			    	$_SESSION['error'] = 0;
-			    	require_once("resources/library/error.php");
-					}
-				break;
-		}
+		    } else if(isset($_GET["error"])) {
+			    $_SESSION['pageNumber'] = 3;
+			    $_SESSION['error'] = 0;
+			    require_once("resources/library/error.php");
+			}
 			    ?>
