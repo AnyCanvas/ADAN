@@ -26,9 +26,11 @@ body{
 }
 
 
-.top-row { margin-top:4em; margin-bottom:4em;}
+.top-row {  margin-top:4em; margin-bottom:4em;}
 
 .mid-row { margin-bottom:.25em;}
+
+.brand-row { margin-top:4em;}
 
 .inline-text {
   font-weight: bold;
