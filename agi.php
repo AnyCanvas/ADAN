@@ -3,7 +3,7 @@
 	$_SESSION['pageNumber'] = 1;
 	include 'resources/library/functions.php';
 
-	$fnbtName  = htmlspecialchars($_GET["name"]);
+	$fnbtName  = "agi";
 	
 	if(findFnbt($fnbtName)){
 		$token = $_SESSION['accesToken'];
