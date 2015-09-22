@@ -28,7 +28,7 @@
 			<?php 
 
 						var_dump($_SESSION['config']);
-						echo $_SESSION['config']["bgcolor"];
+						echo (array)$_SESSION['config']["bgcolor"];
 
 			?>
 					}
