@@ -235,7 +235,7 @@
 
 		        $_SESSION['pageImage'] = $row["pageImage"];
 		        $_SESSION['pageColor'] = $row["pageColor"];
-		        $_SESSION['config'] = json_decode($row["config"]);
+		        $_SESSION['config'] = json_decode($row["config"], true);
 
 			    }
 
