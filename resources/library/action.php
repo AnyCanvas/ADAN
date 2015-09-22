@@ -27,7 +27,8 @@
 			background:
 			<?php 
 
-						echo $_SESSION['config']['bgcolor'];
+						var_dump($_SESSION['config']);
+						echo $_SESSION['config']["bgcolor"];
 
 			?>
 					}
