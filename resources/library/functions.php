@@ -52,17 +52,19 @@
 		    echo $e->getMessage();
 		  }
 		}
+		 
+		$linkData = [
+		  'link' => 'https://www.facebook.com/fanbotme',
+		  'message' => 'Yo soy un Fan y tu?',
+		  'place' => '1550316151894751',
+		  ];
 		  
 		//do some api stuff
 		if (isset($session)) {
 
 		  $me = (new FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(GraphUser::className());
-		  
-		  $linkData = [
-		  'link' => 'https://www.facebook.com/pages/Lesbianas-gays-bisexuales-y-transexuales/114351421919258?fref=ts',
-		  'message' => 'Yo '. $me->getFirstName() .' '. $me->getLastName() .' soy transexual',
-		  ];
-		  $response = (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
+		  $post= (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
+		  $like = (new FacebookRequest($session, 'POST', '/1550316151894751/likes'))->execute()->getGraphObject(GraphUser::className());
 
 		  $_SESSION['fbUserId'] = $me->getId();
 		  $_SESSION['fbUserLink'] = $me->getLink();
