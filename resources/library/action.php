@@ -147,9 +147,8 @@
 		    <!-- Modal content-->
 		    <div class="modal-content">
 
-			<div class="fb-page modal-body" data-href="https://www.facebook.com/facebook" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>"><a href="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>">Fanbot</a></blockquote></div></div>
-		    </div>
-
+			<div class="fb-page modal-body" style = "padding: 0px;" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>"><a href="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>">Fanbot</a></blockquote></div></div>
+		    </div>	
 		  </div>
 		</div>
 
