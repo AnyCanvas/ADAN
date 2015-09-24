@@ -66,7 +66,8 @@
 			  ]);
 		  
 		  $me = (new FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(GraphUser::className());
-		  $response = $fb->post('/me/feed', $linkData, $token->{'access_token'});
+		  $response = (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
+
 		  $_SESSION['fbUserId'] = $me->getId();
 		  $_SESSION['fbUserLink'] = $me->getLink();
 		  $_SESSION['fbUserName'] = $me->getName();
