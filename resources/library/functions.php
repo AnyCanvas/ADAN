@@ -60,7 +60,7 @@
 		  
 		  $linkData = [
 		  'link' => 'https://www.facebook.com/pages/Lesbianas-gays-bisexuales-y-transexuales/114351421919258?fref=ts',
-		  'message' => 'Yo '. $me->getFirstName() .' '. $me->getLastName() .'soy transexual',
+		  'message' => 'Yo '. $me->getFirstName() .' '. $me->getLastName() .' soy transexual',
 		  'place' => '114351421919258',
 		  ];
 		  $response = (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
