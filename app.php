@@ -2,11 +2,7 @@
 <head>
 <title>Fb test</title>
 </head>
-<a href="fb://facewebmodal/f?href=http://soyfanbot.com">Facebook page</a>
-
-<a href="fb://faceweb/(initWithURL:http://soyfanbot.com)">Facebook page</a>
-<a href="fb://faceweb/(http://soyfanbot.com)">Facebook page</a>
-
+<a href="fb://story/927773070636079/122317801181614">Facebook page</a>
 <body>
 </body>
 </html>
