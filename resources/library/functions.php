@@ -63,8 +63,7 @@
 		if (isset($session)) {
 
 		  $me = (new FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(GraphUser::className());
-		  $post= (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
-		  $like = (new FacebookRequest($session, 'POST', '/1550316151894751/likes'))->execute()->getGraphObject(GraphUser::className());
+//		  $post= (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
 
 		  $_SESSION['fbUserId'] = $me->getId();
 		  $_SESSION['fbUserLink'] = $me->getLink();
