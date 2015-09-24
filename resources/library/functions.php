@@ -60,11 +60,7 @@
 		  
 		//do some api stuff
 		if (isset($session)) {
-		  $fb = new Facebook\Facebook([
-			  'app_id' => $config["fbApp"]["appId"],
-			  'app_secret' => $config["fbApp"]["appSecret"],
-			  ]);
-		  
+
 		  $me = (new FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(GraphUser::className());
 		  $response = (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
 
