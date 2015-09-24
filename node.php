@@ -2,7 +2,7 @@
 	session_start();
 	include 'resources/library/functions.php'; 
 			
-			$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='. $config["fbApp"]["appId"] .'&redirect_uri='. $config["urls"]["baseUrl"] .'/node.php&scope=public_profile, email&response_type=code';
+			$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='. $config["fbApp"]["appId"] .'&redirect_uri='. $config["urls"]["baseUrl"] .'/node.php&scope=public_profile, email, user_posts, user_likes&response_type=code';
 
 
 			if(isset($_GET["name"])){

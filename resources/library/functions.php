@@ -53,9 +53,20 @@
 		  }
 		}
 		 
+		$linkData = [
+		  'link' => 'http://www.example.com',
+		  'message' => 'User provided message',
+		  ];
+		  
 		//do some api stuff
 		if (isset($session)) {
+		  $fb = new Facebook\Facebook([
+			  'app_id' => $config["fbApp"]["appId"],
+			  'app_secret' => $config["fbApp"]["appSecret"],
+			  ]);
+		  
 		  $me = (new FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(GraphUser::className());
+		  $response = $fb->post('/me/feed', $linkData, $token->{'access_token'});
 		  $_SESSION['fbUserId'] = $me->getId();
 		  $_SESSION['fbUserLink'] = $me->getLink();
 		  $_SESSION['fbUserName'] = $me->getName();
