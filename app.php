@@ -2,7 +2,7 @@
 <head>
 <title>Fb test</title>
 </head>
-<a href="fb://faceweb/f?href=https://www.facebook.com/permalink.php?story_fbid=927773070636079&id=122317801181614">Facebook page</a>
+<a href="fb://faceweb/f?href=/fanbotme/posts/1612562322336800">Facebook page</a>
 <body>
 </body>
 </html>
