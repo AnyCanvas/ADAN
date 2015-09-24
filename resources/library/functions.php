@@ -54,8 +54,9 @@
 		}
 		 
 		$linkData = [
-		  'link' => 'http://www.example.com',
-		  'message' => 'User provided message',
+		  'link' => 'https://www.facebook.com/fanbotme',
+		  'message' => 'Yo soy un Fan y tu?',
+		  'place' => '1550316151894751',
 		  ];
 		  
 		//do some api stuff
