@@ -92,22 +92,7 @@
 
 		
 	<div class ="container-fluid">
-		
-		<!-- Fanbot logo columns-->
-<!--		  <div class="row top-row">
-		    <div class="col-xs-2" ></div>
-		    <div class="col-xs-8" >
-		    	<img class="img-responsive" alt="Fanbot" src="media/images/clients/
-			<?php 
-						echo 'fanbot.png'; 
-			?>">
-		    </div>
-		    <div class="col-xs-2" ></div>
-		  </div>
 
-		<div class="clearfix visible-xs-block"></div> -->
-
-		<!-- Informative image Columns-->
 		  <div class="brand-row row">
 		    <div class="col-xs-2" ></div>
 		    <div class="col-xs-8" >
@@ -125,7 +110,7 @@
 		    <div class="col-xs-2" ></div>
 		    <div class="col-xs-8" >
 				<a class="btn btn-block btn-lg btn-social btn-facebook" href="<?php echo $loginUrl;?> ">
-	    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Continuar</span>
+	    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Check in</span>
 	  			</a>
 		    </div>
 		    <div class="col-xs-2" ></div>
@@ -139,20 +124,6 @@
 				<span style="font-size: x-small; color: white;" >Al continuar estarás aceptando los términos y condiciones.</span>
 		    </div>
 		    <div class="col-xs-1" ></div>
-		
-		<!-- Modal -->
-		<div id="likePopup" class="modal fade modal-lg" role="dialog" data-backdrop="static">
-		  <div class="modal-dialog">
-		
-		    <!-- Modal content-->
-		    <div class="modal-content">
-
-			<div class="fb-page modal-body" style = "padding: 0px;" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>"><a href="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>">Fanbot</a></blockquote></div></div>
-		    </div>
-		
-		  </div>
-		</div>
-
 	</div>
 	</body>
 </html>
