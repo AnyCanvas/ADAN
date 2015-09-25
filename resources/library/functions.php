@@ -281,9 +281,9 @@
 		
 
 		if($_SESSION['config']['socialnetwork'] == 'facebook'){
-			if($_SESSION['config'][action] == 'like'){
+			if($_SESSION['config']['type'] == 'like'){
 				$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUserId'] ." ' AND fbPage = '". $_SESSION['fbPage'] . "'";				
-			} else if($_SESSION['config']['action'] == 'post'){
+			} else if($_SESSION['config']['type'] == 'post'){
 				return TRUE;				
 			}
 		}
