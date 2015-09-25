@@ -284,8 +284,8 @@
 			if($_SESSION['config']['type'] == 'like'){
 				$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUserId'] ." ' AND fbPage = '". $_SESSION['fbPage'] . "'";				
 			} else if($_SESSION['config']['type'] == 'post'){
-				die();
-				return TRUE;				
+				return TRUE;	
+				exit();			
 			}
 		}
 		$result = $conn->query($sql);
