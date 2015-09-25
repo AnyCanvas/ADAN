@@ -12,8 +12,12 @@
 					if($_SESSION['status'] == 0){
 						$_SESSION['error'] = 2;
 						header("location: ./resources/library/error.php");
-					} else {				
-						require_once("resources/library/action.php");
+					} else if ($_SESSION['config']['socialnetwork'] == 'facebook'){	
+						if($_SESSION['config']['type'] == 'like'){	
+							require_once("resources/library/action.php");
+						} else if ($_SESSION['config']['type'] == 'post'){
+							header("location: ./final.php");
+						}
 				} 
 				
 				}else {

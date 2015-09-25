@@ -63,7 +63,13 @@
 		if (isset($session)) {
 
 		  $me = (new FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(GraphUser::className());
-//		  $post= (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
+		  
+		  
+		  if($_SESSION['config']['socialnetwork'] == 'facebook'){
+			  if($_SESSION['config']['type'] == 'post'){
+			  	$post= (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
+			  }
+		  }
 
 		  $_SESSION['fbUserId'] = $me->getId();
 		  $_SESSION['fbUserLink'] = $me->getLink();
