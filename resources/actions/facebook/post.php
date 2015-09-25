@@ -21,20 +21,7 @@
 	  ga('create', 'UA-65249445-1', 'auto');
 	  ga('send', 'pageview');
 	
-	</script>
-  	<style type="text/css">
-		html{
-		    height: 100%;
-		}
-		body{
-			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fae300+0,ad9c00+100 */
-			background:
-			<?php 
-						echo $_SESSION['config']['bgcolor'];
-			?>
-					}
-  	</style>
-  	
+	</script>  	
   	<script type="text/javascript">
 			  	/**
 		 * Vertically center Bootstrap 3 modals so they aren't always stuck at the top
@@ -114,8 +101,8 @@
 		<div class="row mid-row">
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10" >
-			    <div class="container">
-					<div class="fb-page lockframe" style = "padding: 0px;" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>"><a href="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>">Fanbot</a></blockquote></div></div>
+			    <div class="container" style="background: transparent;">
+					<div style="z-index: -2;" class="fb-page lockframe" style = "padding: 0px;" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>"><a href="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>">Fanbot</a></blockquote></div></div>
 			    </div>
 		    </div>
 
