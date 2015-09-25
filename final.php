@@ -3,6 +3,7 @@
 
 	require 'resources/library/functions.php';
 
+	
 	if (checkForDuplucatedLike()){
 		$deviceId = $_SESSION["deviceId"];
 		$accesToken = $_SESSION['accesToken'];

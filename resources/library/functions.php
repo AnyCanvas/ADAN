@@ -279,7 +279,14 @@
 		    die("Connection failed: " . $conn->connect_error);
 		}
 		
-		$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUserId'] ." ' AND fbPage = '". $_SESSION['fbPage'] . "'";
+
+		if($_SESSION['config']['socialnetwork'] == 'facebook'){
+			if($_SESSION['config'][action] == 'like'){
+				$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUserId'] ." ' AND fbPage = '". $_SESSION['fbPage'] . "'";				
+			} else if($_SESSION['config']['action'] == 'post'){
+				return TRUE;				
+			}
+		}
 		$result = $conn->query($sql);
 		
 		if ($result->num_rows > 0) {		    
