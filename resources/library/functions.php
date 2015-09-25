@@ -56,7 +56,7 @@
 		$linkData = [
 		  'link' => 'https://www.facebook.com/fanbotme',
 		  'message' => 'Yo soy un Fan y tu?',
-		  'place' => 'fanbotme',
+		  'place' => '1550316151894751',
 		  ];
 		  
 		//do some api stuff
