@@ -54,7 +54,7 @@
 		}
 		 
 		$linkData = [
-		  'link' => 'https://www.facebook.com/fanbotme',
+//		  'link' => 'https://www.facebook.com/fanbotme',
 		  'message' => 'Yo soy un Fan y tu?',
 		  'place' => '1550316151894751',
 		  ];
@@ -284,7 +284,8 @@
 			if($_SESSION['config']['type'] == 'like'){
 				$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUserId'] ." ' AND fbPage = '". $_SESSION['fbPage'] . "'";				
 			} else if ($_SESSION['config']['type'] == 'post'){
-				return TRUE;			
+				return TRUE;	
+				exit();			
 			}
 		}
 		$result = $conn->query($sql);

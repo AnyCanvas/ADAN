@@ -7,7 +7,9 @@
 	if (checkForDuplucatedLike()){
 		$deviceId = $_SESSION["deviceId"];
 		$accesToken = $_SESSION['accesToken'];
-		if(fanbotAction( $deviceId, $accesToken)){
+//		if(fanbotAction( $deviceId, $accesToken)){
+		if(true){
+			fanbotAction( $deviceId, $accesToken);
 			saveUserDataToDB();
 //			if ($_SESSION['fbUserId'] !== '120319224983556'){
 			saveInteractionToDB();
