@@ -54,10 +54,11 @@
 		}
 		 
 		$page = (new FacebookRequest($session, 'GET', $_SESSION['fbPage']))->execute()->getGraphObject(GraphUser::className());
+		$pageArray = json_decode(json_encode($page), true);
 		$linkData = [
-		  'link' => 'https://www.facebook.com/'. (array)$page['id'],
+		  'link' => 'https://www.facebook.com/'. $pageArray['id'],
 		  'message' => 'Yo soy un Fan y tu?',
-		  'place' => (array)$page['id'],
+		  'place' => $pageArray['id'],
 		  ];
 		  
 		//do some api stuff
