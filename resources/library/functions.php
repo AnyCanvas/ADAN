@@ -57,7 +57,7 @@
 		$pageId = $page->getId();
 		$linkData = [
 		  'link' => 'https://www.facebook.com/'. $_SESSION['fbPage'],
-		  'message' => 'Yo soy un Fan y tu?',
+//		  'message' => 'Yo soy un Fan y tu?',
 		  'place' => $pageId,
 		  ];
 		  
