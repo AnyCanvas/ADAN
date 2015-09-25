@@ -16,7 +16,7 @@
 						if($_SESSION['config']['type'] == 'like'){	
 							require_once("resources/library/action.php");
 						} else if ($_SESSION['config']['type'] == 'post'){
-							header("location: ./final.php");
+							require_once("resources/library/action.php");
 						}
 				} 
 				
@@ -25,8 +25,15 @@
 					header("location: ./index.php");
 				}			
 			} else if(isset($_GET["code"])){
-			    getUserFbInfo($_GET["code"]);
-				require_once("resources/library/action.php");
+
+				if($_SESSION['config']['type'] == 'like'){	
+				    getUserFbInfo($_GET["code"]);
+					require_once("resources/library/action.php");
+				} else if ($_SESSION['config']['type'] == 'post'){
+				    getUserFbInfo($_GET["code"]);
+					header("location: ./final.php");
+				}
+
 
 		    } else if(isset($_GET["error"])) {
 			    $_SESSION['pageNumber'] = 3;
