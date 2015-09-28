@@ -109,7 +109,7 @@
 			<div class="row mid-row" style="padding-top: 10px;">
 			    <div class="col-xs-2" ></div>
 			    <div class="col-xs-8" >
-					<a class="btn btn-block btn-lg btn-social btn-facebook" href="<?php echo $loginUrl;?> ">
+					<a class="btn btn-block btn-lg btn-social btn-facebook" style="padding-left: 50px;" href="<?php echo $loginUrl;?> ">
 		    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Check in</span>
 		  			</a>
 			    </div>
