@@ -105,10 +105,16 @@
 			    <div class="iframecontainer" style="background: transparent; z-index: 2;">
 					<div style="z-index: -1;" class="fb-page lockframe" style = "padding: 0px;" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>"><a href="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>">Fanbot</a></blockquote></div></div>
 			    </div>
-
-				<a class="btn btn-block btn-lg btn-social btn-facebook" href="<?php echo $loginUrl;?> ">
-	    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Check in</span>
-	  			</a>
+	
+			<div class="row mid-row">
+			    <div class="col-xs-2" ></div>
+			    <div class="col-xs-8" >
+					<a class="btn btn-block btn-lg btn-social btn-facebook" href="<?php echo $loginUrl;?> ">
+		    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Check in</span>
+		  			</a>
+			    </div>
+			    <div class="col-xs-2" ></div>
+			</div>	
 
 		    </div>
 
@@ -119,15 +125,6 @@
 		
 		<div class="clearfix visible-xs-block"></div>
 
-		<div class="row mid-row">
-		    <div class="col-xs-2" ></div>
-		    <div class="col-xs-8" >
-				<a class="btn btn-block btn-lg btn-social btn-facebook" href="<?php echo $loginUrl;?> ">
-	    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Check in</span>
-	  			</a>
-		    </div>
-		    <div class="col-xs-2" ></div>
-		</div>	
 
 		<div class="clearfix visible-xs-block"></div>
 
