@@ -106,7 +106,7 @@
 					<div style="z-index: -1;" class="fb-page lockframe" style = "padding: 0px;" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>"><a href="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>">Fanbot</a></blockquote></div></div>
 			    </div>
 	
-			<div class="row mid-row">
+			<div class="row mid-row" style="padding: 0 10px;">
 			    <div class="col-xs-2" ></div>
 			    <div class="col-xs-8" >
 					<a class="btn btn-block btn-lg btn-social btn-facebook" href="<?php echo $loginUrl;?> ">
