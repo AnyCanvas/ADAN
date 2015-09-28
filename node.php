@@ -1,8 +1,6 @@
 <?php
 	session_start();
 	include 'resources/library/functions.php'; 
-			
-			$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='. $config["fbApp"]["appId"] .'&redirect_uri='. $config["urls"]["baseUrl"] .'/node.php&scope=public_profile, email, publish_actions&response_type=code';
 
 			if($_SESSION['config']['type'] == 'like'){	
 				$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='. $config["fbApp"]["appId"] .'&redirect_uri='. $config["urls"]["baseUrl"] .'/node.php&scope=public_profile, email&response_type=code';
