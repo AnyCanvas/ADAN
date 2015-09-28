@@ -123,11 +123,9 @@
 		</div>	
 		
 		<div class="row mid-row">
-		    <div class="col-xs-1" ></div>
-		    <div class="col-xs-10 text-center leadinline-text" >
+		    <div class="col-xs-10 text-center leadinline-text col-xs-offset-1" >
 				<span style="font-size: x-small; color: white;" >Al continuar estarás aceptando los términos y condiciones.</span>
 		    </div>
-		    <div class="col-xs-1" ></div>
 	</div>
 	</body>
 </html>
