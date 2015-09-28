@@ -26,7 +26,7 @@
 			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fae300+0,ad9c00+100 */
 			background:
 			<?php 
-						echo $_SESSION['config']['bgcolor'];
+						echo $_SESSION['pageColor'];
 			?>
 					}
   	</style>
@@ -93,27 +93,13 @@
 		
 	<div class ="container-fluid">
 		
-		<!-- Fanbot logo columns-->
-<!--		  <div class="row top-row">
-		    <div class="col-xs-2" ></div>
-		    <div class="col-xs-8" >
-		    	<img class="img-responsive" alt="Fanbot" src="media/images/clients/
-			<?php 
-						echo 'fanbot.png'; 
-			?>">
-		    </div>
-		    <div class="col-xs-2" ></div>
-		  </div>
-
-		<div class="clearfix visible-xs-block"></div> -->
-
 		<!-- Informative image Columns-->
 		  <div class="brand-row row">
 		    <div class="col-xs-2" ></div>
 		    <div class="col-xs-8" >
 		    	<img class="img-responsive" alt="Name help image" src="media/clients/
 			<?php 
-						echo $_SESSION['config']['image']; 
+						echo $_SESSION['pageImage']; 
 			?>">
 		    </div>
 		    <div class="col-xs-2" ></div>
@@ -147,8 +133,9 @@
 		    <!-- Modal content-->
 		    <div class="modal-content">
 
-			<div class="fb-page modal-body" style = "padding: 0px;" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>"><a href="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>">Fanbot</a></blockquote></div></div>
-		    </div>	
+			<div class="fb-page modal-body" style = "padding: 0px;" data-href="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>"><a href="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>">Fanbot</a></blockquote></div></div>
+		    </div>
+		
 		  </div>
 		</div>
 
