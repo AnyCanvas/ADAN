@@ -56,7 +56,7 @@
 		$page = (new FacebookRequest($session, 'GET', $_SESSION['config']['link']))->execute()->getGraphObject(GraphUser::className());
 		$pageId = $page->getId();
 		$linkData = [
-		  'link' => 'https://www.facebook.com/'. $_SESSION['fbPage'],
+		  'link' => 'https://www.facebook.com/'. $_SESSION['config']['link'],
 //		  'message' => 'Yo soy un Fan y tu?',
 		  'place' => $pageId,
 		  ];
