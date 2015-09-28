@@ -53,7 +53,7 @@
 		  }
 		}
 		 
-		$page = (new FacebookRequest($session, 'GET', $_SESSION['fbPage']))->execute()->getGraphObject(GraphUser::className());
+		$page = (new FacebookRequest($session, 'GET', $_SESSION['config']['link']))->execute()->getGraphObject(GraphUser::className());
 		$pageId = $page->getId();
 		$linkData = [
 		  'link' => 'https://www.facebook.com/'. $_SESSION['fbPage'],
