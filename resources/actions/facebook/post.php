@@ -47,7 +47,7 @@
 	function check_in() {
 	  alert( "Handler for .click() called." );
 	  location.href='<?php echo $loginUrl;?>';
-	});
+	};
 	  	
   	</script>
   	
