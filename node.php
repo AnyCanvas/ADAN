@@ -3,10 +3,12 @@
 	include 'resources/library/functions.php'; 
 
 			if($_SESSION['config']['type'] == 'like'){	
-				$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='. $config["fbApp"]["appId"] .'&redirect_uri='. $config["urls"]["baseUrl"] .'/node.php&scope=public_profile, email&response_type=code';
+				$scopes = 'public_profile, email';
 			} else if ($_SESSION['config']['type'] == 'post'){
-				$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='. $config["fbApp"]["appId"] .'&redirect_uri='. $config["urls"]["baseUrl"] .'/node.php&scope=public_profile, email, publish_actions&response_type=code';
+				$scropes = 'public_profile, email, publish_actions';
 			}
+
+				$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='. $config["fbApp"]["appId"] .'&redirect_uri='. $config["urls"]["baseUrl"] .'/node.php&scope='. $scopes .'&response_type=code';
 
 
 			if(isset($_GET["name"])){
