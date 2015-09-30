@@ -44,7 +44,7 @@
 		    });
 		});		
 
-	$( "#check_in" ).click(function() {
+	function check_in() {
 	  alert( "Handler for .click() called." );
 	  location.href='<?php echo $loginUrl;?>';
 	});
@@ -108,7 +108,7 @@
 			<div class="row mid-row" style="padding-top: 10px;">
 			    <div class="col-xs-2" ></div>
 			    <div class="col-xs-8" >
-					<a class="btn btn-block btn-lg btn-social btn-facebook" id="check_in" style="padding-left: 50px;">
+					<a class="btn btn-block btn-lg btn-social btn-facebook" id="check_in" style="padding-left: 50px;" onclick="check_in();">
 		    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Check in</span>
 		  			</a>
 			    </div>
