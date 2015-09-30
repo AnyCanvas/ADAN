@@ -55,9 +55,15 @@
 		 
 		$page = (new FacebookRequest($session, 'GET', $_SESSION['config']['link']))->execute()->getGraphObject(GraphUser::className());
 		$pageId = $page->getId();
+		
+		if(!isset($_COOKIE["message"])) {
+			    $message = "Cookie is not set!";
+			} else {
+			    $message =  $_COOKIE["message"];
+			}
 		$linkData = [
 		  'link' => 'https://www.facebook.com/'. $_SESSION['config']['link'],
-//		  'message' => 'Yo soy un Fan y tu?',
+		  'message' => $message,
 		  'place' => $pageId,
 		  ];
 		  
