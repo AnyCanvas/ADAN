@@ -45,7 +45,7 @@
 		});		
 
 	function check_in() {
-	  alert(  $('#message').value() );
+	  alert(  $('#message').val() );
 	  location.href='<?php echo $loginUrl;?>';
 	  document.cookie="message=" + $('#message').value();
 	};
