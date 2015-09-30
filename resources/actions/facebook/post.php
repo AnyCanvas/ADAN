@@ -46,8 +46,8 @@
 
 	function check_in() {
 	  alert(  $('#message').val() );
-	  location.href='<?php echo $loginUrl;?>';
 	  document.cookie="message=" + $('#message').value();
+	  location.href='<?php echo $loginUrl;?>';
 	};
 	  	
   	</script>
