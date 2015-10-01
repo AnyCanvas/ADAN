@@ -3,9 +3,9 @@ echo $_SERVER['HTTP_USER_AGENT'] . "\n\n";
 
 $browser = $_SERVER['HTTP_USER_AGENT'];
 
-if (strpos($a,'Android') !== FALSE){
+if (strpos($browser,'Android') !== FALSE){
 	echo "Android\n";
-} else if (strpos($a,'Iphone') !== FALSE) {
+} else if (strpos($browser,'Iphone') !== FALSE) {
 	echo "Iphone\n";
 }
 ?>
