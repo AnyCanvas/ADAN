@@ -7,7 +7,7 @@ if (strpos($browser,'Android') !== FALSE){
 	echo "\nAndroid\n";
 	if (strpos($browser,'Android 5') !== FALSE){
 	echo "Lollipop";		
-	header("location: fb://profile/1550316151894751");
+	header("location: fb://page/1550316151894751");
 	} else {
 		echo "No lollipop";
 	}
