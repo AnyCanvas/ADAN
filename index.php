@@ -3,15 +3,12 @@
 
 $browser = $_SERVER['HTTP_USER_AGENT'];
 
-if (strpos($browser,'Android') !== FALSE){
-	echo "\nAndroid\n";
-	if (strpos($browser,'Android 5') !== FALSE){
-		
+if (strpos($browser,'Android 5') !== FALSE){		
 	header("location: fb://page/1550316151894751");
-	} else {
-		require_once 'resources/library/index-legacy.php';
-	}
 } else if (strpos($browser,'iPhone') !== FALSE) {
 	header("location: fb://profile/1550316151894751");
-}
+} else {
+	echo "legacy";
+	require_once("resources/index/legacy.php");
+	}
 ?>
