@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>!Bravo¡</title>
+	<title>¡Bravo!</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta charset="utf-8"> 
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -50,7 +50,7 @@
 		<div class="row mid-row">
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10" >
-		    	<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">!Bravo¡, algo asombroso <br> acaba de pasar.</p>
+		    	<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">Algo asombroso <br> acaba de pasar.</p>
 		    </div>
 		    <div class="col-xs-1" ></div>
 		</div>
