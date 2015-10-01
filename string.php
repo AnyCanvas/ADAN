@@ -1,5 +1,5 @@
 <?php
-echo $_SERVER['HTTP_USER_AGENT'] . "\n\n";
+// echo $_SERVER['HTTP_USER_AGENT'] . "\n\n";
 
 $browser = $_SERVER['HTTP_USER_AGENT'];
 
