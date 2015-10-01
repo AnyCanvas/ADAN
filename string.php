@@ -11,6 +11,6 @@ if (strpos($browser,'Android') !== FALSE){
 		echo "No lollipop";
 	}
 } else if (strpos($browser,'Iphone') !== FALSE) {
-	header("location: fb://profile/1550316151894751");
+	echo 'var newUrl = fb://profile/1550316151894751;window.location.replace(newUrl);';
 }
 ?>
