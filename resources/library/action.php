@@ -125,6 +125,7 @@
 				<span style="font-size: x-small; color: white;" >Al continuar estarás aceptando los términos y condiciones.</span>
 		    </div>
 		    <div class="col-xs-1" ></div>
+		</div>
 		
 		<!-- Modal -->
 		<div id="likePopup" class="modal fade modal-lg" role="dialog" data-backdrop="static">
