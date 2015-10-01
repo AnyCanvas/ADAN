@@ -3,13 +3,11 @@
 
 $browser = $_SERVER['HTTP_USER_AGENT'];
 
-if (strpos($browser,'Android 5') !== FALSE){		
-	require_once("resources/index/android.php");
-
+if (strpos($browser,'FBAV') !== FALSE){		
+	require_once("resources/index/legacy.php");
+} else if (strpos($browser,'Android 5') !== FALSE){		
 	header("location: fb://page/1550316151894751");
 } else if (strpos($browser,'iPhone') !== FALSE) {
-
-	require_once("resources/index/iphone.php");
 	header("location: fb://profile/1550316151894751");
 } else {
 	require_once("resources/index/legacy.php");
