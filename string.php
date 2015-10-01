@@ -10,7 +10,7 @@ if (strpos($browser,'Android') !== FALSE){
 	} else {
 		echo "No lollipop";
 	}
-} else if (strpos($browser,'Iphone') !== FALSE) {
+} else if (strpos($browser,'iPhone') !== FALSE) {
 	echo("Iphone\n");
 	echo '<script>document.location.href = "fb://profile/1550316151894751";</script>';
 }
