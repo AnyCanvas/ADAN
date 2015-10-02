@@ -23,12 +23,11 @@
 </head>
 <body>	
 <script>
-	$(document).ready ( function(){
 	FB.ui(
 	 {
 	  method: 'share',
 	  href: 'https://developers.facebook.com/docs/'
 	}, function(response){});
-});​
+
 </script>
 </body>
