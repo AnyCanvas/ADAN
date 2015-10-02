@@ -1,3 +1,8 @@
+<html>
+<head>
+	<title>Inicia sesion en Facebook para continuar</title>
+</head>
+<body>	
 	<div id="fb-root"></div>
 		<script>(function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
@@ -25,3 +30,5 @@ FB.getLoginStatus(function(response) {
   }
  });
 </script>
+
+</body>
