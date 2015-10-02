@@ -1,6 +1,8 @@
 <html>
 <head>
 	<title>Inicia sesion en Facebook para continuar</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -17,16 +19,16 @@
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-
-$(document).ready ( function(){
+</script> 
+</head>
+<body>	
+<script>
+	$(document).ready ( function(){
 	FB.ui(
 	 {
 	  method: 'share',
 	  href: 'https://developers.facebook.com/docs/'
 	}, function(response){});
 });​
-</script> 
-</head>
-<body>	
-
+</script>
 </body>
