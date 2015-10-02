@@ -18,11 +18,13 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 
-FB.ui(
- {
-  method: 'share',
-  href: 'https://developers.facebook.com/docs/'
-}, function(response){});
+$(document).ready ( function(){
+	FB.ui(
+	 {
+	  method: 'share',
+	  href: 'https://developers.facebook.com/docs/'
+	}, function(response){});
+});​
 </script> 
 </head>
 <body>	
