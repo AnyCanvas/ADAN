@@ -16,7 +16,7 @@
 		</script>
 
 <script>
-	setTimeout(function(){
+//	setTimeout(function(){
 		FB.getLoginStatus(function(response) {
 		  if (response.status === 'connected') {
 		   alert('conectado');
@@ -28,7 +28,7 @@
 		   alert('desconectado');
 		  }
 		 });
-	},1000);
+// 	},1000);
 
 </script>
 </body>
