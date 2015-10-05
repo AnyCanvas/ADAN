@@ -1,8 +1,7 @@
 <html>
 <head>
-	<title>Inicia sesion en Facebook para continuar</title>
+	<title>Inicia sesión en Facebook para continuar</title>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>	
 	<div id="fb-root"></div>
