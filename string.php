@@ -23,10 +23,14 @@
 				   alert('conectado');
 				  } else {
 				  	var browserAgent = navigator.userAgent
-				   }if (browserAgent.indexOf("Android") > -1){
-					   alert('Android');					   
-				   } else if (browserAgent.indexOf("iPhone") > -1){
-				   		alert("iPhone");
+				   }if (browserAgent.indexOf("iPhone") > -1){
+					   alert('iPhone');					   
+				   } else if (browserAgent.indexOf("Android") > -1){
+				   		if (browserAgent.indexOf("Android 5") > -1){
+					   		alert("Lollipop");
+				   		} else{
+					   		alert("No lollipop");
+				   		}
 				  }
 				 });
 			  };
