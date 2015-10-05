@@ -22,7 +22,11 @@
 				  } else if (response.status === 'not_authorized') {
 				   alert('conectado');
 				  } else {
-				   alert('desconectado');
+				  	var browserAgent = navigator.userAgent
+				   if (browserAgent.indexOf("Android") > -1){
+					   alert('Android');					   
+				   } else if (browserAgent.indexOf("iPhone") > -1){
+				   		alert("iPhone");
 				  }
 				 });
 			  };
