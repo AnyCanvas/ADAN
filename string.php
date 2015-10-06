@@ -34,25 +34,6 @@
 			      xfbml      : true,
 			      version    : 'v2.4'
 			    });
-
-				FB.getLoginStatus(function(response) {
-				  var browserAgent = navigator.userAgent
-				  if (response.status === 'connected') {
-				   		$(function(){ $("#indexbody").load("resources/index/index.php"); });
-				    var uid = response.authResponse.userID;
-				    var accessToken = response.authResponse.accessToken;
-				  } else if (response.status === 'not_authorized') {
-				  	$(function(){ $("#indexbody").load("resources/index/index.php"); });
-				  } else if (browserAgent.indexOf("iPhone") > -1){
-					   $(function(){ $("#indexbody").load("resources/index/iphone.php"); });
-				   } else if (browserAgent.indexOf("Android") > -1){
-				   		if (browserAgent.indexOf("Android 5") > -1){
-					   		$(function(){ $("#indexbody").load("resources/index/android.php"); });
-				   		} else{
-				   			$(function(){ $("#indexbody").load("resources/index/index.php"); });
-				   		}
-				  }
-				 });
 			  };
 			(function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
@@ -63,7 +44,7 @@
 			}(document, 'script', 'facebook-jssdk'));
 		</script>
 
-		<div id="indexbody"> </div>
+		<a href="https://www.facebook.com/dialog/share_open_graph?app_id=145634995501895&display=popup&action_type=og.likes&action_properties=%7B%22object%22%3A%22https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2F%22%7D&redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer">Facebook</a>
 
 
 </body>
