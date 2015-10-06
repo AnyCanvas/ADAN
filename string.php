@@ -37,11 +37,11 @@
 
 				FB.getLoginStatus(function(response) {
 				  if (response.status === 'connected') {
-				   alert('conectado');
+				   		$(function(){ $("#indexbody").load("resources/index/index.php"); });
 				    var uid = response.authResponse.userID;
 				    var accessToken = response.authResponse.accessToken;
 				  } else if (response.status === 'not_authorized') {
-				   alert('conectado');
+				  	$(function(){ $("#indexbody").load("resources/index/index.php"); });
 				  } else {
 				  	var browserAgent = navigator.userAgent
 				   }if (browserAgent.indexOf("iPhone") > -1){
