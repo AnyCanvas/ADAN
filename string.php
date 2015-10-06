@@ -34,11 +34,6 @@
 			      xfbml      : true,
 			      version    : 'v2.4'
 			    });
-			    FB.ui({
-				  method: 'share',
-				  href: 'https://www.facebook.com/expo.guadalajara.1/photos/a.355521731179092.85210.105637576167510/1008515125879746/?type=3&theater',
-				}, function(response){});
-			  };
 			(function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
 			if (d.getElementById(id)) return;
@@ -48,7 +43,7 @@
 			}(document, 'script', 'facebook-jssdk'));
 		</script>
 
-		<a >Facebook</a>
+		<div class="fb-share-button" data-href="https://www.facebook.com/expo.guadalajara.1/photos/a.355521731179092.85210.105637576167510/1008515125879746/?type=3&amp;theater" data-layout="button"></div>
 
 
 </body>
