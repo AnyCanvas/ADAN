@@ -73,10 +73,14 @@
 		
 <script>
   window.fbAsyncInit = function() {
+	 <?php
+    if (isset($_GET["code"])){?>
+     
     FB.ui({
 				  method: 'share',
 				  href: 'https://www.facebook.com/<?php echo $_SESSION['fbPage'];?>',
 				}, function(response){});
+    <?php } ?>
     FB.Event.subscribe('edge.create', function(targetUrl) {
 	  $("body").find("*").attr("disabled", "disabled");
 	   console.log("out");    
