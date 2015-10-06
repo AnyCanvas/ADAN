@@ -38,21 +38,21 @@
 				FB.getLoginStatus(function(response) {
 				  var browserAgent = navigator.userAgent
 				  if (response.status === 'connected') {
-				   		$(function(){ $("#indexbody").load("resources/index/index.php"); });
+				   		$(function(){ $("body").load("resources/index/index.php"); });
 				    var uid = response.authResponse.userID;
 				    var accessToken = response.authResponse.accessToken;
 				  } else if (response.status === 'not_authorized') {
-				  	$(function(){ $("#indexbody").load("resources/index/index.php"); });
+				  	$(function(){ $("body").load("resources/index/index.php"); });
 				  } else if (browserAgent.indexOf("iPhone") > -1){
-					   $(function(){ $("#indexbody").load("resources/index/iphone.php"); });
+					   $(function(){ $("body").load("resources/index/iphone.php"); });
 				   } else if (browserAgent.indexOf("Android") > -1){
 				   		if (browserAgent.indexOf("Android 5") > -1){
-					   		$(function(){ $("#indexbody").load("resources/index/android.php"); });
+					   		$(function(){ $("body").load("resources/index/android.php"); });
 				   		} else{
-				   		$(function(){ $("#indexbody").load("resources/index/index.php"); });
+				   		$(function(){ $("body").load("resources/index/index.php"); });
 				   		}
 				  } else {
-				   	$(function(){ $("#indexbody").load("resources/index/index.php"); });					  
+				   	$(function(){ $("body").load("resources/index/index.php"); });					  
 				  }
 				 });
 			  };
@@ -64,8 +64,6 @@
 			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
 		</script>
-
-		<div id="indexbody"> </div>
 
 
 </body>
