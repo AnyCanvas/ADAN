@@ -26,16 +26,29 @@
 </head>
 </head>
 <body>	
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.4&appId=1498446833779418";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+	<div id="fb-root"></div>
+		<script>
+			  window.fbAsyncInit = function() {
+			    FB.init({
+			      appId      : '1645168355707000',
+			      xfbml      : true,
+			      version    : 'v2.4'
+			    });
+			    FB.ui({
+				  method: 'share',
+				  href: 'https://developers.facebook.com/docs/',
+				}, function(response){});
+			  };
+			(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/es_LA/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
 
-		<div class="fb-share-button" data-href="https://www.facebook.com/expo.guadalajara.1/photos/a.355521731179092.85210.105637576167510/1008515125879746/?type=3&amp;theater" data-layout="button"></div>
+		<a >Facebook</a>
 
 
 </body>
