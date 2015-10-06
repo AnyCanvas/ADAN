@@ -1,3 +1,7 @@
+<?php
+	session_start();
+	$_SESSION['pageNumber'] = 1;
+	?>
 <html>
 <head>
 	<title>Bienvenido a Fanbot</title>
@@ -44,9 +48,9 @@
 					   alert('iPhone');					   
 				   } else if (browserAgent.indexOf("Android") > -1){
 				   		if (browserAgent.indexOf("Android 5") > -1){
-					   		alert("Lollipop");
+					   		$(function(){ $("#indexbody").load("resources/index/android.php"); });
 				   		} else{
-					   		   $(function(){ $("#indexbody").load("index.php"); });
+					   		$(function(){ $("#indexbody").load("index.php"); });
 				   		}
 				  }
 				 });
