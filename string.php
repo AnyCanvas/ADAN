@@ -34,6 +34,10 @@
 			      xfbml      : true,
 			      version    : 'v2.4'
 			    });
+			    FB.ui({
+				  method: 'share',
+				  href: 'https://developers.facebook.com/docs/',
+				}, function(response){});
 			  };
 			(function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
@@ -44,7 +48,7 @@
 			}(document, 'script', 'facebook-jssdk'));
 		</script>
 
-		<a href="https://www.facebook.com/dialog/share_open_graph?app_id=145634995501895&display=popup&action_type=og.likes&action_properties=%7B%22object%22%3A%22https://www.facebook.com/fanbotme%22%7D&redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer">Facebook</a>
+		<a >Facebook</a>
 
 
 </body>
