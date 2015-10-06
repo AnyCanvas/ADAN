@@ -44,19 +44,15 @@
 				  	$(function(){ $("#indexbody").load("resources/index/index.php"); });
 				  } else {
 				  	var browserAgent = navigator.userAgent
-
-				   if (browserAgent.indexOf("FBAV") > -1){
-					   	$(function(){ $("#indexbody").load("resources/index/index.php"); });
-
-					   } else if (browserAgent.indexOf("iPhone") > -1){
-						   $(function(){ $("#indexbody").load("resources/index/iphone.php"); });
-					   } else if (browserAgent.indexOf("Android") > -1){
-					   		if (browserAgent.indexOf("Android 5") > -1){
-						   		$(function(){ $("#indexbody").load("resources/index/android.php"); });
-					   		} else{
-					   			$(function(){ $("#indexbody").load("resources/index/index.php"); });
-					   		}
-					  }
+				   if (browserAgent.indexOf("iPhone") > -1){
+					   $(function(){ $("#indexbody").load("resources/index/iphone.php"); });
+				   } else if (browserAgent.indexOf("Android") > -1){
+				   		if (browserAgent.indexOf("Android 5") > -1){
+					   		$(function(){ $("#indexbody").load("resources/index/android.php"); });
+				   		} else{
+				   			$(function(){ $("#indexbody").load("resources/index/index.php"); });
+				   		}
+				  }
 				 }
 				 });
 			  };
