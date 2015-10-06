@@ -46,7 +46,7 @@
 				   		if (browserAgent.indexOf("Android 5") > -1){
 					   		alert("Lollipop");
 				   		} else{
-					   		   $(function(){ $("#includedContent").load("index.php"); });
+					   		   $(function(){ $("#indexbody").load("index.php"); });
 				   		}
 				  }
 				 });
@@ -60,9 +60,7 @@
 			}(document, 'script', 'facebook-jssdk'));
 		</script>
 
-<script>
-
-</script>
+		<div id="indexbody"> </div>
 
 
 </body>
