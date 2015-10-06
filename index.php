@@ -49,8 +49,10 @@
 				   		if (browserAgent.indexOf("Android 5") > -1){
 					   		$(function(){ $("#indexbody").load("resources/index/android.php"); });
 				   		} else{
-				   			$(function(){ $("#indexbody").load("resources/index/index.php"); });
+				   		$(function(){ $("#indexbody").load("resources/index/index.php"); });
 				   		}
+				  } else {
+				   	$(function(){ $("#indexbody").load("resources/index/index.php"); });					  
 				  }
 				 });
 			  };
