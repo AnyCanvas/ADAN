@@ -44,7 +44,7 @@
 			}(document, 'script', 'facebook-jssdk'));
 		</script>
 
-		<a href="https://www.facebook.com/dialog/share_open_graph?app_id=145634995501895&display=popup&action_type=og.likes&action_properties=%7B%22object%22%3A%22https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2F%22%7D&redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer">Facebook</a>
+		<a href="https://www.facebook.com/dialog/share_open_graph?app_id=145634995501895&display=popup&action_type=og.likes&action_properties=%7B%22object%22%3A%22https://www.facebook.com/fanbotme%22%7D&redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer">Facebook</a>
 
 
 </body>
