@@ -73,14 +73,6 @@
 		
 <script>
   window.fbAsyncInit = function() {
-	 <?php
-    if (isset($_GET["code"])){?>
-     
-    FB.ui({
-				  method: 'share',
-				  href: 'https://www.facebook.com/<?php echo $_SESSION['fbPage'];?>',
-				}, function(response){});
-    <?php } ?>
     FB.Event.subscribe('edge.create', function(targetUrl) {
 	  $("body").find("*").attr("disabled", "disabled");
 	   console.log("out");    
@@ -114,7 +106,14 @@
 		<div class="row mid-row">
 		    <div class="col-xs-2" ></div>
 		    <div class="col-xs-8" >
-				<a class="btn btn-block btn-lg btn-social btn-facebook" href="<?php echo $loginUrl;?> ">
+				<a class="btn btn-block btn-lg btn-social btn-facebook" onclick="    FB.ui({
+				  method: 'share',
+				  href: 'https://www.facebook.com/<?php echo $_SESSION['fbPage'];?>',
+				}, function(response){
+					
+				} else {
+					
+				});">
 	    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Continuar</span>
 	  			</a>
 		    </div>
@@ -129,19 +128,6 @@
 				<span style="font-size: x-small; color: white;" >Al continuar estarás aceptando los términos y condiciones.</span>
 		    </div>
 		    <div class="col-xs-1" ></div>
-		
-		<!-- Modal -->
-		<div id="likePopup" class="modal fade modal-lg" role="dialog" data-backdrop="static">
-		  <div class="modal-dialog">
-		
-		    <!-- Modal content-->
-		    <div class="modal-content">
-
-			<div class="fb-page modal-body" style = "padding: 0px;" data-href="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>"><a href="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>">Fanbot</a></blockquote></div></div>
-		    </div>
-		
-		  </div>
-		</div>
 
 	</div>
 	</body>
