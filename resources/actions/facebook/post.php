@@ -78,13 +78,13 @@
 		  method: 'share',
 		  href: 'https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>',
 		}, function(response){
-			if (response && response.post_id) {
+            if (response && response.post_id) {
                       alert('Post was published.');
-					  window.location="<?php echo $loginUrl;?>";			
                 } else {
                     alert('Post was not published.');
                     }
-            }
+                }			
+			window.location="<?php echo $loginUrl;?>";			
 		});
 	}	
 
