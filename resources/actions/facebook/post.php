@@ -77,7 +77,9 @@
 		FB.ui({
 		  method: 'share',
 		  href: 'https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>',
-		}, function(response){});
+		}, function(response){
+			window.location="final.php";			
+		});
 	}	
 
   window.fbAsyncInit = function() {
