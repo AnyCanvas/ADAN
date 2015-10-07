@@ -75,7 +75,7 @@
 
 postclick = function () {
   alert( "Handler for .click() called." );
-});	
+}	
 
   window.fbAsyncInit = function() {
   	
