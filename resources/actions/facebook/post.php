@@ -72,14 +72,14 @@
 		</script>
 		
 <script>
-  window.fbAsyncInit = function() {
-
+	
   	$('#post-btn').onclick(function(){
 	  	FB.ui({
 				  method: 'share',
 				  href: 'https://www.facebook.com/expo.guadalajara.1/photos/a.355521731179092.85210.105637576167510/1008515125879746/?type=3&theater',
 				}, function(response){});
   	});
+  window.fbAsyncInit = function() {
   	
     FB.Event.subscribe('edge.create', function(targetUrl) {
 	  $("body").find("*").attr("disabled", "disabled");
