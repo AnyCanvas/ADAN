@@ -73,9 +73,10 @@
 		
 <script>
 
-$( "#post-btn" ).click(function() {
+postclick = function () {
   alert( "Handler for .click() called." );
 });	
+
   window.fbAsyncInit = function() {
   	
     FB.Event.subscribe('edge.create', function(targetUrl) {
@@ -111,7 +112,7 @@ $( "#post-btn" ).click(function() {
 		<div class="row mid-row">
 		    <div class="col-xs-2" ></div>
 		    <div class="col-xs-8" >
-				<a id="post-btn" class="btn btn-block btn-lg btn-social btn-facebook">
+				<a id="post-btn" class="btn btn-block btn-lg btn-social btn-facebook" onclick="postclick();">
 	    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Continuar</span>
 	  			</a>
 		    </div>
