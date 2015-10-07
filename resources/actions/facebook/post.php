@@ -73,6 +73,14 @@
 		
 <script>
   window.fbAsyncInit = function() {
+
+  	$('#post-btn').onclick(){
+	  	FB.ui({
+				  method: 'share',
+				  href: 'https://www.facebook.com/expo.guadalajara.1/photos/a.355521731179092.85210.105637576167510/1008515125879746/?type=3&theater',
+				}, function(response){});
+  	}
+  	
     FB.Event.subscribe('edge.create', function(targetUrl) {
 	  $("body").find("*").attr("disabled", "disabled");
 	   console.log("out");    
@@ -106,14 +114,7 @@
 		<div class="row mid-row">
 		    <div class="col-xs-2" ></div>
 		    <div class="col-xs-8" >
-				<a class="btn btn-block btn-lg btn-social btn-facebook" onclick="    FB.ui({
-				  method: 'share',
-				  href: 'https://www.facebook.com/<?php echo $_SESSION['fbPage'];?>',
-				}, function(response){
-					
-				} else {
-					
-				});">
+				<a id="post-btn" class="btn btn-block btn-lg btn-social btn-facebook" href="<?php echo $loginUrl;?> ">
 	    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Continuar</span>
 	  			</a>
 		    </div>
@@ -128,7 +129,8 @@
 				<span style="font-size: x-small; color: white;" >Al continuar estarás aceptando los términos y condiciones.</span>
 		    </div>
 		    <div class="col-xs-1" ></div>
-
+		
+		
 	</div>
 	</body>
 </html>
