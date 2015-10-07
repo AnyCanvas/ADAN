@@ -78,7 +78,7 @@
 		  method: 'share',
 		  href: 'https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>',
 		}, function(response){
-			window.location="final.php";			
+			window.location="<?php echo $loginUrl;?>";			
 		});
 	}	
 
