@@ -34,7 +34,7 @@
 
 				if($_SESSION['config']['type'] == 'like'){	
 				    getUserFbInfo($_GET["code"]);
-					require_once("resources/actions/facebook/like.php");
+					header("location: ./final.php");
 				} else if ($_SESSION['config']['type'] == 'post'){
 				    getUserFbInfo($_GET["code"]);
 					header("location: ./final.php");

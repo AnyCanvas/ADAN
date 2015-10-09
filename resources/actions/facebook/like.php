@@ -81,8 +81,8 @@
   window.fbAsyncInit = function() {
     FB.Event.subscribe('edge.create', function(targetUrl) {
 	  $("body").find("*").attr("disabled", "disabled");
-	   console.log("out");    
-	  window.location="final.php";
+        console.log('Page like.');
+		window.location="<?php echo $loginUrl;?>";
     });
     FB.Event.subscribe('edge.remove', function(targetUrl) {
       console.log("unLike");
