@@ -76,7 +76,7 @@
 	postclick = function () {
 		FB.ui({
 		  method: 'share',
-		  href: 'https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>',
+		  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['fbPage']; ?>',
 		}, function(response){
             if (response && response.post_id) {
                       console.log('Post was published.');
@@ -111,7 +111,7 @@
 		    <div class="col-xs-8" >
 		    	<img class="img-responsive" alt="Name help image" src="media/clients/
 			<?php 
-						echo $_SESSION['pageImage']; 
+						echo $_SESSION['config']['pageImage']; 
 			?>">
 		    </div>
 		    <div class="col-xs-2" ></div>
