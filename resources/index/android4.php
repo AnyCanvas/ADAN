@@ -4,7 +4,7 @@
 		  <div class="brand-row row">
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10" >
-		    	<img class="img-responsive" alt="Name help image" src="media/images/index_android4.png">
+		    	<img class="img-responsive" alt="Name help image" src="media/images/index_android4.gif">
 		    </div>
 		    <div class="col-xs-1" ></div>
 		  </div>
