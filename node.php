@@ -2,12 +2,7 @@
 	session_start();
 	include 'resources/library/functions.php'; 
 
-			if($_SESSION['config']['type'] == 'like'){	
 				$scopes = 'public_profile, email';
-			} else if ($_SESSION['config']['type'] == 'post'){
-				$scopes = 'public_profile, email, publish_actions';
-			}
-
 				$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='. $config["fbApp"]["appId"] .'&redirect_uri='. $config["urls"]["baseUrl"] .'/node.php&scope='. $scopes .'&response_type=code';
 
 
