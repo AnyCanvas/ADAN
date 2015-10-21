@@ -47,8 +47,10 @@
 					   $(function(){ $("body").load("resources/index/iphone.php"); });
 				   } else if (browserAgent.indexOf("Android") > -1){
 				   		if (browserAgent.indexOf("Android 5") > -1){
-					   		$(function(){ $("body").load("resources/index/android.php"); });
-				   		} else{
+					   		$(function(){ $("body").load("resources/index/android5.php"); });
+				   		} else if (browserAgent.indexOf("Android 4.4"){
+					   		$(function(){ $("body").load("resources/index/android4.php"); });					   		
+				   		} else {
 				   		$(function(){ $("body").load("resources/index/index.php"); });
 				   		}
 				  } else {
