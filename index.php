@@ -37,7 +37,7 @@
 
 				FB.getLoginStatus(function(response) {
 				  var browserAgent = navigator.userAgent
-				  if (response.status === 'connected') {
+				  if (response.status === 'connected' || $_GET["mode"] == 'web') {
 				   		$(function(){ $("body").load("resources/index/index.php"); });
 				    var uid = response.authResponse.userID;
 				    var accessToken = response.authResponse.accessToken;
