@@ -24,8 +24,7 @@
 		<div class="row mid-row">
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10" >
-				<a class="btn btn-block btn-lg btn-facebook" href="fb://page/1550316151894751">Continuar en el navegador
-	  			</a>
+				<a class="btn btn-block btn-lg btn-facebook" href="fb://page/1550316151894751">Déjame continuar</a>
 		    </div>
 		    <div class="col-xs-1" ></div>
 		</div>	
