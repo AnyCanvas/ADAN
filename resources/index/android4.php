@@ -1,7 +1,7 @@
 	<div class ="container-fluid">
 
 		<!-- Fanbot logo columns-->
-		  <div class="row top-row">
+		  <div class="row top-row" style=" margin-bottom: 0em;">
 		    <div class="col-xs-3" ></div>
 		    <div class="col-xs-6" >
 		    	<img class="img-responsive" alt="Fanbot" src="media/images/fanbot.png">
@@ -11,7 +11,7 @@
 	
 		<div class="clearfix visible-xs-block"></div>		
 		<!-- Informative image Columns-->
-		  <div class="brand-row row">
+		  <div class="brand-row row" style=" margin-top: 0em;">
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10" >
 		    	<img class="img-responsive" alt="Name help image" src="media/images/index_android4.gif">
