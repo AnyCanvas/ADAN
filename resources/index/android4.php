@@ -24,7 +24,7 @@
 		<div class="row mid-row">
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10" >
-				<a class="btn btn-block btn-lg btn-facebook" href="fb://page/1550316151894751">Déjame continuar &nbsp; Conozco mi contraseña</a>
+				<a class="btn btn-block btn-lg btn-facebook" href="fb://page/1550316151894751">Déjame continuar <br> Conozco mi contraseña</a>
 		    </div>
 		    <div class="col-xs-1" ></div>
 		</div>	
