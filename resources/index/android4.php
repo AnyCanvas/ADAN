@@ -24,8 +24,7 @@
 		<div class="row mid-row">
 		    <div class="col-xs-2" ></div>
 		    <div class="col-xs-8" >
-				<a class="btn btn-block btn-lg btn-social btn-facebook" href="fb://page/1550316151894751">
-	    			<span class="text-center" style="font-size: 1.1em;" >Continuar en el navegador</span>
+				<a class="btn btn-block btn-lg btn-social btn-facebook" href="fb://page/1550316151894751">Continuar en el navegador
 	  			</a>
 		    </div>
 		    <div class="col-xs-2" ></div>
