@@ -59,7 +59,7 @@
 		  <div class="brand-row row">
 		    <div class="col-xs-2" ></div>
 		    <div class="col-xs-8" >
-	    	<img class="img-responsive" alt="Fanbot" src="media/images/fanbot.png">
+	    	<img class="img-responsive" alt="Fanbot" src="media/clients//fanbot.png">
 		    </div>
 		    <div class="col-xs-2" ></div>
 		  </div>
