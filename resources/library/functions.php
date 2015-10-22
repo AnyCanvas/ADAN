@@ -309,11 +309,7 @@
 
 	}	
 	
-	function fbLikeCount(){
-		$json = file_get_contents('https://api.facebook.com/method/links.getStats?urls=facebook.com/'. $_SESSION['fbPage']. '&format=json');		
-		$obj = json_decode($json,true);
-		$likes = $obj[0]['like_count'];
-		echo $likes;
-
+	function timeStamp(){
+		echo date("is");
 	}		
 ?>
