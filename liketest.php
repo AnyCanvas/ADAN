@@ -18,6 +18,7 @@
 		    -ms-transform: scale(2);
 		    width: 73px;
 		    overflow: hidden;
+		    margin: 0 auto;
 		}
 	</style>
 
