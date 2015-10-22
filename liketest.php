@@ -12,11 +12,12 @@
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<style type="text/css">
 		#fblike {
-		    margin-left: 50%;
 		    transform: scale(7);
-		    -webkit-transform: scale(7);
+		    -webkit-transform: scale(2);
 		    -moz-transform: scale(7);
 		    -ms-transform: scale(7);
+		    width: 73px;
+		    overflow: hidden;
 		}
 	</style>
 
