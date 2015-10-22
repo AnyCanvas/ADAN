@@ -39,7 +39,7 @@
 		<div class="row mid-row">
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10" >
-		    	<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">Like: <?php fbLikeCount(); ?></p>
+		    	<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">Like: <?php timeStamp(); ?></p>
 		    </div>
 		    <div class="col-xs-1" ></div>
 		</div>
