@@ -110,12 +110,16 @@
 		<div class="clearfix visible-xs-block"></div>
 
 		<div class="row mid-row">
+
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10" >
 
-			<div class="fb-page modal-body" style = "padding: 0px;" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>"><a href="https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>">Fanbot</a></blockquote></div></div>
-		    </div>
+			<div id="fblike">
+			    <div class="fb-like" data-action="like" data-href"https://www.facebook.com/fanbotme" data-layout="button" data-show-faces="false" data-share="false" ></div>
+			</div>
+
 		    <div class="col-xs-1" ></div>
+
 		</div>	
 
 		<div class="clearfix visible-xs-block"></div>
