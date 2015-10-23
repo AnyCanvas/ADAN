@@ -18,7 +18,10 @@
 	//			$_SESSION['error'] = 2;
 	//			require_once("resources/library/error.php");			
 	//		}
-		} 
+		} else {
+				$_SESSION['error'] = 1;
+				require_once("resources/library/error.php");
+			}
 	} else {
 			$_SESSION['error'] = 1;
 			require_once("resources/library/error.php");
