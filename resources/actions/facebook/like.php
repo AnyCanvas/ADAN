@@ -115,7 +115,7 @@
 		    <div class="col-xs-10" >
 
 			<div id="fblike">
-			    <div class="fb-like" data-action="like" data-href"https://www.facebook.com/fanbotme" data-layout="button" data-show-faces="false" data-share="false" ></div>
+			    <div class="fb-like" data-action="like" data-href="https://www.facebook.com/fanbotme" data-layout="button" data-show-faces="false" data-share="false" ></div>
 			</div>
 
 		    <div class="col-xs-1" ></div>
