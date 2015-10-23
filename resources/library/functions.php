@@ -137,7 +137,7 @@
 				    die("Connection failed: " . $conn->connect_error);
 				} 
 
-				$sql = "INSERT INTO interactions  (fanbotId, userId, clientId, fbPage) VALUES ( '". $_SESSION['id']. "','".  $_SESSION['fbUserId']. "','". $_SESSION['clientId']. "','". $_SESSION['fbPage']. "')";
+				$sql = "INSERT INTO interactions  (fanbotId, userId, clientId, fbPage) VALUES ( '". $_SESSION['id']. "','".  $_SESSION['fbUserId']. "','". $_SESSION['clientId']. "','". $_SESSION['config']['link'] . "')";
 							
 				
 				if ($conn->query($sql) === TRUE) {
