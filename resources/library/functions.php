@@ -106,7 +106,7 @@
 				    die("Connection failed: " . $conn->connect_error);
 				} 
 				
-						$sql = "SELECT * FROM users WHERE fbID = '". $_SESSION['fbUserId']. "'";
+		$sql = "SELECT * FROM users WHERE fbID = '". $_SESSION['fbUserId']. "'";
 		$result = $conn->query($sql);
 		
 		if ($result->num_rows > 0) {		    
