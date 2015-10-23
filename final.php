@@ -22,3 +22,6 @@
 		$_SESSION['error'] = 1;
 		require_once("resources/library/error.php");
 	}
+	session_unset();
+
+?>
