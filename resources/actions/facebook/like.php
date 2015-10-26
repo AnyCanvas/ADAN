@@ -110,8 +110,8 @@
 
 		<div class="row mid-row">
 
-			    <div class="col-xs-2" ></div>
-			    <div class="col-xs-8" >
+			    <div class="col-xs-4" ></div>
+			    <div class="col-xs-4" >
 
 
 				    <div class="center-block">
@@ -125,7 +125,7 @@
 				</div>
 		
 
-		    <div class="col-xs-2" ></div>
+		    <div class="col-xs-4" ></div>
 
 		</div>	
 
