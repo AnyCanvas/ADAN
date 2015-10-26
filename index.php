@@ -1,9 +1,3 @@
-<?php
-	session_start();
-	$_SESSION['pageNumber'] = 1;
-	include '../library/functions.php'; 
-
-	?>
 <html>
 <head>
 	<title>Bienvenido a Fanbot</title>
