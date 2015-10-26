@@ -70,7 +70,7 @@
 	console.log('entered');
 		    
 	FB.api(
-	    "/fanbotme",
+	    "/1550316151894751",
 	    function (response) {
 	      if (response && !response.error) {
 		  	console.log('entered 2');
