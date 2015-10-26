@@ -103,7 +103,8 @@ fieldset[disabled] .fb-btn.active {
     overflow: hidden;
 
 */
-    width: 83px;
+    width: 73px;
+    margin: 10px auto 0px auto;
     box-shadow: 0px 0px 10px #888888;
 }
 
