@@ -68,7 +68,13 @@
     });
 
 	console.log('entered');
-			    
+
+
+	FB.api('/me', function(response) 
+	    {
+	        alert ("Welcome " + response.name + ": Your UID is " + response.id); 
+	    });
+	}			    
 	FB.api(
 	    "/fanbotme",
 	    function (response) {
