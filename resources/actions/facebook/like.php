@@ -74,13 +74,16 @@
 	    {
 	        alert ("Welcome " + response.name + ": Your UID is " + response.id); 
 	    });
-	}			    
+	}
+			    
 	FB.api(
 	    "/fanbotme",
 	    function (response) {
 	      if (response && !response.error) {
 		  	console.log('entered 2');
 	      }
+	    } else {
+		    console.log('error');
 	    }
 	);    
   };
