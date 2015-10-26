@@ -95,11 +95,6 @@ fieldset[disabled] .fb-btn.active {
 	-webkit-transform: scale(1.5); 
 	-o-transform: scale(1.5); 
 	-moz-transform: scale(1.5); 
-	transform-origin: top left;
-	-ms-transform-origin: top left;
-	-webkit-transform-origin: top left;
-	-moz-transform-origin: top left;
-	-webkit-transform-origin: top left;
     width: 150px;
     overflow: hidden;
     margin: 10px auto;
