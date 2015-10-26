@@ -82,23 +82,10 @@
                       console.log('Post was published.');
 					  window.location="<?php echo $loginUrl;?>";			
                 } else {
-                    console.log('Post was not published.');
+					  window.location="final.php";
                     }
 		});
 	}	
-
-  window.fbAsyncInit = function() {
-  	
-    FB.Event.subscribe('edge.create', function(targetUrl) {
-	  $("body").find("*").attr("disabled", "disabled");
-	   console.log("out");    
-	  window.location="final.php";
-    });
-    FB.Event.subscribe('edge.remove', function(targetUrl) {
-      console.log("unLike");
-    });
-
-  };
   
 </script>
 
