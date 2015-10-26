@@ -1,5 +1,5 @@
 <?php 	
-	include '../library/functions.php'; 
+	include '.../library/functions.php'; 
 ?>
 
 <html>
