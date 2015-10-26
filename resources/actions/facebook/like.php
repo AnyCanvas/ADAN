@@ -64,7 +64,8 @@
 				    FB.Event.subscribe('edge.remove', function(targetUrl) {
 				      console.log("unLike");
 				    });
-
+				}
+				
 				FB.api(
 				    "/fanbotme",
 				    function (response) {
