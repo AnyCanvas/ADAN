@@ -55,7 +55,7 @@
   	
 </head>
 
-<body>
+<body onload="facebookPageName()">
 	
 	<div id="fb-root"></div>
 		<script>(function(d, s, id) {
