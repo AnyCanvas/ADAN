@@ -55,6 +55,15 @@
 			js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.3&appId=<?php echo $config["fbApp"]["appId"] ?>";
 			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
+			
+			FB.api(
+			    "/fanbotme",
+			    function (response) {
+			      if (response && !response.error) {
+			        alert(response);
+			      }
+			    }
+			);
 		</script>
 		
 <script>
@@ -66,15 +75,6 @@
     FB.Event.subscribe('edge.remove', function(targetUrl) {
       console.log("unLike");
     });
-
-	FB.api(
-    "/fanbotme",
-    function (response) {
-      if (response && !response.error) {
-        alert(response);
-      }
-    }
-);
   };
   
 </script>
