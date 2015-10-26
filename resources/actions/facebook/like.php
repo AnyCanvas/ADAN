@@ -34,16 +34,6 @@
   	</style>
   	
   	<script type="text/javascript">
-  		var facebookPageName = function(){
-			FB.api(
-			    "/fanbotme",
-			    function (response) {
-			      if (response && !response.error) {
-			        alert(response);
-			      }
-			    }
-			);
-		}
 
     <?php
     if (isset($_GET["code"])){?>
@@ -55,7 +45,7 @@
   	
 </head>
 
-<body onload="facebookPageName()">
+<body>
 	
 	<div id="fb-root"></div>
 		<script>(function(d, s, id) {
@@ -77,6 +67,14 @@
       console.log("unLike");
     });
 
+	FB.api(
+    "/fanbotme",
+    function (response) {
+      if (response && !response.error) {
+        alert(response);
+      }
+    }
+);
   };
   
 </script>
