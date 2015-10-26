@@ -69,14 +69,11 @@
 
 	console.log('entered');
 			    
-	FB.api(
-	    "/fanbotme",
-	    function (response) {
-	      if (response && !response.error) {
-	        console.log(response.name);
-	      }
-	    }
-	);    
+FB.api('/me', function(response) 
+    {
+        alert ("Welcome " + response.name + ": Your UID is " + response.id); 
+    });
+}   
   };
   
 </script>
