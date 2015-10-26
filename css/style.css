@@ -117,3 +117,8 @@ fieldset[disabled] .fb-btn.active {
 .action_img{
 	    margin-bottom: 10px;
 }
+
+.like_box{
+	background: white;
+	padding: 10px;
+}
