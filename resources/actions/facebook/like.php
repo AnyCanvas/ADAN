@@ -59,7 +59,7 @@
 			    
 			    FB.Event.subscribe('edge.create', function(targetUrl) {
 				        console.log('Page like.');
-						window.location="<?php echo $loginUrl;?>";
+						window.location="<?php $_SESSION['config']['link'];?>";
 				    });
 				    FB.Event.subscribe('edge.remove', function(targetUrl) {
 				      console.log("unLike");
