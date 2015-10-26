@@ -115,7 +115,7 @@
 
 					<div class="col-xs-5" >
 					    <div class="center-block">
-							<img id="fb_img" src="https://graph.facebook.com/fanbotme/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+							<img id="fb_img" src="https://graph.facebook.com/fanbotme/<?php echo $_SESSION['config']['link'];?>" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 						</div>
 					</div>
 		
