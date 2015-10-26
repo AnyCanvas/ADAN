@@ -73,7 +73,8 @@
 	    "/fanbotme",
 	    function (response) {
 	      if (response && !response.error) {
-	console.log('entered');	      }
+	        console.log(response.name);
+	      }
 	    }
 	);    
   };
