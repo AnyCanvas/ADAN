@@ -81,10 +81,10 @@
 	    function (response) {
 	      if (response && !response.error) {
 		  	console.log('entered 2');
-	      }
-	    } else {
-		    console.log('error');
-	    }
+		    } else {
+			    console.log('entered');
+		    }
+		}
 	);    
   };
   
