@@ -100,7 +100,7 @@ fieldset[disabled] .fb-btn.active {
 	-webkit-transform-origin: top left;
 	-moz-transform-origin: top left;
 	-webkit-transform-origin: top left;
-    width: 73px;
+    width: 150px;
     overflow: hidden;
     margin: 10px auto;
 }
