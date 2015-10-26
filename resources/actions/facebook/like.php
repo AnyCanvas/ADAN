@@ -80,7 +80,6 @@
 <script>
   window.fbAsyncInit = function() {
     FB.Event.subscribe('edge.create', function(targetUrl) {
-	  $("body").find("*").attr("disabled", "disabled");
         console.log('Page like.');
 		window.location="<?php echo $loginUrl;?>";
     });
@@ -115,9 +114,7 @@
 		    <div class="col-xs-10" >
 
 			<div id="fblike">
-				<div id="fblike">
-			    <iframe align="left" src="http://www.facebook.com/plugins/like.php?app_id=<?php echo $config["fbApp"]["appId"] ?>&href=https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>/&layout=button&show_faces=false&action=like&colorscheme=light" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:60px;"> </iframe>
-				</div>
+			    <div class="fb-like" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" ></div>
 			</div>
 
 		    <div class="col-xs-1" ></div>
