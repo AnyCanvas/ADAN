@@ -33,30 +33,6 @@
 					}
   	</style>
   	
-  	<script type="text/javascript">
-			  	/**
-		 * Vertically center Bootstrap 3 modals so they aren't always stuck at the top
-		 */
-		$(function() {
-		    function reposition() {
-		        var modal = $(this),
-		            dialog = modal.find('.modal-dialog');
-		        modal.css('display', 'block');
-		        
-		        // Dividing by two centers the modal exactly, but dividing by three 
-		        // or four works better for larger screens.
-		        dialog.css("margin-top", Math.max(0, ($(window).height() - dialog.height()) / 2));
-		    }
-		    // Reposition when a modal is shown
-		    $('.modal').on('show.bs.modal', reposition);
-		    // Reposition when the window is resized
-		    $(window).on('resize', function() {
-		        $('.modal:visible').each(reposition);
-		    });
-		});		
-	  	
-  	</script>
-  	
 </head>
 
 <body>
@@ -77,6 +53,7 @@
 		FB.ui({
 		  method: 'share',
 		  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
+		  display: 'page',
 		}, function(response){
             if (response && response.post_id) {
                       console.log('Post was published.');
