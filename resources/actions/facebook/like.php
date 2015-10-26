@@ -96,14 +96,14 @@
 		
 		<!-- Informative image Columns-->
 		  <div class="brand-row row">
-		    <div class="col-xs-2" ></div>
-		    <div class="col-xs-8" >
+		    <div class="col-xs-1" ></div>
+		    <div class="col-xs-10" >
 		    	<img class="img-responsive action_img" alt="Name help image" src="media/clients/
 			<?php 
 						echo $_SESSION['config']['image']; 
 			?>">
 		    </div>
-		    <div class="col-xs-2" ></div>
+		    <div class="col-xs-1" ></div>
 		  </div>
 
 		<div class="clearfix visible-xs-block"></div>
