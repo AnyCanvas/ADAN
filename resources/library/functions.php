@@ -28,7 +28,7 @@
 	function getFbPageName($page){
 		$pageJson = file_get_contents('https://graph.facebook.com/'. $page .'?access_token=1498446833779418|6Uo2HajAgYUiIE0x8DR1AXuhxbw');
 		$pageArray = json_decode($pageJson);
-		echo($pageArray[name]);
+		echo $pageArray['name'];
 	}
 
 	function getUserFbInfo($code){
