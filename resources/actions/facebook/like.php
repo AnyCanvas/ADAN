@@ -112,6 +112,12 @@
 
 			    <div class="col-xs-2" ></div>
 			    <div class="col-xs-8" >
+
+
+				    <div class="center-block">
+			            <p style="text-align: center;">Aquí aparecerá la imagen de tu pagina.</p>	            
+						<img id="fbImg" src="https://graph.facebook.com/fanbotme/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+					</div>
 	
 				    <div class="col-xs-4" ></div>
 				    <div class="col-xs-2" >
