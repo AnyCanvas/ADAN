@@ -110,14 +110,14 @@
 
 		<div class="row mid-row">
 
-		    <div class="col-xs-1" ></div>
-		    <div class="col-xs-10" >
+		    <div class="col-xs-2" ></div>
+		    <div class="col-xs-8" >
 
 			<div id="fblike">
 			    <div class="fb-like" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" ></div>
 			</div>
 
-		    <div class="col-xs-1" ></div>
+		    <div class="col-xs-2" ></div>
 
 		</div>	
 
