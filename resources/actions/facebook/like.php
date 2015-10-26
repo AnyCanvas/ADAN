@@ -65,14 +65,7 @@
 			      console.log("unLike");
 			    });
 			    
-				FB.api(
-				    "/fanbotme",
-				    function (response) {
-				      if (response && !response.error) {
-				        alert(response.name);
-				      }
-				    }
-				);
+
 
 			  };
 			(function(d, s, id) {
