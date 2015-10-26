@@ -56,6 +56,14 @@
 			      xfbml      : true,
 			      version    : 'v2.4'
 			    });
+			    
+			    FB.Event.subscribe('edge.create', function(targetUrl) {
+				        console.log('Page like.');
+						window.location="<?php echo $loginUrl;?>";
+				    });
+				    FB.Event.subscribe('edge.remove', function(targetUrl) {
+				      console.log("unLike");
+				    });
 
 				FB.api(
 				    "/fanbotme",
@@ -75,19 +83,6 @@
 			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
 		</script>
-		
-<script>
-  window.fbAsyncInit = function() {
-    FB.Event.subscribe('edge.create', function(targetUrl) {
-        console.log('Page like.');
-		window.location="<?php echo $loginUrl;?>";
-    });
-    FB.Event.subscribe('edge.remove', function(targetUrl) {
-      console.log("unLike");
-    });
-  };
-  
-</script>
 
 		
 	<div class ="container-fluid">
