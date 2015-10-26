@@ -116,11 +116,13 @@
 
 				    <div class="center-block">
 						<img id="fbImg" src="https://graph.facebook.com/fanbotme/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
-					</div>
-		
+
 					<div id="fblike">
 					    <div class="fb-like center-block" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" ></div>
+
 					</div>
+		
+				</div>
 		
 
 		    <div class="col-xs-2" ></div>
