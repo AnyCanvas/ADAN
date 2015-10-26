@@ -48,22 +48,32 @@
 <body>
 	
 	<div id="fb-root"></div>
-		<script>(function(d, s, id) {
+		<script>
+			
+			  window.fbAsyncInit = function() {
+			    FB.init({
+			      appId      : '<?php echo $config["fbApp"]["appId"]; ?>',
+			      xfbml      : true,
+			      version    : 'v2.4'
+			    });
+
+				FB.api(
+				    "/fanbotme",
+				    function (response) {
+				      if (response && !response.error) {
+				        alert(response);
+				      }
+				    }
+				);
+
+			  };
+			(function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
 			if (d.getElementById(id)) return;
 			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.3&appId=<?php echo $config["fbApp"]["appId"] ?>";
+			js.src = "//connect.facebook.net/es_LA/sdk.js";
 			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
-			
-			FB.api(
-			    "/fanbotme",
-			    function (response) {
-			      if (response && !response.error) {
-			        alert(response);
-			      }
-			    }
-			);
 		</script>
 		
 <script>
