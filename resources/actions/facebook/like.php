@@ -1,6 +1,3 @@
-<?php 	
-	include '.../library/functions.php'; 
-?>
 
 <html>
 <head>
