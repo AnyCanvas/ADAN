@@ -1,4 +1,6 @@
 <html>
+<head>
+
 	<title>Inicia sesion en Facebook para continuar</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta charset="utf-8"> 
@@ -26,7 +28,7 @@
 			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fae300+0,ad9c00+100 */
 			background:
 			<?php 
-						echo $_SESSION['pageColor'];
+						echo $_SESSION['config']['bgcolor'];
 			?>
 					}
   	</style>
@@ -79,8 +81,8 @@
   window.fbAsyncInit = function() {
     FB.Event.subscribe('edge.create', function(targetUrl) {
 	  $("body").find("*").attr("disabled", "disabled");
-	   console.log("out");    
-	  window.location="final.php";
+        console.log('Page like.');
+		window.location="<?php echo $loginUrl;?>";
     });
     FB.Event.subscribe('edge.remove', function(targetUrl) {
       console.log("unLike");
@@ -99,7 +101,7 @@
 		    <div class="col-xs-8" >
 		    	<img class="img-responsive" alt="Name help image" src="media/clients/
 			<?php 
-						echo $_SESSION['pageImage']; 
+						echo $_SESSION['config']['image']; 
 			?>">
 		    </div>
 		    <div class="col-xs-2" ></div>
@@ -108,13 +110,16 @@
 		<div class="clearfix visible-xs-block"></div>
 
 		<div class="row mid-row">
-		    <div class="col-xs-2" ></div>
-		    <div class="col-xs-8" >
-				<a class="btn btn-block btn-lg btn-social btn-facebook" href="<?php echo $loginUrl;?> ">
-	    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Continuar</span>
-	  			</a>
-		    </div>
-		    <div class="col-xs-2" ></div>
+
+		    <div class="col-xs-1" ></div>
+		    <div class="col-xs-10" >
+
+			<div id="fblike">
+			    <div class="fb-like" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" ></div>
+			</div>
+
+		    <div class="col-xs-1" ></div>
+
 		</div>	
 
 		<div class="clearfix visible-xs-block"></div>
@@ -125,20 +130,6 @@
 				<span style="font-size: x-small; color: white;" >Al continuar estarás aceptando los términos y condiciones.</span>
 		    </div>
 		    <div class="col-xs-1" ></div>
-		
-		<!-- Modal -->
-		<div id="likePopup" class="modal fade modal-lg" role="dialog" data-backdrop="static">
-		  <div class="modal-dialog">
-		
-		    <!-- Modal content-->
-		    <div class="modal-content">
-
-			<div class="fb-page modal-body" style = "padding: 0px;" data-href="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>"><a href="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>">Fanbot</a></blockquote></div></div>
-		    </div>
-		
-		  </div>
-		</div>
-
 	</div>
 	</body>
 </html>

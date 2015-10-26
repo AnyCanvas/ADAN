@@ -1,4 +1,6 @@
 <html>
+<head>
+
 	<title>Inicia sesion en Facebook para continuar</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta charset="utf-8"> 
@@ -6,10 +8,6 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/bootstrap-social.css">
-	<style>
-		div.container { background: transparent; };
-		div.lockframe { z-index: -2; };
-	</style>
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script>
@@ -21,7 +19,20 @@
 	  ga('create', 'UA-65249445-1', 'auto');
 	  ga('send', 'pageview');
 	
-	</script>  	
+	</script>
+  	<style type="text/css">
+		html{
+		    height: 100%;
+		}
+		body{
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fae300+0,ad9c00+100 */
+			background:
+			<?php 
+						echo $_SESSION['config']['bgcolor'];
+			?>
+					}
+  	</style>
+  	
   	<script type="text/javascript">
 			  	/**
 		 * Vertically center Bootstrap 3 modals so they aren't always stuck at the top
@@ -43,11 +54,6 @@
 		        $('.modal:visible').each(reposition);
 		    });
 		});		
-
-	function check_in() {
-	  document.cookie="message=" + $('#message').val();
-	  location.href='<?php echo $loginUrl;?>';
-	};
 	  	
   	</script>
   	
@@ -66,7 +72,23 @@
 		</script>
 		
 <script>
+
+	postclick = function () {
+		FB.ui({
+		  method: 'share',
+		  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
+		}, function(response){
+            if (response && response.post_id) {
+                      console.log('Post was published.');
+					  window.location="<?php echo $loginUrl;?>";			
+                } else {
+                    console.log('Post was not published.');
+                    }
+		});
+	}	
+
   window.fbAsyncInit = function() {
+  	
     FB.Event.subscribe('edge.create', function(targetUrl) {
 	  $("body").find("*").attr("disabled", "disabled");
 	   console.log("out");    
@@ -82,7 +104,8 @@
 
 		
 	<div class ="container-fluid">
-
+		
+		<!-- Informative image Columns-->
 		  <div class="brand-row row">
 		    <div class="col-xs-2" ></div>
 		    <div class="col-xs-8" >
@@ -94,42 +117,28 @@
 		    <div class="col-xs-2" ></div>
 		  </div>
 
+		<div class="clearfix visible-xs-block"></div>
+
+		<div class="row mid-row">
+		    <div class="col-xs-2" ></div>
+		    <div class="col-xs-8" >
+				<a id="post-btn" class="btn btn-block btn-lg btn-social btn-facebook" onclick="postclick();">
+	    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Continuar</span>
+	  			</a>
+		    </div>
+		    <div class="col-xs-2" ></div>
+		</div>	
 
 		<div class="clearfix visible-xs-block"></div>
 
 		<div class="row mid-row">
 		    <div class="col-xs-1" ></div>
-		    <div class="col-xs-10" style="background-color: white; z-index: 1; padding: 10px; box-shadow: 2px 2px 1px 1px rgba(137,140,144,0.5)">
-			    <input type="text" class="form-control" id="message" placeholder="Escribe tu mensaje(opcional)">
-			    <div class="iframecontainer" style="background: transparent; z-index: 2; padding-top: 10px;">
-					<div style="z-index: -1;" class="fb-page lockframe" style = "padding: 0px;" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>"><a href="https://www.facebook.com/<?php echo $_SESSION['fbPage']; ?>">Fanbot</a></blockquote></div></div>
-			    </div>
-	
-			<div class="row mid-row" style="padding-top: 10px;">
-			    <div class="col-xs-2" ></div>
-			    <div class="col-xs-8" >
-					<a class="btn btn-block btn-lg btn-social btn-facebook" id="check_in" style="padding-left: 50px;" onclick="check_in();">
-		    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Check in</span>
-		  			</a>
-			    </div>
-			    <div class="col-xs-2" ></div>
-			</div>	
-
-		    </div>
-
-		    </div>
-		    <div class="col-xs-1" ></div>
-		</div>	
-		
-		
-		<div class="clearfix visible-xs-block"></div>
-
-		<div class="mid-row">
-		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10 text-center leadinline-text" >
 				<span style="font-size: x-small; color: white;" >Al continuar estarás aceptando los términos y condiciones.</span>
 		    </div>
 		    <div class="col-xs-1" ></div>
+		
+		
 	</div>
 	</body>
 </html>

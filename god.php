@@ -3,7 +3,7 @@
 	$_SESSION['pageNumber'] = 1;
 	include 'resources/library/functions.php';
 
-	$fnbtName  = "agi";
+	$fnbtName  = htmlspecialchars($_GET["name"]);
 	
 	if(findFnbt($fnbtName)){
 		$token = $_SESSION['accesToken'];
@@ -15,5 +15,6 @@
 		echo 'No se encontro la fanbot';
 	}
 	
+	header("location: ./god.php?name=". $fnbtName);
 	
 ?>

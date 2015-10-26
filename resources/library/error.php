@@ -1,7 +1,3 @@
-<?php
-	session_start();
-	$_SESSION['pageNumber'] = 1;
-?>
 <!DOCTYPE html>
 <html>
 <head>

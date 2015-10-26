@@ -73,11 +73,11 @@
 		  $me = (new FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(GraphUser::className());
 		  
 		  
-		  if($_SESSION['config']['socialnetwork'] == 'facebook'){
-			  if($_SESSION['config']['type'] == 'post'){
-			  	$post= (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
-			  }
-		  }
+//		  if($_SESSION['config']['socialnetwork'] == 'facebook'){
+//			  if($_SESSION['config']['type'] == 'post'){
+//			  	$post= (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
+//			  }
+//		  }
 
 		  $_SESSION['fbUserId'] = $me->getId();
 		  $_SESSION['fbUserLink'] = $me->getLink();
@@ -106,7 +106,7 @@
 				    die("Connection failed: " . $conn->connect_error);
 				} 
 				
-						$sql = "SELECT * FROM users WHERE fbID = '". $_SESSION['fbUserId']. "'";
+		$sql = "SELECT * FROM users WHERE fbID = '". $_SESSION['fbUserId']. "'";
 		$result = $conn->query($sql);
 		
 		if ($result->num_rows > 0) {		    
@@ -137,7 +137,7 @@
 				    die("Connection failed: " . $conn->connect_error);
 				} 
 
-				$sql = "INSERT INTO interactions  (fanbotId, userId, clientId, fbPage) VALUES ( '". $_SESSION['id']. "','".  $_SESSION['fbUserId']. "','". $_SESSION['clientId']. "','". $_SESSION['fbPage']. "')";
+				$sql = "INSERT INTO interactions  (fanbotId, userId, clientId, fbPage) VALUES ( '". $_SESSION['id']. "','".  $_SESSION['fbUserId']. "','". $_SESSION['clientId']. "','". $_SESSION['config']['link'] . "')";
 							
 				
 				if ($conn->query($sql) === TRUE) {
@@ -252,12 +252,8 @@
 		        $_SESSION['clientId'] = $row["clientId"];
 		        $_SESSION['accesToken'] = $row["accesToken"];
 		        $_SESSION['deviceId'] = $row["deviceId"];
-		        $_SESSION['fbPage'] = $row["fbPage"];
 		        $_SESSION['fanbotPlan'] = $row["plan"];
 		        $_SESSION['status'] = $row["estatus"];
-
-		        $_SESSION['pageImage'] = $row["pageImage"];
-		        $_SESSION['pageColor'] = $row["pageColor"];
 		        $_SESSION['config'] = json_decode($row["config"], true);
 
 			    }
@@ -290,7 +286,7 @@
 
 		if ($_SESSION['config']['socialnetwork'] == 'facebook'){
 			if($_SESSION['config']['type'] == 'like'){
-				$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUserId'] ." ' AND fbPage = '". $_SESSION['fbPage'] . "'";				
+				$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUserId'] ." ' AND fbPage = '". $_SESSION['config']['link'] . "'";				
 			} else if ($_SESSION['config']['type'] == 'post'){
 				return TRUE;	
 				exit();			
@@ -309,11 +305,7 @@
 
 	}	
 	
-	function fbLikeCount(){
-		$json = file_get_contents('https://api.facebook.com/method/links.getStats?urls=facebook.com/'. $_SESSION['fbPage']. '&format=json');		
-		$obj = json_decode($json,true);
-		$likes = $obj[0]['like_count'];
-		echo $likes;
-
+	function timeStamp(){
+		echo date("is");
 	}		
 ?>
