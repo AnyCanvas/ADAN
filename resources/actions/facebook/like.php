@@ -73,7 +73,7 @@
 	    "/fanbotme",
 	    function (response) {
 	      if (response && !response.error) {
-	        console.log(response.name);
+		  	console.log('entered');
 	      }
 	    }
 	);    
