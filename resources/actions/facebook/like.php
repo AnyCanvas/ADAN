@@ -113,13 +113,13 @@
 			    <div class="col-xs-2" ></div>
 			    <div class="col-xs-8 like_box">
 
-					<div class="col-xs-4" >
+					<div class="col-xs-5" >
 					    <div class="center-block">
 							<img id="fb_img" src="https://graph.facebook.com/fanbotme/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 						</div>
 					</div>
 		
-					<div class="col-xs-8" >
+					<div class="col-xs-7" >
 						<div id="fblike center-block">
 						    <div class="fb-like center-block" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" >
 							    
