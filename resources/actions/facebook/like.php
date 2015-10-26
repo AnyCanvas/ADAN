@@ -115,7 +115,9 @@
 		    <div class="col-xs-10" >
 
 			<div id="fblike">
-			    <div class="fb-like" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" ></div>
+				<div id="fblike">
+			    <iframe align="left" src="http://www.facebook.com/plugins/like.php?app_id=130658207032883&href=https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>/&layout=button_count&width=200&show_faces=false&action=like&colorscheme=light" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:60px;"> </iframe>
+				</div>
 			</div>
 
 		    <div class="col-xs-1" ></div>
