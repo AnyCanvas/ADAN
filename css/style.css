@@ -108,6 +108,10 @@ fieldset[disabled] .fb-btn.active {
 
 } 
 
+fbImg{
+	width: 50%;
+}
+
 .action_img{
 	    margin-bottom: 10px;
 }
