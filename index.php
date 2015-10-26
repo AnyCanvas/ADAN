@@ -1,6 +1,8 @@
 <?php
 	session_start();
 	$_SESSION['pageNumber'] = 1;
+	include 'resources/library/functions.php'; 
+
 	?>
 <html>
 <head>
@@ -30,7 +32,7 @@
 		<script>
 			  window.fbAsyncInit = function() {
 			    FB.init({
-			      appId      : '1645168355707000',
+			      appId      : <?php echo $config["fbApp"]["appId"]; ?>,
 			      xfbml      : true,
 			      version    : 'v2.4'
 			    });
