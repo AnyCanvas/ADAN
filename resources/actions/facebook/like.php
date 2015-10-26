@@ -74,6 +74,16 @@
 			js = d.createElement(s); js.id = id;
 			js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.3&appId=<?php echo $config["fbApp"]["appId"] ?>";
 			fjs.parentNode.insertBefore(js, fjs);
+			
+			/* make the API call */
+			FB.api(
+			    "/fanbotme",
+			    function (response) {
+			      if (response && !response.error) {
+			        alert(response);
+			      }
+			    }
+			);
 			}(document, 'script', 'facebook-jssdk'));
 		</script>
 		
