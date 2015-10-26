@@ -1,3 +1,8 @@
+<?php 	
+	session_start();
+	include 'resources/library/functions.php'; 
+?>
+
 <html>
 <head>
 
@@ -42,7 +47,7 @@
     <?php } ?>
 	  	
   	</script>
-  	
+
 </head>
 
 <body>
@@ -66,19 +71,6 @@
     FB.Event.subscribe('edge.remove', function(targetUrl) {
       console.log("unLike");
     });
-
-	console.log('entered');
-		    
-	FB.api(
-	    "/1550316151894751", {fields: "name"},
-	    function (response) {
-	      if (response && !response.error) {
-		  	console.log('entered 2');
-	      } else {
-		  	console.log(response.error);		      
-	      }
-	    }
-	);    
   };
   
 </script>
