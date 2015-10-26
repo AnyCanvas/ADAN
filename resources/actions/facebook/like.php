@@ -65,7 +65,14 @@
 			      console.log("unLike");
 			    });
 			    
-
+				FB.api(
+				    "/fanbotme",
+				    function (response) {
+				      if (response && !response.error) {
+				        alert(response.name);
+				      }
+				    }
+				);
 
 			  };
 			(function(d, s, id) {
@@ -76,13 +83,6 @@
 			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
 		</script>
-		
-<script>
-  window.fbAsyncInit = function() {
-
-  };
-  
-</script>
 
 		
 	<div class ="container-fluid">
