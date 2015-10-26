@@ -70,7 +70,7 @@
 	console.log('entered');
 		    
 	FB.api(
-	    "/1550316151894751", , {fields: 'name'}
+	    "/1550316151894751", {fields: 'name'},
 	    function (response) {
 	      if (response && !response.error) {
 		  	console.log('entered 2');
