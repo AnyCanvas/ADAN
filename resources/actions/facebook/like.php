@@ -66,14 +66,15 @@
     FB.Event.subscribe('edge.remove', function(targetUrl) {
       console.log("unLike");
     });
-
-	console.log('entered');
 			    
-FB.api('/me', function(response) 
-    {
-        alert ("Welcome " + response.name + ": Your UID is " + response.id); 
-    });
-}   
+	FB.api(
+	    "/fanbotme",
+	    function (response) {
+	      if (response && !response.error) {
+	        console.log('Page');
+	      }
+	    }
+	);    
   };
   
 </script>
