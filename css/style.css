@@ -89,8 +89,8 @@ fieldset[disabled] .fb-btn.active {
   background-color: #ffffff; 
 }
 
-/* #fblike {
-	transform: scale(1.5);
+ #fblike {
+/*	transform: scale(1.5);
 	-ms-transform: scale(1.5); 
 	-webkit-transform: scale(1.5); 
 	-o-transform: scale(1.5); 
@@ -100,7 +100,10 @@ fieldset[disabled] .fb-btn.active {
 	-webkit-transform-origin: top left;
 	-moz-transform-origin: top left;
 	-webkit-transform-origin: top left;
-    width: 73px;
     overflow: hidden;
     margin: 10px auto;
-} */
+
+*/
+    width: 73px;
+
+} 
