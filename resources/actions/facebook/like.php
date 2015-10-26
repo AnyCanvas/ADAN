@@ -115,7 +115,7 @@
 
 					<div class="col-xs-4" >
 					    <div class="center-block">
-							<img id="fbImg" src="https://graph.facebook.com/fanbotme/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+							<img id="fbImg" src="https://graph.facebook.com/fanbotme/picture" class="img-responsive center-block" alt="Cinque Terre">
 						</div>
 					</div>
 		
