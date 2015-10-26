@@ -116,7 +116,7 @@
 
 			<div id="fblike">
 				<div id="fblike">
-			    <iframe align="left" src="http://www.facebook.com/plugins/like.php?app_id=130658207032883&href=https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>/&layout=button&show_faces=false&action=like&colorscheme=light" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:60px;"> </iframe>
+			    <iframe align="left" src="http://www.facebook.com/plugins/like.php?app_id=130658207032883&href=https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>/&layout=button_count&show_faces=false&action=like&colorscheme=light" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:60px;"> </iframe>
 				</div>
 			</div>
 
