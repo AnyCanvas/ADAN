@@ -95,13 +95,13 @@
 			    <div class="col-xs-8 like_box">
 
 					<div class="col-xs-5" >
-					    <div class="center-block" style="overflow: hidden">
+					    <div class="center-block" >
 							<img id="fb_img" src="https://graph.facebook.com/<?php echo $_SESSION['config']['link'];?>/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 						</div>
 					</div>
 		
-					<div class="col-xs-7" >
-						<p style="text-overflow: ellipsis; white-space:nowrap;"><?php getFbPageName($_SESSION['config']['link']);?><p>
+					<div class="col-xs-7" style="overflow: hidden text-overflow: ellipsis; white-space:nowrap;" >
+						<p><?php getFbPageName($_SESSION['config']['link']);?><p>
 						<div id="fblike center-block">
 						    <div class="fb-like center-block" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" >
 							    
