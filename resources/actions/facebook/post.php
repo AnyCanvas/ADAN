@@ -33,30 +33,6 @@
 					}
   	</style>
   	
-  	<script type="text/javascript">
-			  	/**
-		 * Vertically center Bootstrap 3 modals so they aren't always stuck at the top
-		 */
-		$(function() {
-		    function reposition() {
-		        var modal = $(this),
-		            dialog = modal.find('.modal-dialog');
-		        modal.css('display', 'block');
-		        
-		        // Dividing by two centers the modal exactly, but dividing by three 
-		        // or four works better for larger screens.
-		        dialog.css("margin-top", Math.max(0, ($(window).height() - dialog.height()) / 2));
-		    }
-		    // Reposition when a modal is shown
-		    $('.modal').on('show.bs.modal', reposition);
-		    // Reposition when the window is resized
-		    $(window).on('resize', function() {
-		        $('.modal:visible').each(reposition);
-		    });
-		});		
-	  	
-  	</script>
-  	
 </head>
 
 <body>
@@ -77,28 +53,16 @@
 		FB.ui({
 		  method: 'share',
 		  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
+		  display: 'page',
 		}, function(response){
             if (response && response.post_id) {
                       console.log('Post was published.');
 					  window.location="<?php echo $loginUrl;?>";			
                 } else {
-                    console.log('Post was not published.');
+					  window.location="final.php";
                     }
 		});
 	}	
-
-  window.fbAsyncInit = function() {
-  	
-    FB.Event.subscribe('edge.create', function(targetUrl) {
-	  $("body").find("*").attr("disabled", "disabled");
-	   console.log("out");    
-	  window.location="final.php";
-    });
-    FB.Event.subscribe('edge.remove', function(targetUrl) {
-      console.log("unLike");
-    });
-
-  };
   
 </script>
 
@@ -107,14 +71,14 @@
 		
 		<!-- Informative image Columns-->
 		  <div class="brand-row row">
-		    <div class="col-xs-2" ></div>
-		    <div class="col-xs-8" >
+		    <div class="col-xs-1" ></div>
+		    <div class="col-xs-10" >
 		    	<img class="img-responsive" alt="Name help image" src="media/clients/
 			<?php 
 						echo $_SESSION['config']['image']; 
 			?>">
 		    </div>
-		    <div class="col-xs-2" ></div>
+		    <div class="col-xs-1" ></div>
 		  </div>
 
 		<div class="clearfix visible-xs-block"></div>

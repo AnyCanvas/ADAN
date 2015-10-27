@@ -1,3 +1,4 @@
+
 <html>
 <head>
 
@@ -34,27 +35,8 @@
   	</style>
   	
   	<script type="text/javascript">
-			  	/**
-		 * Vertically center Bootstrap 3 modals so they aren't always stuck at the top
-		 */
-		$(function() {
-		    function reposition() {
-		        var modal = $(this),
-		            dialog = modal.find('.modal-dialog');
-		        modal.css('display', 'block');
-		        
-		        // Dividing by two centers the modal exactly, but dividing by three 
-		        // or four works better for larger screens.
-		        dialog.css("margin-top", Math.max(0, ($(window).height() - dialog.height()) / 2));
-		    }
-		    // Reposition when a modal is shown
-		    $('.modal').on('show.bs.modal', reposition);
-		    // Reposition when the window is resized
-		    $(window).on('resize', function() {
-		        $('.modal:visible').each(reposition);
-		    });
-		});		
 
+  	console.log('<?php getFbPageName($_SESSION['config']['link']);?>');
     <?php
     if (isset($_GET["code"])){?>
      
@@ -62,7 +44,7 @@
     <?php } ?>
 	  	
   	</script>
-  	
+
 </head>
 
 <body>
@@ -80,14 +62,12 @@
 <script>
   window.fbAsyncInit = function() {
     FB.Event.subscribe('edge.create', function(targetUrl) {
-	  $("body").find("*").attr("disabled", "disabled");
         console.log('Page like.');
 		window.location="<?php echo $loginUrl;?>";
     });
     FB.Event.subscribe('edge.remove', function(targetUrl) {
       console.log("unLike");
     });
-
   };
   
 </script>
@@ -97,28 +77,41 @@
 		
 		<!-- Informative image Columns-->
 		  <div class="brand-row row">
-		    <div class="col-xs-2" ></div>
-		    <div class="col-xs-8" >
-		    	<img class="img-responsive" alt="Name help image" src="media/clients/
+		    <div class="col-xs-1" ></div>
+		    <div class="col-xs-10" >
+		    	<img class="img-responsive action_img" alt="Name help image" src="media/clients/
 			<?php 
 						echo $_SESSION['config']['image']; 
 			?>">
 		    </div>
-		    <div class="col-xs-2" ></div>
+		    <div class="col-xs-1" ></div>
 		  </div>
 
 		<div class="clearfix visible-xs-block"></div>
 
 		<div class="row mid-row">
 
-		    <div class="col-xs-1" ></div>
-		    <div class="col-xs-10" >
+			    <div class="col-xs-2" ></div>
+			    <div class="col-xs-8 like_box">
 
-			<div id="fblike">
-			    <div class="fb-like" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" ></div>
-			</div>
+					<div class="col-xs-5" >
+					    <div class="center-block" >
+							<img id="fb_img" src="https://graph.facebook.com/<?php echo $_SESSION['config']['link'];?>/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+						</div>
+					</div>
+		
+					<div class="col-xs-7" style="overflow: hidden; white-space: nowrap;" >
+						<p><?php getFbPageName($_SESSION['config']['link']);?><p>
+						<div id="fblike center-block">
+						    <div class="fb-like center-block" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" >
+							    
+						    </div>
+	
+					</div>
 
-		    <div class="col-xs-1" ></div>
+				</div>
+
+		    <div class="col-xs-2" ></div>
 
 		</div>	
 
