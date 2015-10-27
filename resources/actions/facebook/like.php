@@ -101,7 +101,7 @@
 					</div>
 		
 					<div class="col-xs-7" >
-						<p><?php getFbPageName($_SESSION['config']['link']);?><p>
+						<p style="text-overflow: ellipsis;"><?php getFbPageName($_SESSION['config']['link']);?><p>
 						<div id="fblike center-block">
 						    <div class="fb-like center-block" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" >
 							    
