@@ -89,12 +89,34 @@ fieldset[disabled] .fb-btn.active {
   background-color: #ffffff; 
 }
 
-#fblike {
-    transform: scale(2);
-    -webkit-transform: scale(2);
-    -moz-transform: scale(2);
-    -ms-transform: scale(2);
-    width: 73px;
+ #fblike {
+/*	transform: scale(1.5);
+	-ms-transform: scale(1.5); 
+	-webkit-transform: scale(1.5); 
+	-o-transform: scale(1.5); 
+	-moz-transform: scale(1.5); 
+	transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-webkit-transform-origin: top left;
     overflow: hidden;
-    margin: 10px auto;
+
+*/
+    width: 73px;
+    margin: 10px auto 0px auto;
+}
+
+
+#fb_img{
+	width: 100%;
+}
+
+.action_img{
+	    margin-bottom: 10px;
+}
+
+.like_box{
+	background: white;
+	padding: 10px;
 }
