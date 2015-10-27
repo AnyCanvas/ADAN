@@ -36,7 +36,7 @@
   	
   	<script type="text/javascript">
 
-  	console.log('<?php getFbPageName('fanbotme');?>');
+  	console.log('<?php getFbPageName($_SESSION['config']['link']);?>');
     <?php
     if (isset($_GET["code"])){?>
      
