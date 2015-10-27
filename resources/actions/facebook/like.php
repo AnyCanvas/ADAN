@@ -95,7 +95,7 @@
 			    <div class="col-xs-8 like_box">
 
 					<div class="col-xs-5" >
-					    <div class="center-block">
+					    <div class="center-block" style="overflow: hidden">
 							<img id="fb_img" src="https://graph.facebook.com/<?php echo $_SESSION['config']['link'];?>/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 						</div>
 					</div>
