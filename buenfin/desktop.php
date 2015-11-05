@@ -7,6 +7,7 @@
 			</div>
 	    </div>
 	    <div class="col-xs-6" style="background-image: url('frame.png'); background-repeat: no-repeat; background-position: center; height: auto; width: auto" >
+		    jajaj
 	    </div>
 	  </div>
 
