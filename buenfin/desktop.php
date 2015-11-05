@@ -7,7 +7,7 @@
 			</div>
 	    </div>
 	    <div class="col-xs-6" style="background-image: url('frame.png'); background-size: contain; background-repeat: no-repeat; background-position: center; height : 100vh;" >
-		    <div class="centered"> hola gol</div>
+		    <div class="center-block"> hola gol</div>
 	    	<div
 	    </div>
 	  </div>
