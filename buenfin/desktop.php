@@ -7,7 +7,7 @@
 			</div>
 	    </div>
 	    <div class="col-xs-6" style="background-image: url('frame.png'); background-size: contain; background-repeat: no-repeat; background-position: center;" >
-	    	<img class="img-responsive" alt="Fanbot" src="frame.png" style="height: 80%; margin: auto">
+		    <div class="centered"> hola gol</div>
 	    	<div
 	    </div>
 	  </div>
