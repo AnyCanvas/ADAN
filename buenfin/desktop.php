@@ -7,7 +7,7 @@
 			</div>
 	    </div>
 	    <div class="col-xs-6" >
-	    	<img class="img-responsive" alt="Fanbot" src="frame.png" style="height: 80%">
+	    	<img class="img-responsive" alt="Fanbot" src="frame.png" style="height: 80%; margin: auto">
 	    </div>
 	  </div>
 
