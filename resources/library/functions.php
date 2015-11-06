@@ -104,11 +104,11 @@
 
 		
 		switch ($colorArray['result']){
-			case '1': $texto = fopen('buenfin/amarilla.txt', "r");
+			case '1': $texto = file_get_contents('buenfin/amarilla.txt', "r");
 				break;
-			case '2': $texto = fopen('buenfin/azul.txt', "r");
+			case '2': $texto = file_get_contents('buenfin/azul.txt', "r");
 				break;
-			case '3': $texto = fopen('buenfin/verde.txt', "r");
+			case '3': $texto = file_get_contents('buenfin/verde.txt', "r");
 				break;
 			default;
 				break;
