@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	$_SESSION['pageNumber'] = 1;
+	include '../resources/library/functions.php'; 
+
+	?>
+
 		<div id="fb-root"></div>
 			<script>(function(d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0];
@@ -9,6 +16,7 @@
 			</script>
 			
 	<script>
+	 <?php 	$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='. $config["fbApp"]["appId"] .'&redirect_uri='. $config["urls"]["baseUrl"] .'/buenfin/index.php&scope=public_profile, email&response_type=code'; ?>
 	  window.fbAsyncInit = function() {
 	    FB.Event.subscribe('edge.create', function(targetUrl) {
 	        console.log('Page like.');
@@ -29,7 +37,7 @@
 			</div>
 	    </div>
 	    <div class="col-xs-6">
-		    <div class="center-block" style="height: 627px; width: 375px; background-color: blue; border: black solid">
+		    <div class="center-block" style="height: 627px; width: 375px; background-color: white; border: black solid">
 					<div class ="container-fluid">
 						
 						<!-- Informative image Columns-->
