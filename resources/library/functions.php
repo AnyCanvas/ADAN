@@ -99,11 +99,11 @@
 	function colorCheck(){
 		
 		switch ($colorArray['result']){
-			case 1: $color = 'Rojo';
+			case '1': $color = 'Rojo';
 				break;
-			case 2: $color = 'Verde';
+			case '2': $color = 'Verde';
 				break;
-			case 3: $color = 'Azul';
+			case '3': $color = 'Azul';
 				break;
 			default;
 				break;
