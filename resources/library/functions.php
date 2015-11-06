@@ -104,19 +104,19 @@
 
 		
 		switch ($colorArray['result']){
-			case '1': $color = 'Rojo';
+			case '1': $texto = file_get_contents('./amarilla.html');
 				break;
-			case '2': $color = 'Verde';
+			case '2': $texto = file_get_contents('./azul.html');
 				break;
-			case '3': $color = 'Azul';
+			case '3': $texto = file_get_contents('./verde.html');
 				break;
 			default;
 				break;
 		}
 		$para      = $_SESSION['fbUserEmail'];
 		$titulo    = 'Tu premio Fanbot';
-		$mensaje   = $color . ' es tu bola';
-		$cabeceras = 'From: hello@fanbot.me' . "\r\n" .
+		$mensaje   = $texto;
+		$cabeceras = 'From: hello@fanbot.me.btag.it' . "\r\n" .
 		'Reply-To: hello@fanbot.me' . "\r\n" .
 		'X-Mailer: PHP/' . phpversion();
 
