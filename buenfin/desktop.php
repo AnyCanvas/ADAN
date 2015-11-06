@@ -6,10 +6,12 @@
 			    <iframe class="embed-responsive-item" width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
 			</div>
 	    </div>
-	    <div class="col-xs-6" style="background-image: url('frame.png'); background-size: contain; background-repeat: no-repeat; background-position: center; height : 100vh;" >
-		    <div class="center-block" style="height: 627px; width: 375px; background-color: gray;"> hola gol</div>
+	    <div class="col-xs-6">
+		    <div class="center-block" style="height: 627px; width: 375px; background-color: gray; border: black 10px"> hola gol</div>
 	    	<div
 	    </div>
 	  </div>
 
 	</div>
+	
+<!-- style="background-image: url('frame.png'); background-size: contain; background-repeat: no-repeat; background-position: center; height : 100vh;" -->
