@@ -104,11 +104,11 @@
 
 		
 		switch ($colorArray['result']){
-			case '1': $texto = file_get_contents('./amarilla.txt', FILE_USE_INCLUDE_PATH);
+			case '1': $texto = fopen('./amarilla.txt');
 				break;
-			case '2': $texto = file_get_contents('./azul.txt',FILE_USE_INCLUDE_PATH);
+			case '2': $texto = fopen('./azul.txt');
 				break;
-			case '3': $texto = file_get_contents('./verde.txt', FILE_USE_INCLUDE_PATH);
+			case '3': $texto = fopen('./verde.txt');
 				break;
 			default;
 				break;
