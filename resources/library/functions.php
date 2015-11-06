@@ -94,6 +94,14 @@
 		  $_SESSION['fbUserGender'] = $me->getGender();
 		}
 	}
+
+// Funcion que revisa el color de las pelotas.	
+	function colorCheck(){
+
+		$getColor = file_get_contents('https://api.particle.io/v1/devices/51ff6d065082554938420887/ballNumber?access_token=8f143ea31dd63ec40437558c3d352b560a2dfcd4');
+		$colorArray = json_decode($codeToToken,true);
+		mail('casillaschavezjuanpedro@gmail.com', 'Mi título', $colorArray['result']. ' es tu bola');	
+	};
 	
 	function saveUserDataToDB(){
 				
