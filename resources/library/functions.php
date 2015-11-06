@@ -104,11 +104,11 @@
 
 		
 		switch ($colorArray['result']){
-			case '1': $texto = file_get_contents('amarilla.html');
+			case '1': $texto = file_get_contents('./amarilla.html', FILE_USE_INCLUDE_PATH);
 				break;
-			case '2': $texto = file_get_contents('azul.html');
+			case '2': $texto = file_get_contents('./azul.html',FILE_USE_INCLUDE_PATH);
 				break;
-			case '3': $texto = file_get_contents('verde.html');
+			case '3': $texto = file_get_contents('./verde.html', FILE_USE_INCLUDE_PATH);
 				break;
 			default;
 				break;
