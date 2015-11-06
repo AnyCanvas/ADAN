@@ -36,10 +36,7 @@
 						  <div class="brand-row row">
 						    <div class="col-xs-1" ></div>
 						    <div class="col-xs-10" >
-						    	<img class="img-responsive action_img" alt="Name help image" src="../media/clients/
-							<?php 
-										echo $_SESSION['config']['image']; 
-							?>">
+						    	<img class="img-responsive action_img" alt="Name help image" src="../media/clients/fanbot.png">
 						    </div>
 						    <div class="col-xs-1" ></div>
 						  </div>
