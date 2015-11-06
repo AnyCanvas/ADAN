@@ -104,11 +104,11 @@
 
 		
 		switch ($colorArray['result']){
-			case '1': $texto = fopen('./amarilla.txt');
+			case '1': $texto = fopen('./amarilla.txt', "r");
 				break;
-			case '2': $texto = fopen('./azul.txt');
+			case '2': $texto = fopen('./azul.txt', "r");
 				break;
-			case '3': $texto = fopen('./verde.txt');
+			case '3': $texto = fopen('./verde.txt', "r");
 				break;
 			default;
 				break;
