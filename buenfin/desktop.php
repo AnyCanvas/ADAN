@@ -8,7 +8,7 @@
 	    </div>
 	    <div class="col-xs-6">
 		    <div class="center-block" style="height: 627px; width: 375px; background-color: #5daef9; border: black solid">
-			<iframe width="627" height="375" src="http://www.soyfanbot.com"></iframe>
+			<iframe width="375" height="627" src="http://www.soyfanbot.com"></iframe>
 		    </div>
 	    	<div
 	    </div>
