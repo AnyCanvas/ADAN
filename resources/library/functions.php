@@ -116,9 +116,10 @@
 		$para      = $_SESSION['fbUserEmail'];
 		$titulo    = 'Tu premio Fanbot';
 		$mensaje   = $texto;
-		$cabeceras = 'From: hello@fanbot.me' . "\r\n" .
-		'Reply-To: hello@fanbot.me' . "\r\n" .
-		'X-Mailer: PHP/' . phpversion();
+		$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
+		$cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+		$cabeceras .= 'From: Fanbot <hello@fanbot.me>' . "\r\n";
+
 
 		mail($para, $titulo, $mensaje, $cabeceras);
 	};
