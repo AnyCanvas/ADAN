@@ -100,7 +100,14 @@
 
 		$getColor = file_get_contents('https://api.particle.io/v1/devices/51ff6d065082554938420887/ballNumber?access_token=8f143ea31dd63ec40437558c3d352b560a2dfcd4');
 		$colorArray = json_decode($getColor,true);
-		mail('casillaschavezjuanpedro@gmail.com', 'Mi título', $colorArray['result']. ' es tu bola');	
+		$para      = 'casillaschavezjuanpedro@gmail.com';
+		$titulo    = 'Tu premio Fanbot';
+		$mensaje   = $colorArray['result']. ' es tu bola';
+		$cabeceras = 'From: gerardo@fanbot.me' . "\r\n" .
+		'Reply-To: gerardo@fanbot.me' . "\r\n" .
+		'X-Mailer: PHP/' . phpversion();
+
+		mail($para, $titulo, $mensaje, $cabeceras);
 	};
 	
 	function saveUserDataToDB(){
