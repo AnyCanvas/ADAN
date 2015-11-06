@@ -97,14 +97,25 @@
 
 // Funcion que revisa el color de las pelotas.	
 	function colorCheck(){
+		
+		switch ($colorArray['result']){
+			case 1: $color = 'Rojo';
+				break;
+			case 2: $color = 'Verde';
+				break;
+			case 3: $color = 'Azul';
+				break;
+			default;
+				break;
+		}
 
 		$getColor = file_get_contents('https://api.particle.io/v1/devices/51ff6d065082554938420887/ballNumber?access_token=8f143ea31dd63ec40437558c3d352b560a2dfcd4');
 		$colorArray = json_decode($getColor,true);
-		$para      = 'casillaschavezjuanpedro@gmail.com';
+		$para      = $_SESSION['fbUserEmail'];
 		$titulo    = 'Tu premio Fanbot';
-		$mensaje   = $colorArray['result']. ' es tu bola';
-		$cabeceras = 'From: gerardo@fanbot.me' . "\r\n" .
-		'Reply-To: gerardo@fanbot.me' . "\r\n" .
+		$mensaje   = $color . ' es tu bola';
+		$cabeceras = 'From: hello@fanbot.me' . "\r\n" .
+		'Reply-To: hello@fanbot.me' . "\r\n" .
 		'X-Mailer: PHP/' . phpversion();
 
 		mail($para, $titulo, $mensaje, $cabeceras);
