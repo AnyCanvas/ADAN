@@ -7,7 +7,7 @@
 			</div>
 	    </div>
 	    <div class="col-xs-6">
-		    <div class="center-block" style="height: 627px; width: 375px; background-color: gray; border: black 10px"> hola gol</div>
+		    <div class="center-block" style="height: 627px; width: 375px; background-color: white; border: black solid"> hola gol</div>
 	    	<div
 	    </div>
 	  </div>
