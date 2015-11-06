@@ -2,7 +2,6 @@
 	session_start();
 	$_SESSION['pageNumber'] = 1;
 	include '../resources/library/functions.php'; 
-
 	?>
 <html>
 <head>
