@@ -110,9 +110,9 @@
 		switch ($color){
 			case '1': $texto = file_get_contents('buenfin/amarilla.txt', "r");
 				break;
-			case '2': $texto = file_get_contents('buenfin/azul.txt', "r");
+			case '2': $texto = file_get_contents('buenfin/verde.txt', "r");
 				break;
-			case '3': $texto = file_get_contents('buenfin/verde.txt', "r");
+			case '3': $texto = file_get_contents('buenfin/azul.txt', "r");
 				break;
 			default; $texto = file_get_contents('buenfin/amarilla.txt', "r");
 				break;
