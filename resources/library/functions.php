@@ -145,8 +145,8 @@
 
 
 		$url = 'https://api.sendgrid.com/';
-		$user = 'pedrocch@fanbot.me';
-		$pass = 'Casabonita1.';
+		$user = 'PayTime';
+		$pass = '?V53Q@*v';
 		
 		$params = array(
 		    'api_user'  => $user,
