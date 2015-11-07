@@ -9,7 +9,7 @@
 			$accesToken = $_SESSION['accesToken'];
 	//		if(fanbotAction( $deviceId, $accesToken)){
 // Agregado para el sistema de fanbot por medio de internet
-			if($_SESSION['id'] == "FB-B1-SCM-00102" ){
+			if($_SESSION['id'] == "FB-B1-SCM-00103" ){
 				$color = colorCheck();
 				fanbotAction( $deviceId, $accesToken);
 				saveUserDataToDB();

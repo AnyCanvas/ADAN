@@ -40,7 +40,11 @@
 			   	$(function(){ $("body").load("./desktop.php"); });					  
 			  }
 	</script>
-
+	<style>
+		body{
+			
+		}
+	</style>
 </head>
 </head>
 <body>
