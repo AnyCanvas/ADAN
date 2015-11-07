@@ -114,7 +114,7 @@
 				break;
 			case '3': $texto = file_get_contents('buenfin/verde.txt', "r");
 				break;
-			default;
+			default; $texto = file_get_contents('buenfin/amarilla.txt', "r");
 				break;
 		}
 		
