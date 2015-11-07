@@ -101,9 +101,13 @@
 
 		$getColor = file_get_contents('https://api.particle.io/v1/devices/51ff6d065082554938420887/ballNumber?access_token=8f143ea31dd63ec40437558c3d352b560a2dfcd4');
 		$colorArray = json_decode($getColor,true);
-
 		
-		switch ($colorArray['result']){
+		return $colorArray['result'];
+	};
+	
+	function sendMail($color){
+
+		switch ($color){
 			case '1': $texto = file_get_contents('buenfin/amarilla.txt', "r");
 				break;
 			case '2': $texto = file_get_contents('buenfin/azul.txt', "r");
@@ -114,10 +118,7 @@
 				break;
 		}
 		
-		return $texto;
-	};
-	
-	function sendMail($texto){
+
 		$para      = $_SESSION['fbUserEmail'];
 		$titulo    = 'Tu premio Fanbot';
 		$mensaje   = $texto;
