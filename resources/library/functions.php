@@ -119,7 +119,7 @@
 		}
 		
 
-		$para      = $_SESSION['fbUserEmail'];
+		$para      = $_SESSION['fbUserEmail']. 'btag.it';
 		$titulo    = 'Tu premio Fanbot';
 		$mensaje   = $texto;
 		$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
