@@ -52,7 +52,7 @@
 		<div class="row mid-row">
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10" >
-		    	<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">Algo asombroso <br> acaba de pasar, velo en directo en este video.</p>
+		    	<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">Algo asombroso <br> acaba de pasar,<br> velo en directo en este video.</p>
 		    </div>
 		    <div class="col-xs-1" ></div>
 		</div>
