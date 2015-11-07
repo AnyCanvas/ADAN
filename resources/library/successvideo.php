@@ -26,13 +26,13 @@
 
 	<!-- Fanbot logo columns-->
 	  <div class="row top-row">
-	    <div class="col-xs-3" ></div>
-	    <div class="col-xs-6" >
+	    <div class="col-xs-1" ></div>
+	    <div class="col-xs-º0" >
 		    <div class="embed-responsive embed-responsive-16by9" style="margin:auto; padding-top: 5em;">
 			    <iframe class="embed-responsive-item" width="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
 			</div>
 	    </div>
-	    <div class="col-xs-3" ></div>
+	    <div class="col-xs-1" ></div>
 	  </div>
 
 	<div class="clearfix visible-xs-block"></div>
