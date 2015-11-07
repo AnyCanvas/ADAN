@@ -116,21 +116,13 @@
 	  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 	  curl_setopt($ch, CURLOPT_URL, 'https://api.mailgun.net/v2/soyfanbot.com/messages');
 	  curl_setopt($ch, CURLOPT_POSTFIELDS, array('from' => 'hello@fanbot.me',
-	        'to' => $to,
+	        'to' => $_SESSION['fbUserEmail'],
 	        'subject' => $_SESSION['fbUserEmail'],
 	        'html' => 'Tu premio Fanbot',
 	        'text' => $message));
-	
-	  $j = json_decode(curl_exec($ch));
-	
-	  $info = curl_getinfo($ch);
-	
-	  if($info['http_code'] != 200)
-	        error("Fel 313: Vänligen meddela detta via E-post till support@");
-	
+		
 	  curl_close($ch);
 	
-	  return $j;
 	}
 
 	function sendMail($color){
