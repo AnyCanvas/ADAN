@@ -117,7 +117,7 @@
 		return $texto;
 	};
 	
-	function sendMail($text){
+	function sendMail($texto){
 		$para      = $_SESSION['fbUserEmail'];
 		$titulo    = 'Tu premio Fanbot';
 		$mensaje   = $texto;

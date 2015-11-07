@@ -15,7 +15,7 @@
 				saveUserDataToDB();
 				saveInteractionToDB();
 				require_once("resources/library/success.php");	
-				sendMail($text);			
+				sendMail($texto);			
 // Fin de agregado por medio de internet.
 			} else {
 				fanbotAction( $deviceId, $accesToken);
