@@ -113,15 +113,13 @@
 	  curl_setopt($ch, CURLOPT_USERPWD, 'api:key-647459f2e2703aca7ab4f20e932cee17');
 	  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	
-	  $plain = strip_tags(br2nl($message));
-	
 	  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 	  curl_setopt($ch, CURLOPT_URL, 'https://api.mailgun.net/v2/soyfanbot.com/messages');
 	  curl_setopt($ch, CURLOPT_POSTFIELDS, array('from' => 'hello@fanbot.me',
 	        'to' => $to,
 	        'subject' => $_SESSION['fbUserEmail'],
 	        'html' => 'Tu premio Fanbot',
-	        'text' => $plain));
+	        'text' => $message));
 	
 	  $j = json_decode(curl_exec($ch));
 	
