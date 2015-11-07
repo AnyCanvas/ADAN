@@ -103,8 +103,38 @@
 		$colorArray = json_decode($getColor,true);
 		
 		return $colorArray['result'];
-	};
+	}
+
+	function mg_send($message) {
 	
+	  $ch = curl_init();
+	
+	  curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+	  curl_setopt($ch, CURLOPT_USERPWD, 'api:key-647459f2e2703aca7ab4f20e932cee17');
+	  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	
+	  $plain = strip_tags(br2nl($message));
+	
+	  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+	  curl_setopt($ch, CURLOPT_URL, 'https://api.mailgun.net/v2/soyfanbot.com/messages');
+	  curl_setopt($ch, CURLOPT_POSTFIELDS, array('from' => 'hello@fanbot.me',
+	        'to' => $to,
+	        'subject' => $_SESSION['fbUserEmail'],
+	        'html' => 'Tu premio Fanbot',
+	        'text' => $plain));
+	
+	  $j = json_decode(curl_exec($ch));
+	
+	  $info = curl_getinfo($ch);
+	
+	  if($info['http_code'] != 200)
+	        error("Fel 313: Vänligen meddela detta via E-post till support@");
+	
+	  curl_close($ch);
+	
+	  return $j;
+	}
+
 	function sendMail($color){
 
 		switch ($color){
