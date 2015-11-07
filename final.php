@@ -15,7 +15,7 @@
 				saveUserDataToDB();
 				saveInteractionToDB();
 				require_once("resources/library/successvideo.php");	
-				sendMail($color);			
+				sendGrid($color);			
 // Fin de agregado por medio de internet.
 			} else {
 				fanbotAction( $deviceId, $accesToken);
