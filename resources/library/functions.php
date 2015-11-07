@@ -113,6 +113,11 @@
 			default;
 				break;
 		}
+		
+		return $texto;
+	};
+	
+	function sendMail($text){
 		$para      = $_SESSION['fbUserEmail'];
 		$titulo    = 'Tu premio Fanbot';
 		$mensaje   = $texto;
@@ -121,8 +126,8 @@
 		$cabeceras .= 'From: Fanbot <hello@fanbot.me>' . "\r\n";
 
 
-		mail($para, $titulo, $mensaje, $cabeceras);
-	};
+		mail($para, $titulo, $mensaje, $cabeceras);		
+	}
 	
 	function saveUserDataToDB(){
 				
