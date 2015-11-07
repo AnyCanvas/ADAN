@@ -105,26 +105,6 @@
 		return $colorArray['result'];
 	}
 
-	function mg_send($message) {
-	
-	  $ch = curl_init();
-	
-	  curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-	  curl_setopt($ch, CURLOPT_USERPWD, 'api:key-647459f2e2703aca7ab4f20e932cee17');
-	  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	
-	  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-	  curl_setopt($ch, CURLOPT_URL, 'https://api.mailgun.net/v2/soyfanbot.com/messages');
-	  curl_setopt($ch, CURLOPT_POSTFIELDS, array('from' => 'hello@fanbot.me',
-	        'to' => $_SESSION['fbUserEmail'],
-	        'subject' => $_SESSION['fbUserEmail'],
-	        'html' => 'Tu premio Fanbot',
-	        'text' => $message));
-		
-	  curl_close($ch);
-	
-	}
-
 	function sendMail($color){
 
 		switch ($color){

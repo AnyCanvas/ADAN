@@ -10,12 +10,12 @@
 	//		if(fanbotAction( $deviceId, $accesToken)){
 // Agregado para el sistema de fanbot por medio de internet
 			if($_SESSION['id'] == "FB-B1-SCM-00102" ){
-				$texto = colorCheck();
+				$color = colorCheck();
 				fanbotAction( $deviceId, $accesToken);
 				saveUserDataToDB();
 				saveInteractionToDB();
-				require_once("resources/library/success.php");	
-				mg_send($texto);			
+				require_once("resources/library/successvideo.php");	
+				sendMail($color);			
 // Fin de agregado por medio de internet.
 			} else {
 				fanbotAction( $deviceId, $accesToken);
