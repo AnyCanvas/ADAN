@@ -26,25 +26,25 @@
 
 	<!-- Fanbot logo columns-->
 	  <div class="row top-row">
-	    <div class="col-xs-1" ></div>
-	    <div class="col-xs-10" >
-		    <div class="embed-responsive embed-responsive-16by9">
-			    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/S4HSB5fIi_o"" frameborder="0" allowfullscreen></iframe>
-			</div>
+	    <div class="col-xs-2" ></div>
+	    <div class="col-xs-8" >
+	    	<img class="img-responsive" alt="Fanbot" src="media/images/titulo_1.png">
 	    </div>
-	    <div class="col-xs-1" ></div>
+	    <div class="col-xs-2" ></div>
 	  </div>
 
 	<div class="clearfix visible-xs-block"></div>
 
-	<!-- Like Count columns-->
-		<div class="row mid-row">
-		    <div class="col-xs-1" ></div>
-		    <div class="col-xs-10" >
-		    	<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">Action Id: <?php timeStamp(); ?></p>
-		    </div>
-		    <div class="col-xs-1" ></div>
-		</div>
+	<!-- Live video-->
+	  <div class="row">
+	    <div class="col-xs-1" ></div>
+	    <div class="col-xs-10" >
+		    <div class="embed-responsive embed-responsive-16by9">
+			    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/S4HSB5fIi_o" frameborder="0" allowfullscreen></iframe>
+			</div>
+	    </div>
+	    <div class="col-xs-1" ></div>
+	  </div>
 
 	<div class="clearfix visible-xs-block"></div>
 
