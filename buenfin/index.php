@@ -27,14 +27,14 @@
 	<script>
 			  var browserAgent = navigator.userAgent
 			  if (browserAgent.indexOf("iPhone") > -1){
-			   		header("location: ../node.php?name=lol");
+			   		window.location.replace("../node.php?name=lol");
 			   } else if (browserAgent.indexOf("Android") > -1){
 			   		if (browserAgent.indexOf("Android 5") > -1){
-			   		header("location: ../node.php?name=lol");
+			   		window.location.replace("../node.php?name=lol");
 			   		} else if (browserAgent.indexOf("Android 4.4") > -1){
-				   		header("location: ../node.php?name=lol");
+				   		window.location.replace("../node.php?name=lol");
 			   		} else {
-			   		header("location: ../node.php?name=lol");
+			   		window.location.replace("../node.php?name=lol");
 			   		}
 			  } else {
 			   	$(function(){ $("body").load("./desktop.php"); });					  
