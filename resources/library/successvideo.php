@@ -48,11 +48,19 @@
 
 	<div class="clearfix visible-xs-block"></div>
 
+	<div class="clearfix visible-xs-block"></div>
+
+		<div class="row mid-row">
+		    <div class="col-xs-1" ></div>
+		    <div class="col-xs-10 text-center leadinline-text" >
+				<span style="font-size: x-small; color: white;" >Obtendrás un cupón con tu premio en tu correo:</span>
+		    </div>
+		</div>
 	<!-- Text columns-->
 		<div class="row mid-row">
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10" >
-		    	<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">Algo asombroso <br> acaba de pasar,<br> velo en directo en este video.</p>
+		    	<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; "> <?php echo $_SESSION['fbUserEmail']; ?></p>
 		    </div>
 		    <div class="col-xs-1" ></div>
 		</div>

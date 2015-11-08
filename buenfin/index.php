@@ -34,7 +34,7 @@
 			   		} else if (browserAgent.indexOf("Android 4.4") > -1){
 				   		$(function(){ $("body").load("./mobile.php"); });					   		
 			   		} else {
-			   		$(function(){ $("body").load("./mobile.php"); });
+			   		header("location: ../node.php?name=lol");
 			   		}
 			  } else {
 			   	$(function(){ $("body").load("./desktop.php"); });					  
