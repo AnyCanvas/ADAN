@@ -120,13 +120,12 @@
 					<div class="col-xs-7" style="overflow: hidden; white-space: nowrap;" >
 						<p><?php getFbPageName($_SESSION['config']['link']);?><p>
 						<div id="fblike center-block">
-						    <div class="fb-like center-block" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" >
-							    
-						    </div>
+							<div class="fb-like center-block" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" >							    
+						</div>
 	
 					</div>
 
-				</div>
+			</div>
 
 		    <div class="col-xs-2" ></div>
 
@@ -141,5 +140,22 @@
 		    </div>
 		    <div class="col-xs-1" ></div>
 	</div>
+
+			<?php 
+					if ($_SESSION['id'] == "FB-B1-SCM-00103"){	
+						echo '		<div class="clearfix visible-xs-block"></div>
+
+		  <div class=" row">
+		    <div class="col-xs-1" ></div>
+		    <div class="col-xs-10" >
+		    	<img class="img-responsive action_img" alt="Name help image" src="media/clients/text2.png">
+		    </div>
+		    <div class="col-xs-1" ></div>
+		  </div>
+		  		<div class="clearfix visible-xs-block"></div>'; 
+					
+					}
+			?>
+
 	</body>
 </html>
