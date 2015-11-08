@@ -81,7 +81,12 @@
 		    <div class="col-xs-10" >
 		    	<img class="img-responsive action_img" alt="Name help image" src="media/clients/
 			<?php 
+					if ($_SESSION['id'] == "FB-B1-SCM-00103"){	
+						echo 'text1.png'; 
+					
+					} else {
 						echo $_SESSION['config']['image']; 
+					}
 			?>">
 		    </div>
 		    <div class="col-xs-1" ></div>
