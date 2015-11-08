@@ -22,7 +22,7 @@
 	
 	  ga('create', 'UA-65249445-1', 'auto');
 	  ga('send', 'pageview');
-	
+
 	</script>
 	<script>
 			  var browserAgent = navigator.userAgent
@@ -30,9 +30,9 @@
 			   		header("location: ../node.php?name=lol");
 			   } else if (browserAgent.indexOf("Android") > -1){
 			   		if (browserAgent.indexOf("Android 5") > -1){
-				   		$(function(){ $("body").load("./mobile.php"); });
+			   		header("location: ../node.php?name=lol");
 			   		} else if (browserAgent.indexOf("Android 4.4") > -1){
-				   		$(function(){ $("body").load("./mobile.php"); });					   		
+				   		header("location: ../node.php?name=lol");
 			   		} else {
 			   		header("location: ../node.php?name=lol");
 			   		}
