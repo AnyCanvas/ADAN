@@ -48,22 +48,35 @@
 
 	<div class="clearfix visible-xs-block"></div>
 
-	<div class="clearfix visible-xs-block"></div>
 
 		<div class="row mid-row">
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10 text-center leadinline-text" >
-				<span style="font-size: x-small; color: white;" >Obtendrás un cupón con tu premio en tu correo:</span>
+				<span style="color: white; font-size: 1.5em; ">Obtendrás un cupón con tu premio en tu correo:</span>
 		    </div>
 		</div>
+
+	<div class="clearfix visible-xs-block"></div>
 	<!-- Text columns-->
 		<div class="row mid-row">
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10" >
-		    	<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; "> <?php echo $_SESSION['fbUserEmail']; ?></p>
+		    	<p class="text-center text-nowrap" style="font-size: x-small; color: white;"> <?php echo $_SESSION['fbUserEmail']; ?></p>
 		    </div>
 		    <div class="col-xs-1" ></div>
 		</div>
 	</div>
+
+	<div class="clearfix visible-xs-block"></div>
+
+
+		<div class="row mid-row">
+		    <div class="col-xs-1" ></div>
+		    <div class="col-xs-10 text-center leadinline-text" >
+				<span style="color: white; font-size: 1.5em; ">¿Como puedo usar Fanbot en mi negocio?</span>
+		       <a type="button" class="btn btn-info btn-lg" href="https://www.facebook.com/1550316151894751/posts/1625343501058682">Ve a la publicación y pregunta.</a>   
+		    </div>
+		</div>
+
 </body>
 </html>
