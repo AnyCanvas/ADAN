@@ -27,7 +27,7 @@
 	<script>
 			  var browserAgent = navigator.userAgent
 			  if (browserAgent.indexOf("iPhone") > -1){
-				   $(function(){ $("body").load("./mobile.php"); });
+			   		header("location: ../node.php?name=lol");
 			   } else if (browserAgent.indexOf("Android") > -1){
 			   		if (browserAgent.indexOf("Android 5") > -1){
 				   		$(function(){ $("body").load("./mobile.php"); });
