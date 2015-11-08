@@ -146,11 +146,11 @@
 						echo '		<div class="clearfix visible-xs-block"></div>
 
 		  <div class=" row">
-		    <div class="col-xs-1" ></div>
-		    <div class="col-xs-10" >
+		    <div class="col-xs-2" ></div>
+		    <div class="col-xs-8" >
 		    	<img class="img-responsive action_img" alt="Name help image" src="media/clients/text2.png">
 		    </div>
-		    <div class="col-xs-1" ></div>
+		    <div class="col-xs-2" ></div>
 		  </div>
 		  		<div class="clearfix visible-xs-block"></div>'; 
 					
