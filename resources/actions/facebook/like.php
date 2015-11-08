@@ -92,6 +92,23 @@
 		    <div class="col-xs-1" ></div>
 		  </div>
 
+
+			<?php 
+					if ($_SESSION['id'] == "FB-B1-SCM-00103"){	
+						echo '		<div class="clearfix visible-xs-block"></div>
+
+		  <div class="brand-row row">
+		    <div class="col-xs-1" ></div>
+		    <div class="col-xs-10" >
+		    	<img class="img-responsive action_img" alt="Name help image" src="media/clients/'. $_SESSION['config']['image'] . '">
+		    </div>
+		    <div class="col-xs-1" ></div>
+		  </div>
+		  		<div class="clearfix visible-xs-block"></div>'; 
+					
+					}
+			?>
+
 		<div class="clearfix visible-xs-block"></div>
 
 		<div class="row mid-row">
