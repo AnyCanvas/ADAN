@@ -12,7 +12,7 @@
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10 text-center leadinline-text" >
 				<span style="color: white; font-size: 1.5em; ">¿Como puedo usar Fanbot en mi negocio?</span>
-		       <a type="button" class="btn btn-info btn-lg" href="http://facebook.com/1550316151894751/posts/1625356427724056">Ve a la publicación y pregunta.</a>   
+		       <a type="button" class="btn btn-info btn-lg" href="https://www.facebook.com/fanbotme/videos/vb.1550316151894751/1625589094367456">Ve a la publicación y pregunta.</a>   
 		    </div>
 		</div>
 	    </div>
