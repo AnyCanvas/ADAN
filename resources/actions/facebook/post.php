@@ -52,7 +52,7 @@
 				  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
 				  display: 'page',
 				}, function(response){
-		            if (response && response.post_id) {
+		            if (response) {
 		                      alert('Post was published.');
 							  window.location="<?php echo $loginUrl;?>";			
 		                } else {
