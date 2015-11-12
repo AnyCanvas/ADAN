@@ -61,7 +61,7 @@
 				});
 			}	
 		   window.fbAsyncInit = function() {
-		    FB.Event.subscribe('edge.send', function(targetUrl) {
+		    FB.Event.subscribe('share.send', function(targetUrl) {
 		        console.log('Page like.');
 				window.location="<?php echo $loginUrl;?>";
 		    });
