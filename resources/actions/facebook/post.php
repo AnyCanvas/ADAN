@@ -83,9 +83,7 @@
 		<div class="row mid-row">
 		    <div class="col-xs-2" ></div>
 		    <div class="col-xs-8" >
-				<a id="post-btn" class="btn btn-block btn-lg btn-social btn-facebook" onclick="postclick();">
-	    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Continuar</span>
-	  			</a>
+<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
 		    </div>
 		    <div class="col-xs-2" ></div>
 		</div>	
