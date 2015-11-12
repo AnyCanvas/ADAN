@@ -45,24 +45,21 @@
 			js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.3&appId=<?php echo $config["fbApp"]["appId"] ?>";
 			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
-		</script>
-		
-<script>
 
-	postclick = function () {
-		FB.ui({
-		  method: 'share',
-		  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
-		  display: 'async',
-		}, function(response){
-            if (response && response.post_id) {
-                      console.log('Post was published.');
-					  window.location="<?php echo $loginUrl;?>";			
-                } else {
-					  window.location="final.php";
-                    }
-		});
-	}	
+			postclick = function () {
+				FB.ui({
+				  method: 'share',
+				  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
+				  display: 'async',
+				}, function(response){
+		            if (response && response.post_id) {
+		                      console.log('Post was published.');
+							   window.location="<?php echo $loginUrl;?>";			
+		                } else {
+							   window.location="final.php";
+		                    }
+				});
+			}	
   
 </script>
 

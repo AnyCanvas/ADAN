@@ -30,6 +30,8 @@
 <body>	
 	<div id="fb-root"></div>
 		<script>
+
+<?php if ( !isset($_COOKIE["nodeFlag"]) ){ setcookie("nodeFlag", "1", time()+60*30); ?>
 			  window.fbAsyncInit = function() {
 			    FB.init({
 			      appId      : '<?php echo $config["fbApp"]["appId"]; ?>',
@@ -39,7 +41,10 @@
 
 				FB.getLoginStatus(function(response) {
 				  var browserAgent = navigator.userAgent
-				  if (response.status === 'connected'<?php if(isset($_GET["mode"])) { echo '|| true';} ?>) {
+				  if (response.status === 'connected'<?php 
+					  									if(isset($_GET["mode"])) { 
+						  									echo ' || true';
+						  									} ?>) {
 				   		$(function(){ $("body").load("resources/index/index.php"); });
 				    var uid = response.authResponse.userID;
 				    var accessToken = response.authResponse.accessToken;
@@ -67,6 +72,10 @@
 			js.src = "//connect.facebook.net/es_LA/sdk.js";
 			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
+			
+			<?php } else {
+				echo '$(function(){ $("body").load("resources/index/index.php"); });';
+			} ?>
 		</script>
 
 
