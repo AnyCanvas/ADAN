@@ -54,9 +54,9 @@
 				}, function(response){
 		            if (response && response.post_id) {
 		                      console.log('Post was published.');
-							   window.location="<?php echo $loginUrl;?>";			
+							  window.location="<?php echo $loginUrl;?>";			
 		                } else {
-							   window.location="final.php";
+							  window.location="final.php";
 		                    }
 				});
 			}	
