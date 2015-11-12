@@ -50,7 +50,7 @@
 				FB.ui({
 				  method: 'share',
 				  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
-				  display: 'async',
+				  display: 'page',
 				}, function(response){
 		            if (response && response.post_id) {
 		                      console.log('Post was published.');
