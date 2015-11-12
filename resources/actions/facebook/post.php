@@ -61,7 +61,7 @@
 				});
 			}	
 		   window.fbAsyncInit = function() {
-		    FB.Event.subscribe('comment.create', function(targetUrl) {
+		    FB.Event.subscribe('message.send', function(targetUrl) {
 		        console.log('Page like.');
 				window.location="<?php echo $loginUrl;?>";
 		    });
