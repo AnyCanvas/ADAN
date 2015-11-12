@@ -61,7 +61,7 @@
 				});
 			}	
 		   window.fbAsyncInit = function() {
-		    FB.Event.subscribe('share.send', function(targetUrl) {
+		    FB.Event.subscribe('comment.create', function(targetUrl) {
 		        console.log('Page like.');
 				window.location="<?php echo $loginUrl;?>";
 		    });
@@ -92,7 +92,7 @@
 		<div class="row mid-row">
 		    <div class="col-xs-2" ></div>
 		    <div class="col-xs-8" >
-<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
+			<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
 		    </div>
 		    <div class="col-xs-2" ></div>
 		</div>	
