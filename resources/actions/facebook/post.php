@@ -56,7 +56,7 @@
 		                      alert('Post was published.');
 							  window.location="<?php echo $loginUrl;?>";			
 		                } else {
-//							  window.location="final.php";
+							alert(response);
 		                    }
 				});
 			}	
