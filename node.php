@@ -35,7 +35,7 @@
 				}
 
 
-		    } else if(isset($_GET["posted"])){
+		    } else if(isset($_GET["post"])){
 				require_once("resources/actions/facebook/post.php");			    
 			    
 		    } else if(isset($_GET["error"])) {
