@@ -35,6 +35,9 @@
 				}
 
 
+		    } else if(isset($_GET["posted"])){
+				require_once("resources/actions/facebook/post.php");			    
+			    
 		    } else if(isset($_GET["error"])) {
 			    $_SESSION['pageNumber'] = 3;
 			    $_SESSION['error'] = 0;
