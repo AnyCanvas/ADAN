@@ -87,7 +87,7 @@
 		<div class="row mid-row">
 		    <div class="col-xs-2" ></div>
 		    <div class="col-xs-8" >
-				<a id="post-btn" class="btn btn-block btn-lg btn-social btn-facebook" href="https://m.facebook.com/dialog/share?+app_id=1645165719040597+&href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2F+&redirect_uri=<?php echo $config["urls"]["baseUrl"]. '/node.php?post=true';?>">
+				<a id="post-btn" class="btn btn-block btn-lg btn-social btn-facebook" href="https://m.facebook.com/dialog/share?+app_id=1645165719040597+&href=https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>%2F+&redirect_uri=<?php echo $config["urls"]["baseUrl"]. '/node.php?post=true';?>">
 	    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Continuar</span>
 	  			</a>
 		    </div>
