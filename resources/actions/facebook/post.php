@@ -10,14 +10,10 @@
 	<link rel="stylesheet" href="css/bootstrap-social.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  	<script src="../../../js/common.js"></script>
 	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	
-	  ga('create', 'UA-65249445-1', 'auto');
-	  ga('send', 'pageview');
+
 	
 	</script>
   	<style type="text/css">
@@ -45,24 +41,25 @@
 			js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.3&appId=<?php echo $config["fbApp"]["appId"] ?>";
 			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
-		</script>
-		
-<script>
 
-	postclick = function () {
-		FB.ui({
-		  method: 'share',
-		  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
-		  display: 'async',
-		}, function(response){
-            if (response && response.post_id) {
-                      console.log('Post was published.');
-					  window.location="<?php echo $loginUrl;?>";			
-                } else {
-					  window.location="final.php";
-                    }
-		});
-	}	
+			postclick = function () {
+				FB.ui({
+				  method: 'share',
+				  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
+				  display: 'page',
+				}, function(response){
+		            if (response) {
+		                      alert('Post was published.');
+							  window.location="<?php echo $loginUrl;?>";			
+		                } else {
+							alert(response);
+		                    }
+				});
+			}	
+		<?php
+			if(isset($_GET["post"])){
+				header("location: ". $loginUrl);			    
+		    } ?>
   
 </script>
 
