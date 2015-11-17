@@ -11,16 +11,7 @@
 	<link rel="stylesheet" href="css/bootstrap-social.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	
-	  ga('create', 'UA-65249445-1', 'auto');
-	  ga('send', 'pageview');
-	
-	</script>
+  	<script src="../../../js/common.js"></script>
   	<style type="text/css">
 		html{
 		    height: 100%;
@@ -77,15 +68,32 @@
 		
 		<!-- Informative image Columns-->
 		  <div class="brand-row row">
-		    <div class="col-xs-1" ></div>
-		    <div class="col-xs-10" >
+		    <div class="col-xs-2" ></div>
+		    <div class="col-xs-8" >
 		    	<img class="img-responsive action_img" alt="Name help image" src="media/clients/
 			<?php 
 						echo $_SESSION['config']['image']; 
 			?>">
 		    </div>
+		    <div class="col-xs-2" ></div>
+		  </div>
+
+
+			<?php 
+					if ($_SESSION['id'] == "FB-B1-SCM-00103"){	
+						echo '		<div class="clearfix visible-xs-block"></div>
+
+		  <div class=" row">
+		    <div class="col-xs-1" ></div>
+		    <div class="col-xs-10" >
+		    	<img class="img-responsive action_img" alt="Name help image" src="media/clients/text1.png">
+		    </div>
 		    <div class="col-xs-1" ></div>
 		  </div>
+		  		<div class="clearfix visible-xs-block"></div>'; 
+					
+					}
+			?>
 
 		<div class="clearfix visible-xs-block"></div>
 
@@ -103,13 +111,12 @@
 					<div class="col-xs-7" style="overflow: hidden; white-space: nowrap;" >
 						<p><?php getFbPageName($_SESSION['config']['link']);?><p>
 						<div id="fblike center-block">
-						    <div class="fb-like center-block" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" >
-							    
-						    </div>
+							<div class="fb-like center-block" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" >							    
+						</div>
 	
 					</div>
 
-				</div>
+			</div>
 
 		    <div class="col-xs-2" ></div>
 
@@ -124,5 +131,22 @@
 		    </div>
 		    <div class="col-xs-1" ></div>
 	</div>
+
+			<?php 
+					if ($_SESSION['id'] == "FB-B1-SCM-00103"){	
+						echo '		<div class="clearfix visible-xs-block"></div>
+
+		  <div class=" row">
+		    <div class="col-xs-2" ></div>
+		    <div class="col-xs-8" >
+		    	<img class="img-responsive action_img" alt="Name help image" src="media/clients/text2.png">
+		    </div>
+		    <div class="col-xs-2" ></div>
+		  </div>
+		  		<div class="clearfix visible-xs-block"></div>'; 
+					
+					}
+			?>
+
 	</body>
 </html>

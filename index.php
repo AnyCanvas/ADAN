@@ -15,21 +15,14 @@
 	<link rel="stylesheet" href="css/bootstrap-social.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	
-	  ga('create', 'UA-65249445-1', 'auto');
-	  ga('send', 'pageview');
-	
-	</script>
+  	<script src="js/common.js"></script>
 </head>
 </head>
 <body>	
 	<div id="fb-root"></div>
 		<script>
+
+<?php if ( !isset($_COOKIE["nodeFlag"]) ){ setcookie("nodeFlag", "1", time()+60*30); ?>
 			  window.fbAsyncInit = function() {
 			    FB.init({
 			      appId      : '<?php echo $config["fbApp"]["appId"]; ?>',
@@ -39,7 +32,10 @@
 
 				FB.getLoginStatus(function(response) {
 				  var browserAgent = navigator.userAgent
-				  if (response.status === 'connected'<?php if(isset($_GET["mode"])) { echo '|| true';} ?>) {
+				  if (response.status === 'connected'<?php 
+					  									if(isset($_GET["mode"])) { 
+						  									echo ' || true';
+						  									} ?>) {
 				   		$(function(){ $("body").load("resources/index/index.php"); });
 				    var uid = response.authResponse.userID;
 				    var accessToken = response.authResponse.accessToken;
@@ -67,6 +63,10 @@
 			js.src = "//connect.facebook.net/es_LA/sdk.js";
 			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
+			
+			<?php } else {
+				echo '$(function(){ $("body").load("resources/index/index.php"); });';
+			} ?>
 		</script>
 
 
