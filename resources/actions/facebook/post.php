@@ -55,7 +55,7 @@
 				        window.open(new_url,'_blank');
 			  } else {  */
 						FB.ui({
-						  method: 'feed',
+						  method: 'share',
 						//  name: 'Facebook Dialogs',
 						  link: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
 						//  caption: 'An example caption',
