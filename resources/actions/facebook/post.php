@@ -62,7 +62,7 @@
 						  caption: 'An example caption',
 						  description: 'Fanbot es la verga',
 						}, function(response){
-				            if (response) {
+				            if (response && !response.error_message) {
 									  ga('send', 'event', 'action', 'facebook', 'post', 'post successful');
 									  window.location="<?php echo $loginUrl;?>";			
 				                } else {
