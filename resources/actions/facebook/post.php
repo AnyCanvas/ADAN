@@ -59,6 +59,7 @@
 //						  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
 						  method: 'feed',
 						  link: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
+						  name: 'Facebook Dialogs',
 						  caption: 'An example caption',
 						  description: 'Fanbot es la verga',
 						}, function(response){
