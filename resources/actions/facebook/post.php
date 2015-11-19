@@ -42,7 +42,6 @@
 			}(document, 'script', 'facebook-jssdk'));
 
 			postclick = function () {
-
 						FB.ui({
 						  method: 'share',
 						  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
@@ -54,7 +53,6 @@
 									  ga('send', 'event', 'action', 'facebook', 'post', 'post unsuccessful');
 				                    }
 						});
-
 			}	
 		<?php
 			if(isset($_GET["post"])){
