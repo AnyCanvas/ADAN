@@ -42,7 +42,7 @@
 			}(document, 'script', 'facebook-jssdk'));
 
 			postclick = function () {
-/*			if(navigator.standalone){
+/*			if(navigator.standalone){ */
 				    new_url = 'https://www.facebook.com/dialog/feed?'+
 				                'app_id=<?php echo $config["fbApp"]["appId"] ?>'+
 				                '&display=popup'+
@@ -52,25 +52,23 @@
 				                '&link=https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>'
 				                '&redirect_uri=http://45.55.247.168/action.php/#post_id';
 				
-				        window.open(new_url,'_self');
-			  } else {  */
+				        window.open(new_url,'_blank');
+/*			  } else {  
 						FB.ui({
-//						  method: 'share',
-//						  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
 						  method: 'feed',
-						  link: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
 						  name: 'Facebook Dialogs',
+						  link: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
 						  caption: 'An example caption',
 						  description: 'Fanbot es la verga',
 						}, function(response){
-				            if (response && !response.error_message) {
+				            if (response) {
 									  ga('send', 'event', 'action', 'facebook', 'post', 'post successful');
 									  window.location="<?php echo $loginUrl;?>";			
 				                } else {
 									  ga('send', 'event', 'action', 'facebook', 'post', 'post unsuccessful');
 				                    }
 						});
-//			  }  
+//			  }   */
 
 
 			}	
