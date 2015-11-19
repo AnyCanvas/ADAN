@@ -42,18 +42,33 @@
 			}(document, 'script', 'facebook-jssdk'));
 
 			postclick = function () {
-				FB.ui({
-				  method: 'share',
-				  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
-				  display: 'page',
-				}, function(response){
-		            if (response) {
-							  ga('send', 'event', 'action', 'facebook', 'post', 'post successful');
-							  window.location="<?php echo $loginUrl;?>";			
-		                } else {
-							  ga('send', 'event', 'action', 'facebook', 'post', 'post unsuccessful');
-		                    }
-				});
+				if(navigator.standalone){
+				    new_url = 'https://www.facebook.com/dialog/feed?'+
+				                'app_id=XXXXXXXXXXXXX'+
+				                '&display=popup'+
+				             //   '&caption='+fbName+
+				             //   '&picture='+fbPicture+
+				             //   '&description='+fbDescription+
+				                '&link=https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>'
+				                '&redirect_uri=<?php echo $loginUrl;?>';
+				
+				        window.open(new_url,'_self');
+				  } else {
+						FB.ui({
+						  method: 'share',
+						  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
+						  display: 'page',
+						}, function(response){
+				            if (response) {
+									  ga('send', 'event', 'action', 'facebook', 'post', 'post successful');
+									  window.location="<?php echo $loginUrl;?>";			
+				                } else {
+									  ga('send', 'event', 'action', 'facebook', 'post', 'post unsuccessful');
+				                    }
+						});
+				  }
+
+
 			}	
 		<?php
 			if(isset($_GET["post"])){
