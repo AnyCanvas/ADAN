@@ -11,6 +11,21 @@
   	<script src="../../js/common.js"></script>
 </head>
 
+<script>
+			<?php switch ($_SESSION['error']){
+				case 0:
+		    	   echo '	ga("send", "event", "action", "final", "error", "fb permissions denied by user");';
+				   break;
+				case 1:
+		    	   echo '	ga("send", "event", "action", "final", "error", "already make action");';
+					break;
+				case 2:
+		    	   echo '	ga("send", "event", "action", "facebook", "like", "fanbot is offline");';
+					break;
+
+				}
+			?>
+</script>
 <body>
 	<div class="container-fluid">
 
