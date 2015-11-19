@@ -50,14 +50,13 @@
 				             //   '&picture='+fbPicture+
 				             //   '&description='+fbDescription+
 				                '&link=https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>'
-				                '&redirect_uri=http://45.55.247.168/action.php';
+				                '&redirect_uri=http://45.55.247.168/action.php/#post_id';
 				
 				        window.open(new_url,'_self');
 				  } else {
 						FB.ui({
 						  method: 'share',
 						  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
-						  display: 'page',
 						}, function(response){
 				            if (response) {
 									  ga('send', 'event', 'action', 'facebook', 'post', 'post successful');
