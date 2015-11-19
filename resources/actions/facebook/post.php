@@ -42,7 +42,7 @@
 			}(document, 'script', 'facebook-jssdk'));
 
 			postclick = function () {
-				if(navigator.standalone){
+//				if(navigator.standalone){
 				    new_url = 'https://www.facebook.com/dialog/feed?'+
 				                'app_id=<?php echo $config["fbApp"]["appId"] ?>'+
 				                '&display=popup'+
@@ -53,7 +53,7 @@
 				                '&redirect_uri=http://45.55.247.168/action.php/#post_id';
 				
 				        window.open(new_url,'_self');
-				  } else {
+/*				  } else {
 						FB.ui({
 						  method: 'share',
 						  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
@@ -65,7 +65,7 @@
 									  ga('send', 'event', 'action', 'facebook', 'post', 'post unsuccessful');
 				                    }
 						});
-				  }
+				  } */
 
 
 			}	
