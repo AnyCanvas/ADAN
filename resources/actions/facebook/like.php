@@ -27,8 +27,6 @@
   	
   	<script type="text/javascript">
 	ga('send', 'event', 'action', 'facebook', 'like', 'load page');
-
-  	console.log('<?php getFbPageName($_SESSION['config']['link']);?>');
 	  	
   	</script>
 
@@ -49,11 +47,11 @@
 <script>
   window.fbAsyncInit = function() {
     FB.Event.subscribe('edge.create', function(targetUrl) {
-		ga('send', 'event', 'action', 'facebook', 'like', 'page liked');
+//		ga('send', 'event', 'action', 'facebook', 'like', 'page liked');
 		window.location="<?php echo $loginUrl;?>";
     });
     FB.Event.subscribe('edge.remove', function(targetUrl) {
-		ga('send', 'event', 'action', 'facebook', 'like', 'page unliked');
+//		ga('send', 'event', 'action', 'facebook', 'like', 'page unliked');
     });
   };
   
