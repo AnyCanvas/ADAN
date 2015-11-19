@@ -13,8 +13,7 @@
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   	<script src="../../../js/common.js"></script>
 	<script>
-
-	
+			ga('send', 'event', 'action', 'facebook', 'post', 'entered');
 	</script>
   	<style type="text/css">
 		html{
@@ -49,10 +48,10 @@
 				  display: 'page',
 				}, function(response){
 		            if (response) {
-		                      alert('Post was published.');
+							  ga('send', 'event', 'action', 'facebook', 'post', 'post successful');
 							  window.location="<?php echo $loginUrl;?>";			
 		                } else {
-							alert(response);
+							  ga('send', 'event', 'action', 'facebook', 'post', 'post unsuccessful');
 		                    }
 				});
 			}	
