@@ -42,7 +42,7 @@
 			}(document, 'script', 'facebook-jssdk'));
 
 			postclick = function () {
-/*			if(navigator.standalone){ */
+/*			if(navigator.standalone){ 
 				    new_url = 'https://www.facebook.com/dialog/feed?'+
 				                'app_id=<?php echo $config["fbApp"]["appId"] ?>'+
 				                '&display=popup'+
@@ -50,16 +50,16 @@
 				             //   '&picture='+fbPicture+
 				             //   '&description='+fbDescription+
 				                '&link=https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>'
-				                '&redirect_uri=http://45.55.247.168/action.php/#post_id';
+				                '&redirect_uri=http://45.55.247.168/action.php/';
 				
 				        window.open(new_url,'_blank');
-/*			  } else {  
+			  } else {  */
 						FB.ui({
 						  method: 'feed',
-						  name: 'Facebook Dialogs',
+						//  name: 'Facebook Dialogs',
 						  link: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
-						  caption: 'An example caption',
-						  description: 'Fanbot es la verga',
+						//  caption: 'An example caption',
+						//  description: 'Fanbot es la verga',
 						}, function(response){
 				            if (response) {
 									  ga('send', 'event', 'action', 'facebook', 'post', 'post successful');
@@ -68,7 +68,7 @@
 									  ga('send', 'event', 'action', 'facebook', 'post', 'post unsuccessful');
 				                    }
 						});
-//			  }   */
+//			  }   
 
 
 			}	
