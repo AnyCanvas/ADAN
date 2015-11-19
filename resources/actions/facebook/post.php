@@ -42,18 +42,22 @@
 			}(document, 'script', 'facebook-jssdk'));
 
 			postclick = function () {
-				FB.ui({
-				  method: 'share',
-				  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
-				  display: 'page',
-				}, function(response){
-		            if (response) {
-							  ga('send', 'event', 'action', 'facebook', 'post', 'post successful');
-							  window.location="<?php echo $loginUrl;?>";			
-		                } else {
-							  ga('send', 'event', 'action', 'facebook', 'post', 'post unsuccessful');
-		                    }
-				});
+						FB.ui({
+						  method: 'share',
+						//  name: 'Facebook Dialogs',
+						  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
+						//  caption: 'An example caption',
+						//  description: 'Fanbot es la verga',
+						}, function(response){
+				            if (response) {
+									  ga('send', 'event', 'action', 'facebook', 'post', '1');
+									  window.location="<?php echo $loginUrl;?>";			
+				                } else {
+									  ga('send', 'event', 'action', 'facebook', 'post', '0');
+				                    }
+						});
+
+
 			}	
 		<?php
 			if(isset($_GET["post"])){

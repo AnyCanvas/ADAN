@@ -14,13 +14,13 @@
 <script>
 			<?php switch ($_SESSION['error']){
 				case 0:
-		    	   echo '	ga("send", "event", "action", "final", "error", "fb permissions denied by user");';
+		    	   echo '	ga("send", "event", "action", "final", "error1", 1);';
 				   break;
 				case 1:
-		    	   echo '	ga("send", "event", "action", "final", "error", "already make action");';
+		    	   echo '	ga("send", "event", "action", "final", "error2", 1);';
 					break;
 				case 2:
-		    	   echo '	ga("send", "event", "action", "facebook", "like", "fanbot is offline");';
+		    	   echo '	ga("send", "event", "action", "facebook", "error3", 1);';
 					break;
 
 				}
