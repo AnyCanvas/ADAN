@@ -44,13 +44,13 @@
 			postclick = function () {
 				if(navigator.standalone){
 				    new_url = 'https://www.facebook.com/dialog/feed?'+
-				                'app_id=XXXXXXXXXXXXX'+
+				                'app_id=<?php echo $config["fbApp"]["appId"] ?>'+
 				                '&display=popup'+
 				             //   '&caption='+fbName+
 				             //   '&picture='+fbPicture+
 				             //   '&description='+fbDescription+
 				                '&link=https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>'
-				                '&redirect_uri=<?php echo $loginUrl;?>';
+				                '&redirect_uri=http://45.55.247.168/action.php';
 				
 				        window.open(new_url,'_self');
 				  } else {
