@@ -57,7 +57,7 @@
 						FB.ui({
 						  method: 'share',
 						//  name: 'Facebook Dialogs',
-						  link: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
+						  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
 						//  caption: 'An example caption',
 						//  description: 'Fanbot es la verga',
 						}, function(response){
