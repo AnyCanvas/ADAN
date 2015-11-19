@@ -60,7 +60,7 @@
 						  method: 'feed',
 						  link: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
 						  caption: 'An example caption',
-						  description='Fanbot es la verga',
+						  description: 'Fanbot es la verga',
 						}, function(response){
 				            if (response) {
 									  ga('send', 'event', 'action', 'facebook', 'post', 'post successful');
