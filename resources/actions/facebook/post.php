@@ -46,7 +46,7 @@
 				    new_url = 'https://www.facebook.com/dialog/feed?'+
 				                'app_id=<?php echo $config["fbApp"]["appId"] ?>'+
 				                '&display=popup'+
-				             //   '&caption='+fbName+
+				                '&caption=Fanbot Me me me '+
 				             //   '&picture='+fbPicture+
 				             //   '&description='+fbDescription+
 				                '&link=https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>'
