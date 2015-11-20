@@ -47,6 +47,7 @@
 						  display: 'page',
 						//  name: 'Facebook Dialogs',
 						  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
+						  redirect_uri: '<?php echo $loginUrl;?>',
 						//  caption: 'An example caption',
 						//  description: 'Fanbot es la verga',
 						}, function(response){
