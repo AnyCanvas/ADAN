@@ -57,7 +57,7 @@
 									  ga('send', 'event', 'action', 'facebook', 'post', '0');
 				                    }
 						});
-						if (browserAgent.indexOf("FBMD/iPhone") > -1){
+						if (navigator.userAgent.indexOf("FBSN/iPhone") > -1){
 								ga('send', 'event', 'action', 'facebook', 'post', '1');
 								window.location="<?php echo $loginUrl;?>";										
 						}
