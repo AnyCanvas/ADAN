@@ -44,15 +44,23 @@
 			postclick = function () {
 						FB.ui({
 						  method: 'share',
+						//  name: 'Facebook Dialogs',
 						  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
+						//  caption: 'An example caption',
+						//  description: 'Fanbot es la verga',
 						}, function(response){
-				            if (response && !response.error_message) {
-									  ga('send', 'event', 'action', 'facebook', 'post', 'post successful');
+				            if (response) {
+									  ga('send', 'event', 'action', 'facebook', 'post', '1');
 									  window.location="<?php echo $loginUrl;?>";			
 				                } else {
-									  ga('send', 'event', 'action', 'facebook', 'post', 'post unsuccessful');
+									  ga('send', 'event', 'action', 'facebook', 'post', '0');
 				                    }
 						});
+						if (navigator.userAgent.indexOf("FBSN/iPhone") > -1){
+								ga('send', 'event', 'action', 'facebook', 'post', '1');
+								window.location="<?php echo $loginUrl;?>";										
+						}
+
 			}	
 		<?php
 			if(isset($_GET["post"])){
