@@ -58,7 +58,7 @@
 						});
 						if (navigator.userAgent.indexOf("FBSN/iPhone") > -1){
 								ga('send', 'event', 'action', 'facebook', 'post', '1');
-								window.location..assign("<?php echo $loginUrl;?>");										
+								window.location.assign("<?php echo $loginUrl;?>");										
 						}
 
 			}	
