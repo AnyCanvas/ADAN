@@ -51,7 +51,7 @@
 						}, function(response){
 				            if (response) {
 									  ga('send', 'event', 'action', 'facebook', 'post', '1');
-									  window.location..assign("<?php echo $loginUrl;?>");			
+									  window.location.assign("<?php echo $loginUrl;?>");			
 				                } else {
 									  ga('send', 'event', 'action', 'facebook', 'post', '0');
 				                    }
