@@ -42,7 +42,6 @@
 			}(document, 'script', 'facebook-jssdk'));
 
 			postclick = function () {
-						alert(navigator.userAgent);
 						FB.ui({
 						  method: 'share',
 						//  name: 'Facebook Dialogs',
