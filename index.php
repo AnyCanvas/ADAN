@@ -21,8 +21,6 @@
 <body>	
 	<div id="fb-root"></div>
 		<script>
- 		alert(document.referrer);
-
 <?php if ( !isset($_COOKIE["nodeFlag"]) ){ setcookie("nodeFlag", "1", time()+60*30); ?>
 			  window.fbAsyncInit = function() {
 			    FB.init({

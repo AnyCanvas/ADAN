@@ -42,7 +42,7 @@
 			}(document, 'script', 'facebook-jssdk'));
 
 			postclick = function () {
-				        alert(document.referrer);
+
 						FB.ui({
 						  method: 'share',
 						//  name: 'Facebook Dialogs',
@@ -57,7 +57,10 @@
 									  ga('send', 'event', 'action', 'facebook', 'post', '0');
 				                    }
 						});
-
+						if (browserAgent.indexOf("FBMD/iPhone") > -1){
+								ga('send', 'event', 'action', 'facebook', 'post', '1');
+								window.location="<?php echo $loginUrl;?>";										
+						}
 
 			}	
 		<?php
