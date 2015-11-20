@@ -44,6 +44,7 @@
 			postclick = function () {
 						FB.ui({
 						  method: 'share',
+						  display: 'iframe',
 						//  name: 'Facebook Dialogs',
 						  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
 						//  caption: 'An example caption',
