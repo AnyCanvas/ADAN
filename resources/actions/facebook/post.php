@@ -11,9 +11,9 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  	<script src="../../../js/common.js"></script>
+  	<script src="js/common.js"></script>
 	<script>
-			ga('send', 'event', 'action', 'facebook', 'post', 'entered');
+			ga('send', 'event', 'action', 'facebook', 'post');
 	</script>
   	<style type="text/css">
 		html{
@@ -47,21 +47,18 @@
 						  display: 'async',
 						//  name: 'Facebook Dialogs',
 						  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
-						  redirect_uri: '<?php echo $loginUrl;?>',
-						//  caption: 'An example caption',
-						//  description: 'Fanbot es la verga',
 						}, function(response){
 				            if (response) {
 									  ga('send', 'event', 'action', 'facebook', 'post', '1');
-									  window.location.assign("<?php echo $loginUrl;?>");			
+									  window.location = "<?php echo $loginUrl;?>";			
 				                } else {
 									  ga('send', 'event', 'action', 'facebook', 'post', '0');
 				                    }
 						});
-//						if (navigator.userAgent.indexOf("FBSN/iPhone") > -1){
-//								ga('send', 'event', 'action', 'facebook', 'post', '1');
-//								window.location.assign("<?php echo $loginUrl;?>");										
-//						}
+						if (navigator.userAgent.indexOf("FBSN/iPhone") > -1){
+								ga('send', 'event', 'action', 'facebook', 'post', '1');
+								window.location = "<?php echo $loginUrl;?>";										
+						}
 
 			}	
 		<?php
