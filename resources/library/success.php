@@ -15,8 +15,6 @@
   	</script>
 </head>
 
-<?php if ( !isset($_COOKIE["lastLike"])  &&  $_SESSION['config']['type'] == 'post')
-			{ setcookie("lastLike", "1", time()+60*60*24); }?>
 <body>
 	<div class="container-fluid">
 
