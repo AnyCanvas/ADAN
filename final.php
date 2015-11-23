@@ -23,6 +23,9 @@
 	//			if ($_SESSION['fbUserId'] !== '120319224983556'){
 				saveInteractionToDB();
 	//			}			
+				if ( !isset($_COOKIE["lastLike"])  &&  $_SESSION['config']['type'] == 'post')
+					{ setcookie("lastLike", "1", time()+60*60*24); }
+
 				require_once("resources/library/success.php");
 	//		} else {
 	//			$_SESSION['error'] = 2;
