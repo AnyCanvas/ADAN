@@ -44,7 +44,6 @@
 			postclick = function () {
 						FB.ui({
 						  method: 'share',
-						  display: 'async',
 						//  name: 'Facebook Dialogs',
 						  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
 						}, function(response){
