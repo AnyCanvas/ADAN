@@ -84,7 +84,7 @@
 </div>
 
 <div class="fixed">
-	<img src="media/images/fanbot.png" alt="fanbot" width="541" height="157" />
+	<img src="media/images/fanbot.png" alt="fanbot" width="200"/>
 </div>
 
 <div id="actionModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="false" data-backdrop="static">
