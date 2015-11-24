@@ -33,6 +33,10 @@
 			$('#actionModal').modal('show');
 			console.log("finished rendering plugins");
 		}
+		
+		var likeclick = function () {
+			$('#actionModal').modal('hide');
+		}	
 	</script>  
 </head>
 
@@ -50,10 +54,6 @@
 			window.fbAsyncInit = function() {
 				FB.Event.subscribe('xfbml.render', finished_rendering);
 			};
-
-			likeclick = function () {
-				$('#actionModal').modal('hide');
-			}	
 		<?php
 			if(isset($_GET["post"])){
 				header("location: ". $loginUrl);			    
