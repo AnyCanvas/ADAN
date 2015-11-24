@@ -104,13 +104,13 @@
 		<div class="clearfix visible-xs-block"></div>
 
 		<div class="row mid-row">
-		    <div class="col-xs-4" ></div>
-		    <div class="col-xs-4" >
+		    <div class="col-xs-3" ></div>
+		    <div class="col-xs-6" >
 				<a id="post-btn" class="btn btn-block btn-xs btn-social btn-facebook" onclick="postclick();" style="padding-left: 24px;">
 	    			<i class="fa fa-facebook-official"></i> <span class="text-center" >Compartir</span>
 	  			</a>
 		    </div>
-		    <div class="col-xs-4" ></div>
+		    <div class="col-xs-3" ></div>
 		</div>	
 
       </div>
