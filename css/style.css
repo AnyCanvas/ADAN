@@ -238,7 +238,7 @@ fieldset[disabled] .fb-btn.active {
 }
 .cssload-loader:after{
 	content: "";
-	border: 3px solid white;
+	border: 0px solid white;
 	z-index: 2;
 	top: -3px;
 	left: -3px;
