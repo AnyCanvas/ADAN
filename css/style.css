@@ -13,12 +13,12 @@ body{
 	transform: translateY(-50%);
 }
 
-div.fixed {
+div.bottom {
     position: fixed;
     bottom: 0;
     right: 0;
     width: 300px;
-
+    padding-bottom: 10px;
 }
 /* fnbt index go button CSS*/
 .next-btn {

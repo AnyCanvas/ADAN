@@ -83,7 +83,7 @@
 	<div class="cssload-loader"></div>
 </div>
 
-<div class="fixed">
+<div class="bottom">
 	<img src="media/images/fanbot.png" alt="fanbot" width="200"/>
 </div>
 

@@ -82,6 +82,11 @@
 <div class="wrapper vertical-center">
 	<div class="cssload-loader"></div>
 </div>
+
+<div class="bottom">
+	<img src="media/images/fanbot.png" alt="fanbot" width="200"/>
+</div>
+
 <div id="actionModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="false" data-backdrop="static">
 
   <div class="modal-dialog modal-sm">		
