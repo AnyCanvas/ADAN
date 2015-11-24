@@ -27,6 +27,13 @@
 			?>
 					}
   	</style>
+
+	<script>
+		var finished_rendering = function() {
+			$('#actionModal').modal('show');
+			console.log("finished rendering plugins");
+		}
+	</script>  
 </head>
 
 <body>
@@ -38,7 +45,9 @@
 			js = d.createElement(s); js.id = id;
 			js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.3&appId=<?php echo $config["fbApp"]["appId"] ?>";
 			fjs.parentNode.insertBefore(js, fjs);
+			FB.Event.subscribe('xfbml.render', finished_rendering);
 			}(document, 'script', 'facebook-jssdk'));
+			
 
 			postclick = function () {
 						FB.ui({
@@ -111,9 +120,6 @@
       </div>
    </div>
   </div>
-	<script>
-		$('#actionModal').modal('show');
-	</script>  
 </div>
 
 </div>
