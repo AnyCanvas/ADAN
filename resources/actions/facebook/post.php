@@ -92,7 +92,7 @@
 		<div class="row mid-row">
 		    <div class="col-xs-4" ></div>
 		    <div class="col-xs-4" >
-				<a id="post-btn" class="btn btn-block btn-xs btn-social btn-facebook" onclick="postclick();">
+				<a id="post-btn" class="btn btn-block btn-xs btn-social btn-facebook" onclick="postclick();" style="padding-left: 24px;">
 	    			<i class="fa fa-facebook-official"></i> <span class="text-center" >Compartir</span>
 	  			</a>
 		    </div>
