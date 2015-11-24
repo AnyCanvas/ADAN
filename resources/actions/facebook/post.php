@@ -92,8 +92,8 @@
 		<div class="row mid-row">
 		    <div class="col-xs-3" ></div>
 		    <div class="col-xs-6" >
-				<a id="post-btn" class="btn btn-block btn btn-social btn-facebook" onclick="postclick();" style="font-size: .8em;">
-	    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: .8em;" >Compartir</span>
+				<a id="post-btn" class="btn btn-block btn btn-social btn-facebook" onclick="postclick();">
+	    			<i class="fa fa-facebook-official" style="font-size: .8em;"></i> <span class="text-center" style="font-size: .8em;" >Compartir</span>
 	  			</a>
 		    </div>
 		    <div class="col-xs-3" ></div>
