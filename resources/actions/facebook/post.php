@@ -68,11 +68,11 @@
 
 <div class ="container-fluid">
 
-<div id="myModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
+<div id="actionModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
 
   <div class="modal-dialog">		
 		<!-- Informative image Columns-->
-    <div class="modal-content" id="action-modal">
+    <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title text-center">Presiona "Compartir"</h4>
       </div>
@@ -112,7 +112,7 @@
    </div>
   </div>
 	<script>
-		$('#myModal').modal('show');
+		$('#actionModal').modal('show');
 	</script>  
 </div>
 

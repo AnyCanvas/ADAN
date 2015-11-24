@@ -121,4 +121,6 @@ fieldset[disabled] .fb-btn.active {
 	padding: 10px;
 }
 
-.fb_logo-row {}
+#action-modal .modal-header{
+	background-color: #425AB0;
+}
