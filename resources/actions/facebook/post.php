@@ -71,6 +71,11 @@
 	<div class ="container-fluid">
 		
 		<!-- Informative image Columns-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title text-center">Presiona "Me gusta"</h4>
+      </div>
+      <div class="modal-body">
 		  <div class="brand-row row">
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10" >
@@ -94,16 +99,18 @@
 		    <div class="col-xs-2" ></div>
 		</div>	
 
-		<div class="clearfix visible-xs-block"></div>
-
+      </div>
+      <div class="modal-footer">
 		<div class="row mid-row">
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10 text-center leadinline-text" >
 				<span style="font-size: x-small; color: white;" >Al continuar estarás aceptando los términos y condiciones.</span>
 		    </div>
 		    <div class="col-xs-1" ></div>
-		
-		
-	</div>
+		</div>
+      </div>
+    </div>
+
+
 	</body>
 </html>
