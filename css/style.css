@@ -126,12 +126,12 @@ fieldset[disabled] .fb-btn.active {
 	color: white;
 }
 
-#actionModal .modal {
+#actionModal {
   text-align: center;
   padding: 0!important;
 }
 
-#actionModal .modal:before {
+#actionModal:before {
   content: '';
   display: inline-block;
   height: 100%;
