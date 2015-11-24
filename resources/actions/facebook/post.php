@@ -113,9 +113,9 @@
   </div>
 	<script>
 		$('#actionModal').modal('show').css({
-		    'margin-left': function () { //Horizontal centering
-		        return -($(this).width() / 2);
-		    }
+		    'margin-top': function () { //vertical centering
+		        return -($(this).height() / 2);
+		    },
 		});
 	</script>  
 </div>
