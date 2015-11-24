@@ -27,7 +27,6 @@
 			?>
 					}
   	</style>
-  	
 </head>
 
 <body>
@@ -77,14 +76,13 @@
       </div>
       <div class="modal-body">
 		  <div class="brand-row row">
-		    <div class="col-xs-1" ></div>
-		    <div class="col-xs-10" >
-		    	<img class="img-responsive" alt="Name help image" src="media/clients/
-			<?php 
-						echo $_SESSION['config']['image']; 
-			?>">
+		    <div class="col-xs-3" ></div>
+		    <div class="col-xs-6" >
+			    <div class="center-block" >
+					<img id="fb_img" src="https://graph.facebook.com/<?php echo $_SESSION['config']['link'];?>/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+				</div>
 		    </div>
-		    <div class="col-xs-1" ></div>
+		    <div class="col-xs-3" ></div>
 		  </div>
 
 		<div class="clearfix visible-xs-block"></div>
