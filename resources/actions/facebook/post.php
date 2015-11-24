@@ -66,11 +66,13 @@
   
 </script>
 
-		
-	<div class ="container-fluid">
-		
+<div class ="container-fluid">
+
+<div id="myModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
+
+  <div class="modal-dialog">		
 		<!-- Informative image Columns-->
-    <div class="modal-content">
+    <div class="modal-content" id="action-modal">
       <div class="modal-header">
         <h4 class="modal-title text-center">Presiona "Me gusta"</h4>
       </div>
@@ -107,8 +109,13 @@
 		    <div class="col-xs-1" ></div>
 		</div>
       </div>
-    </div>
+   </div>
+  </div>
+	<script>
+		$('#myModal').modal('show');
+	</script>  
+</div>
 
-
+</div>
 	</body>
 </html>
