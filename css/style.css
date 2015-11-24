@@ -125,6 +125,6 @@ fieldset[disabled] .fb-btn.active {
 	background-color: #425AB0;
 	color: white;
 }
-#actionModal .modal-backdrop.in {
-     opacity: 0;
-}
+.modal-backdrop {
+    visibility: hidden;
+ }
