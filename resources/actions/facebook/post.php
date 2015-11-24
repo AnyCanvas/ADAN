@@ -77,7 +77,7 @@
         <h4 class="modal-title text-center">Presiona "Compartir"</h4>
       </div>
       <div class="modal-body">
-		  <div class="brand-row row">
+		  <div class="fb_logo-row row">
 		    <div class="col-xs-4" ></div>
 		    <div class="col-xs-4" >
 			    <div class="center-block" >
