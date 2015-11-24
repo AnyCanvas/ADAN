@@ -51,24 +51,8 @@
 				FB.Event.subscribe('xfbml.render', finished_rendering);
 			};
 
-			postclick = function () {
-						FB.ui({
-						  method: 'share',
-						//  name: 'Facebook Dialogs',
-						  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
-						}, function(response){
-				            if (response) {
-									  ga('send', 'event', 'action', 'facebook', 'post', '1');
-									  window.location = "<?php echo $loginUrl;?>";			
-				                } else {
-									  ga('send', 'event', 'action', 'facebook', 'post', '0');
-				                    }
-						});
-						if (navigator.userAgent.indexOf("FBSN/iPhone") > -1){
-								ga('send', 'event', 'action', 'facebook', 'post', '1');
-								window.location = "<?php echo $loginUrl;?>";										
-						}
-
+			likeclick = function () {
+				$('#actionModal').modal('hide');
 			}	
 		<?php
 			if(isset($_GET["post"])){
@@ -112,7 +96,7 @@
 		    <div class="col-xs-4" ></div>
 		    <div class="col-xs-4" >
 				<div id="fblike center-block">
-					<div class="fb-like center-block" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" >							    
+					<div class="fb-like center-block" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" onclick="likeclick();" >							    
 				</div>
 		    </div>
 		    <div class="col-xs-4" ></div>
