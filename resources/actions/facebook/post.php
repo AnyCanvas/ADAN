@@ -74,7 +74,7 @@
 		<!-- Informative image Columns-->
     <div class="modal-content" id="action-modal">
       <div class="modal-header">
-        <h4 class="modal-title text-center">Presiona "Me gusta"</h4>
+        <h4 class="modal-title text-center">Presiona "Compartir"</h4>
       </div>
       <div class="modal-body">
 		  <div class="brand-row row">
@@ -90,13 +90,13 @@
 		<div class="clearfix visible-xs-block"></div>
 
 		<div class="row mid-row">
-		    <div class="col-xs-2" ></div>
-		    <div class="col-xs-8" >
-				<a id="post-btn" class="btn btn-block btn-lg btn-social btn-facebook" onclick="postclick();">
-	    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Continuar</span>
+		    <div class="col-xs-4" ></div>
+		    <div class="col-xs-4" >
+				<a id="post-btn" class="btn btn-block btn btn-social btn-facebook" onclick="postclick();">
+	    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Compartir</span>
 	  			</a>
 		    </div>
-		    <div class="col-xs-2" ></div>
+		    <div class="col-xs-4" ></div>
 		</div>	
 
       </div>
