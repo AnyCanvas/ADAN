@@ -126,12 +126,12 @@ fieldset[disabled] .fb-btn.active {
 	color: white;
 }
 
-.modal {
+#actionModal .modal {
   text-align: center;
   padding: 0!important;
 }
 
-.modal:before {
+#actionModal .modal:before {
   content: '';
   display: inline-block;
   height: 100%;
@@ -139,7 +139,7 @@ fieldset[disabled] .fb-btn.active {
   margin-right: -4px;
 }
 
-.modal-dialog {
+#actionModal .modal-dialog {
   display: inline-block;
   text-align: left;
   vertical-align: middle;
