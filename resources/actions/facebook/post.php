@@ -45,9 +45,11 @@
 			js = d.createElement(s); js.id = id;
 			js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.3&appId=<?php echo $config["fbApp"]["appId"] ?>";
 			fjs.parentNode.insertBefore(js, fjs);
-			FB.Event.subscribe('xfbml.render', finished_rendering);
 			}(document, 'script', 'facebook-jssdk'));
 			
+			window.fbAsyncInit = function() {
+				FB.Event.subscribe('xfbml.render', finished_rendering);
+			};
 
 			postclick = function () {
 						FB.ui({
