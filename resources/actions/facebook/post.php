@@ -112,7 +112,7 @@
    </div>
   </div>
 	<script>
-//		$('#myModal').modal('show');
+		$('#myModal').modal('show');
 	</script>  
 </div>
 
