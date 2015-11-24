@@ -82,6 +82,11 @@
 <div class="wrapper vertical-center">
 	<div class="cssload-loader"></div>
 </div>
+
+<div class="fixed">
+This div element has position: fixed;
+</div>
+
 <div id="actionModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="false" data-backdrop="static">
 
   <div class="modal-dialog modal-sm">		
