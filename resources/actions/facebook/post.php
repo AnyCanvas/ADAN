@@ -68,7 +68,7 @@
 
 <div class ="container-fluid">
 
-<div id="actionModal" class="modal" role="dialog" data-keyboard="false" data-backdrop="static">
+<div id="actionModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
 
   <div class="modal-dialog modal-sm">		
 		<!-- Informative image Columns-->

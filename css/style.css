@@ -125,3 +125,6 @@ fieldset[disabled] .fb-btn.active {
 	background-color: #425AB0;
 	color: white;
 }
+#actionModal .modal-backdrop {
+    background-color: green;
+}
