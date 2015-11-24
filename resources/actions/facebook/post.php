@@ -112,11 +112,7 @@
    </div>
   </div>
 	<script>
-		$('#actionModal').modal('show').css({
-		    'margin-top': function () { //vertical centering
-		        return -($(this).height() / 2);
-		    },
-		});
+		$('#actionModal').modal('show');
 	</script>  
 </div>
 
