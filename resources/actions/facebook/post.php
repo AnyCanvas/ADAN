@@ -90,7 +90,7 @@
 		    <div class="col-xs-4" ></div>
 		    <div class="col-xs-4" >
 
-				<img class="img-responsive center-block" src="../../ Dmedia/images/	<?php  echo $_SESSION['config']['image']; ?>" alt="fanbot" width="200"/>
+				<img class="img-responsive center-block" src="../../media/images/	<?php  echo $_SESSION['config']['image']; ?>" alt="fanbot" width="200"/>
 		    </div>
 		    <div class="col-xs-4" ></div>
 	</div>
