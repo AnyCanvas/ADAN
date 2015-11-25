@@ -52,13 +52,15 @@
 	  </div>
 
 
-	<!-- Informative image Columns-->
-	  <div class="row">
-	    <div class="col-xs-3" ></div>
-	    <div class="col-xs-8" >
-	    	<img class="img-responsive" alt="Name help image" src="media/images/serial.png">
-	    </div>
-	    <div class="col-xs-1" ></div>
-	  </div>
-
+	<!-- Logo img-->
+		<div class="bottom center-block">
+			<div class="fb_logo-row row">
+				    <div class="col-xs-4" ></div>
+				    <div class="col-xs-4" >
+		
+						<img class="img-responsive center-block" src="media/clients/logos/fanbot.png" alt="fanbot" width="200"/>
+				    </div>
+				    <div class="col-xs-4" ></div>
+			</div>
+		</div>
 	</div>
