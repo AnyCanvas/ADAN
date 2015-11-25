@@ -67,7 +67,7 @@
 	<div class="cssload-loader"></div>
 </div>
 
-<div class="bottom">
+<div class="bottom center-block">
 	<img src="media/images/fanbot.png" alt="fanbot" width="200"/>
 </div>
 
