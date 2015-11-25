@@ -20,7 +20,7 @@
 	<div class="clearfix visible-xs-block"></div>
 
 	<!-- Input and button to next page columns-->
-	  <div class="row mid-row vertical-center">
+	<div class="row mid-row vertical-center">
 
 	  <div class="row mid-row ">
 	    <div class="col-xs-1" ></div>
@@ -33,7 +33,7 @@
 	<div class="clearfix visible-xs-block"></div>
 
 
-	  <div class="row mid-row vertical-center">
+	<div class="row mid-row">
 	<div class="col-xs-1" >f</div>
 	    <div class="col-xs-6">f</div>
 	    <div class="col-xs-5" >
