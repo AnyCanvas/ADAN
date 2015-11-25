@@ -35,7 +35,7 @@
       var context = canvas.getContext('2d');
 
       context.beginPath();
-      context.moveTo(70, 110);
+      context.moveTo(70, 150);
       context.lineTo(150, 50);
       context.stroke();
     </script>
