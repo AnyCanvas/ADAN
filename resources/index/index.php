@@ -24,6 +24,14 @@
 	    <div class="col-xs-1" ></div>
 	    <div class="col-xs-10" >
 		    <p class="text-center text-nowrap" style="color: white; font-size: 1.2em; ">Escribe el nombre de la Fanbot</p>
+	    </div>
+	    	<div class="col-xs-1" ></div>
+	  </div>
+
+	<div class="clearfix visible-xs-block"></div>
+
+	<div class="col-xs-1" ></div>
+	    <div class="col-xs-10" >
 			<form class="form" action="node.php" method="get">
 				<div class="input-group square-box">
 	      			<input type="text" class="form-control input-lg text-center lead text-lowercase inline-text square-box" name="name">
@@ -38,7 +46,6 @@
 	    </div>
 	    	<div class="col-xs-1" ></div>
 	  </div>
-
 
 	<!-- Logo img-->
 		<div class="bottom center-block">
