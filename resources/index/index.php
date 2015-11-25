@@ -29,7 +29,7 @@
 	    	<div class="col-xs-1" ></div>
 
 	<div class="clearfix visible-xs-block"></div>
-    <canvas id="myCanvas" width="578" height="200"></canvas>
+    <canvas id="myCanvas" width="578" height="200" style="position: absolute; z-index: 2;"></canvas>
     <script>
       var canvas = document.getElementById('myCanvas');
       var context = canvas.getContext('2d');
