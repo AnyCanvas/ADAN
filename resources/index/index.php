@@ -36,7 +36,7 @@
 
       context.beginPath();
       context.moveTo(80, 100);
-      context.lineTo(450, 50);
+      context.lineTo(150, 50);
       context.stroke();
     </script>
 	<div class="col-xs-5" style="padding-right: 0px;">
