@@ -69,15 +69,16 @@
 
 <div class="clearfix visible-xs-block"></div>
 
-<div class="fb_logo-row row">
+<div class="bottom center-block">
+	<div class="fb_logo-row row">
 		    <div class="col-xs-4" ></div>
 		    <div class="col-xs-4" >
-				<div class="bottom center-block">
+
 				<img class="img-responsive img-thumbnail center-block" src="media/images/fanbot.png" alt="fanbot" width="200"/>
-				</div>
 		    </div>
 		    <div class="col-xs-4" ></div>
-		  </div>
+	</div>
+</div>
 
 </div>
 
