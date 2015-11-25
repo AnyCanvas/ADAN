@@ -30,11 +30,11 @@
 
 	<div class="clearfix visible-xs-block"></div>
 
-	<div class="col-xs-5" >
+	<div class="col-xs-5" style="padding-right: 0px;">
 		<img src="media/images/maquina.png" class="img-responsive center-block" alt="maquina" style="height: 160px;" />		
 	</div>
 	    <div class="col-xs-6" >
-			<form class="form" action="node.php" method="get" style="padding-top: 50px;">
+			<form class="form" action="node.php" method="get" style="padding-top: 50px; padding-left: 0px;">
 				<div class="input-group square-box">
 	      			<input type="text" class="form-control input-lg text-center lead text-lowercase inline-text square-box" name="name">
 	      			<span class="input-group-btn">
