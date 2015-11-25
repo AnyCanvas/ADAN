@@ -67,6 +67,8 @@
 	<div class="cssload-loader"></div>
 </div>
 
+<div class="clearfix visible-xs-block"></div>
+
 <div class="fb_logo-row row">
 		    <div class="col-xs-4" ></div>
 		    <div class="col-xs-4" >
