@@ -68,7 +68,7 @@
 </div>
 
 <div class="bottom center-block">
-	<img src="media/images/fanbot.png" alt="fanbot" width="200"/>
+	<img class="img-responsive" src="media/images/fanbot.png" alt="fanbot" width="200"/>
 </div>
 
 <div id="actionModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="false" data-backdrop="static">
