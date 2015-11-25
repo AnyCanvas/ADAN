@@ -23,7 +23,7 @@
 	  <div class="row mid-row vertical-center">
 	    <div class="col-xs-1" ></div>
 	    <div class="col-xs-10" >
-		    <p class="text-center text-nowrap" style="color: white; font-size: 1em; ">Escribe el nombre de la Fanbot</p>
+		    <p class="text-center text-nowrap" style="color: white; font-size: 1.2em; ">Escribe el nombre de la Fanbot</p>
 			<form class="form" action="node.php" method="get">
 				<div class="input-group square-box">
 	      			<input type="text" class="form-control input-lg text-center lead text-lowercase inline-text square-box" name="name">
