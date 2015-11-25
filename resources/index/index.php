@@ -32,7 +32,8 @@
 
 
 	<div class="col-xs-1" ></div>
-	    <div class="col-xs-10" >
+	    <div class="col-xs-6" ></div>
+	    <div class="col-xs-5" >
 			<form class="form" action="node.php" method="get">
 				<div class="input-group square-box">
 	      			<input type="text" class="form-control input-lg text-center lead text-lowercase inline-text square-box" name="name">
@@ -46,6 +47,7 @@
 
 	    </div>
 	    	<div class="col-xs-1" ></div>
+
 	  </div>
 	</div>
 	<!-- Logo img-->
