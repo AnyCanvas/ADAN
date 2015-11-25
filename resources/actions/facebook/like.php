@@ -67,10 +67,10 @@
 	<div class="cssload-loader"></div>
 </div>
 
-<div class="bottom center-block">
-		  <div class="fb_logo-row row">
+<div class="fb_logo-row row">
 		    <div class="col-xs-4" ></div>
 		    <div class="col-xs-4" >
+				<div class="bottom center-block">
 				<img class="img-responsive img-thumbnail center-block" src="media/images/fanbot.png" alt="fanbot" width="200"/>
 				</div>
 		    </div>
