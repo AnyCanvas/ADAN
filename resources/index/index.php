@@ -31,8 +31,8 @@
 	<div class="clearfix visible-xs-block"></div>
 
 
-	<div class="col-xs-1" ></div>
-	    <div class="col-xs-10" >
+	<div class="col-xs-5" ></div>
+	    <div class="col-xs-6" >
 			<form class="form" action="node.php" method="get">
 				<div class="input-group square-box">
 	      			<input type="text" class="form-control input-lg text-center lead text-lowercase inline-text square-box" name="name">
