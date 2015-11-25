@@ -1,16 +1,5 @@
 	<div class="container-fluid">
 
-	<!-- Fanbot logo columns-->
-	  <div class="row top-row">
-	    <div class="col-xs-3" ></div>
-	    <div class="col-xs-6" >
-	    	<img class="img-responsive" alt="Fanbot" src="media/images/fanbot.png">
-	    </div>
-	    <div class="col-xs-3" ></div>
-	  </div>
-
-	<div class="clearfix visible-xs-block"></div>
-
 
 	<!-- Text columns-->
 		<div class="row mid-row">
