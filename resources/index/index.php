@@ -31,7 +31,7 @@
 	<div class="clearfix visible-xs-block"></div>
 
 	<div class="col-xs-5" >
-		<img src="media/images/maquina.png" alt="maquina" width="104" height="278" />		
+		<img src="media/images/maquina.png" class="img-responsive center-block" alt="maquina" width="104" height="278" />		
 	</div>
 	    <div class="col-xs-6" >
 			<form class="form" action="node.php" method="get">
