@@ -29,7 +29,16 @@
 	    	<div class="col-xs-1" ></div>
 
 	<div class="clearfix visible-xs-block"></div>
+    <canvas id="myCanvas" width="578" height="200"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
 
+      context.beginPath();
+      context.moveTo(100, 150);
+      context.lineTo(450, 50);
+      context.stroke();
+    </script>
 	<div class="col-xs-5" style="padding-right: 0px;">
 		<img src="media/images/maquina.png" class="img-responsive center-block" alt="maquina" style="height: 160px;" />		
 	</div>
