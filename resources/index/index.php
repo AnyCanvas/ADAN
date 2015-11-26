@@ -8,43 +8,39 @@
             <!-- Input and button to next page columns-->
             <div class="row mid-row center-block"
                  style="padding-top: 3em;">
-                <div class="row">
-	                <div class="col-xs-1"></div>
-	                <div class="col-xs-10">
-	                    <p class="text-center text-nowrap"
-	                       style="color: white; font-size: 1.2em;">
-	                        Escribe el nombre de la Fanbot
-	                    </p>
-	                </div>
-	                <div class="col-xs-1"></div>
+                <div class="col-xs-1"></div>
+                <div class="col-xs-10">
+                    <p class="text-center text-nowrap"
+                       style="color: white; font-size: 1.2em;">
+                        Escribe el nombre de la Fanbot
+                    </p>
                 </div>
+                <div class="col-xs-1"></div>
                 <div class="clearfix visible-xs-block"></div>
-                <div class="row">
-	                <div class="col-xs-12">
-	                    <div id="indexDiv"
-	                         class="center-block">
-	                        <div class="col-xs-5"
-	                             style="padding: 0px;">
-	                            <img src="media/images/maquina.png"
-	                                 class="img-responsive center-block"
-	                                 alt="maquina"
-	                                 style="height: 160px; margin-right: 0;">
-	                        </div>
-	                        <div class="col-xs-7"
-	                             style="padding: 0px;">
-	                            <form class="form"
-	                                  action="node.php"
-	                                  method="get"
-	                                  style="padding-top: 50px; padding-left: 0px;">
-	                                <div class="input-group square-box">
-	                                    <input type="text"
-	                                         class="form-control input-lg text-center lead text-lowercase inline-text square-box"
-	                                         name="name">
-	                                </div>
-	                            </form>
-	                        </div>
-	                    </div>
-	                </div>
+                <div class="col-xs-12">
+                    <div id="indexDiv"
+                         class="center-block">
+                        <div class="col-xs-5"
+                             style="padding: 0px;">
+                            <img src="media/images/maquina.png"
+                                 class="img-responsive center-block"
+                                 alt="maquina"
+                                 style="height: 160px; margin-right: 0;">
+                        </div>
+                        <div class="col-xs-7"
+                             style="padding: 0px;">
+                            <form class="form"
+                                  action="node.php"
+                                  method="get"
+                                  style="padding-top: 50px; padding-left: 0px;">
+                                <div class="input-group square-box">
+                                    <input type="text"
+                                         class="form-control input-lg text-center lead text-lowercase inline-text square-box"
+                                         name="name">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div><!-- Logo img-->
             <div class="bottom center-block">
