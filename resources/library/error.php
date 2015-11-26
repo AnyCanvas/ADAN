@@ -30,7 +30,7 @@
 	<div class="container-fluid">
 
 	<!-- Fanbot logo columns-->
-	  <div class="center-block vertical-center" style="height: 22px;">
+	  <div class="center-block vertical-center" style="height: 220px; width: auto">
 	    	<img class="img-responsive" alt="Fanbot" src="../../media/images/<?php switch ($_SESSION['error']){
 				case 0:
 		    	   echo 'upss.png';
