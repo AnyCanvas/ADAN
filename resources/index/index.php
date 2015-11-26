@@ -32,7 +32,7 @@
 	<div class="col-xs-12">
 		<div id="indexDiv" class="center-block">
 			<div class="col-xs-5" style="padding: 0px;">
-				<img src="media/images/maquina.png" class="img-responsive center-block" alt="maquina" style="height: 160px;" />		
+				<img src="media/images/maquina.png" class="img-responsive center-block" alt="maquina" style="height: 160px; left: 0:" />		
 			</div>
 
 		<div class="col-xs-7" style="padding: 0px;">
