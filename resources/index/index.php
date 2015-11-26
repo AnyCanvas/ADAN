@@ -29,8 +29,7 @@
 	    	<div class="col-xs-1" ></div>
 
 	<div class="clearfix visible-xs-block"></div>
-	<div class="col-xs-1"></div>
-	<div class="col-xs-10" style="padding: 0px;">
+	<div class="col-xs-12">
 		<div id="indexDiv" class="center-block">
 			<div class="col-xs-5" style="padding: 0px;">
 				<img src="media/images/maquina.png" class="img-responsive center-block" alt="maquina" style="height: 160px;" />		
@@ -49,7 +48,6 @@
 			</form>
 		</div>
 	</div>
-	<div class="col-xs-1" ></div>
 	</div>
 	</div>
 	<!-- Logo img-->
