@@ -32,7 +32,7 @@
 	<!-- Fanbot logo columns-->
 	  <div class="row top-row">
 	    <div class="col-xs-12" >
-	    	<img class="img-responsive" alt="Fanbot" style="width: 300px;" src="../../media/images/<?php switch ($_SESSION['error']){
+	    	<img class="center-block" alt="Fanbot" style="width: 300px;" src="../../media/images/<?php switch ($_SESSION['error']){
 				case 0:
 		    	   echo 'upss.png';
 				   break;
