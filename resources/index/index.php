@@ -48,9 +48,6 @@
 	    		</div>
 			</form>
 		</div>
-	<div class="col-xs-10" style="padding-left: 0px;">
-
-		</div>
 	</div>
 	<div class="col-xs-1" ></div>
 	</div>
