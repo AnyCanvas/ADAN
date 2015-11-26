@@ -33,7 +33,19 @@
 	  <div class="row top-row">
 	    <div class="col-xs-3" ></div>
 	    <div class="col-xs-6" >
-	    	<img class="img-responsive" alt="Fanbot" src="../../media/images/upss.png">
+	    	<img class="img-responsive" alt="Fanbot" src="../../media/images/<?php switch ($_SESSION['error']){
+				case 0:
+		    	   echo 'upss.png';
+				   break;
+				case 1:
+					echo 'disconnected.png';
+					break;
+				case 2:
+					echo 'suspended.png';
+					break;
+
+				}
+			?>">
 	    </div>
 	    <div class="col-xs-3" ></div>
 	  </div>
@@ -44,19 +56,6 @@
 		<div class="row mid-row">
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10" >
-			<?php switch ($_SESSION['error']){
-				case 0:
-		    	   echo '<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">!Upss¡, Esta Fanbot nos<br>dice  que no tiene <br>los permisos de Facebook.</p>';
-				   break;
-				case 1:
-					echo '<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">!Upss¡, Esta Fanbot nos<br>dice  que ya te dio un<br>premio.</p>';
-					break;
-				case 2:
-					echo '<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">!Upss¡, Esta Fanbot esta<br>suspendida.</p>';
-					break;
-
-				}
-			?>
 				
 		    	
 		    </div>
