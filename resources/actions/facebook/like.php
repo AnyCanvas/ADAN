@@ -62,15 +62,6 @@
 					ga('send', 'event', 'action', 'facebook', 'like', 0);
 				});
   };
-  
-</script>
-
-			};
-		<?php
-			if(isset($_GET["post"])){
-				header("location: ". $loginUrl);			    
-		    } ?>
-  
 </script>
 
 <div class ="container-fluid">
