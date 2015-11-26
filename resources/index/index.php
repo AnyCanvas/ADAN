@@ -48,7 +48,6 @@
                     </div>
                 </div>
             </div><!-- Logo img-->
-            <div class="bottom center-block">
                 <div class="fb_logo-row row">
                     <div class="col-xs-4"></div>
                     <div class="col-xs-4">
@@ -59,7 +58,6 @@
                     </div>
                     <div class="col-xs-4"></div>
                 </div>
-            </div>
         </div>
     </body>
 </html>
