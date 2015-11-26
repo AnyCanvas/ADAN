@@ -107,7 +107,7 @@
 		    <div class="col-xs-4" ></div>
 		    <div class="col-xs-4" >
 				<div id="fblike center-block">
-					<div class="fb-like center-block" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" onclick="likeclick();" >							    
+					<div class="fb-like center-block" style="overflow: hidden;" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" onclick="likeclick();">							    
 				</div>
 		    </div>
 		    <div class="col-xs-4" ></div>
