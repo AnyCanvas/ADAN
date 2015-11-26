@@ -39,8 +39,8 @@
 			    require_once("resources/library/error.php");
 
 			} else if(isset($_COOKIE["lastLike"])) {
-			    $_SESSION['pageNumber'] = 3;
-			    $_SESSION['error'] = 0;
+//			    $_SESSION['pageNumber'] = 3;
+//			    $_SESSION['error'] = 0;
 			    require_once("resources/library/error.php");
 			} else {
 				header("location: ./index.php");
