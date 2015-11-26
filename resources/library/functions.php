@@ -27,7 +27,7 @@
 		
 	function getFbPageName($page){
 		$pageJson = file_get_contents('https://graph.facebook.com/'. $page .'?access_token=1498446833779418|6Uo2HajAgYUiIE0x8DR1AXuhxbw');
-		$pageArray = json_decode($pageJson);
+		$pageArray = json_decode($pageJson, true);
 		echo $pageArray['name'];
 	}
 
@@ -45,7 +45,7 @@
 		
 		// Get de JSON text containing the token 
 		$codeToToken = file_get_contents('https://graph.facebook.com/v2.3/oauth/access_token?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&client_secret='.$config["fbApp"]["appSecret"].'&code='. $code);
-		$token = json_decode($codeToToken, true);
+		$token = json_decode($codeToToken);
 
 
 			
