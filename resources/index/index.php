@@ -1,24 +1,5 @@
 	<div class="container-fluid">
 
-
-	<!-- Text columns-->
-		<div class="row mid-row">
-		    <div class="col-xs-1" ></div>
-		    <div class="col-xs-10" >
-				<?php
-						if(isset($_SESSION['nameErr'])){
-						if ($_SESSION['nameErr']){
-							$_SESSION['nameErr'] = FALSE;
-							echo ('<div class="alert alert-danger text-center text-nowrap" role="alert">La Fanbot que buscas no existe.</div>');
-				}
-				}
-				?>
-		    </div>
-		    <div class="col-xs-1" ></div>
-		</div>
-
-	<div class="clearfix visible-xs-block"></div>
-
 	<!-- Input and button to next page columns-->
 	  <div class="row mid-row" style="padding-top: 3em;">
 

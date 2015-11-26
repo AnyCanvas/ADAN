@@ -46,7 +46,7 @@
 		    <div class="col-xs-10" >
 			<?php switch ($_SESSION['error']){
 				case 0:
-		    	   echo '<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">!Upss¡, Esta Fanbot nos<br>dice  que no tienes <br>los permisos de Facebook.</p>';
+		    	   echo '<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">!Upss¡, Esta Fanbot nos<br>dice  que no tiene <br>los permisos de Facebook.</p>';
 				   break;
 				case 1:
 					echo '<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">!Upss¡, Esta Fanbot nos<br>dice  que ya te dio un<br>premio.</p>';
