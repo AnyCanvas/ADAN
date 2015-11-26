@@ -18,36 +18,10 @@
 <body>
 	<div class="container-fluid">
 
-	<!-- Fanbot logo columns-->
-	  <div class="row top-row">
-	    <div class="col-xs-3" ></div>
-	    <div class="col-xs-6" >
-	    	<img class="img-responsive" alt="Fanbot" src="media/images/done.png">
-	    </div>
-	    <div class="col-xs-3" ></div>
+	  <div class="center-block" style="width: 220px; height: 415px; padding-top: 50%">
+	    	<img class="img-responsive" alt="Fanbot" src="../../media/images/done.png">
 	  </div>
 
-	<div class="clearfix visible-xs-block"></div>
-
-	<!-- Like Count columns-->
-		<div class="row mid-row">
-		    <div class="col-xs-1" ></div>
-		    <div class="col-xs-10" >
-		    	<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">Action Id: <?php timeStamp(); ?></p>
-		    </div>
-		    <div class="col-xs-1" ></div>
-		</div>
-
-	<div class="clearfix visible-xs-block"></div>
-
-	<!-- Text columns-->
-		<div class="row mid-row">
-		    <div class="col-xs-1" ></div>
-		    <div class="col-xs-10" >
-		    	<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">Algo asombroso <br> acaba de pasar.</p>
-		    </div>
-		    <div class="col-xs-1" ></div>
-		</div>
 	</div>
 </body>
 </html>
