@@ -37,6 +37,11 @@
                                     <input type="text"
                                          class="form-control input-lg text-center lead text-lowercase inline-text square-box"
                                          name="name">
+                                    <span class="input-group-btn">
+										<button class="btn btn-lg next-btn square-box" type="submit">
+											<span class="glyphicon glyphicon-chevron-right"></span>
+										</button>
+									</span>
                                 </div>
                             </form>
                         </div>
