@@ -69,18 +69,14 @@
 
 <div class="clearfix visible-xs-block"></div>
 
-<div class="bottom center-block">
-	<div class="fb_logo-row row">
-		    <div class="col-xs-4" ></div>
-		    <div class="col-xs-4" >
-
-				<img class="img-responsive center-block" src="media/clients/logos/<?php  echo $_SESSION['config']['image']; ?>" alt="fanbot" width="200"/>
-		    </div>
-		    <div class="col-xs-4" ></div>
-	</div>
-</div>
-
-</div>
+	    <div class="fb_logo-row row bottom">
+	        <div class="col-xs-4"></div>
+	        <div class="col-xs-4">
+	            <img class="img-responsive center-block"
+	                 src="media/clients/logos/<?php  echo $_SESSION['config']['image']; ?>"
+	                 alt="fanbot"
+	                 width="200">
+	        </div>
 
 <div id="actionModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="false" data-backdrop="static">
 
