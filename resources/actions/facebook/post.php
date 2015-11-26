@@ -86,7 +86,7 @@
 <div class="clearfix visible-xs-block"></div>
 
 <div class="bottom center-block">
-	<div class="fb_logo-row row">
+	<div class="fb_logo-row row" style="max-height: 20%;">
 		    <div class="col-xs-4" ></div>
 		    <div class="col-xs-4" >
 
