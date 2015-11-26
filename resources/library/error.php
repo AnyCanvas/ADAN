@@ -31,8 +31,7 @@
 
 	<!-- Fanbot logo columns-->
 	  <div class="row top-row">
-	    <div class="col-xs-1" ></div>
-	    <div class="col-xs-10" >
+	    <div class="col-xs-12" >
 	    	<img class="img-responsive" alt="Fanbot" src="../../media/images/<?php switch ($_SESSION['error']){
 				case 0:
 		    	   echo 'upss.png';
@@ -47,7 +46,6 @@
 				}
 			?>">
 	    </div>
-	    <div class="col-xs-1" ></div>
 	  </div>
 
 	</div>
