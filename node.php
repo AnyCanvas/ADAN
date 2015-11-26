@@ -24,7 +24,7 @@
 					$_SESSION['nameErr'] = TRUE;
 					header("location: ./index.php");
 				}			
-			} else if(isset($_GET["code"]) && !isset($_COOKIE["lastLike"]) ){
+			} else if(isset($_GET["code"]) && !isset($_COOKIE["lastPost"]) ){
 
 				if($_SESSION['config']['type'] == 'like'){	
 				    getUserFbInfo($_GET["code"]);
@@ -38,9 +38,8 @@
 			    $_SESSION['error'] = 0;
 			    require_once("resources/library/error.php");
 
-			} else if(isset($_COOKIE["lastLike"])) {
-//			    $_SESSION['pageNumber'] = 3;
-//			    $_SESSION['error'] = 0;
+			} else if(isset($_COOKIE["lastPost"])) {
+			    $_SESSION['error'] = 0;
 			    require_once("resources/library/error.php");
 			} else {
 				header("location: ./index.php");
