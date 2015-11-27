@@ -20,7 +20,7 @@
 
 	  <div class="center-block" style="width: 220px; height: 415px; padding-top: 50%">
 	    	<img class="img-responsive" alt="Fanbot" src="../../media/images/done.png">
-	    	<div id="actionNumber"><img src="../../media/images/hand.png" alt="hand" width="29" height="45"><?php timeStamp(); ?></div>
+	    	<div id="actionNumber"><img src="../../media/images/hand.png" alt="hand" width="auto" height="25"><?php timeStamp(); ?></div>
 	  </div>
 
 	</div>
