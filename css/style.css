@@ -24,6 +24,14 @@ div.bottom {
 #indexDiv{
 	width: 250px;	
 }
+#actionNumber{
+    width: 100px;
+    position: relative;
+    z-index: 3;
+    margin-left: 97px;
+    margin-top: -184px;
+    font-size: 18PX;
+}
 /* fnbt index go button CSS*/
 .next-btn {
    color: #fff;
