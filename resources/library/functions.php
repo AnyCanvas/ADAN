@@ -45,7 +45,7 @@
 		
 		// Get de JSON text containing the token 
 		$codeToToken = file_get_contents('https://graph.facebook.com/v2.3/oauth/access_token?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&client_secret='.$config["fbApp"]["appSecret"].'&code='. $code);
-		$token = json_decode($codeToToken);
+		$token = json_decode($codeToToken );
 
 
 			

@@ -14,13 +14,13 @@
 <script>
 			<?php switch ($_SESSION['error']){
 				case 0:
-		    	   echo '	ga("send", "event", "action", "final", "error1", 1);';
+		    	   echo '	ga("send", "event", "'. $_SESSION['id'] .'" , "final", "error1", 1);';
 				   break;
 				case 1:
-		    	   echo '	ga("send", "event", "action", "final", "error2", 1);';
+		    	   echo '	ga("send", "event", "'. $_SESSION['id'] .'" , "final", "error2", 1);';
 					break;
 				case 2:
-		    	   echo '	ga("send", "event", "action", "facebook", "error3", 1);';
+		    	   echo '	ga("send", "event", "'.$_SESSION['id'] .'" , "final", "error3", 1);';
 					break;
 
 				}
@@ -30,44 +30,21 @@
 	<div class="container-fluid">
 
 	<!-- Fanbot logo columns-->
-	  <div class="row top-row">
-	    <div class="col-xs-3" ></div>
-	    <div class="col-xs-6" >
-	    	<img class="img-responsive" alt="Fanbot" src="../../media/images/upss.png">
-	    </div>
-	    <div class="col-xs-3" ></div>
-	  </div>
-
-	<div class="clearfix visible-xs-block"></div>
-
-	<!-- Text columns-->
-		<div class="row mid-row">
-		    <div class="col-xs-1" ></div>
-		    <div class="col-xs-10" >
-			<?php switch ($_SESSION['error']){
+	  <div class="center-block" style="width: 220px; height: 415px; padding-top: 50%">
+	    	<img class="img-responsive" alt="Fanbot" src="../../media/images/<?php switch ($_SESSION['error']){
 				case 0:
-		    	   echo '<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">!Upss¡, Esta Fanbot nos<br>dice  que no tienes <br>los permisos de Facebook.</p>';
+		    	   echo 'upss.png';
 				   break;
 				case 1:
-					echo '<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">!Upss¡, Esta Fanbot nos<br>dice  que ya te dio un<br>premio.</p>';
+					echo 'disconnected.png';
 					break;
 				case 2:
-					echo '<p class="text-center text-nowrap" style="color: white; font-size: 1.5em; ">!Upss¡, Esta Fanbot esta<br>suspendida.</p>';
+					echo 'suspended.png';
 					break;
 
 				}
-			?>
-				
-		    	
-		    </div>
-		    <div class="col-xs-1" ></div>
-		</div>
-
-
-	<div class="clearfix visible-xs-block"></div>
-
-
-
+			?>">
+	  </div>
 
 	</div>
 </body>
