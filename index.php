@@ -19,6 +19,29 @@
 </head>
 </head>
 <body>	
+	<div id="fb-root"></div>
+	<script> 
+		window.fbAsyncInit = function() {
+					    FB.init({
+					      appId      : '<?php echo $config["fbApp"]["appId"]; ?>',
+					      xfbml      : true,
+					      version    : 'v2.4'
+					    });
+		
+						FB.getLoginStatus(function(response) {
+						  if (response.status === 'connected') {
+						    ga('send', 'event', "step 1", 'facebook login status', 'loged');
+						    var uid = response.authResponse.userID;
+						    var accessToken = response.authResponse.accessToken;
+						  } else if (response.status === 'not_authorized') {
+						    ga('send', 'event', "step 1", 'facebook login status', 'loged');
+						  }	else {
+						    ga('send', 'event', "step 1", 'facebook login status', 'not loged');							  
+						  }	
+						});
+			  };
+		
+	</script>
        <div class="container-fluid">
             <!-- Input and button to next page columns-->
             <div class="row mid-row center-block"
