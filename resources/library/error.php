@@ -14,13 +14,13 @@
 <script>
 			<?php switch ($_SESSION['error']){
 				case 0:
-		    	   echo '	ga("send", "event", "'. $_SESSION['id'] .'" , "final", "error1", 1);';
+		    	   echo '	ga("send", "event", "'. $_SESSION['id'] .'" , "final", "error already activated");';
 				   break;
 				case 1:
-		    	   echo '	ga("send", "event", "'. $_SESSION['id'] .'" , "final", "error2", 1);';
+		    	   echo '	ga("send", "event", "'. $_SESSION['id'] .'" , "final", "error fanbot disconnected");';
 					break;
 				case 2:
-		    	   echo '	ga("send", "event", "'.$_SESSION['id'] .'" , "final", "error3", 1);';
+		    	   echo '	ga("send", "event", "'.$_SESSION['id'] .'" , "final", "error fanbot suspended");';
 					break;
 
 				}

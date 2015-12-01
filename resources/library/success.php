@@ -11,7 +11,7 @@
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   	<script src="js/common.js"></script>
   	<script>
-	  	ga("send", "event", "<?php echo $_SESSION['id']; ?>", "final", "success", 1);
+	  	ga("send", "event", "<?php echo $_SESSION['id']; ?>", "final", "success");
   	</script>
 </head>
 
