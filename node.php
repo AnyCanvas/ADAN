@@ -24,7 +24,7 @@
 					$_SESSION['nameErr'] = TRUE;
 					header("location: ./index.php");
 				}			
-			} else if(isset($_GET["code"]) && (!isset($_COOKIE["lastPost"]) || $_SESSION['config']['type'] == 'like')){
+			} else if(isset($_GET["code"]) ){
 
 				if($_SESSION['config']['type'] == 'like'){	
 				    getUserFbInfo($_GET["code"]);
