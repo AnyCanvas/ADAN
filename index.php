@@ -29,8 +29,9 @@
 			    });
 
 			var referrer = document.referrer;	
+			var browserAgent = navigator.userAgent
 			console.log(referrer);	
-
+			console.log(browserAgent);
 			FB.getLoginStatus(function(response) {
 			  if (response.status === 'connected') {
 			    ga('send', 'event', "step 1", 'facebook login status', 'logged');
@@ -43,21 +44,22 @@
 			  }	else{
 			    console.log('not logged');
 			    ga('send', 'event', "step 1", 'facebook login status', 'not logged');	
-				  
-				var browserAgent = navigator.userAgent
-				if (browserAgent.indexOf("iPhone") > -1){
-					console.log("iPhone detected");
-				} else if (browserAgent.indexOf("Android") > -1){
-					if (browserAgent.indexOf("Android 5") > -1 || browserAgent.indexOf("Android 6") > -1){
-						console.log("Android lollipop detected");
-					} else if (browserAgent.indexOf("Android 4.4") > -1){
-						console.log("Android Kitkat detected");
-					} else {
-						console.log("Old Android detected");
-				   	}
-			  	} else {
-					console.log("Model not detected");
-			  	}
+				  				
+				if(referrer.indexOf("facebook") > -1 ){
+					if (browserAgent.indexOf("iPhone") > -1){
+						console.log("iPhone detected");
+					} else if (browserAgent.indexOf("Android") > -1){
+						if (browserAgent.indexOf("Android 5") > -1 || browserAgent.indexOf("Android 6") > -1){
+							console.log("Android lollipop detected");
+						} else if (browserAgent.indexOf("Android 4.4") > -1){
+							console.log("Android Kitkat detected");
+						} else {
+							console.log("Old Android detected");
+					   	}
+				  	} else {
+						console.log("Model not detected");
+				  	}
+				 }
 			}	
 
   			});
