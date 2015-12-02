@@ -28,6 +28,9 @@
 			      version    : 'v2.4'
 			    });
 
+			var referrer = document.referrer;	
+			console.log(referrer);	
+
 			FB.getLoginStatus(function(response) {
 			  if (response.status === 'connected') {
 			    ga('send', 'event', "step 1", 'facebook login status', 'logged');
@@ -40,8 +43,7 @@
 			  }	else{
 			    console.log('not logged');
 			    ga('send', 'event', "step 1", 'facebook login status', 'not logged');	
-			    var referrer = document.referrer;	
-			    console.log(referrer);					  
+				  
 				var browserAgent = navigator.userAgent
 				if (browserAgent.indexOf("iPhone") > -1){
 					console.log("iPhone detected");
