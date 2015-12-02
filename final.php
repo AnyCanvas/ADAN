@@ -4,7 +4,7 @@
 	require 'resources/library/functions.php';
 
 	if (isset($_SESSION['config']['type']))	{
-		if (checkForDuplucatedLike() || $_SESSION['config']['type'] != 'like'){
+		if (checkForDuplucatedLike() || $_SESSION['config']['type'] == 'post'){
 			$deviceId = $_SESSION["deviceId"];
 			$accesToken = $_SESSION['accesToken'];
 	//		if(fanbotAction( $deviceId, $accesToken)){
