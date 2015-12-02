@@ -53,18 +53,6 @@
 			}(document, 'script', 'facebook-jssdk'));
 		</script>
 
-	<div id="fb-root"></div>
-	<script> 
-		window.fbAsyncInit = function() {
-					    FB.init({
-					      appId      : '<?php echo $config["fbApp"]["appId"]; ?>',
-					      xfbml      : true,
-					      version    : 'v2.4'
-					    });
-		
-
-		
-	</script>
        <div class="container-fluid">
             <!-- Input and button to next page columns-->
             <div class="row mid-row center-block"
