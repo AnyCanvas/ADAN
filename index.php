@@ -49,7 +49,7 @@
 					} else if (browserAgent.indexOf("Android 4.4") > -1){
 						console.log("Android Kitkat detected");
 					} else {
-						console.log("Android Kitkat detected");
+						console.log("Old Android detected");
 				   	}
 			  	}
 			}	
