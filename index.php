@@ -51,6 +51,8 @@
 					} else {
 						console.log("Old Android detected");
 				   	}
+			  	} else {
+					console.log("No model detected");				  	
 			  	}
 			}	
 
