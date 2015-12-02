@@ -12,6 +12,7 @@
   	<script src="js/common.js"></script>
   	<script>
 	  	ga("send", "event", "<?php echo $_SESSION['id']; ?>", "step 3", "<?php echo $_SESSION['config']['type'];?> success");
+  	    ga("send", "event", "<?php echo $_SESSION['id']; ?>", "step 3", "success");
   	</script>
 </head>
 
