@@ -52,7 +52,7 @@
 						console.log("Old Android detected");
 				   	}
 			  	} else {
-					console.log("No model detected");				  	
+					console.log("Model not detected");				  	
 			  	}
 			}	
 
