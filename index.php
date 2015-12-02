@@ -19,6 +19,51 @@
 </head>
 </head>
 <body>	
+	<div id="fb-root"></div>
+		<script>
+			  window.fbAsyncInit = function() {
+			    FB.init({
+			      appId      : '<?php echo $config["fbApp"]["appId"]; ?>',
+			      xfbml      : true,
+			      version    : 'v2.4'
+			    });
+
+			FB.getLoginStatus(function(response) {
+			  if (response.status === 'connected') {
+			    ga('send', 'event', "step 1", 'facebook login status', 'logged');
+			    console.log('logged');
+			    var uid = response.authResponse.userID;
+			    var accessToken = response.authResponse.accessToken;
+			  } else if (response.status === 'not_authorized') {
+			    console.log('logged');
+			    ga('send', 'event', "step 1", 'facebook login status', 'logged');
+			  }	else{
+			    console.log('not logged');
+			    ga('send', 'event', "step 1", 'facebook login status', 'not loged');							  
+				var browserAgent = navigator.userAgent
+				if (browserAgent.indexOf("iPhone") > -1){
+					console.log("iPhone detected");
+				} else if (browserAgent.indexOf("Android") > -1){
+					if (browserAgent.indexOf("Android 5") > -1){
+						console.log("Android lollipop detected");
+					} else if (browserAgent.indexOf("Android 4.4") > -1){
+						console.log("Android Kitkat detected");
+					} else {
+						console.log("Android Kitkat detected");
+				   	}
+			  }	
+			});
+  };
+
+			(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/es_LA/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+
        <div class="container-fluid">
             <!-- Input and button to next page columns-->
             <div class="row mid-row center-block"
