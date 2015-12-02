@@ -44,7 +44,7 @@
 				if (browserAgent.indexOf("iPhone") > -1){
 					console.log("iPhone detected");
 				} else if (browserAgent.indexOf("Android") > -1){
-					if (browserAgent.indexOf("Android 5") > -1){
+					if (browserAgent.indexOf("Android 5") > -1 || browserAgent.indexOf("Android 6") > -1){
 						console.log("Android lollipop detected");
 					} else if (browserAgent.indexOf("Android 4.4") > -1){
 						console.log("Android Kitkat detected");
