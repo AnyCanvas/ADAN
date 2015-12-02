@@ -51,9 +51,10 @@
 					} else {
 						console.log("Android Kitkat detected");
 				   	}
-			  }	
-			});
-  };
+			  	}
+			}	
+
+  			});
 
 			(function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
