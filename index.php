@@ -39,7 +39,7 @@
 			    ga('send', 'event', "step 1", 'facebook login status', 'logged');
 			  }	else{
 			    console.log('not logged');
-			    ga('send', 'event', "step 1", 'facebook login status', 'not loged');							  
+			    ga('send', 'event', "step 1", 'facebook login status', 'not logged');							  
 				var browserAgent = navigator.userAgent
 				if (browserAgent.indexOf("iPhone") > -1){
 					console.log("iPhone detected");
@@ -52,7 +52,7 @@
 						console.log("Old Android detected");
 				   	}
 			  	} else {
-					console.log("Model not detected");				  	
+					console.log("Model not detected");
 			  	}
 			}	
 
