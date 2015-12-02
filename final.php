@@ -33,7 +33,7 @@
 	//		}
 			}
 		} else {
-				$_SESSION['error'] = 1;
+				$_SESSION['error'] = 0;
 				require_once("resources/library/error.php");
 			}
 	} else {
