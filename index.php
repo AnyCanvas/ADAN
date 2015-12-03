@@ -135,7 +135,7 @@
 			<!-- Informative image Columns-->
 		    <div class="modal-content">
 		      <div class="modal-header">
-		        <h4 class="modal-title text-center">Presiona "Me gusta"</h4>
+		        <h4 class="modal-title text-center">No haz iniciado sesión de Facebook en el navegador</h4>
 		      </div>
 		      <div class="modal-body">
 				  <div class="fb_logo-row row">
