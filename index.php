@@ -135,6 +135,7 @@
 			<!-- Informative image Columns-->
 		    <div class="modal-content">
 		      <div class="modal-header">
+			    <span class="glyphicon glyphicon-chevron-right"></span>
 		        <h4 class="modal-title text-center">No haz iniciado sesión de Facebook en el navegador</h4>
 		      </div>
 		      <div class="modal-body">
