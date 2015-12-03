@@ -142,7 +142,7 @@
 				  	<div class="col-xs-10">
 					  	<h4 class="modal-title text-center">No haz iniciado sesión de Facebook en el navegador</h4>
 				  	</div>
-
+			      </div>
 		      </div>
 		      <div class="modal-body">
 				  <div class="fb_logo-row row">
