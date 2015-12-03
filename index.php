@@ -130,7 +130,7 @@
                     <div class="col-xs-4"></div>
                 </div>
 
-		<div id="actionModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="false" data-backdrop="static">
+		<div id="indexModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="false" data-backdrop="static">
 		<div class="modal-dialog modal-sm">		
 			<!-- Informative image Columns-->
 		    <div class="modal-content">
