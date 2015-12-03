@@ -22,7 +22,6 @@
 	<div id="fb-root"></div>
 		<script>
 			
-			$('#actionModal').modal('show');
 			  window.fbAsyncInit = function() {
 			    FB.init({
 			      appId      : '<?php echo $config["fbApp"]["appId"]; ?>',
@@ -174,4 +173,8 @@
 		   </div>
 		</div>
 	</div>
+	
+	<script>
+		$('#actionModal').modal('show');
+	</script>
 </body>
