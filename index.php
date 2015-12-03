@@ -150,10 +150,8 @@
 				  <img id="index_img" src="media/images/modal.jpg" class="img-responsive center-block" alt="Cinque Terre">
 			    </div>
 			   </div>
-		
-		
-		      </div>
-      <div class="modal-footer">
+
+			  <div class="modal-footer">
 				<div class="row mid-row">
 				    <div class="col-xs-2" ></div>
 				    <div class="col-xs-8 text-center leadinline-text" >
@@ -163,6 +161,9 @@
 				    </div>
 				    <div class="col-xs-2" ></div>
 				</div>
+		      </div>
+		
+		
 		      </div>
 		   </div>
 		</div>
