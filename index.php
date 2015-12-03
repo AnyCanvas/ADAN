@@ -153,14 +153,16 @@
 		
 		
 		      </div>
-		<!--      <div class="modal-footer">
+      <div class="modal-footer">
 				<div class="row mid-row">
-				    <div class="col-xs-1" ></div>
-				    <div class="col-xs-10 text-center leadinline-text" >
-						<span style="font-size: x-small; color: white;" >Al continuar estarás aceptando los términos y condiciones.</span>
+				    <div class="col-xs-2" ></div>
+				    <div class="col-xs-8 text-center leadinline-text" >
+						<a class="btn btn-block btn-lg btn-social btn-facebook" href="fb://page/1550316151894751">
+			    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Ir a Facebook</span>
+			  			</a>
 				    </div>
-				    <div class="col-xs-1" ></div>
-				</div> -->
+				    <div class="col-xs-2" ></div>
+				</div>
 		      </div>
 		   </div>
 		</div>
