@@ -175,6 +175,6 @@
 	</div>
 	
 	<script>
-		$('#actionModal').modal('show');
+		$('#indexModal').modal('show');
 	</script>
 </body>
