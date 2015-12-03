@@ -136,13 +136,12 @@
 		    <div class="modal-content">
 		      <div class="modal-header">
 			      <div class="row">
-				  	<div class="col-xs-2 col-sm-offset-1">
+				  	<div class="col-xs-2 col-sm-offset-1 col-xs-offset-0">
 				      	<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true" style="font-size: xx-large; text-align: center;"></span>					  	
 				  	</div>
-				  	<div class="col-xs-10 col-sm-offset-3 col-sm-8">
+				  	<div class="col-xs-10 col-sm-offset-3  col-xs-offset-2 col-sm-8">
 					  	<p class="modal-title text-center">No haz iniciado sesión de Facebook en el navegador</p>
 				  	</div>
-                    <div class="col-xs-1"></div>
 
 			      </div>
 		      </div>
