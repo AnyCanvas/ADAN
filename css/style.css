@@ -187,6 +187,7 @@ fieldset[disabled] .fb-btn.active {
 #indexModal .modal-header .modal-title{
 	text-align: left;
 	padding-left: 0px;
+	line-height: normal;
 }
 
 /*  Loader  Start */

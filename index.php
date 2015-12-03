@@ -141,7 +141,7 @@
 				      	<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true" style="font-size: xx-large; text-align: center;"></span>					  	
 				  	</div>
 				  	<div class="col-xs-8">
-					  	<h4 class="modal-title text-center">No haz iniciado sesión de Facebook en el navegador</h4>
+					  	<h5 class="modal-title text-center">No haz iniciado sesión de Facebook en el navegador</h5>
 				  	</div>
                     <div class="col-xs-1"></div>
 
