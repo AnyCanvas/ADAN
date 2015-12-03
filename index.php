@@ -135,8 +135,14 @@
 			<!-- Informative image Columns-->
 		    <div class="modal-content">
 		      <div class="modal-header">
-			    <span class="glyphicon glyphicon-chevron-right"></span>
-		        <h4 class="modal-title text-center">No haz iniciado sesión de Facebook en el navegador</h4>
+			      <div class="row">
+				  	<div class="col-xs-4">
+				      	<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true" style="font-size: 32px"></span>					  	
+				  	</div>
+				  	<div class="col-xs-8">
+					  	<h4 class="modal-title text-center">No haz iniciado sesión de Facebook en el navegador</h4>
+				  	</div>
+
 		      </div>
 		      <div class="modal-body">
 				  <div class="fb_logo-row row">
