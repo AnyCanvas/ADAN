@@ -182,6 +182,9 @@ fieldset[disabled] .fb-btn.active {
 #indexModal .modal-header{
 	background-color: #ffeb3b;
 	color: grey;
+}
+
+#indexModal .modal-header .modal-title{
 	text-align: left;
 }
 
