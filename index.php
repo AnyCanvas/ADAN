@@ -147,7 +147,7 @@
 		      </div>
 		      <div class="modal-body">
 				<div class="center-block" >
-							<img id="fb_img" src="media/images/modal.png" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+							<img id="fb_img" src="media/images/modal.png" class="img-responsive" alt="Cinque Terre">
 						</div>
 				  </div>
 		

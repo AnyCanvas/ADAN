@@ -145,6 +145,9 @@ fieldset[disabled] .fb-btn.active {
 	width: 220px;
 }
 
+#index_img{
+	width: 100%;
+}
 .action_img{
 	    margin-bottom: 10px;
 }
