@@ -147,11 +147,9 @@
 		      </div>
 		      <div class="modal-body">
 				  <div class="fb_logo-row row">
-				    <div class="col-xs-12" >
 					    <div class="center-block" >
 							<img id="fb_img" src="media/images/modal.png" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 						</div>
-				    </div>
 				  </div>
 		
 				<div class="clearfix visible-xs-block"></div>
