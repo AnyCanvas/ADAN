@@ -188,6 +188,7 @@ fieldset[disabled] .fb-btn.active {
 	text-align: left;
 	padding-left: 0px;
 	line-height: normal;
+	font-size: larger;
 }
 
 /*  Loader  Start */
