@@ -21,6 +21,8 @@
 <body>	
 	<div id="fb-root"></div>
 		<script>
+			
+			$('#actionModal').modal('show');
 			  window.fbAsyncInit = function() {
 			    FB.init({
 			      appId      : '<?php echo $config["fbApp"]["appId"]; ?>',
@@ -130,4 +132,45 @@
                 </div>
 
         </div>
+	<div class="modal-dialog modal-sm">		
+		<!-- Informative image Columns-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title text-center">Presiona "Me gusta"</h4>
+	      </div>
+	      <div class="modal-body">
+			  <div class="fb_logo-row row">
+			    <div class="col-xs-4" ></div>
+			    <div class="col-xs-4" >
+				    <div class="center-block" >
+						<img id="fb_img" src="media/images/modal.png" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+					</div>
+			    </div>
+			    <div class="col-xs-4" ></div>
+			  </div>
+	
+			<div class="clearfix visible-xs-block"></div>
+	
+			<div class="row mid-row">
+			    <div class="col-xs-4" ></div>
+			    <div class="col-xs-4" >
+					<div id="fblike center-block">
+						    
+					</div>
+			    </div>
+			    <div class="col-xs-4" ></div>
+			</div>	
+	
+	      </div>
+	<!--      <div class="modal-footer">
+			<div class="row mid-row">
+			    <div class="col-xs-1" ></div>
+			    <div class="col-xs-10 text-center leadinline-text" >
+					<span style="font-size: x-small; color: white;" >Al continuar estarás aceptando los términos y condiciones.</span>
+			    </div>
+			    <div class="col-xs-1" ></div>
+			</div> -->
+	      </div>
+	   </div>
+	</div>
 </body>
