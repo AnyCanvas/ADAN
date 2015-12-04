@@ -28,6 +28,8 @@ div#conoceMas{
 	background-color: #00ffea;
 	padding-top: 10px;
 	color: white;
+	font-weight: bold;
+	text-align: center;
 }
 
 #actionNumber{
