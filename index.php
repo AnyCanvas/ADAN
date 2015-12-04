@@ -153,13 +153,13 @@
 
 			  <div class="modal-footer">
 				<div class="row mid-row">
-				    <div class="col-xs-3" ></div>
-				    <div class="col-xs-6 text-center leadinline-text" >
+				    <div class="col-xs-2" ></div>
+				    <div class="col-xs-8 text-center leadinline-text" >
 						<a class="btn btn-block btn-lg btn-social btn-facebook" href="fb://page/1550316151894751">
 			    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Abrir</span>
 			  			</a>
 				    </div>
-				    <div class="col-xs-3" ></div>
+				    <div class="col-xs-2" ></div>
 				</div>
 		      </div>
 		
