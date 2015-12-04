@@ -50,15 +50,11 @@
 					if (browserAgent.indexOf("iPhone") > -1){
 						console.log("iPhone detected");
 						$('#indexModal').modal('show');
-						function openFacebook(){
-								window.open("fb://profile/1550316151894751");
-							}
+						modalButton.setAttribute('href', 'fb://profile/1550316151894751');
 					} else if (browserAgent.indexOf("Android") > -1){
 						if (browserAgent.indexOf("Android 5") > -1 || browserAgent.indexOf("Android 6") > -1){
 							console.log("Android lollipop detected");
-							function openFacebook(){
-								window.open("fb://page/1550316151894751");
-							}
+							modalButton.setAttribute('href', 'fb://profile/1550316151894751');
 							$('#indexModal').modal('show');
 						} else if (browserAgent.indexOf("Android 4.4") > -1){
 							console.log("Android Kitkat detected");
@@ -163,7 +159,7 @@
 				<div class="row mid-row">
 				    <div class="col-xs-2" ></div>
 				    <div class="col-xs-8 text-center leadinline-text" >
-						<a class="btn btn-block btn-lg btn-social btn-facebook" onclick="openLink()">
+						<a id="modalButton" class="btn btn-block btn-lg btn-social btn-facebook" href="">
 			    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Abrir</span>
 			  			</a>
 				    </div>
