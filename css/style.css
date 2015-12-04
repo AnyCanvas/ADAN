@@ -16,13 +16,21 @@ body{
 div.bottom {
     position: absolute;
     bottom: 0;
-    right: 0;
     width: 100%;
     padding-bottom: 10px;
 }
 
 #indexDiv{
 	width: 250px;	
+}
+
+div#conoceMas{
+	background-color: #00ffea;
+	padding: 15px;
+	color: white;
+	font-weight: 700;
+	font-size: larger;
+	text-align: center;
 }
 
 #actionNumber{
@@ -145,6 +153,9 @@ fieldset[disabled] .fb-btn.active {
 	width: 220px;
 }
 
+#index_img{
+	width: 100%;
+}
 .action_img{
 	    margin-bottom: 10px;
 }
@@ -179,6 +190,21 @@ fieldset[disabled] .fb-btn.active {
 }
 
 
+#indexModal .modal-header{
+	background-color: #ffeb3b;
+	color: grey;
+}
+
+#indexModal .modal-body{
+	padding: 0;
+}
+
+#indexModal .modal-header .modal-title{
+	text-align: left;
+	padding-left: 0px;
+	line-height: normal;
+	font-size: large;
+}
 
 /*  Loader  Start */
 
