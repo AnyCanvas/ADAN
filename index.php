@@ -46,7 +46,7 @@
 			    console.log('not logged');
 			    ga('send', 'event', "step 1", 'facebook login status', 'not logged');	
 				  				
-				if(referrer.indexOf("facebook") > -1 ){
+				if(referrer.indexOf("facebook") <= -1 ){
 					if (browserAgent.indexOf("iPhone") > -1){
 						console.log("iPhone detected");
 						$('#indexModal').modal('show');
