@@ -24,6 +24,10 @@ div.bottom {
 	width: 250px;	
 }
 
+div#conoceMas{
+	background-color: #00ffea;
+}
+
 #actionNumber{
     width: 100px;
     position: relative;
