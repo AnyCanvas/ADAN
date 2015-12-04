@@ -21,9 +21,26 @@
 
 	  <div class="center-block" style="width: 220px; height: 415px; padding-top: 50%">
 	    	<img class="img-responsive" alt="Fanbot" src="../../media/images/done.png">
-	    	<div id="actionNumber"><img src="../../media/images/hand.png" alt="hand" width="auto" height="25"><?php timeStamp(); ?></div>
+	    	<div id="actionNumber">
+		    	<img src="../../media/images/hand.png" 
+		    	     alt="hand" 
+		    	     width="auto" 
+		    	     height="25">
+		    	<?php timeStamp(); ?>
+		   	</div>
 	  </div>
 
+        <div class="fb_logo-row row bottom">
+            <div class="col-xs-4"></div>
+                <div class="col-xs-4">
+                    <img class="img-responsive center-block"
+                         src="media/clients/logos/fanbot.png"
+                         alt="fanbot"
+                         width="200">
+                </div>
+            <div class="col-xs-4"></div>
+        </div>
+	  
 	</div>
 </body>
 </html>
