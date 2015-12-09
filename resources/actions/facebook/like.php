@@ -97,7 +97,7 @@
 		    <div class="col-xs-4" >
 			    <div class="center-block" >
 					<img id="fb_img" src="<?php 
-					$pictureJson = file_get_contents('https://graph.facebook.com/'. $_SESSION['config']['link'] .'/picture?access_token=CAACEdEose0cBAGTE15AidiIcT16Bcj4RFNFrVsqIzMjhtDg9YZADx3HQxbMwdtl1Aefgwm9bZCS98pbyp0vcBA6otROt89KS0JgeqpADuqcmQEeNIOQ28rNL2e1X3gLZCpZAAxiXKP3nZBvBJ6ZA6ZBupfohVOkZB3ci1w1pmHAXHkvekqFLzmgs6lo1fA6yRrIZD&redirect=false&height=300');
+					$pictureJson = file_get_contents('https://graph.facebook.com/'. $_SESSION['config']['link'] .'/picture?redirect=false&height=300');
 					$pictureArray = json_decode($pictureJson, true);
 					echo $pictureArray['data']['url'];
 						?> " class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
