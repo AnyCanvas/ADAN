@@ -94,7 +94,6 @@
                 <div class="col-xs-12">
                     <div id="indexDiv"
                          class="center-block">
-                        <div class="col-xs-12"
                              style="padding: 0px;">
                             <form class="form"
                                   action="node.php"
@@ -111,7 +110,6 @@
 									</span>
                                 </div>
                             </form>
-                        </div>
                     </div>
                 </div>
             </div><!-- Logo img-->
