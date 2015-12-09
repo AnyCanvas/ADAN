@@ -102,7 +102,7 @@
 													  '/picture?access_token=CAACEdEose0cBAGTE15AidiIcT16Bcj4RFNFrVsqIzMjhtDg9YZADx3HQxbMwdtl1Aefgwm9bZCS98pbyp0vcBA6otROt89KS0JgeqpADuqcmQEeNIOQ28rNL2e1X3gLZCpZAAxiXKP3nZBvBJ6ZA6ZBupfohVOkZB3ci1w1pmHAXHkvekqFLzmgs6lo1fA6yRrIZD&redirect=false');
 					$pictureArray = json_decode($pictureJson, true);
 					echo $pictureArray['url'];
-						?>" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+						?> " class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 				</div>
 		    </div>
 		    <div class="col-xs-4" ></div>
