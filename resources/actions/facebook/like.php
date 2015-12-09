@@ -96,13 +96,13 @@
 		    <div class="col-xs-4" ></div>
 		    <div class="col-xs-4" >
 			    <div class="center-block" >
-					<img id="fb_img" src="https://graph.facebook.com/<?php 
+					<img id="fb_img" src="<?php 
 					$pictureJson = file_get_contents('https://graph.facebook.com/'. 
 													  $_SESSION['config']['link'] .
-													  '/picture?access_token=1498446833779418|6Uo2HajAgYUiIE0x8DR1AXuhxbw&redirect=false');
+													  '/picture?access_token=CAACEdEose0cBAGTE15AidiIcT16Bcj4RFNFrVsqIzMjhtDg9YZADx3HQxbMwdtl1Aefgwm9bZCS98pbyp0vcBA6otROt89KS0JgeqpADuqcmQEeNIOQ28rNL2e1X3gLZCpZAAxiXKP3nZBvBJ6ZA6ZBupfohVOkZB3ci1w1pmHAXHkvekqFLzmgs6lo1fA6yRrIZD&redirect=false');
 					$pictureArray = json_decode($pictureJson, true);
 					echo $pictureArray['url'];
-						?>/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+						?>" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 				</div>
 		    </div>
 		    <div class="col-xs-4" ></div>
