@@ -96,7 +96,13 @@
 		    <div class="col-xs-4" ></div>
 		    <div class="col-xs-4" >
 			    <div class="center-block" >
-					<img id="fb_img" src="https://graph.facebook.com/<?php echo $_SESSION['config']['link'];?>/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+					<img id="fb_img" src="https://graph.facebook.com/<?php 
+					$pictureJson = file_get_contents('https://graph.facebook.com/'. 
+													  $_SESSION['config']['link'] .
+													  '/picture?access_token=1498446833779418|6Uo2HajAgYUiIE0x8DR1AXuhxbw&redirect=false');
+					$pictureArray = json_decode($pictureJson, true);
+					echo $pictureArray['url'];
+						?>/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 				</div>
 		    </div>
 		    <div class="col-xs-4" ></div>
