@@ -85,7 +85,7 @@
                 <div class="col-xs-1"></div>
                 <div class="col-xs-10">
                     <p class="text-center text-nowrap"
-                       style="color: white; font-size: 1.2em;">
+                       style="color: white; font-size: 1.5em;">
                         Cual es nuestro hashtag
                     </p>
                 </div>
