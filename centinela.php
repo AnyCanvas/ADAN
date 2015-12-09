@@ -91,10 +91,9 @@
                 </div>
                 <div class="col-xs-1"></div>
                 <div class="clearfix visible-xs-block"></div>
-                <div class="col-xs-12">
+                <div class="col-xs-12" style="padding: 0px;">
                     <div id="indexDiv"
                          class="center-block">
-                             style="padding: 0px;">
                             <form class="form"
                                   action="node.php"
                                   method="get"
@@ -110,7 +109,7 @@
 									</span>
                                 </div>
                             </form>
-                    </div>
+                        </div>
                 </div>
             </div><!-- Logo img-->
 
