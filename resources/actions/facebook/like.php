@@ -97,13 +97,13 @@
 		    <div class="col-xs-4" >
 			    <div class="center-block" >
 				    <?php if($_SESSION['id'] == "FB-B1-SCM-00102"){ ?>
-					<img id="fb_img" src="../../../media/clients/logos/centinela.png" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">				    
+					<img id="fb_img" src="../../../media/clients/logos/centinela.png" class="img-responsive img-thumbnail center-block" alt="Logo">
 				    <?php } else { ?>
 					<img id="fb_img" src="<?php 
 					$pictureJson = file_get_contents('https://graph.facebook.com/'. $_SESSION['config']['link'] .'/picture?redirect=false&height=300');
 					$pictureArray = json_decode($pictureJson, true);
 					echo $pictureArray['data']['url'];
-						?> " class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+						?> " class="img-responsive img-thumbnail center-block" alt="Logo">
 					<?php } ?>
 				</div>
 		    </div>
