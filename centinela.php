@@ -101,9 +101,10 @@
                                 <div class="input-group square-box" style="box-shadow: 3px 4px 1px rgba(255,255,255,.15);">
                                     <input type="text"
                                          class="form-control input-lg text-center lead text-lowercase inline-text square-box"
-                                         name="name">
+                                         name="name"
+                                         style="box-shadow: 3px 4px 1px rgba(255,255,255,.15);">
                                     <span class="input-group-btn">
-										<button class="btn btn-lg next-btn square-box" type="submit">
+										<button class="btn btn-lg next-btn square-box" type="submit" style="box-shadow: 3px 4px 1px rgba(255,255,255,.15);">
 											<span class="glyphicon glyphicon-chevron-right"></span>
 										</button>
 									</span>
