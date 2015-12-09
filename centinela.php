@@ -98,7 +98,7 @@
                                   action="node.php"
                                   method="get"
                                   style="padding-top: 50px; padding-left: 0px;">
-                                <div class="input-group square-box">
+                                <div class="input-group square-box" style="box-shadow: 3px 4px 1px rgba(255,255,255,.15);">
                                     <input type="text"
                                          class="form-control input-lg text-center lead text-lowercase inline-text square-box"
                                          name="name">
