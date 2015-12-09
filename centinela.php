@@ -18,7 +18,7 @@
   	<script src="js/common.js"></script>
 </head>
 </head>
-<body>	
+<body style="background-color: black;">	
 	<div id="fb-root"></div>
 		<script>
 			
@@ -117,7 +117,7 @@
                     <div class="col-xs-4"></div>
                     <div class="col-xs-4">
                         <img class="img-responsive center-block"
-                             src="media/clients/logos/fanbot.png"
+                             src="media/clients/logos/centinela.png"
                              alt="fanbot"
                              width="200">
                     </div>
