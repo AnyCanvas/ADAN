@@ -42,7 +42,7 @@
                 </a>
         </div>
 	  <?php } else {?>
-	  <div class="center-block" style="width: 220px; height: 415px; padding-top: 10%; color: white; font-size: larger;">
+	  <div class="center-block" style="width: 220px; height: 415px; padding-top: 10%; color: white; font-size: xx-large; text-align: center;">
 	  		Algo asombroso acaba de pasar.
 		   	</div>
 	  </div>	  
