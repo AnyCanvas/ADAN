@@ -15,7 +15,7 @@
   	</script>
 </head>
 
-<body>
+<body <?php if($_SESSION['id'] == "FB-B1-SCM-00102"){ echo 'style="background-color: black;"'; }?>>
 	<div class="container-fluid">
 
 	  <div class="center-block" style="width: 220px; height: 415px; padding-top: 10%">
