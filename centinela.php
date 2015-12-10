@@ -11,11 +11,11 @@
 	<meta charset="utf-8"> 
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/bootstrap-social.css">
+	<link rel="stylesheet" href="http://soyfanbot.com/css/style.css">
+	<link rel="stylesheet" href="http://soyfanbot.com/css/bootstrap-social.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  	<script src="js/common.js"></script>
+  	<script src="http://js/common.js"></script>
 </head>
 </head>
 <body style="background-color: black;">	
@@ -95,7 +95,7 @@
                     <div id="indexDiv"
                          class="center-block">
                             <form class="form"
-                                  action="node.php"
+                                  action="http://soyfanbot.com/node.php"
                                   method="get"
                                   style="padding-top: 50px; padding-left: 0px;">
                                 <div class="input-group square-box" style="box-shadow: 3px 4px 1px rgba(255,255,255,.15);">
