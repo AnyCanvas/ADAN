@@ -142,7 +142,7 @@
 		      </div>
 		      <div class="modal-body">
 				<div class="center-block" >
-				  <img id="index_img" src="media/images/modal.jpg" class="img-responsive center-block" alt="Cinque Terre">
+				  <img id="index_img" src="http://soyfanbot.com/media/images/modal.jpg" class="img-responsive center-block" alt="Cinque Terre">
 			    </div>
 			   </div>
 
