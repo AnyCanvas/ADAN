@@ -118,7 +118,7 @@
                     <div class="col-xs-4"></div>
                     <div class="col-xs-4">
                         <img class="img-responsive center-block"
-                             src="media/clients/logos/centinela.png"
+                             src="http://soyfanbot.com/media/clients/logos/centinela.png"
                              alt="fanbot"
                              width="200">
                     </div>
