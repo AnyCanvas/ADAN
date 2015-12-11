@@ -46,6 +46,9 @@
 		      xfbml      : true,
 		      version    : 'v2.5'
 		    });
+
+			FB.Event.subscribe('xfbml.render', finished_rendering);
+
 		  };
 		
 		  (function(d, s, id){
@@ -55,10 +58,6 @@
 		     js.src = "//connect.facebook.net/en_US/sdk.js";
 		     fjs.parentNode.insertBefore(js, fjs);
 		   }(document, 'script', 'facebook-jssdk'));
-
-			window.fbAsyncInit = function() {
-				FB.Event.subscribe('xfbml.render', finished_rendering);
-			};
 
 			postclick = function () {
 						FB.ui({
