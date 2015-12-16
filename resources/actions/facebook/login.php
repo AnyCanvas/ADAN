@@ -114,7 +114,7 @@
 		    <div class="col-xs-3" ></div>
 		    <div class="col-xs-6"  style="padding: 0px 34px;">
 				<a id="post-btn" class="btn btn-block btn-xs btn-social btn-facebook" onclick="postclick();" style="padding-left: 20px;">
-	    			<i class="fa fa-facebook-official"></i> <span class="text-center" >Compartir</span>
+	    			<i class="fa fa-facebook-official"></i> <span class="text-center" >Login</span>
 	  			</a>
 		    </div>
 		    <div class="col-xs-3" ></div>
