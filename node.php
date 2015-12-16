@@ -11,7 +11,7 @@
 		$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='. 
 		            $config["fbApp"]["appId"] .
 		            '&redirect_uri='. $config["urls"]["baseUrl"] .
-		            '/node.php%3Ffoo%3Dbar&scope=public_profile, email,publish_actions&response_type=code';
+		            '/node.php%3Fstep%3D2&scope=public_profile, email,publish_actions&response_type=code';
 	}
 
 	if(isset($_GET["name"])){
@@ -33,6 +33,8 @@
 			$_SESSION['nameErr'] = TRUE;
 			header("location: ./index.php");
 		}			
+	} else if(isset($_GET["step"])){
+		require_once("resources/actions/facebook/post.php");		
 	} else if(isset($_GET["code"]) && (!isset($_COOKIE["lastPost"]) || $_SESSION['config']['type'] == 'like')){
 
 		if($_SESSION['config']['type'] == 'like'){	
