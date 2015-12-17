@@ -94,7 +94,7 @@
 		<!-- Informative image Columns-->
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title text-center">Presiona "Compartir"</h4>
+        <h4 class="modal-title text-center">Presiona "Check-in"</h4>
       </div>
       <div class="modal-body">
 		  <div class="fb_logo-row row">
@@ -114,7 +114,7 @@
 		    <div class="col-xs-3" ></div>
 		    <div class="col-xs-6"  style="padding: 0px 34px;">
 				<a id="post-btn" class="btn btn-block btn-xs btn-social btn-facebook" onclick="postclick();" style="padding-left: 20px;">
-	    			<i class="fa fa-facebook-official"></i> <span class="text-center" >Compartir</span>
+	    			<i class="fa fa-facebook-official"></i> <span class="text-center" >Check-in</span>
 	  			</a>
 		    </div>
 		    <div class="col-xs-3" ></div>
