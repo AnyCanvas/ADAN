@@ -114,7 +114,7 @@
 		    <div class="col-xs-3" ></div>
 		    <div class="col-xs-6"  style="padding: 0px 34px;">
 				<a id="post-btn" class="btn btn-block btn-xs btn-social btn-facebook" onclick="postclick();" style="padding-left: 20px;">
-	    			<span style="font-size: 300%">
+	    			<span style="font-size: xx-large ">
 						<a href="">&#128512;</a>
 						<a href="">&#128528;</a>
 						<a href="">&#128544;</a>
