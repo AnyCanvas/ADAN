@@ -34,9 +34,9 @@
 			header("location: ./index.php");
 		}			
 	} else if(isset($_GET["step"])){
-		if ($_GET["step"] = '1'){
+		if ($_GET["step"] == '1'){
 			require_once("resources/actions/facebook/post.php");					
-		} else if ($_GET["step"] = '2'){
+		} else if ($_GET["step"] == '2'){
 			require_once("resources/actions/surveys/rate.php");					
 			
 		}
