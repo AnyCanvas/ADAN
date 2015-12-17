@@ -34,7 +34,12 @@
 			header("location: ./index.php");
 		}			
 	} else if(isset($_GET["step"])){
-		require_once("resources/actions/facebook/post.php");		
+		if ($_GET["step"] = '1'){
+			require_once("resources/actions/facebook/post.php");					
+		} else if ($_GET["step"] = '2'){
+			require_once("resources/actions/surveys/rate.php");					
+			
+		}
 	} else if(isset($_GET["code"]) && (!isset($_COOKIE["lastPost"]) || $_SESSION['config']['type'] == 'like')){
 
 		if($_SESSION['config']['type'] == 'like'){	
