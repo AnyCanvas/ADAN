@@ -11,7 +11,7 @@
 		$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='. 
 		            $config["fbApp"]["appId"] .
 		            '&redirect_uri='. $config["urls"]["baseUrl"] .
-		            '/node.php%3Fstep%3D2&scope=public_profile, email,publish_actions&response_type=code';
+		            '/node.php%3Fstep%3D1&scope=public_profile, email,publish_actions&response_type=code';
 	}
 
 	if(isset($_GET["name"])){
