@@ -99,7 +99,7 @@
       <div class="modal-body">
 		<div class="row mid-row">
 		    <div class="col-xs-1" ></div>
-		    <div class="col-xs-10"  style="padding: 0px 34px;">
+		    <div class="col-xs-10"  style="padding: 10px 34px;">
 	    			<span style="font-size: 300%; text-align: left; ">
 						<a href="">&#128544;</a>
 						<a href="">&#128528;</a>
