@@ -125,7 +125,7 @@
 		<div class="row mid-row">
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10 text-center leadinline-text" >
-				<span style="font-size: x-small;" ><a href="<?php echo $config["urls"]["baseUrl"] . '/node.php%3Fstep%3D2' ?>"> Prefiero hacer una encuesta.<a></span>
+				<span style="font-size: x-small;" ><a href="<?php echo $config["urls"]["baseUrl"] . '/node.php?step=22' ?>"> Prefiero hacer una encuesta.<a></span>
 		    </div>
 		    <div class="col-xs-1" ></div>
 		</div>
