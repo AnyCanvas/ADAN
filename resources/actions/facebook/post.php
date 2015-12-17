@@ -60,8 +60,7 @@
 		   }(document, 'script', 'facebook-jssdk'));
 
 			postclick = function () {
-					var code ? 
-								window.location = "<?php echo $config["urls"]["baseUrl"] . '/node.php?code=' . $_GET["code"]; ?>";										
+					window.location = "<?php echo $config["urls"]["baseUrl"] . '/node.php?code=' . $_GET["code"]; ?>";										
 						}	
 		<?php
 			if(isset($_GET["post"])){
