@@ -111,15 +111,15 @@
 		<div class="clearfix visible-xs-block"></div>
 
 		<div class="row mid-row">
-		    <div class="col-xs-3" ></div>
-		    <div class="col-xs-6"  style="padding: 0px 34px;">
+		    <div class="col-xs-1" ></div>
+		    <div class="col-xs-10"  style="padding: 0px 34px;">
 	    			<span style="font-size: 300% ">
 						<a href="">&#128512;</a>
 						<a href="">&#128528;</a>
 						<a href="">&#128544;</a>
 					</span>
 		    </div>
-		    <div class="col-xs-3" ></div>
+		    <div class="col-xs-1" ></div>
 		</div>	
 
       </div>
