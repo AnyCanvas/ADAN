@@ -10,7 +10,7 @@
 	} else if ($_SESSION['config']['type'] == 'post'){
 		$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='. 
 		            $config["fbApp"]["appId"] .
-		            '&redirect_uri='. $config["urls"]["baseUrl"] .
+		            '&redirect_uri='. $config["urls"]["baseUrl"].
 		            '/node.php%3Fstep%3D1&scope=public_profile, email,publish_actions&response_type=code';
 	}
 
