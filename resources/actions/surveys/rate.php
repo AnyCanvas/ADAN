@@ -113,7 +113,7 @@
 		<div class="row mid-row">
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10"  style="padding: 0px 34px;">
-	    			<span style="font-size: 300% ">
+	    			<span style="font-size: 300%; text-align: center; ">
 						<a href="">&#128512;</a>
 						<a href="">&#128528;</a>
 						<a href="">&#128544;</a>
