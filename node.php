@@ -40,7 +40,7 @@
 			require_once("resources/actions/surveys/rate.php");					
 			
 		}
-	} else if(isset($_SESSION['code']) && (!isset($_COOKIE["lastPost"]) || $_SESSION['config']['type'] == 'like')){
+	} else if(isset($_GET['code']) && (!isset($_COOKIE["lastPost"]) || $_SESSION['config']['type'] == 'like')){
 
 		if($_SESSION['config']['type'] == 'like'){	
 		    getUserFbInfo($_SESSION['code']);
