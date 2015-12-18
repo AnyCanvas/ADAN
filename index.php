@@ -160,7 +160,7 @@
 				    <div class="col-xs-2" ></div>
 				    <div class="col-xs-8 text-center leadinline-text" >
 						<a id="modalButton" class="btn btn-block btn-lg btn-social btn-facebook" href="">
-			    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Abrir</span>
+			    			<span class="text-center" >USAR APLICACIÓN</span>
 			  			</a>
 				    </div>
 				    <div class="col-xs-2" ></div>
