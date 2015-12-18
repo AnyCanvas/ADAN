@@ -86,7 +86,7 @@
                 <div class="col-xs-10">
                     <p class="text-center text-nowrap"
                        style="color: white; font-size: 1.2em;">
-                        Escribe el nombre de la Fanbot
+                        Escribe la palabra de la etiqueta azul
                     </p>
                 </div>
                 <div class="col-xs-1"></div>
