@@ -166,7 +166,7 @@ fieldset[disabled] .fb-btn.active {
 }
 
 #actionModal .modal-header{
-	background-color: #506CA3;
+	background-color: #425AB0;
 	color: white;
 }
 
@@ -191,8 +191,8 @@ fieldset[disabled] .fb-btn.active {
 
 
 #indexModal .modal-header{
-	background-color: #ffeb3b;
-	color: grey;
+	background-color: #506CA3;
+	color: white;
 }
 
 #indexModal .modal-body{
