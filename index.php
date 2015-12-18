@@ -144,14 +144,14 @@
 				      	<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true" style="font-size: xx-large; text-align: center;"></span>					  	
 				  	</div>
 				  	<div class="col-xs-10">
-					  	<p class="modal-title text-center">No haz iniciado sesión de Facebook en este navegador</p>
+					  	<p class="modal-title text-center">Necesitas ingresar a Facebook y usar la aplicación</p>
 				  	</div>
 
 			      </div>
 		      </div>
 		      <div class="modal-body">
 				<div class="center-block" >
-				  <img id="index_img" src="media/images/modal.jpg" class="img-responsive center-block" alt="Cinque Terre">
+				  <img id="index_img" src="media/images/modal.gif" class="img-responsive center-block" alt="Cinque Terre">
 			    </div>
 			   </div>
 
