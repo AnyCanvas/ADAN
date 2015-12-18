@@ -1,4 +1,4 @@
-	<?php $_SESSION['code'] = $_GET('code'); ?>
+	<?php $_SESSION['code'] = $_GET["code"]; ?>
 
 <html>
 <head>
