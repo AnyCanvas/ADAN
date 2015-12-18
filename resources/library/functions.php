@@ -69,7 +69,7 @@
 			}
 		$linkData = [
 		  'link' => 'https://www.facebook.com/'. $_SESSION['config']['link'],
-//		  'message' => $message,
+		  'message' => $message,
 		  'place' => $pageId,
 		  ];
 		  
@@ -83,7 +83,7 @@
 			  if($_SESSION['config']['type'] == 'post'){
 			  	$post= (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
 			  }
-		  }
+	  }
 
 		  $_SESSION['fbUserId'] = $me->getId();
 		  $_SESSION['fbUserLink'] = $me->getLink();
