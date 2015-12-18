@@ -157,13 +157,13 @@
 
 			  <div class="modal-footer">
 				<div class="row mid-row">
-				    <div class="col-xs-2" ></div>
-				    <div class="col-xs-8 text-center leadinline-text" >
+				    <div class="col-xs-1" ></div>
+				    <div class="col-xs-10 text-center leadinline-text" >
 						<a id="modalButton" class="btn btn-block btn-primary" href="">
 			    			<span class="text-center" >USAR APLICACIÓN</span>
 			  			</a>
 				    </div>
-				    <div class="col-xs-2" ></div>
+				    <div class="col-xs-1" ></div>
 				</div>
 		      </div>
 		
