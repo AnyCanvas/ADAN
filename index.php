@@ -159,7 +159,7 @@
 				<div class="row mid-row">
 				    <div class="col-xs-2" ></div>
 				    <div class="col-xs-8 text-center leadinline-text" >
-						<a id="modalButton" class="btn btn-block btn-lg" href="">
+						<a id="modalButton" class="btn btn-block btn-lg btn-primary" href="">
 			    			<span class="text-center" >USAR APLICACIÓN</span>
 			  			</a>
 				    </div>
