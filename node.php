@@ -40,13 +40,13 @@
 			require_once("resources/actions/surveys/rate.php");					
 			
 		}
-	} else if(isset($_GET["code"]) && (!isset($_COOKIE["lastPost"]) || $_SESSION['config']['type'] == 'like')){
+	} else if(isset($_SESSION['code']) && (!isset($_COOKIE["lastPost"]) || $_SESSION['config']['type'] == 'like')){
 
 		if($_SESSION['config']['type'] == 'like'){	
-		    getUserFbInfo($_GET["code"]);
+		    getUserFbInfo($_SESSION['code']);
 			header("location: ./final.php");
 		} else if ($_SESSION['config']['type'] == 'post'){
-		    getUserFbInfo($_GET["code"]);
+		    getUserFbInfo($_SESSION['code']);
 			header("location: ./final.php");
 		}			    
     } else if( isset($_GET["error"]) ) {
