@@ -1,5 +1,3 @@
-	<?php $_SESSION['code'] = $_GET["code"]; ?>
-
 <html>
 <head>
 

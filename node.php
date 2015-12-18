@@ -10,7 +10,7 @@
 	} else if ($_SESSION['config']['type'] == 'post'){
 		$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='. 
 		            $config["fbApp"]["appId"] .
-		            '&redirect_uri='. $config["urls"]["baseUrl"].
+		            '&redirect_uri='. $config["urls"]["baseUrl"] .
 		            '/node.php%3Fstep%3D1&scope=public_profile, email,publish_actions&response_type=code';
 	}
 
@@ -40,13 +40,13 @@
 			require_once("resources/actions/surveys/rate.php");					
 			
 		}
-	} else if(isset($_GET['code']) && (!isset($_COOKIE["lastPost"]) || $_SESSION['config']['type'] == 'like')){
+	} else if(isset($_GET["code"]) && (!isset($_COOKIE["lastPost"]) || $_SESSION['config']['type'] == 'like')){
 
 		if($_SESSION['config']['type'] == 'like'){	
-		    getUserFbInfo($_SESSION['code']);
+		    getUserFbInfo($_GET["code"]);
 			header("location: ./final.php");
 		} else if ($_SESSION['config']['type'] == 'post'){
-		    getUserFbInfo($_SESSION['code']);
+		    getUserFbInfo($_GET["code"]);
 			header("location: ./final.php");
 		}			    
     } else if( isset($_GET["error"]) ) {
