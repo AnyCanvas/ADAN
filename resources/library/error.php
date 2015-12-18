@@ -49,10 +49,8 @@
 	  </div>
 
 	  <?php } else {?>
-	  <div class="center-block" style="width: 220px; height: 415px; padding-top: 10%; color: white; font-size: xx-large; text-align: center;">
-	  		Ocurrió un problema.
-		   	</div>
-	  </div>	  
+	    	<img class="img-responsive" alt="Fanbot" src="media/clients/centinela/upss.jpg">
+	  </div>
 	  <?php }?>
 
 	</div>
