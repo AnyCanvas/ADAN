@@ -164,6 +164,18 @@
 			  			</a>
 				    </div>
 				    <div class="col-xs-1" ></div>
+
+		<div class="clearfix visible-xs-block"></div>
+
+				    <div class="col-xs-1" ></div>
+				    <div class="col-xs-10 text-center leadinline-text" >
+						O
+						<a  id="closeModalButton" href="">
+			    			<span class="text-center" >Continuar en el navegador</span>
+			  			</a>
+				    </div>
+				    <div class="col-xs-1" ></div>
+				    
 				</div>
 		      </div>
 		
