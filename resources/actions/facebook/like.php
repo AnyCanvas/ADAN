@@ -123,14 +123,14 @@
 		</div>	
 
       </div>
-<!--      <div class="modal-footer">
+     <div class="modal-footer">
 		<div class="row mid-row">
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10 text-center leadinline-text" >
-				<span style="font-size: x-small; color: white;" >Al continuar estarás aceptando los términos y condiciones.</span>
+				<span style="font-size: x-small; color: white;" >O <a href="">continuar en el navegador</a></span>
 		    </div>
 		    <div class="col-xs-1" ></div>
-		</div> -->
+		</div>
       </div>
    </div>
   </div>
