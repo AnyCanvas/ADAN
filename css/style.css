@@ -195,7 +195,7 @@ fieldset[disabled] .fb-btn.active {
 	color: white;
 }
 
-closeModalButton:hover{
+#closeModalButton :hover{
 	color: grey;
 	
 }
