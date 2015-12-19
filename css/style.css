@@ -195,11 +195,11 @@ fieldset[disabled] .fb-btn.active {
 	color: white;
 }
 
-#modalButton a:visited{
+#modalButtonDiv a:visited{
 	color: white;
 }
 
-#modalButton{
+#modalButtonDiv{
 	padding: 10px;
 }
 

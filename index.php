@@ -158,8 +158,8 @@
 			  <div class="modal-footer">
 				<div class="row mid-row">
 				    <div class="col-xs-1" ></div>
-				    <div class="col-xs-10 text-center leadinline-text" style="background-color: #2D53D3;" >
-						<a id="modalButton" href="">
+				    <div id="modalButtonDiv" class="col-xs-10 text-center leadinline-text" style="background-color: #2D53D3;" >
+						<a  id="modalButton" href="">
 			    			<span class="text-center" >USAR APLICACIÓN</span>
 			  			</a>
 				    </div>
