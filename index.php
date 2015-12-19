@@ -168,7 +168,7 @@
 		<div class="clearfix visible-xs-block"></div>
 
 				    <div class="col-xs-1" ></div>
-				    <div class="col-xs-10 text-center leadinline-text" >
+				    <div class="col-xs-10 text-center leadinline-text" style="color: gray;">
 						o
 						<a  id="closeModalButton" href="#indexModal" data-toggle="modal" class="text-center">
 			    			Continuar en el navegador
