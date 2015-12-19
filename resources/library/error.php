@@ -49,7 +49,8 @@
 	  </div>
 
 	  <?php } else {?>
-	    	<img class="img-responsive" alt="Fanbot" src="media/clients/centinela/upss.jpg">
+	  <div class="center-block" style="width: 220px; height: 415px; padding-top: 50%">
+	    <img class="img-responsive" alt="Fanbot" src="media/clients/centinela/upss.jpg">
 	  </div>
 	  <?php }?>
 
