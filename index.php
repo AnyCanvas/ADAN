@@ -170,7 +170,7 @@
 				    <div class="col-xs-1" ></div>
 				    <div class="col-xs-10 text-center leadinline-text" >
 						O
-						<a  id="closeModalButton" href="">
+						<a  id="closeModalButton" class="close" data-dismiss="indexModal">
 			    			<span class="text-center" >Continuar en el navegador</span>
 			  			</a>
 				    </div>
