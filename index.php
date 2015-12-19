@@ -169,9 +169,9 @@
 
 				    <div class="col-xs-1" ></div>
 				    <div class="col-xs-10 text-center leadinline-text" >
-						O
-						<a  id="closeModalButton" href="#indexModal" data-toggle="modal">
-			    			<span class="text-center" >Continuar en el navegador</span>
+						o
+						<a  id="closeModalButton" href="#indexModal" data-toggle="modal" class="text-center">
+			    			Continuar en el navegador
 			  			</a>
 				    </div>
 				    <div class="col-xs-1" ></div>
