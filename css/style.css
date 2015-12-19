@@ -195,7 +195,7 @@ fieldset[disabled] .fb-btn.active {
 	color: white;
 }
 
-#modalButton a:visited{
+#modalButton a:visited span{
 	color: white;
 }
 
