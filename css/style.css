@@ -199,6 +199,10 @@ fieldset[disabled] .fb-btn.active {
 	color: white;
 }
 
+#modalButton{
+	padding: 10px;
+}
+
 #indexModal .modal-body{
 	padding: 0;
 }
