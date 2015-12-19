@@ -195,7 +195,8 @@ fieldset[disabled] .fb-btn.active {
 	color: white;
 }
 
-#modalButtonDiv a:visited{
+#modalButtonDiv a:visited,
+#modalButtonDiv a:hover{
 	color: white;
 }
 
