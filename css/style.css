@@ -195,6 +195,10 @@ fieldset[disabled] .fb-btn.active {
 	color: white;
 }
 
+#indexModal a:visited{
+	color: white;
+}
+
 #indexModal .modal-body{
 	padding: 0;
 }
