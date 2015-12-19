@@ -15,7 +15,7 @@
   	</script>
 </head>
 
-<body <?php if($_SESSION['id'] == "PF-B1-LTM-0001"){ echo 'style="background-color: black;"'; }?>>
+<body <?php if($_SESSION['id'] == "PF-B1-LTM-0001"){ echo 'style="background-color: #004485;"'; }?>>
 	<div class="container-fluid">
 
 	 <?php if($_SESSION['id'] != "PF-B1-LTM-0001"){ ?>
@@ -42,10 +42,9 @@
                 </a>
         </div>
 	  <?php } else {?>
-	  <div class="center-block" style="width: 220px; height: 415px; padding-top: 10%; color: white; font-size: xx-large; text-align: center;">
-	  		Algo asombroso acaba de pasar.
-		   	</div>
-	  </div>	  
+	  <div class="center-block" style="width: 220px; height: 415px; padding-top: 10%">
+	    	<img class="img-responsive" alt="Fanbot" src="media/clients/centinela/done.jpg">
+	  </div>
 	  <?php }?>
 	</div>
 </body>

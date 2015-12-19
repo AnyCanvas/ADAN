@@ -86,7 +86,7 @@
                 <div class="col-xs-10">
                     <p class="text-center text-nowrap"
                        style="color: white; font-size: 1.2em;">
-                        Escribe el nombre de la Fanbot
+                        Escribe la palabra de <br>la etiqueta azul
                     </p>
                 </div>
                 <div class="col-xs-1"></div>
@@ -144,26 +144,38 @@
 				      	<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true" style="font-size: xx-large; text-align: center;"></span>					  	
 				  	</div>
 				  	<div class="col-xs-10">
-					  	<p class="modal-title text-center">No haz iniciado sesión de Facebook en este navegador</p>
+					  	<p class="modal-title text-center">Necesitas ingresar a Facebook y usar la aplicación</p>
 				  	</div>
 
 			      </div>
 		      </div>
 		      <div class="modal-body">
 				<div class="center-block" >
-				  <img id="index_img" src="media/images/modal.jpg" class="img-responsive center-block" alt="Cinque Terre">
+				  <img id="index_img" src="media/images/modal.gif" class="img-responsive center-block" alt="Cinque Terre">
 			    </div>
 			   </div>
 
 			  <div class="modal-footer">
 				<div class="row mid-row">
-				    <div class="col-xs-2" ></div>
-				    <div class="col-xs-8 text-center leadinline-text" >
-						<a id="modalButton" class="btn btn-block btn-lg btn-social btn-facebook" href="">
-			    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Abrir</span>
+				    <div class="col-xs-1" ></div>
+				    <div id="modalButtonDiv" class="col-xs-10 text-center leadinline-text" style="background-color: #5890FF;" >
+						<a  id="modalButton" href="">
+			    			<span class="text-center" >USAR APLICACIÓN</span>
 			  			</a>
 				    </div>
-				    <div class="col-xs-2" ></div>
+				    <div class="col-xs-1" ></div>
+
+		<div class="clearfix visible-xs-block"></div>
+
+				    <div class="col-xs-1" ></div>
+				    <div class="col-xs-10 text-center leadinline-text" style="color: gray; font-size: small">
+						o
+						<a  id="closeModalButton" href="#indexModal" data-toggle="modal" class="text-center" style="text-decoration:underline;">
+			    			Continuar en el navegador
+			  			</a>
+				    </div>
+				    <div class="col-xs-1" ></div>
+				    
 				</div>
 		      </div>
 		
