@@ -128,6 +128,7 @@
 							</blockquote>
 						</div>
 					</div>
+				</div>
 		    </div>
 		    <div class="col-xs-4" ></div>
 		</div>	
