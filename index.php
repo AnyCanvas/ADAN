@@ -160,7 +160,7 @@
 				    <div class="col-xs-1" ></div>
 				    <a  id="modalButton" href="">
 					    <div id="modalButtonDiv" class="col-xs-10 text-center leadinline-text" style="background-color: #5890FF;" >					
-				    			<span class="text-center">USAR APLICACIÓN</span>			  			
+				    			<span class="text-center" style="color: white; font-size: medium;">USAR APLICACIÓN</span>			  			
 					    </div>
 				    </a>
 				    <div class="col-xs-1" ></div>
@@ -168,7 +168,7 @@
 		<div class="clearfix visible-xs-block"></div>
 
 				    <div class="col-xs-1" ></div>
-				    <div class="col-xs-10 text-center leadinline-text" style="color: gray; font-size: small">
+				    <div class="col-xs-10 text-center leadinline-text" style="color: gray; font-size: small; padding-top: 10px;">
 						o
 						<a  id="closeModalButton" href="#indexModal" data-toggle="modal" class="text-center" style="text-decoration:underline;">
 			    			Continuar en el navegador
