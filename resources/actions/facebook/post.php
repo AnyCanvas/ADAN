@@ -39,37 +39,29 @@
 <body>
 	
 	<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.3&appId=<?php echo $config["fbApp"]["appId"] ?>";
-			fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-			
-			window.fbAsyncInit = function() {
-				FB.Event.subscribe('xfbml.render', finished_rendering);
-			};
+	<script>
+		window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '<?php echo $config["fbApp"]["appId"] ?>',
+		      xfbml      : true,
+		      version    : 'v2.5'
+		    });
+
+			FB.Event.subscribe('xfbml.render', finished_rendering);
+
+		  };
+		
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "//connect.facebook.net/en_US/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
 
 			postclick = function () {
-						FB.ui({
-						  method: 'share',
-						//  name: 'Facebook Dialogs',
-						  href: 'https://www.facebook.com/<?php echo $_SESSION['config']['link']; ?>',
-						}, function(response){
-				            if (response) {
-									  ga('send', 'event', 'action', 'facebook', 'post', '1');
-									  window.location = "<?php echo $loginUrl;?>";			
-				                } else {
-									  ga('send', 'event', 'action', 'facebook', 'post', '0');
-				                    }
-						});
-						if (navigator.userAgent.indexOf("FBSN/iPhone") > -1){
-								ga('send', 'event', 'action', 'facebook', 'post', '1');
-								window.location = "<?php echo $loginUrl;?>";										
-						}
-
-			}	
+					window.location = "<?php echo $config["urls"]["baseUrl"] . '/node.php?code=' . $_GET["code"]; ?>";										
+						}	
 		<?php
 			if(isset($_GET["post"])){
 				header("location: ". $loginUrl);			    
@@ -102,7 +94,7 @@
 		<!-- Informative image Columns-->
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title text-center">Presiona "Compartir"</h4>
+        <h4 class="modal-title text-center">Haz "Check-in"</h4>
       </div>
       <div class="modal-body">
 		  <div class="fb_logo-row row">
@@ -120,24 +112,24 @@
 
 		<div class="row mid-row">
 		    <div class="col-xs-3" ></div>
-		    <div class="col-xs-6"  style="padding: 0px 34px;">
+		    <div class="col-xs-6"  style="padding: 10px 34px;">
 				<a id="post-btn" class="btn btn-block btn-xs btn-social btn-facebook" onclick="postclick();" style="padding-left: 20px;">
-	    			<i class="fa fa-facebook-official"></i> <span class="text-center" >Compartir</span>
+	    			<i class="fa fa-facebook-official"></i> <span class="text-center" >Check-in</span>
 	  			</a>
 		    </div>
 		    <div class="col-xs-3" ></div>
 		</div>	
 
       </div>
-<!--      <div class="modal-footer">
+      <div class="modal-footer">
 		<div class="row mid-row">
 		    <div class="col-xs-1" ></div>
 		    <div class="col-xs-10 text-center leadinline-text" >
-				<span style="font-size: x-small; color: white;" >Al continuar estarás aceptando los términos y condiciones.</span>
+				<span style="font-size: small; text-align: left;" ><a href="<?php echo $config["urls"]["baseUrl"] . '/node.php?step=2' ?>"> Prefiero hacer una encuesta.<a></span>
 		    </div>
 		    <div class="col-xs-1" ></div>
 		</div>
-      </div> -->
+      </div>
    </div>
   </div>
 </div>

@@ -191,8 +191,29 @@ fieldset[disabled] .fb-btn.active {
 
 
 #indexModal .modal-header{
-	background-color: #ffeb3b;
+	background-color: #4F6BA5;
+	color: white;
+}
+
+a:hover#closeModalButton, a:visited#closeModalButton, a#closeModalButton {
 	color: grey;
+	
+}
+#modalButtonDiv a:visited{
+	color: white;
+}
+
+
+#modalButtonDiv a:hover{
+	color: white;
+}
+
+#modalButtonDiv a{
+	color: white;
+}
+
+#modalButtonDiv{
+	padding: 10px;
 }
 
 #indexModal .modal-body{
@@ -203,7 +224,7 @@ fieldset[disabled] .fb-btn.active {
 	text-align: left;
 	padding-left: 0px;
 	line-height: normal;
-	font-size: large;
+	font-size: inherit;
 }
 
 /*  Loader  Start */

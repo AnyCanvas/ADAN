@@ -13,7 +13,7 @@
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   	<script src="js/common.js"></script>
 	<script>
-			ga('send', 'event', "<?php echo $_SESSION['id']; ?>", 'step 2', 'facebook like');
+			ga('send', 'event', "<?php echo $_SESSION['id']; ?>", 'step 2', 'facebook post');
 	</script>
   	<style type="text/css">
 		html{
@@ -33,35 +33,40 @@
 			$('#actionModal').modal('show');
 			console.log("finished rendering plugins");
 		}
-		
-		var likeclick = function () {
-			$('#actionModal').modal('hide');
-		}	
 	</script>  
 </head>
 
 <body>
 	
 	<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.3&appId=<?php echo $config["fbApp"]["appId"] ?>";
-			fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-			
-			window.fbAsyncInit = function() {
-				FB.Event.subscribe('xfbml.render', finished_rendering);
-				
-				FB.Event.subscribe('edge.create', function(targetUrl) {
-					ga('send', 'event', 'action', 'facebook', 'like', 1);
-					window.location="<?php echo $loginUrl;?>";
-				});
-				FB.Event.subscribe('edge.remove', function(targetUrl) {
-					ga('send', 'event', 'action', 'facebook', 'like', 0);
-				});
-  };
+	<script>
+		window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '<?php echo $config["fbApp"]["appId"] ?>',
+		      xfbml      : true,
+		      version    : 'v2.5'
+		    });
+
+			FB.Event.subscribe('xfbml.render', finished_rendering);
+
+		  };
+		
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "//connect.facebook.net/en_US/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+
+			postclick = function () {
+								window.location = "<?php echo $loginUrl;?>";										
+						}	
+		<?php
+			if(isset($_GET["post"])){
+				header("location: ". $loginUrl);			    
+		    } ?>
+  
 </script>
 
 <div class ="container-fluid">
@@ -89,37 +94,30 @@
 		<!-- Informative image Columns-->
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title text-center">Presiona "Me gusta"</h4>
+        <h4 class="modal-title text-center">Inicia sesión para continuar</h4>
       </div>
       <div class="modal-body">
 		  <div class="fb_logo-row row">
 		    <div class="col-xs-4" ></div>
 		    <div class="col-xs-4" >
 			    <div class="center-block" >
-				    <?php if($_SESSION['id'] == "PF-B1-LTM-0001"){ ?>
-					<img id="fb_img" src="../../../media/clients/logos/centinela.png" class="img-responsive img-thumbnail center-block" alt="Logo">
-				    <?php } else { ?>
-					<img id="fb_img" src="<?php 
-					$pictureJson = file_get_contents('https://graph.facebook.com/'. $_SESSION['config']['link'] .'/picture?redirect=false&height=300');
-					$pictureArray = json_decode($pictureJson, true);
-					echo $pictureArray['data']['url'];
-						?> " class="img-responsive img-thumbnail center-block" alt="Logo">
-					<?php } ?>
+					<img id="fb_img" src="https://graph.facebook.com/<?php echo $_SESSION['config']['link'];?>/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 				</div>
 		    </div>
 		    <div class="col-xs-4" ></div>
 		  </div>
 
+
 		<div class="clearfix visible-xs-block"></div>
 
 		<div class="row mid-row">
-		    <div class="col-xs-4" ></div>
-		    <div class="col-xs-4" >
-				<div id="fblike center-block">
-					<div class="fb-like center-block" style="overflow: hidden;" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" onclick="likeclick();">							    
-				</div>
+		    <div class="col-xs-3" ></div>
+		    <div class="col-xs-6"  style="padding: 10px 34px;">
+				<a id="post-btn" class="btn btn-block btn-xs btn-social btn-facebook" onclick="postclick();" style="padding-left: 20px;">
+	    			<i class="fa fa-facebook-official"></i> <span class="text-center" >Login</span>
+	  			</a>
 		    </div>
-		    <div class="col-xs-4" ></div>
+		    <div class="col-xs-3" ></div>
 		</div>	
 
       </div>
@@ -130,8 +128,8 @@
 				<span style="font-size: x-small; color: white;" >Al continuar estarás aceptando los términos y condiciones.</span>
 		    </div>
 		    <div class="col-xs-1" ></div>
-		</div> -->
-      </div>
+		</div>
+      </div> -->
    </div>
   </div>
 </div>
