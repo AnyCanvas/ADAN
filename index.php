@@ -160,7 +160,7 @@
 				    <div class="col-xs-1" ></div>
 				    <a  id="modalButton" href="">
 					    <div id="modalButtonDiv" class="col-xs-10 text-center leadinline-text" style="background-color: #5890FF;" >					
-				    			<span class="text-center" >USAR APLICACIÓN</span>			  			
+				    			<span class="text-center">USAR APLICACIÓN</span>			  			
 					    </div>
 				    </a>
 				    <div class="col-xs-1" ></div>
