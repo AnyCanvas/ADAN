@@ -11,14 +11,14 @@
 	<meta charset="utf-8"> 
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/bootstrap-social.css">
+	<link rel="stylesheet" href="http://soyfanbot.com/css/style.css">
+	<link rel="stylesheet" href="http://soyfanbot.com/css/bootstrap-social.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  	<script src="js/common.js"></script>
+  	<script src="http://js/common.js"></script>
 </head>
 </head>
-<body>	
+<body style="background-color: black;">	
 	<div id="fb-root"></div>
 		<script>
 			
@@ -85,41 +85,32 @@
                 <div class="col-xs-1"></div>
                 <div class="col-xs-10">
                     <p class="text-center text-nowrap"
-                       style="color: white; font-size: 1.2em;">
-                        Escribe la palabra de <br>la etiqueta azul
+                       style="color: white; font-size: 1.5em;">
+                        Cual es nuestro hashtag?
                     </p>
                 </div>
                 <div class="col-xs-1"></div>
                 <div class="clearfix visible-xs-block"></div>
-                <div class="col-xs-12">
+                <div class="col-xs-12" style="padding: 0px;">
                     <div id="indexDiv"
                          class="center-block">
-                        <div class="col-xs-5"
-                             style="padding: 0px;">
-                            <img src="media/images/maquina.png"
-                                 class="img-responsive center-block"
-                                 alt="maquina"
-                                 style="height: 160px; margin-right: 0;">
-                        </div>
-                        <div class="col-xs-7"
-                             style="padding: 0px;">
                             <form class="form"
-                                  action="node.php"
+                                  action="http://soyfanbot.com/node.php"
                                   method="get"
                                   style="padding-top: 50px; padding-left: 0px;">
-                                <div class="input-group square-box">
+                                <div class="input-group square-box" style="box-shadow: 3px 4px 1px rgba(255,255,255,.15);">
                                     <input type="text"
                                          class="form-control input-lg text-center lead text-lowercase inline-text square-box"
-                                         name="name">
+                                         name="name"
+                                         style="box-shadow: 3px 4px 1px rgba(255,255,255,.15);">
                                     <span class="input-group-btn">
-										<button class="btn btn-lg next-btn square-box" type="submit">
+										<button class="btn btn-lg next-btn square-box" type="submit" style="box-shadow: 3px 4px 1px rgba(255,255,255,.15);">
 											<span class="glyphicon glyphicon-chevron-right"></span>
 										</button>
 									</span>
                                 </div>
                             </form>
                         </div>
-                    </div>
                 </div>
             </div><!-- Logo img-->
 
@@ -127,7 +118,7 @@
                     <div class="col-xs-4"></div>
                     <div class="col-xs-4">
                         <img class="img-responsive center-block"
-                             src="media/clients/logos/fanbot.png"
+                             src="http://soyfanbot.com/media/clients/logos/centinela.png"
                              alt="fanbot"
                              width="200">
                     </div>
@@ -144,38 +135,26 @@
 				      	<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true" style="font-size: xx-large; text-align: center;"></span>					  	
 				  	</div>
 				  	<div class="col-xs-10">
-					  	<p class="modal-title text-center">Necesitas ingresar a Facebook y usar la aplicación</p>
+					  	<p class="modal-title text-center">No haz iniciado sesión de Facebook en este navegador</p>
 				  	</div>
 
 			      </div>
 		      </div>
 		      <div class="modal-body">
 				<div class="center-block" >
-				  <img id="index_img" src="media/images/modal.gif" class="img-responsive center-block" alt="Cinque Terre">
+				  <img id="index_img" src="http://soyfanbot.com/media/images/modal.jpg" class="img-responsive center-block" alt="Cinque Terre">
 			    </div>
 			   </div>
 
 			  <div class="modal-footer">
 				<div class="row mid-row">
-				    <div class="col-xs-1" ></div>
-				    <a  id="modalButton" href="">
-					    <div id="modalButtonDiv" class="col-xs-10 text-center leadinline-text" style="background-color: #5890FF;" >					
-				    			<span class="text-center" style="color: white; font-size: medium;">USAR APLICACIÓN</span>			  			
-					    </div>
-				    </a>
-				    <div class="col-xs-1" ></div>
-
-		<div class="clearfix visible-xs-block"></div>
-
-				    <div class="col-xs-1" ></div>
-				    <div class="col-xs-10 text-center leadinline-text" style="color: gray; font-size: small; padding-top: 10px;">
-						o
-						<a  id="closeModalButton" href="#indexModal" data-toggle="modal" class="text-center" style="text-decoration:underline;">
-			    			Continuar en el navegador
+				    <div class="col-xs-2" ></div>
+				    <div class="col-xs-8 text-center leadinline-text" >
+						<a id="modalButton" class="btn btn-block btn-lg btn-social btn-facebook" href="">
+			    			<i class="fa fa-facebook-official"></i> <span class="text-center" style="font-size: 1.1em;" >Abrir</span>
 			  			</a>
 				    </div>
-				    <div class="col-xs-1" ></div>
-				    
+				    <div class="col-xs-2" ></div>
 				</div>
 		      </div>
 		

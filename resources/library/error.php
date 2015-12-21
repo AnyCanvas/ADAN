@@ -26,8 +26,10 @@
 				}
 			?>
 </script>
-<body>
+<body <?php if($_SESSION['id'] == "PF-B1-LTM-0001"){ echo 'style="background-color: #004485;"'; }?>>
 	<div class="container-fluid">
+
+	 <?php if($_SESSION['id'] != "PF-B1-LTM-0001"){ ?>
 
 	<!-- Fanbot logo columns-->
 	  <div class="center-block" style="width: 220px; height: 415px; padding-top: 50%">
@@ -45,6 +47,12 @@
 				}
 			?>">
 	  </div>
+
+	  <?php } else {?>
+	  <div class="center-block" style="width: 220px; height: 415px; padding-top: 50%">
+	    <img class="img-responsive" alt="Fanbot" src="media/clients/centinela/upss.jpg">
+	  </div>
+	  <?php }?>
 
 	</div>
 </body>
