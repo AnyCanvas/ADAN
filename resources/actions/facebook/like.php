@@ -91,7 +91,7 @@
       <div class="modal-header">
         <h4 class="modal-title text-center">Presiona "Me gusta"</h4>
       </div>
-      <div class="modal-body" style=" max-width: 100px;">
+      <div class="modal-body" style=" max-width: 200px; overflow: hidden">
 		  <div class="fb_logo-row row">
 			    <div class="center-block" >
 				<div id="fblike center-block">
