@@ -93,8 +93,8 @@
       </div>
       <div class="modal-body">
 		  <div class="fb_logo-row row">
-		    <div class="col-xs-4" ></div>
-		    <div class="col-xs-4" >
+		    <div class="col-xs-1" ></div>
+		    <div class="col-xs-10" >
 				<div id="fblike center-block">
 					<div class="fb-page" 
 						 data-href="https://www.facebook.com/facebook" 
@@ -108,30 +108,8 @@
 						</div>
 					</div>
 			    </div>
-		    <div class="col-xs-4" ></div>
+		    <div class="col-xs-1" ></div>
 		  </div>
-
-		<div class="clearfix visible-xs-block"></div>
-
-		<div class="row mid-row">
-		    <div class="col-xs-4" ></div>
-		    <div class="col-xs-4" >
-				<div id="fblike center-block">
-					<div class="fb-page" 
-						 data-href="https://www.facebook.com/facebook" 
-					     data-small-header="true" 
-						 data-adapt-container-width="true" data-hide-cover="true" 
-					     data-show-facepile="false">
-						 <div class="fb-xfbml-parse-ignore">
-							<blockquote cite="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>">
-								<a href="https://www.facebook.com/facebook">Like Box</a>
-							</blockquote>
-						</div>
-					</div>
-				</div>
-		    </div>
-		    <div class="col-xs-4" ></div>
-		</div>	
 
       </div>
 <!--      <div class="modal-footer">
