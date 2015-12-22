@@ -2,16 +2,7 @@
 	session_start();
 	include 'resources/library/functions.php'; 
 
-	if($_SESSION['config']['type'] == 'like'){	
-		$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='. 
-				    $config["fbApp"]["appId"] .'&redirect_uri='. 
-		            $config["urls"]["baseUrl"] .
-		            '/node.php&scope=public_profile, email&response_type=code';
-	} else if ($_SESSION['config']['type'] == 'post'){
-		$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='. 
-				    $config["fbApp"]["appId"] .'&redirect_uri='. 
-		            $config["urls"]["baseUrl"] .
-		            '/node.php&scope=public_profile, email&response_type=code';	}
+		$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=public_profile, email&response_type=code';
 
 
 			if(isset($_GET["name"])){
@@ -33,7 +24,7 @@
 					$_SESSION['nameErr'] = TRUE;
 					header("location: ./index.php");
 				}			
-			} else if(isset($_GET["code"]) && (!isset($_COOKIE["lastPost"]) || $_SESSION['config']['type'] == 'like')){
+			} else if( isset($_GET["code"]) ){
 
 				if($_SESSION['config']['type'] == 'like'){	
 				    getUserFbInfo($_GET["code"]);

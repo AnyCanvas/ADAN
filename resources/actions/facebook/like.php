@@ -93,34 +93,22 @@
       </div>
       <div class="modal-body">
 		  <div class="fb_logo-row row">
-		    <div class="col-xs-4" ></div>
-		    <div class="col-xs-4" >
 			    <div class="center-block" >
-				    <?php if($_SESSION['id'] == "PF-B1-LTM-0001"){ ?>
-					<img id="fb_img" src="../../../media/clients/logos/centinela.png" class="img-responsive img-thumbnail center-block" alt="Logo">
-				    <?php } else { ?>
-					<img id="fb_img" src="<?php 
-					$pictureJson = file_get_contents('https://graph.facebook.com/'. $_SESSION['config']['link'] .'/picture?redirect=false&height=300');
-					$pictureArray = json_decode($pictureJson, true);
-					echo $pictureArray['data']['url'];
-						?> " class="img-responsive img-thumbnail center-block" alt="Logo">
-					<?php } ?>
-				</div>
-		    </div>
-		    <div class="col-xs-4" ></div>
-		  </div>
-
-		<div class="clearfix visible-xs-block"></div>
-
-		<div class="row mid-row">
-		    <div class="col-xs-4" ></div>
-		    <div class="col-xs-4" >
 				<div id="fblike center-block">
-					<div class="fb-like center-block" style="overflow: hidden;" data-action="like" data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" data-layout="button" data-show-faces="false" data-share="false" onclick="likeclick();">							    
+					<div class="fb-page" 
+						data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" 
+					    data-small-header="true" 
+						data-adapt-container-width="true" 
+					    data-hide-cover="true" 
+						data-show-facepile="false">
+						<div class="fb-xfbml-parse-ignore">
+							<blockquote cite="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>">
+								<a href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>">Facebook</a>
+							</blockquote>
+						</div>
+					</div>
 				</div>
-		    </div>
-		    <div class="col-xs-4" ></div>
-		</div>	
+		  </div>
 
       </div>
 <!--      <div class="modal-footer">
