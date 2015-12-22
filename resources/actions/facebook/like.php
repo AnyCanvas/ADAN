@@ -102,8 +102,8 @@
 					    data-hide-cover="true" 
 						data-show-facepile="false">
 						<div class="fb-xfbml-parse-ignore">
-							<blockquote cite="https://www.facebook.com/facebook">
-								<a href="https://www.facebook.com/facebook">Facebook</a>
+							<blockquote cite="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>">
+								<a href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>">Facebook</a>
 							</blockquote>
 						</div>
 					</div>
