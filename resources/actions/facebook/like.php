@@ -94,11 +94,10 @@
       <div class="modal-body">
 		  <div class="fb_logo-row row">
 			    <div class="center-block" >
-				<div id="fblike center-block">
+				<div id="fblike center-block" style="overflow: hidden;">
 					<div class="fb-page" 
 						data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" 
 					    data-small-header="true" 
-						data-height="100"
 						data-adapt-container-width="true" 
 					    data-hide-cover="true" 
 						data-show-facepile="false">
