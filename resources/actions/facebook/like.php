@@ -98,7 +98,8 @@
 					<div class="fb-page" 
 						data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" 
 					    data-small-header="true" 
-						data-adapt-container-width="true" 
+						data-height="150"
+						data-adapt-container-width="false" 
 					    data-hide-cover="true" 
 						data-show-facepile="false">
 						<div class="fb-xfbml-parse-ignore">

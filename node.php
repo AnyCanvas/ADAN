@@ -8,7 +8,6 @@
 			if(isset($_GET["name"])){
 		    	$fnbtName  = htmlspecialchars($_GET["name"]);
 				if (findFnbt($fnbtName)) { 	
-
 					if($_SESSION['status'] == 0){
 						$_SESSION['error'] = 2;
 						header("location: ./resources/library/error.php");
@@ -45,4 +44,4 @@
 				header("location: ./index.php");
 				
 			}
-			    ?>
+?>
