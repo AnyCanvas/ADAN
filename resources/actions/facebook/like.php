@@ -103,7 +103,7 @@
 					     data-show-facepile="false">
 						 <div class="fb-xfbml-parse-ignore">
 							<blockquote cite="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>">
-								<a href="https://www.facebook.com/facebook">Like Box</a>
+								<a href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>">Like Box</a>
 							</blockquote>
 						</div>
 					</div>
