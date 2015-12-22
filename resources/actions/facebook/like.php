@@ -91,13 +91,14 @@
       <div class="modal-header">
         <h4 class="modal-title text-center">Presiona "Me gusta"</h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" style=" overflow: hidden; max-width: 250px;">
 		  <div class="fb_logo-row row">
 			    <div class="center-block" >
 				<div id="fblike center-block">
 					<div class="fb-page" 
 						data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" 
 					    data-small-header="true" 
+						data-height="250"
 						data-adapt-container-width="true" 
 					    data-hide-cover="true" 
 						data-show-facepile="false">
