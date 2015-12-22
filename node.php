@@ -2,16 +2,10 @@
 	session_start();
 	include 'resources/library/functions.php'; 
 
-	if($_SESSION['config']['type'] == 'like'){	
 		$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='. 
 				    $config["fbApp"]["appId"] .'&redirect_uri='. 
 		            $config["urls"]["baseUrl"] .
 		            '/node.php&scope=public_profile, email&response_type=code';
-	} else if ($_SESSION['config']['type'] == 'post'){
-		$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='. 
-				    $config["fbApp"]["appId"] .'&redirect_uri='. 
-		            $config["urls"]["baseUrl"] .
-		            '/node.php&scope=public_profile, email&response_type=code';	}
 
 
 			if(isset($_GET["name"])){
