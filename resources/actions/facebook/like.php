@@ -93,8 +93,6 @@
       </div>
       <div class="modal-body">
 		  <div class="fb_logo-row row">
-		    <div class="col-xs-1" ></div>
-		    <div class="col-xs-10" >
 			    <div class="center-block" >
 				<div id="fblike center-block">
 					<div class="fb-page" 
@@ -110,8 +108,6 @@
 						</div>
 					</div>
 				</div>
-		    </div>
-		    <div class="col-xs-1" ></div>
 		  </div>
 
       </div>
