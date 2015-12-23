@@ -2,21 +2,21 @@
 
 	require(realpath(dirname(__FILE__) . "/../config.php"));
 	
-	require_once ( realpath(dirname(__FILE__) . '/facebook/facebook-php-sdk-v4/src/Facebook/FacebookSession.php') );
-	require_once ( realpath(dirname(__FILE__) . '/facebook/facebook-php-sdk-v4/src/Facebook/HttpClients/FacebookCurl.php') );
-	require_once ( realpath(dirname(__FILE__) . '/facebook/facebook-php-sdk-v4/src/Facebook/HttpClients/FacebookHttpable.php') );
-	require_once ( realpath(dirname(__FILE__) . '/facebook/facebook-php-sdk-v4/src/Facebook/HttpClients/FacebookCurlHttpClient.php') );
-	require_once ( realpath(dirname(__FILE__) . '/facebook/facebook-php-sdk-v4/src/Facebook/FacebookResponse.php') );
-	require_once ( realpath(dirname(__FILE__) . '/facebook/facebook-php-sdk-v4/src/Facebook/FacebookRequest.php') );
-	require_once ( realpath(dirname(__FILE__) . '/facebook/facebook-php-sdk-v4/src/Facebook/FacebookSDKException.php') );
-	require_once ( realpath(dirname(__FILE__) . '/facebook/facebook-php-sdk-v4/src/Facebook/FacebookRequestException.php') );
-	require_once ( realpath(dirname(__FILE__) . '/facebook/facebook-php-sdk-v4/src/Facebook/FacebookAuthorizationException.php') );
-	require_once ( realpath(dirname(__FILE__) . '/facebook/facebook-php-sdk-v4/src/Facebook/Entities/SignedRequest.php') );
-	require_once ( realpath(dirname(__FILE__) . '/facebook/facebook-php-sdk-v4/src/Facebook/Entities/AccessToken.php') );
-	require_once ( realpath(dirname(__FILE__) . '/facebook/facebook-php-sdk-v4/src/Facebook/FacebookSignedRequestFromInputHelper.php') );
-	require_once ( realpath(dirname(__FILE__) . '/facebook/facebook-php-sdk-v4/src/Facebook/FacebookRedirectLoginHelper.php') );
-	require_once ( realpath(dirname(__FILE__) . '/facebook/facebook-php-sdk-v4/src/Facebook/GraphObject.php') );
-	require_once ( realpath(dirname(__FILE__) . '/facebook/facebook-php-sdk-v4/src/Facebook/GraphUser.php') );
+	require_once ( FACEBOOK_SDK_SRC_DIR . 'FacebookSession.php' );
+	require_once ( FACEBOOK_SDK_SRC_DIR . 'HttpClients/FacebookCurl.php' );
+	require_once ( FACEBOOK_SDK_SRC_DIR . 'HttpClients/FacebookHttpable.php' );
+	require_once ( FACEBOOK_SDK_SRC_DIR . 'HttpClients/FacebookCurlHttpClient.php' );
+	require_once ( FACEBOOK_SDK_SRC_DIR . 'FacebookResponse.php' );
+	require_once ( FACEBOOK_SDK_SRC_DIR . 'FacebookRequest.php' );
+	require_once ( FACEBOOK_SDK_SRC_DIR . 'FacebookSDKException.php' );
+	require_once ( FACEBOOK_SDK_SRC_DIR . 'FacebookRequestException.php' );
+	require_once ( FACEBOOK_SDK_SRC_DIR . 'FacebookAuthorizationException.php' );
+	require_once ( FACEBOOK_SDK_SRC_DIR . 'Entities/SignedRequest.php' );
+	require_once ( FACEBOOK_SDK_SRC_DIR . 'Entities/AccessToken.php' );
+	require_once ( FACEBOOK_SDK_SRC_DIR . 'FacebookSignedRequestFromInputHelper.php' );
+	require_once ( FACEBOOK_SDK_SRC_DIR . 'FacebookRedirectLoginHelper.php' );
+	require_once ( FACEBOOK_SDK_SRC_DIR . 'Facebook/GraphObject.php' );
+	require_once ( FACEBOOK_SDK_SRC_DIR . 'GraphUser.php' );
 	 
 	use Facebook\FacebookSession;
 	use Facebook\FacebookRequest;
