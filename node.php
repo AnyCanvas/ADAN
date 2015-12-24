@@ -8,7 +8,7 @@
 			if(isset($_GET["name"])){
 		    	$fnbtName  = htmlspecialchars($_GET["name"]);
 				if (findFnbt($fnbtName)) { 	
-					if($_SESSION['fnbot']['status'] == 0){
+					if($_SESSION['fnbt']['status'] == 0){
 						$_SESSION['error'] = 2;
 						header("location: ./resources/library/error.php");
 					} else if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
