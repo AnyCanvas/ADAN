@@ -14,22 +14,22 @@
 <script>
 			<?php switch ($_SESSION['error']){
 				case 0:
-		    	   echo '	ga("send", "event", "'. $_SESSION['id'] .'" , "step 3", "error already activated");';
+		    	   echo '	ga("send", "event", "'. $_SESSION['fnbot']['id'] .'" , "step 3", "error already activated");';
 				   break;
 				case 1:
-		    	   echo '	ga("send", "event", "'. $_SESSION['id'] .'" , "step 3", "error fanbot disconnected");';
+		    	   echo '	ga("send", "event", "'. $_SESSION['fnbt']['id'] .'" , "step 3", "error fanbot disconnected");';
 					break;
 				case 2:
-		    	   echo '	ga("send", "event", "'.$_SESSION['id'] .'" , "step 3", "error fanbot suspended");';
+		    	   echo '	ga("send", "event", "'.$_SESSION['fnbt']['id'] .'" , "step 3", "error fanbot suspended");';
 					break;
 
 				}
 			?>
 </script>
-<body <?php if($_SESSION['id'] == "PF-B1-LTM-0001"){ echo 'style="background-color: #004485;"'; }?>>
+<body <?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ echo 'style="background-color: #004485;"'; }?>>
 	<div class="container-fluid">
 
-	 <?php if($_SESSION['id'] != "PF-B1-LTM-0001"){ ?>
+	 <?php if($_SESSION['fnbt']['id'] != "PF-B1-LTM-0001"){ ?>
 
 	<!-- Fanbot logo columns-->
 	  <div class="center-block" style="width: 220px; height: 415px; padding-top: 50%">

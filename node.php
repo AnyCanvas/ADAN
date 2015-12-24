@@ -8,13 +8,13 @@
 			if(isset($_GET["name"])){
 		    	$fnbtName  = htmlspecialchars($_GET["name"]);
 				if (findFnbt($fnbtName)) { 	
-					if($_SESSION['status'] == 0){
+					if($_SESSION['fnbot']['status'] == 0){
 						$_SESSION['error'] = 2;
 						header("location: ./resources/library/error.php");
-					} else if ($_SESSION['config']['socialnetwork'] == 'facebook'){	
-						if($_SESSION['config']['type'] == 'like'){	
+					} else if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
+						if($_SESSION['fnbt']['config']['type'] == 'like'){	
 							require_once("resources/actions/facebook/like.php");
-						} else if ($_SESSION['config']['type'] == 'post'){
+						} else if ($_SESSION['fnbt']['config']['type'] == 'post'){
 							require_once("resources/actions/facebook/post.php");
 						}
 				} 
@@ -25,10 +25,10 @@
 				}			
 			} else if( isset($_GET["code"]) ){
 
-				if($_SESSION['config']['type'] == 'like'){	
+				if($_SESSION['fnbt']['config']['type'] == 'like'){	
 				    getUserFbInfo($_GET["code"]);
 					header("location: ./final.php");
-				} else if ($_SESSION['config']['type'] == 'post'){
+				} else if ($_SESSION['fnbt']['config']['type'] == 'post'){
 				    getUserFbInfo($_GET["code"]);
 					header("location: ./final.php");
 				}			    

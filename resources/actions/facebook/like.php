@@ -23,7 +23,7 @@
 			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fae300+0,ad9c00+100 */
 			background:
 			<?php 
-						echo $_SESSION['config']['bgcolor'];
+						echo $_SESSION['fnbt']['config']['bgcolor'];
 			?>
 					}
   	</style>
@@ -76,7 +76,7 @@
                     <div class="col-xs-4"></div>
                     <div class="col-xs-4">
                         <img class="img-responsive center-block"
-							 src="media/clients/logos/<?php  echo $_SESSION['config']['image']; ?>"
+							 src="media/clients/logos/<?php  echo $_SESSION['fnbt']['config']['image']; ?>"
                              alt="fanbot"
                              width="200">
                     </div>
@@ -96,15 +96,15 @@
 			    <div class="center-block" >
 				<div id="fblike center-block">
 					<div class="fb-page" 
-						data-href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>" 
+						data-href="https://www.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>" 
 					    data-small-header="true" 
 						data-height="250"
 						data-adapt-container-width="true" 
 					    data-hide-cover="true" 
 						data-show-facepile="false">
 						<div class="fb-xfbml-parse-ignore">
-							<blockquote cite="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>">
-								<a href="https://www.facebook.com/<?php echo $_SESSION['config']['link'];?>">Facebook</a>
+							<blockquote cite="https://www.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>">
+								<a href="https://www.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>">Facebook</a>
 							</blockquote>
 						</div>
 					</div>

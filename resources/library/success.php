@@ -10,15 +10,15 @@
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   	<script src="js/common.js"></script>
   	<script>
-	  	ga("send", "event", "<?php echo $_SESSION['id']; ?>", "step 3", "<?php echo $_SESSION['config']['type'];?> success");
-  	    ga("send", "event", "<?php echo $_SESSION['id']; ?>", "step 3", "success");
+	  	ga("send", "event", "<?php echo $_SESSION['fnbt']['id']; ?>", "step 3", "<?php echo $_SESSION['fnbt']['config']['type'];?> success");
+  	    ga("send", "event", "<?php echo $_SESSION['fnbt']['id']; ?>", "step 3", "success");
   	</script>
 </head>
 
-<body <?php if($_SESSION['id'] == "PF-B1-LTM-0001"){ echo 'style="background-color: #004485;"'; }?>>
+<body <?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ echo 'style="background-color: #004485;"'; }?>>
 	<div class="container-fluid">
 
-	 <?php if($_SESSION['id'] != "PF-B1-LTM-0001"){ ?>
+	 <?php if($_SESSION['fnbt']['id'] != "PF-B1-LTM-0001"){ ?>
 	  <div class="center-block" style="width: 220px; height: 415px; padding-top: 10%">
 	    	<img class="img-responsive" alt="Fanbot" src="media/images/done.png">
 	    	<div id="actionNumber">
