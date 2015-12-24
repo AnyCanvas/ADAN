@@ -20,7 +20,7 @@
 		    	   echo '	ga("send", "event", "'. $_SESSION['fnbt']['id'] .'" , "step 3", "error fanbot disconnected");';
 					break;
 				case 2:
-		    	   echo '	ga("send", "event", "'.$_SESSION['fnbt']['id'] .'" , "step 3", "error fanbot suspended");';
+		    	   echo '	ga("send", "event", "'. $_SESSION['fnbt']['id'] .'" , "step 3", "error fanbot suspended");';
 					break;
 
 				}
