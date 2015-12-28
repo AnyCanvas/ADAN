@@ -26,6 +26,8 @@
 				}
 			?>
 </script>
+
+
 <body <?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ echo 'style="background-color: #004485;"'; }?>>
 	<div class="container-fluid">
 

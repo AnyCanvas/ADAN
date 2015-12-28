@@ -1,9 +1,7 @@
 <?php
 	session_start();
 	include 'resources/library/functions.php'; 
-
-		$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=public_profile, email&response_type=code';
-
+	$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=public_profile, email&response_type=code';
 
 			if(isset($_GET["name"])){
 		    	$fnbtName  = htmlspecialchars($_GET["name"]);
@@ -31,7 +29,7 @@
 				} else if ($_SESSION['fnbt']['config']['type'] == 'post'){
 				    getUserFbInfo($_GET["code"]);
 					header("location: ./final.php");
-				}			    
+				}		    
 		    } else if( isset($_GET["error"]) ) {
 			    $_SESSION['pageNumber'] = 3;
 			    $_SESSION['error'] = 0;
