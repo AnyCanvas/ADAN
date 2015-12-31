@@ -37,24 +37,30 @@
 
 				    case 2:
 				    	if(isset($_GET["code"])){
+					    	getUserFbInfo($_GET["code"]);
+					    	$_SESSION['pageNumber'] = 3;
 							if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
-								$_SESSION['pageNumber'] = 3;
 								if($_SESSION['fnbt']['config']['type'] == 'like'){	
 									require_once("resources/actions/facebook/like.php");
 								} else if ($_SESSION['fnbt']['config']['type'] == 'post'){
 									require_once("resources/actions/facebook/post.php");
 								}
 							} else {
+								header("location: ./index.php");
 							}
 						}
 				        break;
 
 				    case 3:
+						header("location: ./index.php");
 				        break;
 
 				    default:
+						header("location: ./index.php");
 				    	break;
 				}
+			} else {
+				header("location: ./index.php");				
 			}
 ?>
 
