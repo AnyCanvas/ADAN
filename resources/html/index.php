@@ -66,6 +66,13 @@
              style="padding-top: 3em;">
             <div class="col-xs-1"></div>
             <div class="col-xs-10">
+<?php
+	if(isset($_GET["erro"])){
+		if ($_GET["name"] == 1){
+			echo ('<div class="alert alert-danger text-center text-nowrap" role="alert">La Fanbot que buscas no existe.</div>');
+		}
+	}
+?>  
                 <p class="text-center text-nowrap"
                    style="color: white; font-size: 1.2em;">
 				    Escribe la palabra de <br>la etiqueta azul
