@@ -9,13 +9,15 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   	<script src="js/common.js"></script>
+
+</head>
+
+<body <?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ echo 'style="background-color: #004485;"'; }?>>
+
   	<script>
 	  	ga("send", "event", "<?php echo $_SESSION['fnbt']['id']; ?>", "step 3", "<?php echo $_SESSION['fnbt']['config']['type'];?> success");
   	    ga("send", "event", "<?php echo $_SESSION['fnbt']['id']; ?>", "step 3", "success");
   	</script>
-</head>
-
-<body <?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ echo 'style="background-color: #004485;"'; }?>>
 	<div class="container-fluid">
 
 	 <?php if($_SESSION['fnbt']['id'] != "PF-B1-LTM-0001"){ ?>

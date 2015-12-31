@@ -1,7 +1,8 @@
 <?php
 	session_start();
-
 	require 'resources/library/functions.php';
+?>
+<?php
 
 	if (isset($_SESSION['fnbt']['config']['type']))	{
 		if (checkForDuplucatedLike() || $_SESSION['fnbt']['config']['type'] == 'post'){
