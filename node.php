@@ -38,7 +38,7 @@
 				    case 2:
 				    	if(isset($_GET["code"])){
 					    	getUserFbInfo($_GET["code"]);
-					    	$_SESSION['pageNumber'] = 3;
+					    	$_SESSION['page'] = 3;
 							if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
 								if($_SESSION['fnbt']['config']['type'] == 'like'){	
 									require_once("resources/actions/facebook/like.php");
@@ -52,7 +52,8 @@
 				        break;
 
 				    case 3:
-						header("location: ./index.php");
+					    $_SESSION['page'] = 0;
+						header("location: ./final.php");
 				        break;
 
 				    default:
