@@ -35,6 +35,8 @@
 								$_SESSION['nameErr'] = TRUE;
 								header("location: ./index.php");
 							}			
+						} else {
+							header("location: ./index.php");							
 						}
 				        break;
 
