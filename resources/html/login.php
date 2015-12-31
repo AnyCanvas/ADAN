@@ -90,7 +90,7 @@
 			<div class="clearfix visible-xs-block"></div>
 
 			<div class="col-xs-12 text-center leadinline-text" >
-				<span style="font-size: x-small; color: gray;" >Al continuar estarás aceptando los términos y condiciones.</span>
+				<span style="font-size: x-small; color: gray;" >Al continuar estarás aceptando los términos y condiciones. <?php echo $_SESSION['pageNumber'];?></span>
 			</div>
 	
 	      </div>
