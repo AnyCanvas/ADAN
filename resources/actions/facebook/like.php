@@ -1,4 +1,4 @@
-<body style="html{height: 100%;};">
+<body>
 	
 	<div id="fb-root"></div>
 		<script>
