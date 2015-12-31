@@ -109,14 +109,14 @@
 
 
                 </div>
-            </div>
 <?php
 	if(isset($_GET["error"])){
 		if ($_GET["error"] == 1){
 			echo ('<div class="alert alert-danger text-center text-nowrap" role="alert">La Fanbot que buscas no existe.</div>');
 		}
 	}
-?>              
+?>            
+            </div>  
         </div>
 
          <div class="fb_logo-row row bottom">
