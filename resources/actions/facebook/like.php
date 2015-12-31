@@ -29,29 +29,31 @@
   	</style>
 
 	<script>
-		var finished_rendering = function() {
-			$('#actionModal').modal('show');
-			console.log("finished rendering plugins");
-		}
-		
-		var likeclick = function () {
-			$('#actionModal').modal('hide');
-		}	
 	</script>  
 </head>
 
 <body>
 	
 	<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.3&appId=<?php echo $config["fbApp"]["appId"] ?>";
-			fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
+		<script>
 			
-			window.fbAsyncInit = function() {
+			var finished_rendering = function() {
+				$('#actionModal').modal('show');
+				console.log("finished rendering plugins");
+			}
+			
+			var likeclick = function () {
+				$('#actionModal').modal('hide');
+			}	
+			
+			
+		window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '<?php echo $config["fbApp"]["appId"] ?>',
+		      xfbml      : true,
+		      version    : 'v2.5'
+		    });
+
 				FB.Event.subscribe('xfbml.render', finished_rendering);
 				
 				FB.Event.subscribe('edge.create', function(targetUrl) {
@@ -61,7 +63,17 @@
 				FB.Event.subscribe('edge.remove', function(targetUrl) {
 					ga('send', 'event', 'action', 'facebook', 'like', 0);
 				});
-  };
+		  };
+		
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "//connect.facebook.net/en_US/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+			
+
 </script>
 
 <div class ="container-fluid">

@@ -27,13 +27,6 @@
 			?>
 					}
   	</style>
-
-	<script>
-		var finished_rendering = function() {
-			$('#actionModal').modal('show');
-			console.log("finished rendering plugins");
-		}
-	</script>  
 </head>
 
 </html>
