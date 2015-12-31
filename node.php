@@ -25,7 +25,7 @@
 									header("location: ./resources/library/error.php");
 								} else{	
 									$_SESSION['pageNumber'] = 2;
-									require_once("resources/actions/html/login.php");
+									require_once("resources/html/login.php");
 								} 
 							}else {
 								header("location: ./index.php?error=1");
