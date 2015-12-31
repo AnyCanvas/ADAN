@@ -23,13 +23,9 @@
 								if($_SESSION['fnbt']['status'] == 0){
 									$_SESSION['error'] = 2;
 									header("location: ./resources/library/error.php");
-								} else if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
+								} else{	
 									$_SESSION['pageNumber'] = 2;
-									if($_SESSION['fnbt']['config']['type'] == 'like'){	
-										require_once("resources/actions/facebook/like.php");
-									} else if ($_SESSION['fnbt']['config']['type'] == 'post'){
-										require_once("resources/actions/facebook/post.php");
-									}
+									require_once("resources/actions/html/login.php");
 								} 
 							}else {
 								header("location: ./index.php?error=1");
@@ -40,6 +36,14 @@
 				        break;
 
 				    case 2:
+						if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
+							$_SESSION['pageNumber'] = 2;
+							if($_SESSION['fnbt']['config']['type'] == 'like'){	
+								require_once("resources/actions/facebook/like.php");
+							} else if ($_SESSION['fnbt']['config']['type'] == 'post'){
+								require_once("resources/actions/facebook/post.php");
+							}
+						}
 				        break;
 
 				    case 3:
