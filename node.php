@@ -4,7 +4,7 @@
 	include 'resources/library/functions.php'; 
 
 	?>
-<!DOCTYPE html>
+
 <html>
 <head>
 <?php require_once( "resources/html/header.php" ); ?>
