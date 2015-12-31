@@ -48,7 +48,7 @@
 	                    <div class="col-xs-4"></div>
 	                    <div class="col-xs-4">
 	                        <img class="img-responsive center-block"
-								 src="media/clients/logos/<?php  echo $_SESSION['config']['image']; ?>"
+								 src="media/clients/logos/<?php  echo $_SESSION['fnbt']['config']['image']; ?>"
 	                             alt="fanbot"
 	                             width="200">
 	                    </div>
@@ -68,7 +68,7 @@
 			    <div class="col-xs-4" ></div>
 			    <div class="col-xs-4" >
 				    <div class="center-block" >
-						<img id="fb_img" src="https://graph.facebook.com/<?php echo $_SESSION['config']['link'];?>/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+						<img id="fb_img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 					</div>
 			    </div>
 			    <div class="col-xs-4" ></div>
