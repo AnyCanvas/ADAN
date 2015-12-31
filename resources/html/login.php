@@ -27,8 +27,8 @@
 		   }(document, 'script', 'facebook-jssdk'));
 
 			postclick = function () {
-								window.location = "<?php echo $loginUrl;?>";										
-						}	
+				window.location = "<?php echo $loginUrl;?>";										
+			}	
 		<?php
 			if(isset($_GET["post"])){
 				header("location: ". $loginUrl);			    
