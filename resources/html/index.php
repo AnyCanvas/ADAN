@@ -110,7 +110,7 @@
 
                 </div>
             </div>
-        </div><
+        </div>
 
          <div class="fb_logo-row row bottom">
             <div class="col-xs-4"></div>
