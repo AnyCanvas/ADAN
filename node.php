@@ -7,7 +7,7 @@
 <html>
 <head>
 <?php require_once( "resources/html/header.php" ); ?>
-	<title>Bienvenido a Fanbot</title>
+	<title>Fanbot</title>
 </head>
 
 <?php
@@ -44,6 +44,7 @@
 								} else if ($_SESSION['fnbt']['config']['type'] == 'post'){
 									require_once("resources/actions/facebook/post.php");
 								}
+							} else {
 							}
 						}
 				        break;

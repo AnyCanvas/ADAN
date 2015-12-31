@@ -29,10 +29,6 @@
 			postclick = function () {
 				window.location = "<?php echo $loginUrl;?>";										
 			}	
-		<?php
-			if(isset($_GET["post"])){
-				header("location: ". $loginUrl);			    
-		    } ?>
   
 	</script>
 	
