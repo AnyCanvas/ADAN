@@ -31,7 +31,7 @@
 								header("location: ./index.php?error=1");
 							}			
 						} else {
-							header("location: ./index.php");							
+							//header("location: ./index.php");							
 						}
 				        break;
 
