@@ -86,17 +86,16 @@
 			    </div>
 			    <div class="col-xs-2" ></div>
 			</div>	
+
+			<div class="clearfix visible-xs-block"></div>
+
+			<div class="col-xs-12 text-center leadinline-text" >
+				<span style="font-size: x-small; color: gray;" >Al continuar estarás aceptando los términos y condiciones.</span>
+			</div>
 	
 	      </div>
       
-		  <div class="modal-footer">
-			<div class="row mid-row">			    
-			    <div class="col-xs-12 text-center leadinline-text" >
-					<span style="font-size: x-small; color: gray;" >Al continuar estarás aceptando los términos y condiciones.</span>
-			    </div>
 
-			</div>
-	      </div>
 
 	    </div>
 	  </div>
