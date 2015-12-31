@@ -24,7 +24,6 @@
 				
 				FB.Event.subscribe('edge.create', function(targetUrl) {
 					ga('send', 'event', 'action', 'facebook', 'like', 1);
-					window.location="<?php echo $loginUrl;?>";
 				});
 				FB.Event.subscribe('edge.remove', function(targetUrl) {
 					ga('send', 'event', 'action', 'facebook', 'like', 0);
