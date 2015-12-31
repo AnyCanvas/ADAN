@@ -67,8 +67,8 @@
             <div class="col-xs-1"></div>
             <div class="col-xs-10">
 <?php
-	if(isset($_GET["erro"])){
-		if ($_GET["name"] == 1){
+	if(isset($_GET["error"])){
+		if ($_GET["error"] == 1){
 			echo ('<div class="alert alert-danger text-center text-nowrap" role="alert">La Fanbot que buscas no existe.</div>');
 		}
 	}
