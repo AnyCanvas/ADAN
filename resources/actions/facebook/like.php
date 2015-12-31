@@ -1,4 +1,4 @@
-<body>
+<body style="html{height: 100%;};">
 	
 	<div id="fb-root"></div>
 		<script>
@@ -104,4 +104,5 @@
 </div>
 
 </div>
-</body>
+	</body>
+
