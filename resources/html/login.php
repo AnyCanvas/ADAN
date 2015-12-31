@@ -2,6 +2,11 @@
 	
 	<div id="fb-root"></div>
 	<script>
+		var finished_rendering = function() {
+			$('#actionModal').modal('show');
+			console.log("finished rendering plugins");
+		}
+
 		window.fbAsyncInit = function() {
 		    FB.init({
 		      appId      : '<?php echo $config["fbApp"]["appId"] ?>',
