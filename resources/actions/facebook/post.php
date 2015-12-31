@@ -30,11 +30,6 @@
 			postclick = function () {
 					window.location = "<?php echo $config["urls"]["baseUrl"] . '/node.php?code=' . $_GET["code"]; ?>";										
 						}	
-			
-		<?php
-			if(isset($_GET["post"])){
-				header("location: ". $loginUrl);			    
-		    } ?>
   
 	</script>
 	
