@@ -1,6 +1,17 @@
 <?php
 	session_start();
+	$_SESSION['pageNumber'] = 1;
 	include 'resources/library/functions.php'; 
+
+	?>
+<!DOCTYPE html>
+<html>
+<head>
+<?php require_once( "resources/html/header.php" ); ?>
+	<title>Bienvenido a Fanbot</title>
+</head>
+
+<?php
 	$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=public_profile, email&response_type=code';
 
 			if(isset($_GET["name"])){
@@ -43,3 +54,5 @@
 				
 			}
 ?>
+
+</html>
