@@ -80,7 +80,7 @@
 			<div class="row mid-row">
 			    <div class="col-xs-3" ></div>
 			    <div class="col-xs-6"  style="padding: 10px 34px;">
-					<a id="post-btn" class="btn btn-block btn-social btn-facebook" onclick="postclick();" style="padding-left: 20px;">
+					<a id="post-btn" class="btn btn-block btn-social btn-facebook" onclick="postclick();" style="padding-left: 35px;">
 		    			<i class="fa fa-facebook-official"></i> <span class="text-center" >Login</span>
 		  			</a>
 			    </div>
