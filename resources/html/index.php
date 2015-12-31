@@ -109,6 +109,8 @@
 
 
                 </div>
+            <div class="clearfix visible-xs-block"></div>
+
 <?php
 	if(isset($_GET["error"])){
 		if ($_GET["error"] == 1){
