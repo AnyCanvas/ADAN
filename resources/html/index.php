@@ -66,13 +66,6 @@
              style="padding-top: 3em;">
             <div class="col-xs-1"></div>
             <div class="col-xs-10">
-<?php
-	if(isset($_GET["error"])){
-		if ($_GET["error"] == 1){
-			echo ('<div class="alert alert-danger text-center text-nowrap" role="alert">La Fanbot que buscas no existe.</div>');
-		}
-	}
-?>  
                 <p class="text-center text-nowrap"
                    style="color: white; font-size: 1.2em;">
 				    Escribe la palabra de <br>la etiqueta azul
@@ -117,6 +110,13 @@
 
                 </div>
             </div>
+<?php
+	if(isset($_GET["error"])){
+		if ($_GET["error"] == 1){
+			echo ('<div class="alert alert-danger text-center text-nowrap" role="alert">La Fanbot que buscas no existe.</div>');
+		}
+	}
+?>              
         </div>
 
          <div class="fb_logo-row row bottom">
