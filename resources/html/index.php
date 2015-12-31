@@ -1,8 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html>
-    <head>
-        <title></title>
-    </head>
     <body>
         <div class="container-fluid">
             <!-- Input and button to next page columns-->
@@ -62,4 +57,3 @@
 
         </div>
     </body>
-</html>

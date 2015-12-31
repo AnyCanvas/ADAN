@@ -6,8 +6,11 @@
 	?>
 <!DOCTYPE html>
 <html>
-<?php require_once( "resources/html/header.php" ); ?>
 <head>
+<?php require_once( "resources/html/header.php" ); ?>
 	<title>Bienvenido a Fanbot</title>
 </head>
+
+<?php require_once( "resources/html/index.php" ); ?>
+
 </html>
