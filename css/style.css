@@ -1,6 +1,8 @@
-body{
-	background-color: #55ACe8;
+html {
 	height: 100%;
+}
+body{	
+	background-color: #55ACe8;
 }
 
 .container-fluid{
