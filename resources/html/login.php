@@ -59,6 +59,8 @@
 	
 	<div id="actionModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="false" data-backdrop="static">
 
+	
+	  <div class="modal-dialog modal-sm">		
 <?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ ?>
 			  <div class="fb_logo-row row">
 			    <div class="col-xs-3" ></div>
@@ -73,8 +75,7 @@
 	
 			<div class="clearfix visible-xs-block"></div>
 	
-<?php  }?>	
-	  <div class="modal-dialog modal-sm">		
+<?php  }?>
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <h4 class="modal-title text-center">Inicia sesión para continuar</h4>
