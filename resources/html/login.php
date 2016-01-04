@@ -60,18 +60,6 @@
 	        <h4 class="modal-title text-center">Inicia sesión para continuar</h4>
 	      </div>
 	      <div class="modal-body">
-			  <div class="fb_logo-row row">
-			    <div class="col-xs-4" ></div>
-			    <div class="col-xs-4" >
-				    <div class="center-block" >
-						<img id="fb_img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
-					</div>
-			    </div>
-			    <div class="col-xs-4" ></div>
-			  </div>
-	
-	
-			<div class="clearfix visible-xs-block"></div>
 	
 			<div class="row mid-row">
 			    <div class="col-xs-2" ></div>
