@@ -2,23 +2,18 @@
 <html>
 <head>
 	<title>¡Bravo!</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<meta charset="utf-8"> 
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  	<script src="js/common.js"></script>
-  	<script>
-	  	ga("send", "event", "<?php echo $_SESSION['id']; ?>", "step 3", "<?php echo $_SESSION['config']['type'];?> success");
-  	    ga("send", "event", "<?php echo $_SESSION['id']; ?>", "step 3", "success");
-  	</script>
+	<?php require_once( "resources/html/header.php" ); ?>
 </head>
 
-<body <?php if($_SESSION['id'] == "PF-B1-LTM-0001"){ echo 'style="background-color: #004485;"'; }?>>
+<body <?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ echo 'style="background-color: #004485;"'; }?>>
+
+  	<script>
+	  	ga("send", "event", "<?php echo $_SESSION['fnbt']['id']; ?>", "step 3", "<?php echo $_SESSION['fnbt']['config']['type'];?> success");
+  	    ga("send", "event", "<?php echo $_SESSION['fnbt']['id']; ?>", "step 3", "success");
+  	</script>
 	<div class="container-fluid">
 
-	 <?php if($_SESSION['id'] != "PF-B1-LTM-0001"){ ?>
+	 <?php if($_SESSION['fnbt']['id'] != "PF-B1-LTM-0001"){ ?>
 	  <div class="center-block" style="width: 220px; height: 415px; padding-top: 10%">
 	    	<img class="img-responsive" alt="Fanbot" src="media/images/done.png">
 	    	<div id="actionNumber">

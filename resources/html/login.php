@@ -8,7 +8,6 @@
 	
 	<div id="fb-root"></div>
 	<script>
-		
 		var finished_rendering = function() {
 			$('#actionModal').modal('show');
 			console.log("finished rendering plugins");
@@ -34,8 +33,8 @@
 		   }(document, 'script', 'facebook-jssdk'));
 
 			postclick = function () {
-					window.location = "<?php echo $config["urls"]["baseUrl"] . '/node.php?code=' . $_GET["code"]; ?>";										
-						}	
+				window.location = "<?php echo $loginUrl;?>";										
+			}	
   
 	</script>
 	
@@ -64,45 +63,49 @@
 			<!-- Informative image Columns-->
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h4 class="modal-title text-center">Haz "Check-in"</h4>
+	        <h4 class="modal-title text-center">Inicia sesión para continuar</h4>
 	      </div>
 	      <div class="modal-body">
+<?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ ?>
 			  <div class="fb_logo-row row">
-			    <div class="col-xs-4" ></div>
-			    <div class="col-xs-4" >
+			    <div class="col-xs-3" ></div>
+			    <div class="col-xs-6" >
 				    <div class="center-block" >
-						<img id="fb_img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+						<img class="img-responsive" alt="Fanbot" src="../../media/clients/centinela/centinelalogo.png">
 					</div>
 			    </div>
-			    <div class="col-xs-4" ></div>
+			    <div class="col-xs-3" ></div>
 			  </div>
 	
 	
 			<div class="clearfix visible-xs-block"></div>
 	
+<?php  }?>
 			<div class="row mid-row">
-			    <div class="col-xs-3" ></div>
-			    <div class="col-xs-6"  style="padding: 10px 34px;">
-					<a id="post-btn" class="btn btn-block btn-xs btn-social btn-facebook" onclick="postclick();" style="padding-left: 20px;">
-		    			<i class="fa fa-facebook-official"></i> <span class="text-center" >Check-in</span>
+			    <div class="col-xs-2" ></div>
+			    <div class="col-xs-8"  style="padding: 10px 34px;">
+					<a id="post-btn" class="btn btn-block btn-social btn-facebook" onclick="postclick();" style="padding-left: 35px;">
+		    			<i class="fa fa-facebook-official"></i> <span class="text-center" >Login</span>
 		  			</a>
 			    </div>
-			    <div class="col-xs-3" ></div>
+			    <div class="col-xs-2" ></div>
 			</div>	
+
+			<div class="clearfix visible-xs-block"></div>
+
+			<div class="col-xs-12 text-center leadinline-text" >
+				<span style="font-size: x-small; color: gray;" >Al continuar estarás aceptando los términos y condiciones.</span>
+			</div>
 	
 	      </div>
-	      <div class="modal-footer">
-			<div class="row mid-row">
-			    <div class="col-xs-1" ></div>
-			    <div class="col-xs-10 text-center leadinline-text" >
-					<span style="font-size: small; text-align: left;" ><a href="<?php echo $config["urls"]["baseUrl"] . '/node.php?step=2' ?>"> Prefiero hacer una encuesta.<a></span>
-			    </div>
-			    <div class="col-xs-1" ></div>
-			</div>
-	      </div>
-	   </div>
+      
+			<div class="clearfix visible-xs-block"></div>
+
+
+	    </div>
 	  </div>
 	</div>
 	
 	</div>
 </body>
+
