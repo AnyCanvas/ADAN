@@ -81,13 +81,13 @@
 	      <div class="modal-body">
 <?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ ?>
 			  <div class="fb_logo-row row">
-			    <div class="col-xs-4" ></div>
-			    <div class="col-xs-4" >
+			    <div class="col-xs-3" ></div>
+			    <div class="col-xs-6" >
 				    <div class="center-block" >
-						<img class="img-responsive" alt="Fanbot" src="../../media/clients/centinela/centinelalogo.png">
+						<img class="img-responsive" alt="Fanbot" src="../../media/clients/centinela/centinelalogo.jpg">
 					</div>
 			    </div>
-			    <div class="col-xs-4" ></div>
+			    <div class="col-xs-3" ></div>
 			  </div>
 	
 	
