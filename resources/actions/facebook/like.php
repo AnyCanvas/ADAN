@@ -75,7 +75,7 @@
 			    <div class="col-xs-1" ></div>
 			    <div class="col-xs-10" >
 				    <div class="center-block" >
-						<img class="img-responsive" alt="Fanbot" src="../../media/clients/centinela/clasicoshot.png">
+						<img class="img-responsive" alt="Fanbot" src="../../media/clients/centinela/clasicoshot.jpg">
 					</div>
 			    </div>
 			    <div class="col-xs-1" ></div>
