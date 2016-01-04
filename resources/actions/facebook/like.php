@@ -70,8 +70,21 @@
 <div id="actionModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="false" data-backdrop="static">
 
   <div class="modal-dialog modal-sm">		
-		<!-- Informative image Columns-->
     <div class="modal-content">
+<?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ ?>
+			  <div class="fb_logo-row row">
+			    <div class="col-xs-1" ></div>
+			    <div class="col-xs-10" >
+				    <div class="center-block" >
+						<img class="img-responsive" alt="Fanbot" src="../../media/clients/centinela/clasicoshot.png">
+					</div>
+			    </div>
+			    <div class="col-xs-1" ></div>
+			  </div>
+	
+	
+<?php  }?>
+
       <div class="modal-header">
         <h4 class="modal-title text-center">Presiona "Me gusta"</h4>
       </div>
@@ -96,14 +109,6 @@
 		  </div>
 
       </div>
-<!--      <div class="modal-footer">
-		<div class="row mid-row">
-		    <div class="col-xs-1" ></div>
-		    <div class="col-xs-10 text-center leadinline-text" >
-				<span style="font-size: x-small; color: white;" >Al continuar estarás aceptando los términos y condiciones.</span>
-		    </div>
-		    <div class="col-xs-1" ></div>
-		</div> -->
       </div>
    </div>
   </div>
