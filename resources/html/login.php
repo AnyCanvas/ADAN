@@ -1,11 +1,5 @@
-<?php 
-	if(isset($_SESSION['fnbt']['config']["bgcolor"])){
-		echo '<body style="background-color: '. $_SESSION['fnbt']['config']["bgcolor"] .'">';
-	} else {
-		echo '<body>';
-	}
-?>
-
+<body>
+	
 	<div id="fb-root"></div>
 	<script>
 		var finished_rendering = function() {
@@ -66,7 +60,21 @@
 	        <h4 class="modal-title text-center">Inicia sesión para continuar</h4>
 	      </div>
 	      <div class="modal-body">
+<?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ ?>
+			  <div class="fb_logo-row row">
+			    <div class="col-xs-4" ></div>
+			    <div class="col-xs-4" >
+				    <div class="center-block" >
+						<img id="fb_img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+					</div>
+			    </div>
+			    <div class="col-xs-4" ></div>
+			  </div>
 	
+	
+			<div class="clearfix visible-xs-block"></div>
+	
+<?php  }?>
 			<div class="row mid-row">
 			    <div class="col-xs-2" ></div>
 			    <div class="col-xs-8"  style="padding: 10px 34px;">
