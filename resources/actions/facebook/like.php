@@ -71,7 +71,7 @@
 
   <div class="modal-dialog modal-sm">		
 <?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ ?>
-			  <div class="fb_logo-row row">
+			  <div class="fb_logo-row row" style="margin: -2px;">
 			    <div class="col-xs-1" ></div>
 			    <div class="col-xs-10" >
 				    <div class="center-block" >
