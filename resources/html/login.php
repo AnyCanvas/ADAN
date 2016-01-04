@@ -58,9 +58,22 @@
 	                </div>
 	
 	<div id="actionModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="false" data-backdrop="static">
+
 	
 	  <div class="modal-dialog modal-sm">		
-			<!-- Informative image Columns-->
+<?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ ?>
+			  <div class="fb_logo-row row">
+			    <div class="col-xs-1" ></div>
+			    <div class="col-xs-10" >
+				    <div class="center-block" >
+						<img class="img-responsive" alt="Fanbot" src="../../media/clients/centinela/clasicoshot.png">
+					</div>
+			    </div>
+			    <div class="col-xs-1" ></div>
+			  </div>
+	
+	
+<?php  }?>
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <h4 class="modal-title text-center">Inicia sesión para continuar</h4>
@@ -68,13 +81,13 @@
 	      <div class="modal-body">
 <?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ ?>
 			  <div class="fb_logo-row row">
-			    <div class="col-xs-3" ></div>
-			    <div class="col-xs-6" >
+			    <div class="col-xs-4" ></div>
+			    <div class="col-xs-4" >
 				    <div class="center-block" >
 						<img class="img-responsive" alt="Fanbot" src="../../media/clients/centinela/centinelalogo.png">
 					</div>
 			    </div>
-			    <div class="col-xs-3" ></div>
+			    <div class="col-xs-4" ></div>
 			  </div>
 	
 	
@@ -82,13 +95,13 @@
 	
 <?php  }?>
 			<div class="row mid-row">
-			    <div class="col-xs-2" ></div>
-			    <div class="col-xs-8"  style="padding: 10px 34px;">
+			    <div class="col-xs-1" ></div>
+			    <div class="col-xs-10"  style="padding: 10px 34px;">
 					<a id="post-btn" class="btn btn-block btn-social btn-facebook" onclick="postclick();" style="padding-left: 35px;">
-		    			<i class="fa fa-facebook-official"></i> <span class="text-center" >Login</span>
+		    			<i class="fa fa-facebook-official"></i> <span class="text-center"style="font-size: 2.2vh;" >Continuar en Facebook</span>
 		  			</a>
 			    </div>
-			    <div class="col-xs-2" ></div>
+			    <div class="col-xs-1" ></div>
 			</div>	
 
 			<div class="clearfix visible-xs-block"></div>
