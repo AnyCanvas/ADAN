@@ -95,13 +95,13 @@
 	
 <?php  }?>
 			<div class="row mid-row">
-			    <div class="col-xs-3" ></div>
-			    <div class="col-xs-6"  style="padding: 10px 34px;">
+			    <div class="col-xs-1" ></div>
+			    <div class="col-xs-10"  style="padding: 10px 34px;">
 					<a id="post-btn" class="btn btn-block btn-social btn-facebook" onclick="postclick();" style="padding-left: 35px;">
-		    			<i class="fa fa-facebook-official"></i> <span class="text-center" >Login</span>
+		    			<i class="fa fa-facebook-official"></i> <span class="text-center" >Continuar en Facebook</span>
 		  			</a>
 			    </div>
-			    <div class="col-xs-3" ></div>
+			    <div class="col-xs-1" ></div>
 			</div>	
 
 			<div class="clearfix visible-xs-block"></div>
