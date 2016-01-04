@@ -66,7 +66,7 @@
 			    <div class="col-xs-1" ></div>
 			    <div class="col-xs-10" >
 				    <div class="center-block" >
-						<img class="img-responsive" alt="Fanbot" src="../../media/clients/centinela/clasicoshot.jpg">
+						<img class="img-responsive" alt="Fanbot" src="../../media/clients/centinela/clasicoshot.png">
 					</div>
 			    </div>
 			    <div class="col-xs-1" ></div>
@@ -84,7 +84,7 @@
 			    <div class="col-xs-4" ></div>
 			    <div class="col-xs-4" >
 				    <div class="center-block" >
-						<img class="img-responsive" alt="Fanbot" src="../../media/clients/centinela/centinelalogo.png">
+						<img class="img-responsive" alt="Fanbot" src="../../media/clients/centinela/centinelalogo.jpg">
 					</div>
 			    </div>
 			    <div class="col-xs-4" ></div>
