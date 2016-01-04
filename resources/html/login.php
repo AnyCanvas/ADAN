@@ -98,7 +98,7 @@
 			    <div class="col-xs-1" ></div>
 			    <div class="col-xs-10"  style="padding: 10px 34px;">
 					<a id="post-btn" class="btn btn-block btn-social btn-facebook" onclick="postclick();" style="padding-left: 35px;">
-		    			<i class="fa fa-facebook-official"></i> <span class="text-center"style="font-size: 2.5vmax;" >Continuar en Facebook</span>
+		    			<i class="fa fa-facebook-official"></i> <span class="text-center"style="font-size: 2.2vh;" >Continuar en Facebook</span>
 		  			</a>
 			    </div>
 			    <div class="col-xs-1" ></div>
