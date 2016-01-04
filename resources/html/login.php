@@ -71,7 +71,7 @@
 			    <div class="col-xs-4" ></div>
 			    <div class="col-xs-4" >
 				    <div class="center-block" >
-						<img id="fb_img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+						<img class="img-responsive" alt="Fanbot" src="../../media/clients/centinela/centinelalogo.png">
 					</div>
 			    </div>
 			    <div class="col-xs-4" ></div>
