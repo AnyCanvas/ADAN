@@ -1,4 +1,10 @@
-<body>
+<?php 
+	if(isset($_SESSION['fnbt']['config']["bgcolor"])){
+		echo '<body style="background-color: '. $_SESSION['fnbt']['config']["bgcolor"] .'">';
+	} else {
+		echo '<body>';
+	}
+?>
 	
 	<div id="fb-root"></div>
 		<script>
