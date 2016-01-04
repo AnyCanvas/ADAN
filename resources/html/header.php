@@ -1,4 +1,4 @@
-	<base href=" <?php $config["urls"]["baseUrl"] ?>" target="_blank">
+	<base href=" <?php echo $config["urls"]["baseUrl"] ?> " target="_blank">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta charset="utf-8"> 
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
