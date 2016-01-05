@@ -34,7 +34,7 @@
 		   }(document, 'script', 'facebook-jssdk'));
 
 			postclick = function () {
-//					window.location = "<?php echo $postCodeUrl; ?>";										
+					window.location = "<?php echo $postCodeUrl; ?>";										
 						}	
   
 	</script>
