@@ -62,27 +62,6 @@
 		if (isset($session)) {
 
 		  $me = (new FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(GraphUser::className());
-		  
-		  
-		// fbPost part start (Is necessary to separate this part of the code in other function) 
-		 
-		// Get fbPageId for facebook post
-		$page = (new FacebookRequest($session, 'GET', $_SESSION['fnbt']['config']['link']))->execute()->getGraphObject(GraphUser::className());
-		$pageId = $page->getId();
-	
-		
-		// fbPost array wiht the post info
-		$linkData = [
-		  'link' => 'https://www.facebook.com/'. $_SESSION['fnbt']['config']['link'],
-//		  'message' => $message,
-		  'place' => $pageId,
-		  ];
-
-		if($_SESSION['fnbt']['config']['type'] == 'post'){
-			$post= (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
-		}
-
-		// fbPost part end
 
 
 		  $_SESSION['fbUser']['id'] = $me->getId();
