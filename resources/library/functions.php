@@ -82,6 +82,52 @@
 		echo $pageArray['name'];
 	}
 
+
+	function fbPost($code){
+		require(realpath(dirname(__FILE__) . "/../config.php"));		
+			$servername = $config["db"]["fanbot"]["host"];
+			$username = $config["db"]["fanbot"]["username"];
+			$password = $config["db"]["fanbot"]["password"];
+			$dbname = $config["db"]["fanbot"]["dbname"];
+
+		// Initialize the Facebook app using the application ID and secret.
+		FacebookSession::setDefaultApplication( $config["fbApp"]["appId"],$config["fbApp"]["appSecret"] );
+
+		// Get de JSON text containing the token 
+		$codeToToken = file_get_contents('https://graph.facebook.com/v2.3/oauth/access_token?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&client_secret='.$config["fbApp"]["appSecret"].'&code='. $code);
+
+		$token = json_decode($codeToToken );
+
+		// Get fbPageId for facebook post
+		$page = (new FacebookRequest($session, 'GET', $_SESSION['fnbt']['config']['link']))->execute()->getGraphObject(GraphUser::className());
+		$pageId = $page->getId();
+	
+		
+		// fbPost array wiht the post info
+		$linkData = [
+		  'link' => 'https://www.facebook.com/'. $_SESSION['fnbt']['config']['link'],
+//		  'message' => $message,
+		  'place' => $pageId,
+		  ];
+			
+		// Get new fb session
+		if (!isset($session)) {
+		  try {
+		    $session = new FacebookSession($token->{'access_token'});	    
+		  } catch(FacebookRequestException $e) {
+		    unset($session);
+		    echo $e->getMessage();
+		  }
+		}
+
+		// Post to FB
+		if (isset($session)) {
+
+			$post= (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
+
+		}
+		
+	}
 //////////////////// Facebook sdk functions end  ////////////////////
 	
 //////////////////// DB functions start  ////////////////////

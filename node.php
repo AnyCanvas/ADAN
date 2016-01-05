@@ -58,6 +58,11 @@
 
 				    case 3:
 					    $_SESSION['page'] = 0;
+						
+						if ($_SESSION['fnbt']['config']['type'] == 'post' && isset($_GET["code"]) ){
+							fbPost($_GET["code"]);
+						}
+						
 						header("location: ./final.php");
 				        break;
 
