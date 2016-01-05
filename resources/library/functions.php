@@ -97,18 +97,6 @@
 		$codeToToken = file_get_contents('https://graph.facebook.com/v2.3/oauth/access_token?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&client_secret='.$config["fbApp"]["appSecret"].'&code='. $code);
 
 		$token = json_decode($codeToToken );
-
-		// Get fbPageId for facebook post
-		$page = (new FacebookRequest($session, 'GET', $_SESSION['fnbt']['config']['link']))->execute()->getGraphObject(GraphUser::className());
-		$pageId = $page->getId();
-	
-		
-		// fbPost array wiht the post info
-		$linkData = [
-		  'link' => 'https://www.facebook.com/'. $_SESSION['fnbt']['config']['link'],
-//		  'message' => $message,
-		  'place' => $pageId,
-		  ];
 			
 		// Get new fb session
 		if (!isset($session)) {
@@ -122,6 +110,17 @@
 
 		// Post to FB
 		if (isset($session)) {
+		// Get fbPageId for facebook post
+		$page = (new FacebookRequest($session, 'GET', $_SESSION['fnbt']['config']['link']))->execute()->getGraphObject(GraphUser::className());
+		$pageId = $page->getId();
+	
+		
+		// fbPost array wiht the post info
+		$linkData = [
+		  'link' => 'https://www.facebook.com/'. $_SESSION['fnbt']['config']['link'],
+//		  'message' => $message,
+		  'place' => $pageId,
+		  ];
 
 			$post= (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
 
