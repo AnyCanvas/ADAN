@@ -114,7 +114,7 @@
 		$page = (new FacebookRequest($session, 'GET', $_SESSION['fnbt']['config']['link']))->execute()->getGraphObject(GraphUser::className());
 		$pageId = $page->getId();
 		$checkinBool = $page->asArray();
-		print_r($checkinBool);
+		error_log($checkinBool, 0); 
 		
 		// fbPost array wiht the post info
 		$linkData = [
