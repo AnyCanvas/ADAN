@@ -117,7 +117,7 @@
 		
 		// fbPost array wiht the post info
 		$linkData = [
-		  'link' => 'https://www.facebook.com/'. $_SESSION['fnbt']['config']['link'],
+//		  'link' => 'https://www.facebook.com/'. $_SESSION['fnbt']['config']['link'],
 //		  'message' => $message,
 		  'place' => $pageId,
 		  ];
