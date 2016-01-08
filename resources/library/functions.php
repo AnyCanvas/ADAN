@@ -128,7 +128,7 @@
 		} else {
 			$linkData = [
 			  'link' => 'https://www.facebook.com/'. $_SESSION['fnbt']['config']['link'],
-	//			  'message' => '',
+				  'message' => $pageArray['can_checkin'],
 			  ];
 			
 		}
