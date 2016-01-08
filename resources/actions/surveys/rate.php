@@ -1,13 +1,10 @@
 <body>
 	<script>
-			postclick = function () {
-					window.location = "<?php echo $config["urls"]["baseUrl"] . '/node.php'?>";										
-						}	
+		postclick = function () {
+			window.location = "<?php echo $config["urls"]["baseUrl"] . '/node.php'?>";										
+		}	
 
-			var finished_rendering = function() {
-				$('#actionModal').modal('show');
-				console.log("finished rendering plugins");
-			}
+		$('#actionModal').modal('show');
 	</script>
 	
 	<div class ="container-fluid">
