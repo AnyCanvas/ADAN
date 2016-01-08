@@ -97,6 +97,10 @@
 		$codeToToken = file_get_contents('https://graph.facebook.com/v2.3/oauth/access_token?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&client_secret='.$config["fbApp"]["appSecret"].'&code='. $code);
 
 		$token = json_decode($codeToToken );
+
+		$pageId = $page->getId();
+		$pageJson = file_get_contents('https://graph.facebook.com/'. $pageId .'?fields=can_checkin&access_token=1498446833779418|6Uo2HajAgYUiIE0x8DR1AXuhxbw');
+		$pageArray = json_decode($pageJson, true);	
 			
 		// Get new fb session
 		if (!isset($session)) {
@@ -112,9 +116,6 @@
 		if (isset($session)) {
 		// Get fbPageId for facebook post
 		$page = (new FacebookRequest($session, 'GET', $_SESSION['fnbt']['config']['link']))->execute()->getGraphObject(GraphUser::className());
-		$pageId = $page->getId();
-		$pageJson = file_get_contents('https://graph.facebook.com/'. $pageId .'?fields=can_checkin&access_token=1498446833779418|6Uo2HajAgYUiIE0x8DR1AXuhxbw');
-		$pageArray = json_decode($pageJson, true);	
 		
 		// fbPost array wiht the post info
 
@@ -128,6 +129,8 @@
 		$linkData = [
 		  'link' => 'https://www.facebook.com/'. $_SESSION['fnbt']['config']['link'],
 //			  'message' => '',
+		  'place' => $pageId,
+
 		  ];
 			
 		}
