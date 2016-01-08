@@ -118,19 +118,11 @@
 		$pageId = $page->getId();		
 		// fbPost array wiht the post info
 
-		if (1){
-			$linkData = [
-			  'link' => '',
-//			  'message' => '',
-			  'place' => $pageId,
-			  ];
-		} else {
 			$linkData = [
 			  'link' => 'https://www.facebook.com/'. $_SESSION['fnbt']['config']['link'],
 	//			  'message' => '',
 			  ];
-			
-		}
+
 
 		$post= (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
 
