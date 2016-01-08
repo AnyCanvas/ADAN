@@ -2,7 +2,7 @@
 	<script>
 
 			postclick = function () {
-					window.location = "<?php echo $config["urls"]["baseUrl"] . '/node.php?code=' . $_GET["code"]; ?>";										
+					window.location = "<?php echo $config['fnbt']["urls"]["baseUrl"] . '/node.php?code=' . $_GET["code"]; ?>";										
 						}	
 		<?php
 			if(isset($_GET["post"])){
@@ -22,7 +22,7 @@
 	                    <div class="col-xs-4"></div>
 	                    <div class="col-xs-4">
 	                        <img class="img-responsive center-block"
-								 src="media/clients/logos/<?php  echo $_SESSION['config']['image']; ?>"
+								 src="media/clients/logos/<?php  echo $_SESSION['fnbt']['config']['image']; ?>"
 	                             alt="fanbot"
 	                             width="200">
 	                    </div>

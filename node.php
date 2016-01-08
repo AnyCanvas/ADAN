@@ -57,11 +57,10 @@
 				        break;
 
 				    case 3:
-						
+					    $_SESSION['page'] = 0;						
 						if ($_SESSION['fnbt']['config']['type'] == 'post' && isset($_GET["code"]) ){
-					    	$_SESSION['page'] = 0;
 							fbPost($_GET["code"]);
-						} else if (isset($_GET["step"])){
+						} else if (isset($_GET['step'])){
 							require_once("resources/actions/surveys/rate.php");							
 						} else {
 					    	$_SESSION['page'] = 0;
