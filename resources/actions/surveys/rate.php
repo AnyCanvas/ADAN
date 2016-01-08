@@ -2,12 +2,8 @@
 	<script>
 
 			postclick = function () {
-					window.location = "<?php echo $config['fnbt']["urls"]["baseUrl"] . '/node.php?code=' . $_GET["code"]; ?>";										
+					window.location = "<?php echo $config['fnbt']["urls"]["baseUrl"] . '/node.php'?>";										
 						}	
-		<?php
-			if(isset($_GET["post"])){
-				header("location: ". $loginUrl);			    
-		    } ?>
 	</script>
 	
 	<div class ="container-fluid">
