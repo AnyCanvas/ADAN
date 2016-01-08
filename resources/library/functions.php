@@ -115,7 +115,7 @@
 		if (isset($session)) {
 		// Get fbPageId for facebook post
 		$page = (new FacebookRequest($session, 'GET', $_SESSION['fnbt']['config']['link']))->execute()->getGraphObject(GraphUser::className());
-		
+		$pageId = $page->getId();		
 		// fbPost array wiht the post info
 
 		if ($pageArray['can_checkin']){
