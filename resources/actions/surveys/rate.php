@@ -1,6 +1,5 @@
 <body>
 	<script>
-
 			postclick = function () {
 					window.location = "<?php echo $config["urls"]["baseUrl"] . '/node.php'?>";										
 						}	

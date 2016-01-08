@@ -60,13 +60,13 @@
 					    $_SESSION['page'] = 0;						
 						if ($_SESSION['fnbt']['config']['type'] == 'post' && isset($_GET["code"]) ){
 							fbPost($_GET["code"]);
+							header("location: ./final.php");
 						} else if (isset($_GET['step'])){
 							require_once("resources/actions/surveys/rate.php");							
 						} else {
 					    	$_SESSION['page'] = 0;
-						}
-						
-						header("location: ./final.php");
+							header("location: ./final.php");
+						}						
 				        break;
 
 				    default:
