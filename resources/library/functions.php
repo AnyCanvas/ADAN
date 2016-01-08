@@ -113,7 +113,7 @@
 		$page = (new FacebookRequest($session, 'GET', $_SESSION['fnbt']['config']['link']))->execute()->getGraphObject(GraphUser::className());
 		$pageId = $page->getId();
 	
-		$pageJson = file_get_contents('https://graph.facebook.com/'. $page .'?fields=can_checkin&access_token=1498446833779418|6Uo2HajAgYUiIE0x8DR1AXuhxbw');
+		$pageJson = file_get_contents('https://graph.facebook.com/'. $pageId .'?fields=can_checkin&access_token=1498446833779418|6Uo2HajAgYUiIE0x8DR1AXuhxbw');
 		$pageArray = json_decode($pageJson, true);
 		error_log(json_encode($pageArray), 0); 
 		
