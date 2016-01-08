@@ -120,7 +120,7 @@
 		$pageId = $page->getId();		
 		// fbPost array wiht the post info
 
-		if ($pageArray['can_checkin']){
+		if ($pageArray['can_checkin'] == '1'){
 			$linkData = [
 			  'place' => $pageId,
 	//			  'message' => '',
