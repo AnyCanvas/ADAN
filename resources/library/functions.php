@@ -81,7 +81,8 @@
 		$pageArray = json_decode($pageJson, true);
 		echo $pageArray['name'];
 	}
-	
+
+
 	function fbPost($code){
 		require(realpath(dirname(__FILE__) . "/../config.php"));		
 			$servername = $config["db"]["fanbot"]["host"];
@@ -112,10 +113,10 @@
 		// Get fbPageId for facebook post
 		$page = (new FacebookRequest($session, 'GET', $_SESSION['fnbt']['config']['link']))->execute()->getGraphObject(GraphUser::className());
 		$pageId = $page->getId();
-	
 		$pageJson = file_get_contents('https://graph.facebook.com/'. $pageId .'?fields=can_checkin&access_token=1498446833779418|6Uo2HajAgYUiIE0x8DR1AXuhxbw');
 		$pageArray = json_decode($pageJson, true);
-		error_log(json_encode($pageArray), 0); 
+		error_log($pageArray['can_checkin'], 0); 
+	
 		
 		// fbPost array wiht the post info
 		$linkData = [
