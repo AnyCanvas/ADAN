@@ -1,10 +1,15 @@
 <body>
 	<script>
-		postclick = function () {
-			window.location = "<?php echo $config["urls"]["baseUrl"] . '/node.php'?>";										
-		}	
+			postclick = function () {
+					window.location = "<?php echo $config["urls"]["baseUrl"] . '/node.php'?>";										
+						}	
 
-		$('#actionModal').modal('show');
+			var finished_rendering = function() {
+				$('#actionModal').modal('show');
+				console.log("finished rendering plugins");
+			}
+			
+			finished_rendering();
 	</script>
 	
 	<div class ="container-fluid">
@@ -26,7 +31,7 @@
 	                    <div class="col-xs-4"></div>
 	                </div>
 	
-	<div id="actionModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
+	<div id="actionModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="false" data-backdrop="static">
 	
 	  <div class="modal-dialog modal-sm">		
 			<!-- Informative image Columns-->
