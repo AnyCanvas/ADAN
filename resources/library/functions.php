@@ -120,7 +120,7 @@
 		$pageId = $page->getId();		
 		// fbPost array wiht the post info
 
-		if ($pageArray['can_checkin'] == '1'){
+		if ($pageArray["can_checkin"]){
 			$linkData = [
 			  'place' => $pageId,
 	//			  'message' => '',
@@ -128,9 +128,10 @@
 		} else {
 			$linkData = [
 			  'link' => 'https://www.facebook.com/'. $_SESSION['fnbt']['config']['link'],
-				  'message' => $pageArray['can_checkin'],
-			  ];
-			
+	//			  'message' => '',
+			  'place' => $pageId,
+	
+			  ];			
 		}
 
 		$post= (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
