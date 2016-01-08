@@ -2,7 +2,7 @@
 	<script>
 
 			postclick = function () {
-					window.location = "<?php echo $config['fnbt']["urls"]["baseUrl"] . '/node.php'?>";										
+					window.location = "<?php echo $config["urls"]["baseUrl"] . '/node.php'?>";										
 						}	
 	</script>
 	
