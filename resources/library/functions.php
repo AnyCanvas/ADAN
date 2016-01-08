@@ -100,7 +100,7 @@
 
 		$pageJson = file_get_contents('https://graph.facebook.com/'. $_SESSION['fnbt']['config']['link'] .'?fields=can_checkin&access_token=1498446833779418|6Uo2HajAgYUiIE0x8DR1AXuhxbw');
 		$pageArray = json_decode($pageJson, true);	
-		error_log($pageArray['can_checkin']);
+//		error_log($pageArray['can_checkin']);
 		// Get new fb session
 		if (!isset($session)) {
 		  try {
