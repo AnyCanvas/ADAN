@@ -3,6 +3,11 @@
 			postclick = function () {
 					window.location = "<?php echo $config["urls"]["baseUrl"] . '/node.php'?>";										
 						}	
+
+			var finished_rendering = function() {
+				$('#actionModal').modal('show');
+				console.log("finished rendering plugins");
+			}
 	</script>
 	
 	<div class ="container-fluid">
