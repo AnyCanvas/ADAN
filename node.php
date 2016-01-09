@@ -62,7 +62,7 @@
 							fbPost($_GET["code"]);
 							header("location: ./final.php");
 						} else if (isset($_GET['step'])){
-						    $_SESSION['page'] = 3;						
+							$_SESSION['page'] = 3;
 							require_once("resources/actions/surveys/rate.php");							
 						} else {
 							header("location: ./final.php");
