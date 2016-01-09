@@ -60,6 +60,6 @@
 
 	<script>
 		finished_rendering();
-	</scipt>
+	</script>
 </body>
 
