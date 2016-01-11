@@ -1,4 +1,4 @@
-	<title>Fanbot</title>
+<title>Fanbot</title>
 
 <?php 
 	if(isset($_SESSION['fnbt']['config']["bgcolor"])){
