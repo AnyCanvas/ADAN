@@ -10,6 +10,7 @@
 	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookRequest.php' );
 	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookSDKException.php' );
 	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookRequestException.php' );
+	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookClientException.php' );
 	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookAuthorizationException.php' );
 	require_once ( FACEBOOK_SDK_SRC_DIR . '/Entities/SignedRequest.php' );
 	require_once ( FACEBOOK_SDK_SRC_DIR . '/Entities/AccessToken.php' );
@@ -19,13 +20,14 @@
 	require_once ( FACEBOOK_SDK_SRC_DIR . '/GraphUser.php' );
 
 
+
 	use Facebook\FacebookSession;
 	use Facebook\FacebookRequest;
 	use Facebook\FacebookJavaScriptLoginHelper;
 	use Facebook\FacebookRedirectLoginHelper;
 	use Facebook\Graphuser;
 	use Facebook\FacebookRequestException;
-
+	use Facebook\FacebookClientException;
 
 //////////////////// Facebook sdk functions start  ////////////////////
 
@@ -62,27 +64,6 @@
 		if (isset($session)) {
 
 		  $me = (new FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(GraphUser::className());
-		  
-		  
-		// fbPost part start (Is necessary to separate this part of the code in other function) 
-		 
-		// Get fbPageId for facebook post
-		$page = (new FacebookRequest($session, 'GET', $_SESSION['fnbt']['config']['link']))->execute()->getGraphObject(GraphUser::className());
-		$pageId = $page->getId();
-	
-		
-		// fbPost array wiht the post info
-		$linkData = [
-		  'link' => 'https://www.facebook.com/'. $_SESSION['fnbt']['config']['link'],
-//		  'message' => $message,
-		  'place' => $pageId,
-		  ];
-
-		if($_SESSION['fnbt']['config']['type'] == 'post'){
-			$post= (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
-		}
-
-		// fbPost part end
 
 
 		  $_SESSION['fbUser']['id'] = $me->getId();
@@ -103,6 +84,61 @@
 		echo $pageArray['name'];
 	}
 
+
+	function fbPost($code){
+		require(realpath(dirname(__FILE__) . "/../config.php"));		
+			$servername = $config["db"]["fanbot"]["host"];
+			$username = $config["db"]["fanbot"]["username"];
+			$password = $config["db"]["fanbot"]["password"];
+			$dbname = $config["db"]["fanbot"]["dbname"];
+
+		// Initialize the Facebook app using the application ID and secret.
+		FacebookSession::setDefaultApplication( $config["fbApp"]["appId"],$config["fbApp"]["appSecret"] );
+
+		// Get de JSON text containing the token 
+		$codeToToken = file_get_contents('https://graph.facebook.com/v2.3/oauth/access_token?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&client_secret='.$config["fbApp"]["appSecret"].'&code='. $code);
+
+		$token = json_decode($codeToToken );
+
+		$pageJson = file_get_contents('https://graph.facebook.com/'. $_SESSION['fnbt']['config']['link'] .'?fields=location&access_token=1498446833779418|6Uo2HajAgYUiIE0x8DR1AXuhxbw');
+		$pageArray = json_decode($pageJson, true);	
+		error_log($pageJson);
+		// Get new fb session
+		if (!isset($session)) {
+		  try {
+		    $session = new FacebookSession($token->{'access_token'});	    
+		  } catch(FacebookRequestException $e) {
+		    unset($session);
+		    echo $e->getMessage();
+		  }
+		}
+
+		// Post to FB
+		if (isset($session)) {
+		// Get fbPageId for facebook post
+		$page = (new FacebookRequest($session, 'GET', $_SESSION['fnbt']['config']['link']))->execute()->getGraphObject(GraphUser::className());
+		$pageId = $page->getId();		
+		// fbPost array wiht the post info
+
+		if (isset( $pageArray['location']['latitude'])){
+			$linkData = [
+			  'place' => $pageId,
+	//			  'message' => '',
+			  ];
+		} else {
+			$linkData = [
+			  'link' => 'https://www.facebook.com/'. $_SESSION['fnbt']['config']['link'],
+	//			  'message' => '',
+			  'place' => $pageId,
+	
+			  ];			
+		}
+
+		$post= (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
+
+		}
+		
+	}
 //////////////////// Facebook sdk functions end  ////////////////////
 	
 //////////////////// DB functions start  ////////////////////

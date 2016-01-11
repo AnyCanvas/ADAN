@@ -5,13 +5,13 @@
 	?>
 <!DOCTYPE html>
 <html>
-<head>
 <?php require_once( "resources/html/header.php" ); ?>
-	<title>Fanbot</title>
-</head>
+
+
 
 <?php
 	$loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=public_profile,email&response_type=code';
+	$postCodeUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=publish_actions&response_type=code';
 
 	if(isset($_GET["name"])){
 	$_SESSION['page'] = 1;		
@@ -56,8 +56,16 @@
 				        break;
 
 				    case 3:
-					    $_SESSION['page'] = 0;
-						header("location: ./final.php");
+					    $_SESSION['page'] = 0;						
+						if ($_SESSION['fnbt']['config']['type'] == 'post' && isset($_GET["code"]) ){
+							fbPost($_GET["code"]);
+							header("location: ./final.php");
+						} else if (isset($_GET['step'])){
+							$_SESSION['page'] = 3;
+							require_once("resources/actions/surveys/rate.php");							
+						} else {
+							header("location: ./final.php");
+						}						
 				        break;
 
 				    default:

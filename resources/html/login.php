@@ -1,3 +1,8 @@
+<?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ ?>
+	<title>Todo un clásico</title>
+<?php } else { ?>
+	<title>Fanbot</title>
+<?php } ?>
 <?php 
 	if(isset($_SESSION['fnbt']['config']["bgcolor"])){
 		echo '<body style="background-color: '. $_SESSION['fnbt']['config']["bgcolor"] .'">';

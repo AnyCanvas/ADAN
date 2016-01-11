@@ -1,3 +1,5 @@
+<title>Fanbot</title>
+
 <?php 
 	if(isset($_SESSION['fnbt']['config']["bgcolor"])){
 		echo '<body style="background-color: '. $_SESSION['fnbt']['config']["bgcolor"] .'">';
@@ -34,7 +36,7 @@
 		   }(document, 'script', 'facebook-jssdk'));
 
 			postclick = function () {
-					window.location = "<?php echo $config["urls"]["baseUrl"] . '/node.php?code=' . $_GET["code"]; ?>";										
+					window.location = "<?php echo $postCodeUrl; ?>";										
 						}	
   
 	</script>

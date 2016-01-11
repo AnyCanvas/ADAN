@@ -1,13 +1,13 @@
 <body>
 	<script>
-
-			postclick = function () {
-					window.location = "<?php echo $config["urls"]["baseUrl"] . '/node.php?code=' . $_GET["code"]; ?>";										
+			faceClick = function () {
+					window.location = "<?php echo $config["urls"]["baseUrl"] . '/node.php'?>";										
 						}	
-		<?php
-			if(isset($_GET["post"])){
-				header("location: ". $loginUrl);			    
-		    } ?>
+
+			var finished_rendering = function() {
+				$('#actionModal').modal('show');
+				console.log("finished rendering plugins");
+			}
 	</script>
 	
 	<div class ="container-fluid">
@@ -22,7 +22,7 @@
 	                    <div class="col-xs-4"></div>
 	                    <div class="col-xs-4">
 	                        <img class="img-responsive center-block"
-								 src="media/clients/logos/<?php  echo $_SESSION['config']['image']; ?>"
+								 src="media/clients/logos/<?php  echo $_SESSION['fnbt']['config']['image']; ?>"
 	                             alt="fanbot"
 	                             width="200">
 	                    </div>
@@ -42,9 +42,9 @@
 			    <div class="col-xs-1" ></div>
 			    <div class="col-xs-10"  style="padding: 10px 34px;">
 		    			<span style="font-size: 300%; text-align: left; ">
-							<a href="">&#128544;</a>
-							<a href="">&#128528;</a>
-							<a href="">&#128512;</a>
+							<a onclick="faceClick();">&#128544;</a>
+							<a onclick="faceClick();">&#128528;</a>
+							<a onclick="faceClick();">&#128512;</a>
 	
 						</span>
 			    </div>
@@ -52,19 +52,14 @@
 			</div>	
 	
 	      </div>
-	<!--      <div class="modal-footer">
-			<div class="row mid-row">
-			    <div class="col-xs-1" ></div>
-			    <div class="col-xs-10 text-center leadinline-text" >
-					<span style="font-size: x-small; color: white;" >Al continuar estarás aceptando los términos y condiciones.</span>
-			    </div>
-			    <div class="col-xs-1" ></div>
-			</div>
-	      </div> -->
 	   </div>
 	  </div>
 	</div>
 	
 	</div>
+
+	<script>
+		finished_rendering();
+	</script>
 </body>
 

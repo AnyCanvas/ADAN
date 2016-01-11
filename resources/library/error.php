@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
 	<title>!Upss¡</title>
 	<?php require_once( "resources/html/header.php" ); ?>
-</head>
 
 
 
