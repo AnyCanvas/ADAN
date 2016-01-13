@@ -42,7 +42,8 @@
 	</script>
 	
 	<div class ="container-fluid">
-	
+
+	<h1>Obtén tu recompensa con un Check-in </h1>	
 	<div class="wrapper vertical-center">
 		<div class="cssload-loader"></div>
 	</div>
