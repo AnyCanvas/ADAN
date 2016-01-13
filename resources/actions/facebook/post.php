@@ -66,9 +66,6 @@
 	  <div class="modal-dialog modal-sm">		
 			<!-- Informative image Columns-->
 	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h4 class="modal-title text-center">Haz "Check-in"</h4>
-	      </div>
 	      <div class="modal-body">
 			  <div class="fb_logo-row row">
 			    <div class="col-xs-4" ></div>
