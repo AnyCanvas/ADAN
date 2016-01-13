@@ -92,7 +92,7 @@
 			<div class="row mid-row">
 			    <div class="col-xs-1" ></div>
 			    <div class="col-xs-10 text-center leadinline-text" >
-					<span style="font-size: small; text-align: left;" ><a href="<?php echo $config["urls"]["baseUrl"] . '/node.php?step=2' ?>"> Saltar Check-in, tengo un codigo.<a></span>
+					<span style="font-size: 2.2vh; text-align: left;" ><a href="<?php echo $config["urls"]["baseUrl"] . '/node.php?step=2' ?>"> Saltar Check-in, tengo un codigo.<a></span>
 			    </div>
 			    <div class="col-xs-1" ></div>
 			</div>
