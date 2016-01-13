@@ -43,7 +43,7 @@
 	
 	<div class ="container-fluid">
 
-	<span style="text-align: center"><h3>Obtén tu recompensa con un Check-in </h3> <h6> O selecciona saltar Check-in tengo un codigo.</h6></span>
+	<span style="text-align: center"><h3>Obtén tu recompensa con un Check-in </h3> <h6> O selecciona saltar Check-in, tengo un codigo.</h6></span>
 	
 	<div class="clearfix visible-xs-block"></div>
 	
@@ -92,7 +92,7 @@
 			<div class="row mid-row">
 			    <div class="col-xs-1" ></div>
 			    <div class="col-xs-10 text-center leadinline-text" >
-					<span style="font-size: small; text-align: left;" ><a href="<?php echo $config["urls"]["baseUrl"] . '/node.php?step=2' ?>"> Prefiero hacer una encuesta.<a></span>
+					<span style="font-size: small; text-align: left;" ><a href="<?php echo $config["urls"]["baseUrl"] . '/node.php?step=2' ?>"> saltar Check-in, tengo un codigo.<a></span>
 			    </div>
 			    <div class="col-xs-1" ></div>
 			</div>
