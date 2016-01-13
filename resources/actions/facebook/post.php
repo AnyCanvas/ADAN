@@ -43,7 +43,7 @@
 	
 	<div class ="container-fluid">
 
-	<span style="text-align: center"><h4>Obtén tu recompensa con un Check-in </h4> <br> <h6> O selecciona saltar Check-in tengo un codigo.</h6></span>
+	<span style="text-align: center"><h4>Obtén tu recompensa con un Check-in </h4> <h6> O selecciona saltar Check-in tengo un codigo.</h6></span>
 	
 	<div class="clearfix visible-xs-block"></div>
 	
