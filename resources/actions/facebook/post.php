@@ -43,10 +43,7 @@
 	
 	<div class ="container-fluid">
 
-	<h1>Obtén tu recompensa con un Check-in </h1>	
-	<div class="wrapper vertical-center">
-		<div class="cssload-loader"></div>
-	</div>
+	<h4>Obtén tu recompensa con un Check-in </h4>	
 	
 	<div class="clearfix visible-xs-block"></div>
 	
