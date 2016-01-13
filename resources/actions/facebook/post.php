@@ -83,9 +83,11 @@
 					<a id="post-btn" class="btn btn-block btn-xs btn-social btn-facebook" onclick="postclick();" style="padding-left: 20px;">
 		    			<i class="fa fa-facebook-official"></i> <span class="text-center" >Check-in</span>
 		  			</a>
-					<span style="font-size: 2vh; text-align: left;" ><a href="<?php echo $config["urls"]["baseUrl"] . '/node.php?step=2' ?>"> Saltar Check-in, tengo un codigo.<a></span>
 			    </div>
 			    <div class="col-xs-3" ></div>
+			    <div class="col-xs-12" >
+					<span style="font-size: 2vh; text-align: left;" ><a href="<?php echo $config["urls"]["baseUrl"] . '/node.php?step=2' ?>"> Saltar Check-in, tengo un codigo.<a></span>
+				</div>
 			</div>	
 	
 	      </div>
