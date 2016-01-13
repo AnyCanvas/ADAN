@@ -43,7 +43,7 @@
 	
 	<div class ="container-fluid">
 
-	<h4>Obtén tu recompensa con un Check-in </h4>	
+	<span style="text-align: center"><h4>Obtén tu recompensa con un Check-in </h4></span>
 	
 	<div class="clearfix visible-xs-block"></div>
 	
