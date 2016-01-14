@@ -35,4 +35,6 @@ main {
 
 .button-div{
     z-index: 5;
+    left: 72vw;
+    top: 43vh;
 }
