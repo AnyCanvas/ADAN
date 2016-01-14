@@ -34,6 +34,9 @@ main {
 }
 
 .button-div{
-	margin-top: 75vw;
-    margin-left: 80vw;
+	margin-top: 50vh;
+    margin-left: 50vh;
+    height: 100px;
+    width: 100px;
+    z-index: 5;
 }
