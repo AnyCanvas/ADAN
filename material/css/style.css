@@ -35,7 +35,8 @@ main {
 
 .button-div{
     z-index: 5;
-    left: 80vw;
-    top: 85vh;
+    left: calc(100% - 60px);
+    top: calc(100% - 60px);
     position: absolute;
 }
+
