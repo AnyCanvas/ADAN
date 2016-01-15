@@ -68,5 +68,7 @@ main {
 
 .fbpage-img{
 	width: 30vh;
-	margin-top: 20vh;
+    top: 29vh !important;
+    position: relative;
+}
 }
