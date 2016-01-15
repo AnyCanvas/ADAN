@@ -71,4 +71,9 @@ main {
     top: 29vh !important;
     position: relative;
 }
+
+.error-img{
+	width: 50vh;
+    top: 25vh !important;
+    position: relative;
 }
