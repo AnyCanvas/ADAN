@@ -45,7 +45,8 @@ main {
     width: 40vw !important;
     margin-left: 30vw !important;
     background: #4A90E2 !important;
-    padding: 4vh 1vw !important;
+    padding: 1vw !important;
+    height: 11vh;
     border-radius: 10px !important;
     text-align: center;
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
