@@ -86,3 +86,10 @@ main {
     top: 30vh !important;
     position: relative;
 }
+
+.btn-centered{
+    left: 15vw;
+    display: block;
+    width: 70vw;
+}	
+}
