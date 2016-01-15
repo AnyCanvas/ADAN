@@ -40,12 +40,12 @@ main {
     position: absolute;
 }
 
-.fnbt-name-input{
-    width: 50% !important; 
-    margin-left: 25% !important;
+.fnbt-name-input {
+    width: 40% !important;
+    margin-left: 30% !important;
     margin-top: 30px !important;
-    background: dodgerblue;
-    padding: 1%;
-    border-radius: 10px;
+    background: dodgerblue !important;
+    padding: 2% 1% !important;
+    border-radius: 10px !important;
     text-align: center;
 }
