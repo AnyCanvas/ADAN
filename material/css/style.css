@@ -57,6 +57,8 @@ main {
 .fnbt-name-text {
     text-align: center;
 	font-size: small;
+    margin-top: -1px;
+    padding: 10px;
 }
 
 .login-img{
