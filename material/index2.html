@@ -9,14 +9,6 @@
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-	  <script>
-		  var size = [window.width,window.height];  //public variable
-
-
-			$(window).resize(function(){
-			    window.resizeTo(size[0],size[1]);
-			});
-	  </script>
     <body>
 
 	<div class="container-fluid" style="height: 100%; width: 100%">
@@ -34,5 +26,14 @@
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
+
+	  <script>
+		  var size = [window.width,window.height];  //public variable
+
+
+			$(window).resize(function(){
+			    window.resizeTo(size[0],size[1]);
+			});
+	  </script>
     </body>
   </html>
