@@ -58,3 +58,10 @@ main {
     text-align: center;
 	font-size: small;
 }
+
+.login-img{
+    background-image: url(images/login.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: auto 100%;	
+}
