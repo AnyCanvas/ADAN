@@ -56,7 +56,7 @@ main {
 
 .fnbt-name-text {
     text-align: center;
-	font-size: small;
+	font-size: smaller;
     margin-top: -1px;
     padding: 10px;
 }
