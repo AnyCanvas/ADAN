@@ -56,14 +56,14 @@ main {
 
 .fnbt-name-text {
     text-align: center;
-	font-size: smaller;
+	font-size: small;
     margin-top: -1px;
     padding: 10px;
 }
 
 .error-text {
     text-align: center;
-	font-size: medium;
+	font-size:small;
     margin-top: -1px;
     padding: 10px;
 }
