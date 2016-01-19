@@ -81,15 +81,20 @@ main {
     position: relative;
 }
 
+.index-img{
+	height: 30vh;
+    position: relative;
+} 
+
 .error-img{
-	width: 40vh;
-    top: 30vh !important;
+	height: 60vh;
+    top: 10vh !important;
     position: relative;
 }
 
 .success-img{
-	height: 40vh;
-    top: 30vh !important;
+	height: 60vh;
+    top: 10vh !important;
     position: relative;
 }
 
