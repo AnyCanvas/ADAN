@@ -87,8 +87,8 @@ main {
 } 
 
 .error-img{
-	height: 60vh;
-    top: 10vh !important;
+	height: 40vh;
+    top: 30vh !important;
     position: relative;
 }
 
