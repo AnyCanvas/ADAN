@@ -107,3 +107,9 @@ main {
 .btn-full{
     display: block;
 }	
+
+.btn-full-div{
+    position: absolute;
+    bottom: 0;
+    width: 100vh;	
+}
