@@ -75,6 +75,13 @@ main {
     background-size: auto 100%;	
 }
 
+.jugar-img{
+    background-image: url(../images/jugar.gif);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: auto 100%;	
+}
+
 .fbpage-img{
 	width: 30vh;
     top: 29vh !important;
