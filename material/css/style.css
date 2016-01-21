@@ -58,14 +58,14 @@ main {
     text-align: center;
 	font-size: small;
     margin-top: 0px;
-    padding: 10px;
+    padding-top: 2vh;
 }
 
 .error-text {
     text-align: center;
 	font-size:small;
     margin-top: 0px;
-    padding: 1vh;
+    padding-top: 2vh;
 }
 
 .login-img{
