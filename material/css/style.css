@@ -120,3 +120,11 @@ main {
     bottom: 0;
     width: 100vw;	
 }
+
+.fb-btn{
+	font-size: 3vw !important;
+    max-width: 60% !important;
+    letter-spacing: 0vw !important;
+    padding: 0 1rem !important;
+    left: 20vw !important;
+}
