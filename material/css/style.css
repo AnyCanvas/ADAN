@@ -57,14 +57,14 @@ main {
 .fnbt-name-text {
     text-align: center;
 	font-size: small;
-    margin-top: -1px;
+    margin-top: 0px;
     padding: 10px;
 }
 
 .error-text {
     text-align: center;
 	font-size:small;
-    margin-top: -1px;
+    margin-top: 0px;
     padding: 1vh;
 }
 
