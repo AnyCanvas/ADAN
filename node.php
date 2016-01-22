@@ -20,7 +20,12 @@
 			if(isset($_SESSION['page'])){
 				switch ($_SESSION['page']) {
 
+
 				    case 1:
+					    require_once("resources/html/login.php");
+					    break;
+
+				    case 2:
 						if(isset($_GET["name"])){
 					    	$fnbtName  = htmlspecialchars($_GET["name"]);
 							if (findFnbt($fnbtName)) { 	
@@ -29,17 +34,17 @@
 									header("location: ./resources/library/error.php");
 								} else{	
 									$_SESSION['page'] = 2;
-									require_once("resources/html/name.php");
+									require_once("resources/html/login.php");
 								} 
 							}else {
-								header("location: ./name_error.php");
+								header("location: ./index.php?error=1");
 							}			
 						} else {
 							header("location: ./index.php");							
 						}
 				        break;
 
-				    case 2:
+				    case 3:
 				    	if(isset($_GET["code"])){
 					    	getUserFbInfo($_GET["code"]);
 					    	$_SESSION['page'] = 3;
@@ -55,7 +60,7 @@
 						}
 				        break;
 
-				    case 3:
+				    case 4:
 					    $_SESSION['page'] = 0;						
 						if ($_SESSION['fnbt']['config']['type'] == 'post' && isset($_GET["code"]) ){
 							fbPost($_GET["code"]);
