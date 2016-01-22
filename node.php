@@ -59,7 +59,7 @@
 
 				    case 3:
 				    	if(isset($_GET["code"])){
-					    	$_SESSION['page'] = 3;
+					    	$_SESSION['page'] = 4;
 							if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
 								if($_SESSION['fnbt']['config']['type'] == 'like'){	
 									require_once("resources/actions/facebook/like.php");
