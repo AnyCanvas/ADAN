@@ -34,7 +34,7 @@
 
 	<div class="container-fluid" style="height: 100%; width: 100%">
 		<div style="height: 75%;" class="blue">
-		<div class="div-wrapper full" style="background-color: <?php $_SESSION['fnbt']['config']["bgcolor"] ?>;">
+		<div class="div-wrapper full" style="background-color: <?php echo $_SESSION['fnbt']['config']["bgcolor"] ?>;">
 			<img class="center-img fbpage-img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture?type=large" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 		</div>
 		</div>
