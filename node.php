@@ -32,7 +32,7 @@
 									require_once("resources/html/login.php");
 								} 
 							}else {
-								header("location: ./index.php?error=1");
+								header("location: ./name_error.php");
 							}			
 						} else {
 							header("location: ./index.php");							
