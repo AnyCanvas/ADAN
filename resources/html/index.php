@@ -1,3 +1,8 @@
+<?php 	
+	session_start();
+	include 'resources/library/functions.php'; 
+    $loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=public_profile,email&response_type=code';	
+?>
 <title>Inicia sesión</title>
 
 	
@@ -5,11 +10,6 @@
 
 	<div id="fb-root"></div>
 	<script>
-		var finished_rendering = function() {
-			$('#actionModal').modal('show');
-			console.log("finished rendering plugins");
-		}
-
 		window.fbAsyncInit = function() {
 		    FB.init({
 		      appId      : '<?php echo $config["fbApp"]["appId"] ?>',
