@@ -15,7 +15,7 @@
 		      <form action="node.php" method="get" name="name">
 		      <input type="text" id="fnbt-name-label" class="fnbt-name-input white-text" on></input>
 		      <form>
-			<a class="button-div btn-floating btn-large waves-effect green accent-2" onclick="sendName();"><i class="material-icons white-text">arrow_forward</i></a>
+			<a class="fnbt-name-button button-div btn-floating btn-large waves-effect green accent-2" onclick="sendName();"><i class="material-icons white-text">arrow_forward</i></a>
 
 	    </footer>
 
