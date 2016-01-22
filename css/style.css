@@ -129,6 +129,13 @@ main {
     left: 20vw !important;
 }
 
+.like-div{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 @media screen and (min-aspect-ratio: 1/1) {
 	
 }
