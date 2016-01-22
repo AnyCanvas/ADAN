@@ -39,7 +39,15 @@
 									header("location: ./resources/library/error.php");
 								} else{	
 									$_SESSION['page'] = 3;
-									require_once("resources/html/login.php");
+									if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
+										if($_SESSION['fnbt']['config']['type'] == 'like'){	
+											require_once("resources/actions/facebook/like.php");
+										} else if ($_SESSION['fnbt']['config']['type'] == 'post'){
+											require_once("resources/actions/facebook/post.php");
+										}
+									} else {
+										header("location: ./index.php");
+									}
 								} 
 							}else {
 								header("location: ./name_error.php");
