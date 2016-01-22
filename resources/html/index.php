@@ -5,6 +5,11 @@
 	
 	<script>
 			
+			  function sendName(){
+				  window.location = "/node.php";
+			  }
+
+
 			  window.fbAsyncInit = function() {
 			    FB.init({
 			      appId      : '<?php echo $config["fbApp"]["appId"]; ?>',
@@ -70,12 +75,13 @@
 		</div>
 	    <footer style="height: 25%;">
 		      <p class="fnbt-name-text grey-text">Escribe la palabra de la etiqueta Azul</p>
-		      <input  class="fnbt-name-input white-text" ></input>
-			<a class="button-div btn-floating btn-large waves-effect green accent-2"><i class="material-icons white-text">arrow_forward</i></a>
+		      <input  id="fnbt-name-label" class="fnbt-name-input white-text" ></input>
+			<a class="button-div btn-floating btn-large waves-effect green accent-2" onclick="sendName();"><i class="material-icons white-text">arrow_forward</i></a>
 
 	    </footer>
 
 	</div>
     </body>
+
   </html>
 </body>
