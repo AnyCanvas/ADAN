@@ -128,3 +128,11 @@ main {
     padding: 0 1rem !important;
     left: 20vw !important;
 }
+
+@media screen and (min-aspect-ratio: 1/1) {
+	
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+	
+}

@@ -1,4 +1,6 @@
-<body>	
+
+ 
+<body>
 	<div id="fb-root"></div>
 	
 	<script>
@@ -60,152 +62,23 @@
 
 	</script>
 
-    <div class="container-fluid">
-            <!-- Input and button to next page columns-->
-        <div class="row mid-row center-block"
-             style="padding-top: 3em;">
-            <div class="col-xs-1"></div>
-            <div class="col-xs-10">
-                <p class="text-center text-nowrap"
-                   style="color: white; font-size: 1.2em;">
-				    Escribe la palabra de <br>la etiqueta azul
-                </p>
-            </div>
-            
-            <div class="col-xs-1"></div>
-                
-                
-            <div class="clearfix visible-xs-block"></div>
-                
-            <div class="col-xs-12">
-                <div id="indexDiv"
-                     class="center-block">
-                    <div class="col-xs-5"
-                         style="padding: 0px;">
-                        <img src="media/images/maquina.png"
-                             class="img-responsive center-block"
-                             alt="maquina"
-                             style="height: 160px; margin-right: 0;">
-                    </div>
-                    
-                    <div class="col-xs-7"
-                         style="padding: 0px;">
-                        <form class="form"
-                              action="node.php"
-                              method="get"
-                              style="padding-top: 50px; padding-left: 0px;">
-                            <div class="input-group square-box">
-                                <input type="text"
-                                       class="form-control input-lg text-center lead text-lowercase inline-text square-box"
-                                       name="name">
-                                <span class="input-group-btn">
-									<button class="btn btn-lg next-btn square-box" type="submit">
-										<span class="glyphicon glyphicon-chevron-right"></span>
-									</button>
-								</span>
-                            </div>
-                        </form>
-                    </div>
-
-
-                </div>
-            <div class="clearfix visible-xs-block"></div>
-
-<?php
-	if(isset($_GET["error"])){
-		if ($_GET["error"] == 1){
-			echo ('<div class="alert alert-danger text-center text-nowrap" role="alert">La Fanbot que buscas no existe.</div>');
-		}
-	}
-?>            
-            </div>  
-        </div>
-
-         <div class="fb_logo-row row bottom">
-            <div class="col-xs-4"></div>
-
-            <div class="col-xs-4">
-                <img class="img-responsive center-block"
-                     src="media/clients/logos/fanbot.png"
-                     alt="fanbot"
-                     width="200">
-            </div>
-
-            <div class="col-xs-4"></div>
-        </div>
-
-		<div id="indexModal" 
-			 class="modal fade" 
-		     role="dialog" data-keyboard="false" 
-			 data-backdrop="false" 
-		     data-backdrop="static">
-			<div class="modal-dialog modal-sm">		
-				<!-- Informative image Columns-->
-			    <div class="modal-content">
-			        <div class="modal-header">
-				        <div class="row">
-					    
-					        <div class="col-xs-2">
-					            <span class="glyphicon glyphicon-exclamation-sign" 
-					                  aria-hidden="true" 
-					                  style="font-size: xx-large; text-align: center;">
-					            </span>					  	
-					        </div>
-					    
-					        <div class="col-xs-10">
-						        <p class="modal-title text-center">Necesitas ingresar a Facebook y usar la aplicación</p>
-					        </div>
-	
-				        </div>
-			        </div>
-	
-			        <div class="modal-body">
-					    <div class="center-block" >
-					        <img id="index_img" 
-					             src="media/images/modal.gif" 
-					             class="img-responsive center-block" 
-					             alt="Cinque Terre">
-				        </div>
-				    </div>
-	
-	    	        <div class="modal-footer">
-					    <div class="row mid-row">
-	
-					        <div class="col-xs-1" ></div>
-	
-					        <a  id="modalButton" href="">
-						    <div id="modalButtonDiv" 
-							     class="col-xs-10 text-center leadinline-text" 
-								 style="background-color: #5890FF;" >					
-					    	    <span class="text-center" style="color: white; font-size: medium;">USAR APLICACIÓN</span>			  			
-						    </div>
-					        </a>
-	
-	    				    <div class="col-xs-1" ></div>
-	
-			                <div class="clearfix visible-xs-block"></div>
-	
-					        <div class="col-xs-1" ></div>
-	
-					        <div class="col-xs-10 text-center leadinline-text" 
-						         style="color: gray; font-size: small; padding-top: 10px;">
-							    o
-							    <a  id="closeModalButton" 
-								    href="#indexModal" 
-								    data-toggle="modal" 
-								    class="text-center" 
-								    style="text-decoration:underline;">
-				    			    Continuar en el navegador
-				  			    </a>
-					        </div>
-					    
-					        <div class="col-xs-1" ></div>
-					    
-					    </div>
-			        </div>
-			
-			    </div>
-			</div>
+	<div class="container-fluid" style="height: 100%; width: 100%">
+		<div style="height: 75%;" class="blue">
+		<div class="div-wrapper full" style="padding-top: top: 40vh !important;">
+			<img class="center-align center-img index-img" src="images/fanbot_label.png"  />
 		</div>
+		</div>
+	    <footer style="height: 25%;">
+		      <p class="fnbt-name-text grey-text">Escribe la palabra de la etiqueta Azul</p>
+		      <input  class="fnbt-name-input white-text" ></input>
+			<a class="button-div btn-floating btn-large waves-effect green accent-2"><i class="material-icons white-text">arrow_forward</i></a>
+
+	    </footer>
+
 	</div>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+  </html>
 </body>
