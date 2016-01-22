@@ -17,7 +17,7 @@
 		</div>
 	    <footer style="height: 25%;" class="red accent-2">
 		      <p class="error-text white-text">Esa palabra no coincide<br>con la de la etiqueta azul.<p>
-			  <a href="index.html" class="waves-effect waves-light btn white black-text btn-centered">INTENTAR DE NUEVO</a>
+			  <a href="index.php" class="waves-effect waves-light btn white black-text btn-centered">INTENTAR DE NUEVO</a>
 	    </footer>
 
 	</div>
