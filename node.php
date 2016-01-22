@@ -22,7 +22,13 @@
 
 
 				    case 1:
-					    require_once("resources/html/name.php");
+				    	if(isset($_GET["code"])){
+					    	getUserFbInfo($_GET["code"]);
+ 							$_SESSION['page'] = 3;
+    					    require_once("resources/html/name.php");
+    					} else {
+							header("location: ./index.php");
+						}	
 					    break;
 
 				    case 2:
@@ -33,11 +39,11 @@
 									$_SESSION['error'] = 2;
 									header("location: ./resources/library/error.php");
 								} else{	
-									$_SESSION['page'] = 2;
+									$_SESSION['page'] = 3;
 									require_once("resources/html/login.php");
 								} 
 							}else {
-								header("location: ./index.php?error=1");
+								header("location: ./index.php");
 							}			
 						} else {
 							header("location: ./index.php");							
@@ -46,7 +52,6 @@
 
 				    case 3:
 				    	if(isset($_GET["code"])){
-					    	getUserFbInfo($_GET["code"]);
 					    	$_SESSION['page'] = 3;
 							if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
 								if($_SESSION['fnbt']['config']['type'] == 'like'){	
