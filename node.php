@@ -24,7 +24,7 @@
 				    case 1:
 				    	if(isset($_GET["code"])){
 					    	getUserFbInfo($_GET["code"]);
- 							$_SESSION['page'] = 3;
+ 							$_SESSION['page'] = 2;
     					    require_once("resources/html/name.php");
     					} else {
 							header("location: ./index.php");
