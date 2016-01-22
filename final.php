@@ -34,11 +34,11 @@
 	//		}
 			}
 		} else {
-				require_once("resources/library/error_1.php");
+				require_once("resources/html/error_1.php");
 			}
 	} else {
 			$_SESSION['error'] = 1;
-			require_once("resources/library/error_2.php");
+			require_once("resources/html/error_2.php");
 		}
 		
 	session_unset();
