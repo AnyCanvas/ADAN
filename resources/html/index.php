@@ -6,7 +6,7 @@
 	<script>
 			
 			  function sendName(){
-				  window.location = "node.php";
+				  window.location = "node.php?name=" + $("#fnbt-name-label").val();;
 			  }
 
 
