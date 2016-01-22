@@ -1,4 +1,9 @@
 <body>
+	<script>
+		function sendName(){
+			window.location = "node.php?name=" + $("#fnbt-name-label").val();;
+		}
+	</script>
 	<div class="container-fluid" style="height: 100%; width: 100%">
 		<div style="height: 75%;" class="blue">
 		<div class="div-wrapper full" style="padding-top: top: 40vh !important;">
