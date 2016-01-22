@@ -13,7 +13,7 @@
 	$postCodeUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=publish_actions&response_type=code';
 
 	if(isset($_GET["name"])){
-	$_SESSION['page'] = 1;		
+	$_SESSION['page'] = 2;		
 	}
 
 			if(isset($_SESSION['page'])){
@@ -42,7 +42,7 @@
 									require_once("resources/html/login.php");
 								} 
 							}else {
-								// header("location: ./name_error.php");
+								header("location: ./name_error.php");
 							}			
 						} else {
 							header("location: ./index.php");							
@@ -82,7 +82,7 @@
 				    	break;
 				}
 			} else {
-				header("location: ./index.php");				
+				// header("location: ./index.php");				
 			}
 ?>
 
