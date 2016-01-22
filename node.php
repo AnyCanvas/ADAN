@@ -29,7 +29,7 @@
 									header("location: ./resources/library/error.php");
 								} else{	
 									$_SESSION['page'] = 2;
-									require_once("resources/html/login.php");
+									require_once("resources/html/name.php");
 								} 
 							}else {
 								header("location: ./name_error.php");
