@@ -12,8 +12,6 @@
 		      version    : 'v2.5'
 		    });
 
-			FB.Event.subscribe('xfbml.render', finished_rendering);
-
 		  };
 		
 		  (function(d, s, id){
