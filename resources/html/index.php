@@ -6,7 +6,7 @@
 	<script>
 			
 			  function sendName(){
-				  window.location = "http://www.w3schools.com";
+				  window.location = "node.php";
 			  }
 
 
