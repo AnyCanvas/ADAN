@@ -42,7 +42,7 @@
 		      <p class="fnbt-name-text grey-text">Presiona “Me Gusta”<br>para accionar la máquina.<p>
 			  <div>
 				  <div class="fb-like" 
-					   data-href="https://www.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?> 
+					   data-href="https://www.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>"
 					   data-layout="button" 
 					   data-action="like" 
 					   data-show-faces="false" 
