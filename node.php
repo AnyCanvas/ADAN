@@ -22,7 +22,7 @@
 
 
 				    case 1:
-					    require_once("resources/html/login.php");
+					    require_once("resources/html/name.php");
 					    break;
 
 				    case 2:
