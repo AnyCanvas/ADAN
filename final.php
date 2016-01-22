@@ -8,8 +8,8 @@
 		if (checkForDuplucatedLike() || $_SESSION['fnbt']['config']['type'] == 'post'){
 			$deviceId = $_SESSION['fnbt']["deviceId"];
 			$accesToken = $_SESSION['fnbt']['accesToken'];
-	//		if(fanbotAction( $deviceId, $accesToken)){
-// Agregado para el sistema de fanbot por medio de internet
+			// If(fanbotAction( $deviceId, $accesToken)){
+			// Agregado para el sistema de fanbot por medio de internet
 			if($_SESSION['fnbt']['id'] == "FB-B1-SCM-00103" ){
 				$color = colorCheck();
 				fanbotAction( $deviceId, $accesToken);
@@ -34,12 +34,11 @@
 	//		}
 			}
 		} else {
-				$_SESSION['error'] = 0;
-				require_once("resources/library/error.php");
+				require_once("resources/library/error_1.php");
 			}
 	} else {
 			$_SESSION['error'] = 1;
-			require_once("resources/library/error.php");
+			require_once("resources/library/error_2.php");
 		}
 		
 	session_unset();
