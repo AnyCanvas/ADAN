@@ -1,7 +1,12 @@
 <?php
 	session_start();
 	require 'resources/library/functions.php';
+
 ?>
+<!DOCTYPE html>
+<html>
+<?php require_once( "resources/html/header.php" ); ?>
+
 <?php
 
 	if (isset($_SESSION['fnbt']['config']['type']))	{
