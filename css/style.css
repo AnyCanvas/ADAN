@@ -54,9 +54,6 @@ main {
     text-transform: uppercase;
 }
 
-.fnbt-name-button {
-	display: none;
-}
 .fnbt-name-text {
     text-align: center;
 	font-size: small;
