@@ -61,10 +61,14 @@
 									require_once("resources/actions/facebook/like.php");
 								} else if ($_SESSION['fnbt']['config']['type'] == 'post'){
 									require_once("resources/actions/facebook/post.php");
+								} else {
+									header("location: ./index.php");									
 								}
 							} else {
 								header("location: ./index.php");
 							}
+						} else {
+								header("location: ./index.php");
 						}
 				        break;
 
