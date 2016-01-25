@@ -11,6 +11,33 @@
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+	<script>
+		var browserAgent = navigator.userAgent
+		console.log(browserAgent);
+			if(referrer.indexOf("facebook") <= -1 ){
+				if (browserAgent.indexOf("iPhone") > -1){
+					console.log("iPhone detected");
+					$("#app-btn").setAttribute('href', 'fb://profile/1550316151894751');
+				} else if (browserAgent.indexOf("Android") > -1){
+					if (browserAgent.indexOf("Android 5") > -1 || browserAgent.indexOf("Android 6") > -1){
+						console.log("Android lollipop detected");
+						document.location.href = 'openapp.php';	
+						$("#app-btn").setAttribute('href', 'fb://page/1550316151894751');
+						$('#indexModal').modal('show');
+					} else if (browserAgent.indexOf("Android 4.4") > -1){
+						console.log("Android Kitkat detected");
+					} else {
+						console.log("Old Android detected");
+				   	}
+			  	} else {
+					console.log("Model not detected");
+			  	}
+			 }
+			
+		postclick = function () {
+			window.location = "<?php echo $loginUrl;?>";										
+		}	
+	</script>
     <body>
 
 	<div class="container-fluid" style="height: 100%; width: 100%">
@@ -20,7 +47,7 @@
 		</div>
 	    <footer style="height: 25%;">
 		      <p class="fnbt-name-text grey-text">&nbsp;<p>
-			  <a class="waves-effect waves-light fb-btn btn btn-centered " style=" background-color: #405A9F; font-size: 3vw;"><i class="socicon-facebook left" style=" font-size: 4vw !important;"></i>Abrir Facebook</a>
+			  <a id="app-btn" class="waves-effect waves-light fb-btn btn btn-centered " style=" background-color: #405A9F; font-size: 3vw;"><i class="socicon-facebook left" style=" font-size: 4vw !important;"></i>Abrir Facebook</a>
 	    </footer>
 
 	</div>
