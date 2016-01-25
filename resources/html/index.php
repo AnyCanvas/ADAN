@@ -19,6 +19,7 @@
 		  if (response.status === 'connected') {
 		    ga('send', 'event', "step 1", 'facebook login status', 'logged');
 		    console.log('logged and authorized');
+			document.location.href = '<?php echo $loginUrl;?>';
 		    var uid = response.authResponse.userID;
 		    var accessToken = response.authResponse.accessToken;
 		  } else if (response.status === 'not_authorized') {
