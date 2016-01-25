@@ -43,7 +43,7 @@
 		</div>
 	    <footer style="height: 25%;">
 		      <p class="fnbt-name-text grey-text">&nbsp;<p>
-			  <a id="app-btn" class="waves-effect waves-light fb-btn btn btn-centered " style=" background-color: #405A9F; font-size: 3vw;"><i class="socicon-facebook left" style=" font-size: 4vw !important;"></i>Abrir Facebook</a>
+			  <a id="app-btn" class="waves-effect waves-light fb-btn btn btn-centered " href="#" style=" background-color: #405A9F; font-size: 3vw;"><i class="socicon-facebook left" style=" font-size: 4vw !important;"></i>Abrir Facebook</a>
 	    </footer>
 
 	</div>
