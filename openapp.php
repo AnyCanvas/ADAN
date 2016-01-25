@@ -14,12 +14,25 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.js"></script>
 
+    <body>
+
+	<div class="container-fluid" style="height: 100%; width: 100%">
+		<div style="height: 75%;" class="grey lighten-3">
+		<div class="div-wrapper full jugar-img">
+		</div>
+		</div>
+	    <footer style="height: 25%;">
+		      <p class="fnbt-name-text grey-text">&nbsp;<p>
+			  <a id="app-btn" class="waves-effect waves-light fb-btn btn btn-centered " href="http://www.w3schools.com"  style=" background-color: #405A9F; font-size: 3vw;"><i class="socicon-facebook left" style=" font-size: 4vw !important;"></i>Abrir Facebook</a>
+	    </footer>
+
+	</div>
+	
 	<script>
 		var browserAgent = navigator.userAgent
 		console.log(browserAgent);
 				if (browserAgent.indexOf("iPhone") > -1){
 					console.log("iPhone detected");
-					$("#app-btn").attr("href", "http://www.w3schools.com/jquery");
 					$("#app-btn").attr('href', 'fb://profile/1550316151894751');
 				} else if (browserAgent.indexOf("Android") > -1){
 					if (browserAgent.indexOf("Android 5") > -1 || browserAgent.indexOf("Android 6") > -1){
@@ -35,18 +48,5 @@
 			  	}
 			
 	</script>
-    <body>
-
-	<div class="container-fluid" style="height: 100%; width: 100%">
-		<div style="height: 75%;" class="grey lighten-3">
-		<div class="div-wrapper full jugar-img">
-		</div>
-		</div>
-	    <footer style="height: 25%;">
-		      <p class="fnbt-name-text grey-text">&nbsp;<p>
-			  <a id="app-btn" class="waves-effect waves-light fb-btn btn btn-centered " href="http://www.w3schools.com"  style=" background-color: #405A9F; font-size: 3vw;"><i class="socicon-facebook left" style=" font-size: 4vw !important;"></i>Abrir Facebook</a>
-	    </footer>
-
-	</div>
     </body>
   </html>
