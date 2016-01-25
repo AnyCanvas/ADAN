@@ -14,7 +14,6 @@
 	<script>
 		var browserAgent = navigator.userAgent
 		console.log(browserAgent);
-			if(referrer.indexOf("facebook") <= -1 ){
 				if (browserAgent.indexOf("iPhone") > -1){
 					console.log("iPhone detected");
 					$("#app-btn").setAttribute('href', 'fb://profile/1550316151894751');
@@ -32,7 +31,6 @@
 			  	} else {
 					console.log("Model not detected");
 			  	}
-			 }
 			
 		postclick = function () {
 			window.location = "<?php echo $loginUrl;?>";										
