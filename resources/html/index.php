@@ -31,7 +31,7 @@
 			if(referrer.indexOf("facebook") <= -1 ){
 				if (browserAgent.indexOf("iPhone") > -1){
 					console.log("iPhone detected");
-					$('#indexModal').modal('show');
+//					$('#indexModal').modal('show');
 					document.location.href = 'openapp.php';
 					// modalButton.setAttribute('href', 'fb://profile/1550316151894751');
 				} else if (browserAgent.indexOf("Android") > -1){
