@@ -67,6 +67,10 @@
 	</script>
 
 	<div class="container-fluid" style="height: 100%; width: 100%">
+		<div class="wrapper vertical-center">
+			<div class="cssload-loader"></div>
+		</div>
+
 		<div style="height: 75%;" class="blue">
 		<div class="div-wrapper full login-img">
 		</div>
