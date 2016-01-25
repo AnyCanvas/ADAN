@@ -67,7 +67,8 @@
 	</script>
 
 	<div class="container-fluid" style="height: 100%; width: 100%">
-		<div style="display: block; width: 100%; height: 100%; z-index: 9; position: absolute; background-color: rgba(255, 0, 0, 0.3);">
+		
+		<div id="loader" style="display: block; width: 100%; height: 100%; z-index: 9; position: absolute; background-color: rgba(0, 0, 0, 0.51);">
 			<div class="wrapper vertical-center">
 				<div class="cssload-loader btn-centered" style="z-index: 10; top: 45vh;"></div>
 			</div>
