@@ -5,12 +5,20 @@
 
 	<div id="fb-root"></div>
 	<script>
+
+		var finished_rendering = function() {
+			$('#loader').hide();
+			console.log("finished rendering plugins");
+		}
 		window.fbAsyncInit = function() {
 		    FB.init({
 		      appId      : '<?php echo $config["fbApp"]["appId"]; ?>',
 		      xfbml      : true,
 		      version    : 'v2.4'
 		    });
+		    
+		FB.Event.subscribe('xfbml.render', finished_rendering);
+
 		var referrer = document.referrer;	
 		var browserAgent = navigator.userAgent
 		console.log(referrer);	
