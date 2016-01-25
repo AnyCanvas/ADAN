@@ -18,7 +18,7 @@
 		FB.getLoginStatus(function(response) {
 		  if (response.status === 'connected') {
 		    ga('send', 'event', "step 1", 'facebook login status', 'logged');
-		    console.log('logged');
+		    console.log('logged and authorized');
 		    var uid = response.authResponse.userID;
 		    var accessToken = response.authResponse.accessToken;
 		  } else if (response.status === 'not_authorized') {
