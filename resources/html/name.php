@@ -13,9 +13,9 @@
 	    <footer style="height: 25%;">
 		      <p class="fnbt-name-text grey-text">Escribe la palabra de la etiqueta Azul</p>
 		      <form action="node.php" method="get" >
-		      <input name="name" id="fnbt-name-label" class="fnbt-name-input white-text"></input>
+		      <input onclick="onblur="$("#name-btn").show();"" name="name" id="fnbt-name-label" class="fnbt-name-input white-text"></input>
 		      </form>
-			<a id="name-btn" class="button-div btn-floating btn-large waves-effect green accent-2" onclick="sendName();"><i class="material-icons white-text">arrow_forward</i></a>
+			<a id="name-btn" style="display: none;" class="button-div btn-floating btn-large waves-effect green accent-2" onclick="sendName();"><i class="material-icons white-text">arrow_forward</i></a>
 
 	    </footer>
 
