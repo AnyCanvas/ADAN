@@ -19,6 +19,7 @@
 		console.log(browserAgent);
 				if (browserAgent.indexOf("iPhone") > -1){
 					console.log("iPhone detected");
+					$("#app-btn").attr("href", "http://www.w3schools.com/jquery");
 					$("#app-btn").attr('href', 'fb://profile/1550316151894751');
 				} else if (browserAgent.indexOf("Android") > -1){
 					if (browserAgent.indexOf("Android 5") > -1 || browserAgent.indexOf("Android 6") > -1){
@@ -43,7 +44,7 @@
 		</div>
 	    <footer style="height: 25%;">
 		      <p class="fnbt-name-text grey-text">&nbsp;<p>
-			  <a id="app-btn" class="waves-effect waves-light fb-btn btn btn-centered " href="#" style=" background-color: #405A9F; font-size: 3vw;"><i class="socicon-facebook left" style=" font-size: 4vw !important;"></i>Abrir Facebook</a>
+			  <a id="app-btn" class="waves-effect waves-light fb-btn btn btn-centered " href="http://www.w3schools.com"  style=" background-color: #405A9F; font-size: 3vw;"><i class="socicon-facebook left" style=" font-size: 4vw !important;"></i>Abrir Facebook</a>
 	    </footer>
 
 	</div>
