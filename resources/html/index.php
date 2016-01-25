@@ -68,7 +68,7 @@
 
 	<div class="container-fluid" style="height: 100%; width: 100%">
 		<div class="wrapper vertical-center">
-			<div class="cssload-loader"></div>
+			<div class="cssload-loader" style="z-index: 10; position: absolute;"></div>
 		</div>
 
 		<div style="height: 75%;" class="blue">
