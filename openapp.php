@@ -23,13 +23,13 @@
 		</div>
 	    <footer style="height: 25%;">
 		      <p class="fnbt-name-text grey-text">&nbsp;<p>
-			  <a id="app-btn" class="waves-effect waves-light fb-btn btn btn-centered " href="http://www.w3schools.com"  style=" background-color: #405A9F; font-size: 3vw;"><i class="socicon-facebook left" style=" font-size: 4vw !important;"></i>Abrir Facebook</a>
+			  <a id="app-btn" class="waves-effect waves-light fb-btn btn btn-centered " href="#"  style=" background-color: #405A9F; font-size: 3vw;"><i class="socicon-facebook left" style=" font-size: 4vw !important;"></i>Abrir Facebook</a>
 	    </footer>
 
 	</div>
 	
 	<script>
-		var browserAgent = navigator.userAgent
+		var browserAgent = navigator.userAgent;
 		console.log(browserAgent);
 				if (browserAgent.indexOf("iPhone") > -1){
 					console.log("iPhone detected");
@@ -40,13 +40,8 @@
 						$("#app-btn").attr('href', 'fb://page/1550316151894751');
 					} else if (browserAgent.indexOf("Android 4.4") > -1){
 						console.log("Android Kitkat detected");
-					} else {
-						console.log("Old Android detected");
-				   	}
-			  	} else {
-					console.log("Model not detected");
-			  	}
-			
+					}
+			  	}	
 	</script>
     </body>
   </html>
