@@ -19,7 +19,7 @@ body {
 }  
 
 .container-fluid {
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     position: absolute;
 }
