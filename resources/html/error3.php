@@ -5,7 +5,7 @@
 	</script>
    <body>
 
-	<div class="container-fluid" style="height: 100%; width: 100%">
+	<div class="container-fluid" style="height: 100%; width: 100%" class="red accent-2">
 		<div id="upper-div" class="red accent-2" style=" height: 75%; background-image: url(./images/error3.png); background-repeat: no-repeat; background-position: center bottom; background-size: auto 60%;">
 		</div>
 	    <footer style="height: 25%;" class="red accent-2">
