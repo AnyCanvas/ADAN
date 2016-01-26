@@ -23,7 +23,7 @@
 		<div id="upper-div" class="red accent-2" style=" height: 75%; background-image: url(./images/error1.png); background-repeat: no-repeat; background-position: center bottom; background-size: auto 60%;">
 		</div>
 	    <footer style="height: 25%;" class="red accent-2">
-		    <p class="error-text white-text">Esta Fanbot nos dice que ya te dispensó.</p>
+
 <!--		    <div class="btn-full-div"> 
 			  <a class="waves-effect waves-light btn white black-text btn-full teal accent-2" href="http://fanbot.me/"><i class="material-icons left">arrow_forward</i>CONOCE FANBOT</a>
 		    </div> -->
