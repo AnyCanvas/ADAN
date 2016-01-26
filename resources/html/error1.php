@@ -9,16 +9,11 @@
 
 <?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ ?>
 
-	<div class="container-fluid red accent-2" style="height: 100%; width: 100%">
+	<div class="container-fluid" style="height: 100%; width: 100%; background-color: #004485;">
 		<div id="upper-div" class="red accent-2" style=" height: 75%; background-image: url(/media/clients/centinela/upss.jpg); background-repeat: no-repeat; background-position: center bottom; background-size: auto 60%;">
 		</div>
 	    <footer style="height: 25%;" class="red accent-2">
 		    <p class="error-text white-text">Ya te dispensó.</p>
-<!--		    <div class="btn-full-div"> 
-			  <a class="waves-effect waves-light btn white black-text btn-full teal accent-2" href="http://fanbot.me/"><i class="material-icons left">arrow_forward</i>CONOCE FANBOT</a>
-		    </div> -->
-			  <a class="waves-effect waves-light btn white black-text btn-centered teal accent-2" href="http://facebook.com/fanbotme"><i class="material-icons left">arrow_forward</i>CONOCE FANBOT</a>
-
 
 	    </footer>
 
