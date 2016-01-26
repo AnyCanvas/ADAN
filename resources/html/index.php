@@ -81,7 +81,7 @@
 				<div class="cssload-loader btn-centered" style="z-index: 10; top: 45vh; margin: auto;"></div>
 			</div>
 		</div>	
-		<div style="height: 74vh; width: 100vw;" class="blue">
+		<div style="height: 70vh; width: 100vw;" class="blue">
 		<div class="div-wrapper full login-img">
 		</div>
 		</div>
