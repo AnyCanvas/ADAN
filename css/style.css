@@ -9,7 +9,9 @@ body {
   }
 
 
-  
+.iphone-fix{
+	height: 74vh !important;
+}  
 .center-img{
  	display: block;
 	margin-left: auto; 
