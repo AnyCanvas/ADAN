@@ -112,14 +112,14 @@
 		// Se the div height
 		$('#container-fluid').css({'height':(($(window).height()))+'px'});
 		// if mobileSafari add +60px
-		if(mobileSafari == 'Safari'){ $('#right-sidebar').css('height','+=60'); };
+		if(mobileSafari == 'Safari'){ $('#container-fluid').css('height','+=60'); };
 	});
 		
 	// On window resize run through the sizing again
 	$(window).resize(function(){
 		$('#container-fluid').css({'height':(($(window).height()))+'px'});
 		// if mobileSafari add +60px
-		if(mobileSafari == 'Safari'){ $('#right-sidebar').css('height','+=60'); };
+		if(mobileSafari == 'Safari'){ $('#container-fluid').css('height','+=60'); };
 	});
 </script>
 	</div>
