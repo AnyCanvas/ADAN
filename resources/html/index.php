@@ -92,14 +92,6 @@
 
 	</div>
 	
-	<script>
-			var browserAgent = navigator.userAgent;
-		console.log(browserAgent);
-			if (browserAgent.indexOf("iPhone") > -1){
-				console.log("Changed class");
-				$( "#upper-div" ).addClass( "iphone-fix" );
 
-			}
-	</script>
     </body>
   </html>
