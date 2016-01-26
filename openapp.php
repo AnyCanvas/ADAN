@@ -44,7 +44,7 @@
 			  	}	
 
 	$( document ).ready(function() {
-	  $('#app-btn').show('slow');
+	  setTimeout($('#app-btn').show('slow'); }, 5000);
 	});
 	</script>
     </body>
