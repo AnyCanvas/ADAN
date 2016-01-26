@@ -76,7 +76,7 @@
 
 	<div class="container-fluid">
 		
-		<div id="loader" style="display: block; width: 100vh; height: 100vh; z-index: 9; position: absolute; background-color: rgba(0, 0, 0, 0.51);">
+		<div id="loader" style="display: block; width: 100vw; height: 100vh; z-index: 9; position: absolute; background-color: rgba(0, 0, 0, 0.51);">
 			<div class="wrapper vertical-center">
 				<div class="cssload-loader btn-centered" style="z-index: 10; top: 45vh; margin: auto;"></div>
 			</div>
