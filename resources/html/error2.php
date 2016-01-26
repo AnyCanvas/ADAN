@@ -10,7 +10,7 @@
 		<div id="upper-div" class="red accent-2" style=" height: 75%; background-image: url(./images/error2.png); background-repeat: no-repeat; background-position: center bottom; background-size: auto 60%;">
 		</div>
 	    <footer style="height: 25%;" class="red accent-2">
-		      <p class="error-text white-text">Esta Fanbot está desconectada,<br>puedes probar Fanbot en otro negocio.<p>
+		      <p class="error-text white-text">Esta Fanbot está desconectada,<br>puedes probar Fanbot en otro negocio.</p>
 			  <a class="waves-effect waves-light btn white black-text btn-centered">BUSCAR OTROS NEGOCIOS</a>
 	    </footer>
 
