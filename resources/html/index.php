@@ -74,9 +74,9 @@
 		}	
 	</script>
 
-	<div class="container-fluid">
+	<div class="container-fluid" >
 		
-		<div id="loader" style="display: block; width: 100vw; height: 100vh; z-index: 9; position: absolute; background-color: rgba(0, 0, 0, 0.51);">
+		<div id="loader" style="display: block; width: 100%; height: 80%; z-index: 9; position: absolute; background-color: rgba(0, 0, 0, 0.51);">
 			<div class="wrapper vertical-center">
 				<div class="cssload-loader btn-centered" style="z-index: 10; top: 45vh; margin: auto;"></div>
 			</div>
@@ -112,14 +112,14 @@
 		// Se the div height
 		$('#container-fluid').css({'height':(($(window).height()))+'px'});
 		// if mobileSafari add +60px
-		if(mobileSafari == 'Safari'){ $('#container-fluid').css('height','+=60'); };
+		if(mobileSafari == 'Safari'){ $('#right-sidebar').css('height','+=60'); };
 	});
 		
 	// On window resize run through the sizing again
 	$(window).resize(function(){
 		$('#container-fluid').css({'height':(($(window).height()))+'px'});
 		// if mobileSafari add +60px
-		if(mobileSafari == 'Safari'){ $('#container-fluid').css('height','+=60'); };
+		if(mobileSafari == 'Safari'){ $('#right-sidebar').css('height','+=60'); };
 	});
 </script>
 	</div>
