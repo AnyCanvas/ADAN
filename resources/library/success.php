@@ -8,10 +8,20 @@
 
     <body>
 
-	<div class="container-fluid blue" style="height: 100%; width: 100%">
+<?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ ?>
+		<div class="container-fluid" style="height: 100%; width: 100%; background-color: #004485">
+<?php } else { ?>
+		<div class="container-fluid blue" style="height: 100%; width: 100%">
+
+<?php } ?>
 		<div id="upper-div" style="height: 75%;" class="blue">
 		<div class="div-wrapper full">
+<?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ ?>
+			<img class="center-img success-img" src="/media/clients/centinela/done.jpg">
+<?php } else { ?>
 			<img class="center-img success-img" src="images/success.png">
+
+<?php } ?>
 		</div>
 		</div>
 	    <footer style="height: 25%; padding-top: 17.5vh;" class="blue">
