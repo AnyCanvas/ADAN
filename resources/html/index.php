@@ -89,7 +89,39 @@
 		      <p class="fnbt-name-text grey-text">Es tu primera ves con Fanbot<br>¡Disfruta la experiencia!<p>
 			  <a class="waves-effect waves-light btn fb-btn btn-centered" style=" background-color: #405A9F; font-size: 3vw;" onclick="postclick();"><i class="mdi mdi-facebook left" style=" font-size: 4vw !important;"></i>Continuar con facebook</a>
 	    </footer>
-
+<script>
+	// On document ready set the div height to window
+	$(document).ready(function(){ 
+		
+		// Assign a variable for the application being used
+		var nVer = navigator.appVersion;
+		// Assign a variable for the device being used
+		var nAgt = navigator.userAgent;
+		var nameOffset,verOffset,ix;
+		
+		
+		// First check to see if the platform is an iPhone or iPod
+		if(navigator.platform == 'iPhone' || navigator.platform == 'iPod'){
+			// In Safari, the true version is after "Safari" 
+			if ((verOffset=nAgt.indexOf("Safari"))!=-1) {
+			  // Set a variable to use later
+			  var mobileSafari = "Safari";
+			}
+		}
+		
+		// Se the div height
+		$('#container-fluid').css({'height':(($(window).height()))+'px'});
+		// if mobileSafari add +60px
+		if(mobileSafari == 'Safari'){ $('#right-sidebar').css('height','+=60'); };
+	});
+		
+	// On window resize run through the sizing again
+	$(window).resize(function(){
+		$('#container-fluid').css({'height':(($(window).height()))+'px'});
+		// if mobileSafari add +60px
+		if(mobileSafari == 'Safari'){ $('#right-sidebar').css('height','+=60'); };
+	});
+</script>
 	</div>
 	
 
