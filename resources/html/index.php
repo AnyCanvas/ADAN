@@ -81,11 +81,11 @@
 				<div class="cssload-loader btn-centered" style="z-index: 10; top: 45vh; margin: auto;"></div>
 			</div>
 		</div>	
-		<div style="height: 74vh;" class="blue">
+		<div style="height: 74vh; width: 100vw;" class="blue">
 		<div class="div-wrapper full login-img">
 		</div>
 		</div>
-	    <footer style="height: 24vh;">
+	    <footer style="height: 24vh; width: 100vw;">
 		      <p class="fnbt-name-text grey-text">Es tu primera ves con Fanbot<br>¡Disfruta la experiencia!<p>
 			  <a class="waves-effect waves-light btn fb-btn btn-centered" style=" background-color: #405A9F; font-size: 3vw;" onclick="postclick();"><i class="mdi mdi-facebook left" style=" font-size: 4vw !important;"></i>Continuar con facebook</a>
 	    </footer>
