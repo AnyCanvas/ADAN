@@ -76,6 +76,11 @@
 
 	<div class="container-fluid" style="height: 100%; width: 100%">
 		
+		<div id="loader" style="display: block; width: 100%; height: 100%; z-index: 9; position: absolute; background-color: rgba(0, 0, 0, 0.51);">
+			<div class="cssload-wrapper vertical-center">
+				<div class="cssload-loader btn-centered" style="z-index: 10; top: 45vh; margin: auto;"></div>
+			</div>
+		</div>	
 		<div style="height: 75vh;" class="blue">
 		<div class="div-wrapper full login-img">
 		</div>
