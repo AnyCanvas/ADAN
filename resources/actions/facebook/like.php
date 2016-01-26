@@ -47,9 +47,10 @@
 		<div id="upper-div" style="height: 75%;" class="blue">
 		<div class="div-wrapper full" style="background-color: <?php echo $_SESSION['fnbt']['config']["bgcolor"] ?>;">
 <?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ ?>
-			<img class="center-img fbpage-img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture?type=large" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
-<?php } else { ?>
 			<img class="center-img fbpage-img" src="/media/clients/centinela/like.png" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+<?php } else { ?>
+			<img class="center-img fbpage-img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture?type=large" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+
 <?php } ?>
 		</div>
 		</div>
