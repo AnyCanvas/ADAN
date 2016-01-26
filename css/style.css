@@ -40,6 +40,10 @@ body {
     position: absolute;
 }
 
+.button-div-iphone-fix{
+    top: 78% !important;
+}
+
 .fnbt-name-input {
     width: 40vw !important;
     margin-left: 30vw !important;
