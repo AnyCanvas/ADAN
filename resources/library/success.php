@@ -9,19 +9,24 @@
     <body>
 
 <?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ ?>
-		<div class="container-fluid" style="height: 100%; width: 100%; background-color: #004485">
-<?php } else { ?>
-		<div class="container-fluid blue" style="height: 100%; width: 100%">
 
-<?php } ?>
+		<div class="container-fluid" style="height: 100%; width: 100%; background-color: #004485">
 		<div id="upper-div" style="height: 75%;" class="blue">
 		<div class="div-wrapper full">
-<?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ ?>
 			<img class="center-img success-img" src="/media/clients/centinela/done.jpg">
-<?php } else { ?>
-			<img class="center-img success-img" src="images/success.png">
+		</div>
+		</div>
+	    <footer style="height: 25%; padding-top: 17.5vh;" style="background-color: #004485;">
+	    </footer>
 
-<?php } ?>
+	</div>
+
+<?php } else { ?>
+
+	<div class="container-fluid blue" style="height: 100%; width: 100%">
+		<div id="upper-div" style="height: 75%;" class="blue">
+		<div class="div-wrapper full">
+			<img class="center-img success-img" src="images/success.png">
 		</div>
 		</div>
 	    <footer style="height: 25%; padding-top: 17.5vh;" class="blue">
@@ -34,6 +39,8 @@
 	    </footer>
 
 	</div>
+
+<?php } ?>
 
 	<script>
 			var browserAgent = navigator.userAgent;
