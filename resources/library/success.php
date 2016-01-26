@@ -8,7 +8,7 @@
 
     <body>
 
-	<div class="container-fluid" style="height: 100%; width: 100%" class="blue">
+	<div class="container-fluid blue" style="height: 100%; width: 100%">
 		<div id="upper-div" style="height: 75%;" class="blue">
 		<div class="div-wrapper full">
 			<img class="center-img success-img" src="images/success.png">
