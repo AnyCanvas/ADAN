@@ -17,7 +17,7 @@
     <body>
 
 	<div class="container-fluid" style="height: 100%; width: 100%">
-		<div style="height: 75%;" class="grey lighten-3">
+		<div id="upper-div" style="height: 75%;" class="grey lighten-3">
 		<div class="div-wrapper full jugar-img">
 		</div>
 		</div>
@@ -46,6 +46,12 @@
 	$( document ).ready(function() {
 	  setTimeout(function(){ $('#app-btn').show('slow'); }, 3000);
 	});
+
+		if (browserAgent.indexOf("iPhone") > -1){
+			console.log("Changed class");
+			$( "#upper-div" ).addClass( "iphone-fix" );
+
+		}
 	</script>
     </body>
   </html>

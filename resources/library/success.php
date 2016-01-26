@@ -9,7 +9,7 @@
     <body>
 
 	<div class="container-fluid" style="height: 100%; width: 100%">
-		<div style="height: 75%;" class="blue">
+		<div id="upper-div" style="height: 75%;" class="blue">
 		<div class="div-wrapper full">
 			<img class="center-img success-img" src="images/success.png">
 		</div>
@@ -21,5 +21,15 @@
 	    </footer>
 
 	</div>
+
+	<script>
+			var browserAgent = navigator.userAgent;
+			console.log(browserAgent);
+			if (browserAgent.indexOf("iPhone") > -1){
+				console.log("Changed class");
+				$( "#upper-div" ).addClass( "iphone-fix" );
+
+			}
+	</script>
     </body>
   </html>
