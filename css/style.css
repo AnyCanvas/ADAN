@@ -115,9 +115,9 @@ body {
 }	
 
 .btn-full-div{
-	bottom: 0;
-    width: 100vw;
-    padding-top: 10.8vh;	
+    position: absolute;
+    bottom: 0;
+    width: 100vw;	
 }
 
 .fb-btn{
