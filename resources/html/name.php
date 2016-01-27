@@ -30,7 +30,7 @@
 				$( '#name-btn' ).addClass( 'button-div-iphone-fix' );
 
 			}
-			var function makeSmall(){
+			var makeSmall = function(){
 				$('#name-btn').hide('slow'); 
 				if (browserAgent.indexOf("iPhone") > -1){
 					console.log("Changed class");
@@ -39,7 +39,7 @@
 	
 				}
 
-			var function makeBig(){
+			var makeBig = function (){
 				$('#name-btn').show('slow');
 				if (browserAgent.indexOf("iPhone") > -1){
 					console.log("Changed class");
