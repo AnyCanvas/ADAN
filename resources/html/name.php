@@ -26,7 +26,7 @@
 			console.log(browserAgent);
 			if (browserAgent.indexOf("iPhone") > -1){
 				console.log("Changed class");
-				$( 'upper-div' ).addClass( 'iphone-fix' );
+				$( '#upper-div' ).addClass( 'iphone-fix' );
 				$( '#name-btn' ).addClass( 'button-div-iphone-fix' );
 
 			}
@@ -34,7 +34,7 @@
 				$('#name-btn').hide('slow'); 
 				if (browserAgent.indexOf("iPhone") > -1){
 					console.log("Changed class");
-					$( 'upper-div' ).addClass( 'iphone-fix' );
+					$( '#upper-div' ).addClass( 'iphone-fix' );
 					$( '#name-btn' ).addClass( 'button-div-iphone-fix' );
 	
 				}
@@ -44,7 +44,7 @@
 				$('#name-btn').show('slow');
 				if (browserAgent.indexOf("iPhone") > -1){
 					console.log("Changed class");
-					$( 'upper-div' ).removeClass( 'iphone-fix' );
+					$( '#upper-div' ).removeClass( 'iphone-fix' );
 					$( '#name-btn' ).removeClass( 'button-div-iphone-fix' );
 	
 				}
