@@ -38,6 +38,7 @@
 					$( '#name-btn' ).addClass( 'button-div-iphone-fix' );
 	
 				}
+			}
 
 			var makeBig = function (){
 				$('#name-btn').show('slow');
