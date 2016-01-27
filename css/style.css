@@ -25,7 +25,7 @@ body {
 }
 
 .div-wrapper img {
-    top: 55%;
+    top: 55vh;
 }
 
 .full{
@@ -44,6 +44,10 @@ body {
     top: 75vh !important;
 }
 
+.iphone-fix-img{
+	top: 45vh !important;
+	
+}
 .fnbt-name-input {
     width: 40vw !important;
     margin-left: 30vw !important;
