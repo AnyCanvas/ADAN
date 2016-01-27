@@ -44,6 +44,10 @@ body {
     top: 75vh !important;
 }
 
+.img-fix{
+    top: 55% !important;	
+}
+
 .fnbt-name-input {
     width: 40vw !important;
     margin-left: 30vw !important;
