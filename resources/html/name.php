@@ -26,7 +26,7 @@
 			console.log(browserAgent);
 			if (browserAgent.indexOf("iPhone") > -1){
 				console.log("Changed class");
-				$( 'img' ).addClass( 'iphone-fix-img' );
+//				$( 'img' ).addClass( 'iphone-fix-img' );
 				$( '#upper-div' ).addClass( 'iphone-fix' );
 				$( '#name-btn' ).addClass( 'button-div-iphone-fix' );
 
@@ -35,7 +35,7 @@
 				$('#name-btn').hide('slow'); 
 				if (browserAgent.indexOf("iPhone") > -1){
 					console.log("Changed class");
-					$( 'img' ).addClass( 'iphone-fix-img' );
+//					$( 'img' ).addClass( 'iphone-fix-img' );
 					$( '#upper-div' ).addClass( 'iphone-fix' );
 					$( '#name-btn' ).addClass( 'button-div-iphone-fix' );
 	
@@ -46,7 +46,7 @@
 				$('#name-btn').show('slow');
 				if (browserAgent.indexOf("iPhone") > -1){
 					console.log("Changed class");
-					$( 'img' ).removeClass( 'iphone-fix-img' );
+//					$( 'img' ).removeClass( 'iphone-fix-img' );
 					$( '#upper-div' ).removeClass( 'iphone-fix' );
 					$( '#name-btn' ).removeClass( 'button-div-iphone-fix' );
 	
