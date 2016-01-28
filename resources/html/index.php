@@ -7,7 +7,6 @@
 	<script>
 
 		var finished_rendering = function() {
-			$('#loader').hide();
 			console.log("finished rendering plugins");
 		}
 		window.fbAsyncInit = function() {
@@ -27,11 +26,12 @@
 		  if (response.status === 'connected') {
 		    ga('send', 'event', "step 1", 'facebook login status', 'logged');
 		    console.log('logged and authorized');
-//			document.location.href = '<?php echo $loginUrl;?>';
+			document.location.href = '<?php echo $loginUrl;?>';
 		    var uid = response.authResponse.userID;
 		    var accessToken = response.authResponse.accessToken;
 		  } else if (response.status === 'not_authorized') {
 		    console.log('logged');
+			document.location.href = 'login.php';
 		    ga('send', 'event', "step 1", 'facebook login status', 'logged');
 		  }	else{
 		    console.log('not logged');
@@ -45,7 +45,6 @@
 					if (browserAgent.indexOf("Android 5") > -1 || browserAgent.indexOf("Android 6") > -1){
 						console.log("Android lollipop detected");
 						document.location.href = 'openapp.php';	
-						$('#indexModal').modal('show');
 					} else if (browserAgent.indexOf("Android 4.4") > -1){
 						console.log("Android Kitkat detected");
 					} else {
