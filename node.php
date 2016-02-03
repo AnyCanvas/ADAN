@@ -31,7 +31,9 @@
 				    case 1:
 				    
 				    	if(isset($_GET["token"])){
-					    	$token -> $_GET["token"];
+					    	$token = $_GET["token"];
+					    	$token = json_decode($token);
+					    	$token = json_decode($token);					    	
 					    	getUserFbInfo($token);
  							$_SESSION['page'] = 2;
     					    require_once("resources/html/name.php");					    
