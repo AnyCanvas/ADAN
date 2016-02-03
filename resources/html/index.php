@@ -25,7 +25,7 @@
 		console.log(browserAgent);
 		FB.getLoginStatus(function(response) {
 		  if (response.status === 'connected') {
-		    ga('send', 'event', "step 1", 'facebook login status', 'logged');
+		    ga('send', 'event', "step 0", 'facebook login status', 'logged');
 		    console.log('logged and authorized');
 //			document.location.href = '<?php echo $loginUrl;?>';
 			document.location.href = 'node.php';	
@@ -33,12 +33,12 @@
 		    var accessToken = response.authResponse.accessToken;
 		  } else if (response.status === 'not_authorized') {
 		    console.log('logged');
-		    ga('send', 'event', "step 1", 'facebook login status', 'logged');
+		    ga('send', 'event', "step 0", 'facebook login status', 'logged');
 			document.location.href = 'node.php';	
 
 		  }	else{
 		    console.log('not logged');
-		    ga('send', 'event', "step 1", 'facebook login status', 'not logged');	
+		    ga('send', 'event', "step 0", 'facebook login status', 'not logged');	
 			  				
 			if(referrer.indexOf("facebook") <= -1 ){
 				if (browserAgent.indexOf("iPhone") > -1){
