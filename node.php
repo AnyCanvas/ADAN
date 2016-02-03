@@ -32,7 +32,7 @@
 				    
 				    	if(isset($_GET["token"])){
 					    	$token = $_GET["token"];
-					    	$token = json_decode($token);
+					    	$token = json_encode($token);
 					    	$token = json_decode($token);					    	
 					    	getUserFbInfo($token);
  							$_SESSION['page'] = 2;
