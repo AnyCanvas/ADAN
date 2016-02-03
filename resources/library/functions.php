@@ -71,6 +71,9 @@
 
 
 	function fbCode2token($code){
+
+		require(realpath(dirname(__FILE__) . "/../config.php"));		
+
 		// Get de JSON text containing the token 
 		$codeToToken = file_get_contents('https://graph.facebook.com/v2.3/oauth/access_token?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&client_secret='.$config["fbApp"]["appSecret"].'&code='. $code);
 
