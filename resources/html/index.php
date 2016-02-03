@@ -28,13 +28,13 @@
 		    ga('send', 'event', "step 1", 'facebook login status', 'logged');
 		    console.log('logged and authorized');
 //			document.location.href = '<?php echo $loginUrl;?>';
-			document.location.href = 'login.php';	
+			document.location.href = 'node.php';	
 		    var uid = response.authResponse.userID;
 		    var accessToken = response.authResponse.accessToken;
 		  } else if (response.status === 'not_authorized') {
 		    console.log('logged');
 		    ga('send', 'event', "step 1", 'facebook login status', 'logged');
-			document.location.href = 'login.php';	
+			document.location.href = 'node.php';	
 
 		  }	else{
 		    console.log('not logged');
@@ -51,14 +51,14 @@
 						$('#indexModal').modal('show');
 					} else if (browserAgent.indexOf("Android 4.4") > -1){
 						console.log("Android Kitkat detected");
-						document.location.href = 'login.php';	
+						document.location.href = 'node.php';	
 					} else {
 						console.log("Old Android detected");
-						document.location.href = 'login.php';	
+						document.location.href = 'node.php';	
 				   	}
 			  	} else {
 					console.log("Model not detected");
-					document.location.href = 'login.php';
+					document.location.href = 'node.php';
 			  	}
 			 }
 		}	
