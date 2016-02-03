@@ -34,7 +34,7 @@
 					    	$token = $_GET["token"];
 					    	$token = json_encode($token);
 					    	$token = json_decode($token);					    	
-					    	getUserFbInfo($token);
+					    	getUserFbInfo('CAAXYRZAtwCHgBAJzBdZBlbiW5REVThuzZBo9DSkdHzmamHRIlEDD1UY8ZCdzjiidmQW4YwUGomONkALTsKlHZAT8aYWH2TYgO0zr5LgZBOqhltfu1i91JVgSXYrNxZAbN8ikHuLdNWZCdJTcysjVhDq6ukzZAeKDQdlY4yfMdDu6WHFzEMBj3vgOu7CCbpkCcyyjGdEHdSPmvfZBtIqWODg5v4');
  							$_SESSION['page'] = 2;
     					    require_once("resources/html/name.php");					    
 					    } else if(isset($_GET["code"])){
