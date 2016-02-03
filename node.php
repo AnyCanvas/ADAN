@@ -31,10 +31,9 @@
 				    case 1:
 				    
 				    	if(isset($_GET["token"])){
-					    	$token = $_GET["token"];
-					    	$token = json_encode($token);
-					    	$token = json_decode($token);					    	
-					    	getUserFbInfo('CAAXYRZAtwCHgBAJzBdZBlbiW5REVThuzZBo9DSkdHzmamHRIlEDD1UY8ZCdzjiidmQW4YwUGomONkALTsKlHZAT8aYWH2TYgO0zr5LgZBOqhltfu1i91JVgSXYrNxZAbN8ikHuLdNWZCdJTcysjVhDq6ukzZAeKDQdlY4yfMdDu6WHFzEMBj3vgOu7CCbpkCcyyjGdEHdSPmvfZBtIqWODg5v4');
+					    	$tokenArray['access_token'] = $_GET["token"];
+					    	$token = $object = json_decode(json_encode($tokenArray), FALSE);			    	
+					    	getUserFbInfo($token);
  							$_SESSION['page'] = 2;
     					    require_once("resources/html/name.php");					    
 					    } else if(isset($_GET["code"])){
