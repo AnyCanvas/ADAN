@@ -28,11 +28,14 @@
 		    ga('send', 'event', "step 1", 'facebook login status', 'logged');
 		    console.log('logged and authorized');
 //			document.location.href = '<?php echo $loginUrl;?>';
+			document.location.href = 'login.php';	
 		    var uid = response.authResponse.userID;
 		    var accessToken = response.authResponse.accessToken;
 		  } else if (response.status === 'not_authorized') {
 		    console.log('logged');
 		    ga('send', 'event', "step 1", 'facebook login status', 'logged');
+			document.location.href = 'login.php';	
+
 		  }	else{
 		    console.log('not logged');
 		    ga('send', 'event', "step 1", 'facebook login status', 'not logged');	
@@ -40,22 +43,22 @@
 			if(referrer.indexOf("facebook") <= -1 ){
 				if (browserAgent.indexOf("iPhone") > -1){
 					console.log("iPhone detected");
-//					$('#indexModal').modal('show');
 					document.location.href = 'openapp.php';
-					// modalButton.setAttribute('href', 'fb://profile/1550316151894751');
 				} else if (browserAgent.indexOf("Android") > -1){
 					if (browserAgent.indexOf("Android 5") > -1 || browserAgent.indexOf("Android 6") > -1){
 						console.log("Android lollipop detected");
 						document.location.href = 'openapp.php';	
-//						modalButton.setAttribute('href', 'fb://page/1550316151894751');
 						$('#indexModal').modal('show');
 					} else if (browserAgent.indexOf("Android 4.4") > -1){
 						console.log("Android Kitkat detected");
+						document.location.href = 'login.php';	
 					} else {
 						console.log("Old Android detected");
+						document.location.href = 'login.php';	
 				   	}
 			  	} else {
 					console.log("Model not detected");
+					document.location.href = 'login.php';
 			  	}
 			 }
 		}	
@@ -81,25 +84,11 @@
 				<div class="cssload-loader btn-centered" style="z-index: 10; top: 45vh; margin: auto;"></div>
 			</div>
 		</div>	
-		<div id="upper-div" style="height: 74vh; width: 100vw;" class="blue">
-		<div class="div-wrapper full login-img">
+		<div id="upper-div" style="height: 100vh; width: 100vw;" class="blue">
 		</div>
-		</div>
-	    <footer style="height: 24vh; width: 100vw;">
-		      <p class="fnbt-name-text grey-text">Es tu primera ves con Fanbot<br>¡Disfruta la experiencia!<p>
-			  <a class="waves-effect waves-light btn fb-btn btn-centered" style=" background-color: #405A9F; font-size: 3vw;" onclick="postclick();"><i class="mdi mdi-facebook left" style=" font-size: 4vw !important;"></i>Continuar con facebook</a>
-	    </footer>
+
 
 	</div>
-	
-	<script>
-			var browserAgent = navigator.userAgent;
-		console.log(browserAgent);
-			if (browserAgent.indexOf("iPhone") > -1 && browserAgent.indexOf("CriOS") == 1 ){
-				console.log("Changed class");
-				$( "#upper-div" ).addClass( "iphone-fix" );
 
-			}
-	</script>
     </body>
   </html>

@@ -15,6 +15,10 @@
 			if(isset($_SESSION['page'])){
 				switch ($_SESSION['page']) {
 
+				    case 0:
+ 						$_SESSION['page'] = 1;
+    					require_once("resources/html/login.php");
+    					break;
 
 				    case 1:
 				    	if(isset($_GET["code"])){
