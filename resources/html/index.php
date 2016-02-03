@@ -71,9 +71,6 @@
 		fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 		
-		postclick = function () {
-			window.location = "<?php echo $loginUrl;?>";										
-		}	
 	</script>
 
 	<div class="container-fluid">
