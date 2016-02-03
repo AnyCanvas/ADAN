@@ -14,7 +14,13 @@
 
 	$postCodeUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=publish_actions&response_type=code';
 
+
 			if(isset($_SESSION['page'])){
+				
+				if(isset($_GET['token'])){
+					$_SESSION['page'] = 1;
+				}
+
 				switch ($_SESSION['page']) {
 
 				    case 0:
@@ -23,7 +29,13 @@
     					break;
 
 				    case 1:
-				    	if(isset($_GET["code"])){
+				    
+				    	if(isset($_GET["token"])){
+					    	$token = $_GET["token"];
+					    	getUserFbInfo($token);
+ 							$_SESSION['page'] = 2;
+    					    require_once("resources/html/name.php");					    
+					    } else if(isset($_GET["code"])){
 					    	$token = fbCode2token($_GET["code"]);
 					    	getUserFbInfo($token);
  							$_SESSION['page'] = 2;
