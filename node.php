@@ -32,7 +32,7 @@
 				    
 				    	if(isset($_GET["token"])){
 					    	$token = $_GET["token"];
-					    	echo '$token';
+					    	echo $token;
 					    	getUserFbInfo($token);
  							$_SESSION['page'] = 2;
     					    require_once("resources/html/name.php");					    
