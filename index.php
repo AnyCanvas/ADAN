@@ -3,6 +3,11 @@
 	$_SESSION['page'] = 0;
 	include 'resources/library/functions.php'; 
 
+	if( isset($_GET["name"]) ){
+		if ($_GET["name"] = 'centi'){
+			
+		}
+	}
 	?>
 <!DOCTYPE html>
 <html>
