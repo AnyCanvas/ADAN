@@ -71,7 +71,7 @@
 						    break;
 
 				    case 2:
-						if(isset($_GET["name"]) || isset($_SESSION['fnbt']['name'])){
+						if(( isset($_GET["name"]) ) || ( isset($_SESSION['fnbt']['name'])  ) ){
 							if(isset($_SESSION['fnbt']['name'])){
 						    	$fnbtName  = $_SESSION['fnbt']['name'];
 							} else{
