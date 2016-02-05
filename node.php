@@ -74,7 +74,6 @@
 						if(isset($_GET["name"]) || isset($_SESSION['fnbt']['name'])){
 							if(isset($_SESSION['fnbt']['name'])){
 						    	$fnbtName  = $_SESSION['fnbt']['name'];
-						    	unset($_SESSION['fnbt']['name']);															
 							} else{
 						    	$fnbtName  = htmlspecialchars($_GET["name"]);								
 							}
