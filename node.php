@@ -35,7 +35,7 @@
 						    	$token = $object = json_decode(json_encode($tokenArray), FALSE);			    	
 						    	getUserFbInfo($token);
 	 							$_SESSION['page'] = 2;
-	    					    require_once("resources/html/name.php");					    		 							
+	    					    header("location: ./node.php?name=". $_SESSION['fnbt']['name']);
 						    } else if(isset($_GET["code"])){
 						    	$token = fbCode2token($_GET["code"]);
 						    	getUserFbInfo($token);
