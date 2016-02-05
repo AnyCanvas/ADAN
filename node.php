@@ -50,12 +50,20 @@
 						    	$token = $object = json_decode(json_encode($tokenArray), FALSE);			    	
 						    	getUserFbInfo($token);
 	 							$_SESSION['page'] = 2;
-	    					    require_once("resources/html/name.php");					    
+	 							if (isset($_SESSION['fnbt']['name']) ){
+	    					    	header("location: ./node.php");					    		 									 							
+	 							} else {
+	    					    	require_once("resources/html/name.php");					    		 							
+	 							}	 							
 						    } else if(isset($_GET["code"])){
 						    	$token = fbCode2token($_GET["code"]);
 						    	getUserFbInfo($token);
 	 							$_SESSION['page'] = 2;
-	    					    require_once("resources/html/name.php");
+	 							if (isset($_SESSION['fnbt']['name']) ){
+	    					    	header("location: ./node.php");					    		 									 							
+	 							} else {
+	    					    	require_once("resources/html/name.php");					    		 							
+	 							}	 							
 	    					} else {
 								header("location: ./index.php");
 							}
@@ -63,8 +71,13 @@
 						    break;
 
 				    case 2:
-						if(isset($_GET["name"])){
-					    	$fnbtName  = htmlspecialchars($_GET["name"]);
+						if(isset($_GET["name"]) || isset($_SESSION['fnbt']['name'])){
+							if(isset($_SESSION['fnbt']['name'])){
+						    	$fnbtName  = $_SESSION['fnbt']['name'];
+						    	unset($_SESSION['fnbt']['name']);															
+							} else{
+						    	$fnbtName  = htmlspecialchars($_GET["name"]);								
+							}
 							if (findFnbt($fnbtName)) { 	
 								if($_SESSION['fnbt']['status'] == 0){
 									$_SESSION['error'] = 2;
