@@ -35,12 +35,12 @@
 						    	$token = $object = json_decode(json_encode($tokenArray), FALSE);			    	
 						    	getUserFbInfo($token);
 	 							$_SESSION['page'] = 2;
-	    					    header("node.php");					    
+	    					    header("location: ./node.php");					    
 						    } else if(isset($_GET["code"])){
 						    	$token = fbCode2token($_GET["code"]);
 						    	getUserFbInfo($token);
 	 							$_SESSION['page'] = 2;
-	    					    header("node.php");
+	    					    header("location: ./node.php");
 	    					} else {
 								header("location: ./index.php");
 							}					    	
