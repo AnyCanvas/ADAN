@@ -65,18 +65,14 @@
 	    					    	require_once("resources/html/name.php");					    		 							
 	 							}	 							
 	    					} else {
-								header("location: ./index.php");
+								header("location: ./index.php?name=". $_SESSION['fnbt']['name']);
 							}
 						}	
 						    break;
 
 				    case 2:
-						if(( isset($_GET["name"]) ) || ( isset($_SESSION['fnbt']['name'])  ) ){
-							if(isset($_SESSION['fnbt']['name'])){
-						    	$fnbtName  = $_SESSION['fnbt']['name'];
-							} else{
-						    	$fnbtName  = htmlspecialchars($_GET["name"]);								
-							}
+						if( isset($_GET["name"])){
+						    $fnbtName  = htmlspecialchars($_GET["name"]);								
 							if (findFnbt($fnbtName)) { 	
 								if($_SESSION['fnbt']['status'] == 0){
 									$_SESSION['error'] = 2;
