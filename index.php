@@ -4,9 +4,7 @@
 	include 'resources/library/functions.php'; 
 
 	if( isset($_GET["name"]) ){
-		if ($_GET["name"] = 'centi'){
 			$_SESSION['fnbt']['name'] = $_GET["name"];
-		}
 	}
 	?>
 <!DOCTYPE html>
