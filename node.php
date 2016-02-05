@@ -51,7 +51,7 @@
 						    	getUserFbInfo($token);
 	 							$_SESSION['page'] = 2;
 	 							if (isset($_SESSION['fnbt']['name']) ){
-	    					    	header("location: ./node.php");					    		 									 							
+	    					    	header("location: ./node.php?name=". $_SESSION['fnbt']['name']);					    		 									 							
 	 							} else {
 	    					    	require_once("resources/html/name.php");					    		 							
 	 							}	 							
@@ -65,7 +65,7 @@
 	    					    	require_once("resources/html/name.php");					    		 							
 	 							}	 							
 	    					} else {
-								header("location: ./index.php?name=". $_SESSION['fnbt']['name']);
+								header("location: ./index.php");
 							}
 						}	
 						    break;
