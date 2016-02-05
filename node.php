@@ -33,37 +33,26 @@
 					    	if(isset($_GET["token"])){
 						    	$tokenArray['access_token'] = $_GET["token"];
 						    	$token = $object = json_decode(json_encode($tokenArray), FALSE);			    	
-						    	getUserFbInfo($token);
-	 							$_SESSION['page'] = 2;
-	    					    header("location: ./node.php");					    
 						    } else if(isset($_GET["code"])){
 						    	$token = fbCode2token($_GET["code"]);
 						    	getUserFbInfo($token);
 	 							$_SESSION['page'] = 2;
-	    					    header("location: ./node.php");
+	    					    header("location: ./node.php?name=". $_SESSION['fnbt']['name']);
 	    					} else {
 								header("location: ./index.php");
-							}					    	
+							}
 				    	}else {
 					    	if(isset($_GET["token"])){
 						    	$tokenArray['access_token'] = $_GET["token"];
 						    	$token = $object = json_decode(json_encode($tokenArray), FALSE);			    	
 						    	getUserFbInfo($token);
 	 							$_SESSION['page'] = 2;
-	 							if (isset($_SESSION['fnbt']['name']) ){
-	    					    	header("location: ./node.php?name=". $_SESSION['fnbt']['name']);					    		 									 							
-	 							} else {
-	    					    	require_once("resources/html/name.php");					    		 							
-	 							}	 							
+	    					    require_once("resources/html/name.php");					    		 							
 						    } else if(isset($_GET["code"])){
 						    	$token = fbCode2token($_GET["code"]);
 						    	getUserFbInfo($token);
 	 							$_SESSION['page'] = 2;
-	 							if (isset($_SESSION['fnbt']['name']) ){
-	    					    	header("location: ./node.php");					    		 									 							
-	 							} else {
-	    					    	require_once("resources/html/name.php");					    		 							
-	 							}	 							
+	    					    require_once("resources/html/name.php");					    		 							
 	    					} else {
 								header("location: ./index.php");
 							}
