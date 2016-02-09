@@ -18,8 +18,8 @@
 <?php	if($_SESSION['fnbt']['name'] = 'centi'){ ?>
 
 	<div class="container-fluid">		
-		<div id="upper-div" style="height: 74vh; width: 100vw;" class="blue">
-		<div class="div-wrapper full " style="background-image: url(./media/clients/centinela/clasicoshot.png); background-repeat: no-repeat; background-position: center top; background-size: auto 100%;">
+		<div id="upper-div" style="height: 74vh; width: 100vw;" style="background-color: #004680">
+		<div class="div-wrapper full " style="background-image: url(./media/clients/centinela/clasicoshot.png); background-repeat: no-repeat; background-position: center center; background-size: 100% auto;">
 		</div>
 		</div>
 	    <footer style="height: 24vh; width: 100vw;">
