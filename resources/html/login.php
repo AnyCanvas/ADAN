@@ -15,8 +15,23 @@
 		}	
 	</script>
 
-	<div class="container-fluid">
-		
+<?php	if($_SESSION['fnbt']['name'] = 'centi'){ ?>
+
+	<div class="container-fluid">		
+		<div id="upper-div" style="height: 74vh; width: 100vw;" class="blue">
+		<div class="div-wrapper full login-img">
+		</div>
+		</div>
+	    <footer style="height: 24vh; width: 100vw;">
+		      <p class="fnbt-name-text grey-text">Es tu primera ves con aqui<br>¡Disfruta la experiencia!<p>
+			  <a class="waves-effect waves-light btn fb-btn btn-centered" style=" background-color: #405A9F; font-size: 3vw;" onclick="postclick();"><i class="mdi mdi-facebook left" style=" font-size: 4vw !important;"></i>Continuar con Facebook</a>
+	    </footer>
+
+	</div>
+	
+<?php	}else { ?>
+
+	<div class="container-fluid">		
 		<div id="upper-div" style="height: 74vh; width: 100vw;" class="blue">
 		<div class="div-wrapper full login-img">
 		</div>
@@ -27,7 +42,8 @@
 	    </footer>
 
 	</div>
-	
+
+<?php } ?> 
 	<script>
 			var browserAgent = navigator.userAgent;
 		console.log(browserAgent);
