@@ -13,7 +13,6 @@
 		<div id="upper-div" style=" height: 75%; background-image: url(/media/clients/centinela/upss.jpg); background-repeat: no-repeat; background-position: center bottom; background-size: auto 60%; background-color: #004485;">
 		</div>
 	    <footer style="height: 25%;" style="background-color: background-color: #004485;">
-		    <p class="error-text white-text">Ya te dispensó.</p>
 
 	    </footer>
 
