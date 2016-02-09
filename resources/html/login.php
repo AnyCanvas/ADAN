@@ -19,7 +19,7 @@
 
 	<div class="container-fluid">		
 		<div id="upper-div" style="height: 74vh; width: 100vw;" class="blue">
-		<div class="div-wrapper full login-img">
+		<div class="div-wrapper full " style="background-image: url(./media/clients/centinela/clasicoshot.png); background-repeat: no-repeat; background-position: center top; background-size: auto 100%;">
 		</div>
 		</div>
 	    <footer style="height: 24vh; width: 100vw;">
