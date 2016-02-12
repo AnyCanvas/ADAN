@@ -31,7 +31,7 @@
 		     var js, fjs = d.getElementsByTagName(s)[0];
 		     if (d.getElementById(id)) {return;}
 		     js = d.createElement(s); js.id = id;
-		     js.src = "//connect.facebook.net/en_US/sdk.js";
+		     js.src = "//connect.facebook.net/es_LA/sdk.js";
 		     fjs.parentNode.insertBefore(js, fjs);
 		   }(document, 'script', 'facebook-jssdk'));
 
@@ -42,10 +42,8 @@
 	</script>
 	
 	<div class ="container-fluid">
-	
-	<div class="wrapper vertical-center">
-		<div class="cssload-loader"></div>
-	</div>
+
+	<span style="text-align: center"><h3>Obtén tu recompensa con un Check-in </h3> <h6> O selecciona saltar Check-in, tengo un codigo.</h6></span>
 	
 	<div class="clearfix visible-xs-block"></div>
 	
@@ -65,9 +63,6 @@
 	  <div class="modal-dialog modal-sm">		
 			<!-- Informative image Columns-->
 	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h4 class="modal-title text-center">Haz "Check-in"</h4>
-	      </div>
 	      <div class="modal-body">
 			  <div class="fb_logo-row row">
 			    <div class="col-xs-4" ></div>
@@ -90,17 +85,11 @@
 		  			</a>
 			    </div>
 			    <div class="col-xs-3" ></div>
+			    <div class="col-xs-12" >
+					<span style="font-size: 2vh; text-align: left;" ><a href="<?php echo $config["urls"]["baseUrl"] . '/node.php?step=2' ?>"> Saltar Check-in, tengo un codigo.<a></span>
+				</div>
 			</div>	
 	
-	      </div>
-	      <div class="modal-footer">
-			<div class="row mid-row">
-			    <div class="col-xs-1" ></div>
-			    <div class="col-xs-10 text-center leadinline-text" >
-					<span style="font-size: small; text-align: left;" ><a href="<?php echo $config["urls"]["baseUrl"] . '/node.php?step=2' ?>"> Prefiero hacer una encuesta.<a></span>
-			    </div>
-			    <div class="col-xs-1" ></div>
-			</div>
 	      </div>
 	   </div>
 	  </div>

@@ -1,28 +1,13 @@
-<?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ ?>
-	<title>Todo un clásico</title>
-<?php } else { ?>
-	<title>Fanbot</title>
-<?php } ?>
-<?php 
-	if(isset($_SESSION['fnbt']['config']["bgcolor"])){
-		echo '<body style="background-color: '. $_SESSION['fnbt']['config']["bgcolor"] .'">';
-	} else {
-		echo '<body>';
-	}
-?>
-	
+ <title>Dale like</title>
+
+    <body>
 	<div id="fb-root"></div>
 		<script>
-			
-			var finished_rendering = function() {
-				$('#actionModal').modal('show');
-				console.log("finished rendering plugins");
-			}
-			
-			var likeclick = function () {
-				$('#actionModal').modal('hide');
-			}	
-			
+						
+		var finished_rendering = function() {
+			$('#loader').hide();
+			console.log("finished rendering plugins");
+		}
 			
 		window.fbAsyncInit = function() {
 		    FB.init({
@@ -32,10 +17,10 @@
 		    });
 
 				FB.Event.subscribe('xfbml.render', finished_rendering);
-				
+
 				FB.Event.subscribe('edge.create', function(targetUrl) {
 					ga('send', 'event', 'action', 'facebook', 'like', 1);
-					window.location="<?php echo $loginUrl;?>";
+					window.location="/final.php";
 				});
 				FB.Event.subscribe('edge.remove', function(targetUrl) {
 					ga('send', 'event', 'action', 'facebook', 'like', 0);
@@ -46,79 +31,50 @@
 		     var js, fjs = d.getElementsByTagName(s)[0];
 		     if (d.getElementById(id)) {return;}
 		     js = d.createElement(s); js.id = id;
-		     js.src = "//connect.facebook.net/en_US/sdk.js";
+		     js.src = "//connect.facebook.net/es_LA/sdk.js";
 		     fjs.parentNode.insertBefore(js, fjs);
 		   }(document, 'script', 'facebook-jssdk'));
 			
 
-</script>
+		</script>
 
-<div class ="container-fluid">
-
-<div class="wrapper vertical-center">
-	<div class="cssload-loader"></div>
-</div>
-
-<div class="clearfix visible-xs-block"></div>
-
-                <div class="fb_logo-row row bottom">
-                    <div class="col-xs-4"></div>
-                    <div class="col-xs-4">
-                        <img class="img-responsive center-block"
-							 src="media/clients/logos/<?php  echo $_SESSION['fnbt']['config']['image']; ?>"
-                             alt="fanbot"
-                             width="200">
-                    </div>
-                    <div class="col-xs-4"></div>
-                </div>
-
-<div id="actionModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="false" data-backdrop="static">
-
-  <div class="modal-dialog modal-sm">		
+	<div class="container-fluid" style="height: 100%; width: 100%">
+		<div id="loader" style="display: block; width: 100%; height: 100%; z-index: 9; position: absolute; background-color: rgba(0, 0, 0, 0.51);">
+			<div class="wrapper vertical-center">
+				<div class="cssload-loader btn-centered" style="z-index: 10; top: 45vh; margin: auto;"></div>
+			</div>
+		</div>
+		<div id="upper-div" style="height: 75%;" class="blue">
+		<div class="div-wrapper full" style="background-color: <?php echo $_SESSION['fnbt']['config']["bgcolor"] ?>;">
 <?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ ?>
-			  <div class="fb_logo-row row" style="margin: -2px;">
-			    <div class="col-xs-1" ></div>
-			    <div class="col-xs-10" >
-				    <div class="center-block" >
-						<img class="img-responsive" alt="Fanbot" src="../../media/clients/centinela/clasicoshot.png">
-					</div>
-			    </div>
-			    <div class="col-xs-1" ></div>
-			  </div>
-	
-	
-<?php  }?>
-    <div class="modal-content">
+			<img class="center-img fbpage-img" src="/media/clients/centinela/like.png" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+<?php } else { ?>
+			<img class="center-img fbpage-img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture?type=large" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 
-      <div class="modal-header">
-        <h4 class="modal-title text-center">Presiona "Me gusta"</h4>
-      </div>
-      <div class="modal-body" style=" overflow: hidden; max-width: 250px;">
-		  <div class="fb_logo-row row">
-			    <div class="center-block" >
-				<div id="fblike center-block">
-					<div class="fb-page" 
-						data-href="https://www.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>" 
-					    data-small-header="true" 
-						data-height="250"
-						data-adapt-container-width="true" 
-					    data-hide-cover="true" 
-						data-show-facepile="false">
-						<div class="fb-xfbml-parse-ignore">
-							<blockquote cite="https://www.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>">
-								<a href="https://www.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>">Facebook</a>
-							</blockquote>
-						</div>
-					</div>
-				</div>
-		  </div>
+<?php } ?>
+		</div>
+		</div>
+	    <footer style="height: 25%;">
+		      <p class="fnbt-name-text grey-text">Presiona “Me Gusta”<br>para accionar la máquina.<p>
+			  <div class="like-div" style="overflow: hidden;">
+				  <div class="fb-like" 
+					   data-href="https://www.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>"
+					   data-layout="button" 
+					   data-action="like" 
+					   data-show-faces="false" 
+					   data-share="false">
+				  </div>
+	    </footer>
 
-      </div>
-      </div>
-   </div>
-  </div>
-</div>
+	</div>
+	<script>
+			var browserAgent = navigator.userAgent;
+			console.log(browserAgent);
+			if (browserAgent.indexOf("iPhone") > -1){
+				console.log("Changed class");
+				$( "#upper-div" ).addClass( "iphone-fix" );
 
-</div>
-	</body>
-
+			}
+	</script>
+    </body>
+  </html>

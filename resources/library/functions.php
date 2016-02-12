@@ -31,7 +31,7 @@
 
 //////////////////// Facebook sdk functions start  ////////////////////
 
-	function getUserFbInfo($code){
+	function getUserFbInfo($token){
 
 
 		require(realpath(dirname(__FILE__) . "/../config.php"));		
@@ -42,13 +42,6 @@
 
 		// Initialize the Facebook app using the application ID and secret.
 		FacebookSession::setDefaultApplication( $config["fbApp"]["appId"],$config["fbApp"]["appSecret"] );
-
-		// Get de JSON text containing the token 
-		$codeToToken = file_get_contents('https://graph.facebook.com/v2.3/oauth/access_token?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&client_secret='.$config["fbApp"]["appSecret"].'&code='. $code);
-
-		$token = json_decode($codeToToken );
-
-
 			
 		// Get new fb session
 		if (!isset($session)) {
@@ -76,6 +69,18 @@
 		}
 	}
 
+
+	function fbCode2token($code){
+
+		require(realpath(dirname(__FILE__) . "/../config.php"));		
+
+		// Get de JSON text containing the token 
+		$codeToToken = file_get_contents('https://graph.facebook.com/v2.3/oauth/access_token?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&client_secret='.$config["fbApp"]["appSecret"].'&code='. $code);
+
+		$token = json_decode($codeToToken);
+		
+		return $token;
+	}
 
     // Get fbPage name for various uses in the app
 	function getFbPageName($page){
@@ -190,7 +195,7 @@
 				    die("Connection failed: " . $conn->connect_error);
 				} 
 
-				$sql = "INSERT INTO interactions  (fanbotId, userId, clientId, fbPage) VALUES ( '". $_SESSION['fnbt']['id']. "','".  $_SESSION['fbUser']['id']. "','". $_SESSION['fbUser']['id']. "','". $_SESSION['fnbt']['config']['link'] . "')";
+				$sql = "INSERT INTO interactions  (fanbotId, userId, clientId, fbPage) VALUES ( '". $_SESSION['fnbt']['id']. "','".  $_SESSION['fbUser']['id']. "','". $_SESSION['fnbt']['clientId']. "','". $_SESSION['fnbt']['config']['link'] . "')";
 							
 				
 				if ($conn->query($sql) === TRUE) {

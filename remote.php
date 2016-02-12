@@ -6,7 +6,7 @@
 
 	echo $fnbtName;
 	findFnbt($fnbtName);
-	fanbotAction( $_SESSION['deviceId'], $_SESSION['accesToken'] );
+	fanbotAction( $_SESSION['fnbt']['deviceId'], $_SESSION['fnbt']['accesToken'] );
 		
 	session_unset();
 

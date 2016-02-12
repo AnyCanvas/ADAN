@@ -1,12 +1,15 @@
-	<base href=" <?php echo $config["urls"]["baseUrl"]; ?> " target="_self">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<meta charset="utf-8"> 
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/bootstrap-social.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  	<script src="js/common.js"></script>
-  	<style type="text/css">
-  	</style>
+  <!DOCTYPE html>
+  <html lang="en">
+      <meta charset="utf-8"> 
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="/css/materialize.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="/css/style.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, height=device-height, minimum-scale=1.0001, initial-scale=1.0001, maximum-scale=1.0001, user-scalable=no">
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="/js/materialize.js"></script>
+      <script src="js/common.js"></script>
+      <base href=" <?php echo $config["urls"]["baseUrl"]; ?> " target="_self">

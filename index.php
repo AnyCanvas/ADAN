@@ -1,8 +1,13 @@
 <?php
 	session_start();
-	$_SESSION['page'] = 1;
+	$_SESSION['page'] = 0;
 	include 'resources/library/functions.php'; 
 
+	if( isset($_GET["name"]) ){
+			$_SESSION['fnbt']['name'] = $_GET["name"];
+	} else{
+		unset($_SESSION['fnbt']['name']);
+	}
 	?>
 <!DOCTYPE html>
 <html>
