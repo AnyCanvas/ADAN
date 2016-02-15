@@ -38,8 +38,8 @@
 			    <form class="col s12">
 			      <div class="row">
 			        <div class="input-field col s12">
-			          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-			          <label for="first_name">First Name</label>
+			          <input placeholder="xxx-xxx-xxx" id="first_name" type="text" class="validate">
+			          <label for="first_name">Codigo</label>
 			        </div>
 				  </div>
 				</form>
