@@ -1,99 +1,39 @@
-<title>Fanbot</title>
+ <title>Haz Checkin</title>
 
-<?php 
-	if(isset($_SESSION['fnbt']['config']["bgcolor"])){
-		echo '<body style="background-color: '. $_SESSION['fnbt']['config']["bgcolor"] .'">';
-	} else {
-		echo '<body>';
-	}
-?>
-	
-	<div id="fb-root"></div>
-	<script>
-		
-		var finished_rendering = function() {
-			$('#actionModal').modal('show');
-			console.log("finished rendering plugins");
-		}
+   <body>
 
-		window.fbAsyncInit = function() {
-		    FB.init({
-		      appId      : '<?php echo $config["fbApp"]["appId"] ?>',
-		      xfbml      : true,
-		      version    : 'v2.5'
-		    });
+	<div class="container-fluid" style="height: 100%; width: 100%">
+		<div id="loader" style="display: block; width: 100%; height: 100%; z-index: 9; position: absolute; background-color: rgba(0, 0, 0, 0.51);">
+			<div class="wrapper vertical-center">
+				<div class="cssload-loader btn-centered" style="z-index: 10; top: 45vh; margin: auto;"></div>
+			</div>
+		</div>
+		<div id="upper-div" style="height: 75%;" class="blue">
+		<div class="div-wrapper full" style="background-color: <?php echo $_SESSION['fnbt']['config']["bgcolor"] ?>;">
 
-			FB.Event.subscribe('xfbml.render', finished_rendering);
+			<img class="center-img fbpage-img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture?type=large" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 
-		  };
-		
-		  (function(d, s, id){
-		     var js, fjs = d.getElementsByTagName(s)[0];
-		     if (d.getElementById(id)) {return;}
-		     js = d.createElement(s); js.id = id;
-		     js.src = "//connect.facebook.net/es_LA/sdk.js";
-		     fjs.parentNode.insertBefore(js, fjs);
-		   }(document, 'script', 'facebook-jssdk'));
-
-			postclick = function () {
-					window.location = "<?php echo $postCodeUrl; ?>";										
-						}	
-  
-	</script>
-	
-	<div class ="container-fluid">
-
-	<span style="text-align: center"><h3>Obtén tu recompensa con un Check-in </h3> <h6> O selecciona saltar Check-in, tengo un codigo.</h6></span>
-	
-	<div class="clearfix visible-xs-block"></div>
-	
-	                <div class="fb_logo-row row bottom">
-	                    <div class="col-xs-4"></div>
-	                    <div class="col-xs-4">
-	                        <img class="img-responsive center-block"
-								 src="media/clients/logos/<?php  echo $_SESSION['fnbt']['config']['image']; ?>"
-	                             alt="fanbot"
-	                             width="200">
-	                    </div>
-	                    <div class="col-xs-4"></div>
-	                </div>
-	
-	<div id="actionModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="false" data-backdrop="static">
-	
-	  <div class="modal-dialog modal-sm">		
-			<!-- Informative image Columns-->
-	    <div class="modal-content">
-	      <div class="modal-body">
-			  <div class="fb_logo-row row">
-			    <div class="col-xs-4" ></div>
-			    <div class="col-xs-4" >
-				    <div class="center-block" >
-						<img id="fb_img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
-					</div>
-			    </div>
-			    <div class="col-xs-4" ></div>
-			  </div>
-	
-	
-			<div class="clearfix visible-xs-block"></div>
-	
-			<div class="row mid-row">
-			    <div class="col-xs-3" ></div>
-			    <div class="col-xs-6"  style="padding: 10px 34px;">
+		</div>
+		</div>
+	    <footer style="height: 25%;">
+		      <p class="fnbt-name-text grey-text">Comprueba tu visita con un Check-in<br>o introduce el código de tu recibo.<p>
+			  <div class="like-div" style="overflow: hidden;">
 					<a id="post-btn" class="btn btn-block btn-xs btn-social btn-facebook" onclick="postclick();" style="padding-left: 20px;">
 		    			<i class="fa fa-facebook-official"></i> <span class="text-center" >Check-in</span>
 		  			</a>
-			    </div>
-			    <div class="col-xs-3" ></div>
-			    <div class="col-xs-12" >
-					<span style="font-size: 2vh; text-align: left;" ><a href="<?php echo $config["urls"]["baseUrl"] . '/node.php?step=2' ?>"> Saltar Check-in, tengo un codigo.<a></span>
-				</div>
-			</div>	
-	
-	      </div>
-	   </div>
-	  </div>
+
+			  </div>
+	    </footer>
+
 	</div>
-	
-	</div>
-</body>
+	<script>
+			var browserAgent = navigator.userAgent;
+			console.log(browserAgent);
+			if (browserAgent.indexOf("iPhone") > -1){
+				console.log("Changed class");
+				$( "#upper-div" ).addClass( "iphone-fix" );
+
+			}
+	</script>
+    </body>
+  </html>
