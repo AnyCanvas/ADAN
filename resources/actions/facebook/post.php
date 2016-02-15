@@ -46,6 +46,7 @@
 
 		    </div>
 		    <div class="modal-footer">
+		      <a onclick="$('#modal1').closeModal();" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
 		      <a onclick="postclick();" class=" modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
 		    </div>
 		  </div>
