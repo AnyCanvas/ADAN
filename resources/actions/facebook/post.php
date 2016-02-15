@@ -13,13 +13,13 @@
 
 			<img class="center-img fbpage-img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture?type=large" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 			
-
+		<div class="center-align text-white">
+			<p>Bienvenido a Wingman<br>Obtén recomensas por cada visita.</p>
+		<div>
 
 		</div>
 
-		<div class="centered text-white">
-			<p>Bienvenido a Wingman<br>Obtén recomensas por cada visita.</p>
-		<div>
+
 		</div>
 	    <footer style="height: 25%;">
 		      <p class="fnbt-name-text grey-text">Comprueba tu visita con un Check-in<br>o introduce el código de tu recibo.<p>
