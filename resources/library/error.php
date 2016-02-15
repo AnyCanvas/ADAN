@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<title>!Upss¡</title>
-	<?php require_once( "resources/html/header.php" ); ?>
+	<?php require_once( "../html/header.php" ); ?>
 
 
 
