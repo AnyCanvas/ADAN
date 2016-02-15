@@ -15,11 +15,9 @@
 			
 		<div class="center-align" style="bottom: 10px;">
 			Bienvenido a Wingman<br>Obtén recomensas por cada visita.
-		<div>
-
 		</div>
 
-
+		</div>
 		</div>
 	    <footer style="height: 25%;">
 		      <p class="fnbt-name-text grey-text">Comprueba tu visita con un Check-in<br>o introduce el código de tu recibo.<p>
