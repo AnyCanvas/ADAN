@@ -11,7 +11,7 @@
 		</div>
 	    <footer style="height: 25%;" class="red accent-2">
 		      <p class="error-text white-text">Esta Fanbot está desconectada,<br>puedes probar Fanbot en otro negocio.</p>
-			  <a class="waves-effect waves-light btn white black-text btn-centered">BUSCAR OTROS NEGOCIOS</a>
+			  <a href="www.fanbot.me" class="waves-effect waves-light btn white black-text btn-centered">BUSCAR OTROS NEGOCIOS</a>
 	    </footer>
 
 	</div>
