@@ -34,8 +34,7 @@
 		    console.log('logged');
 		    ga('send', 'event', "step 0", 'facebook login status', 'logged');
 			document.location.href = 'node.php';	
-
-		  }	else{
+		  }	else {
 		    console.log('not logged');
 		    ga('send', 'event', "step 0", 'facebook login status', 'not logged');	
 			  				
@@ -59,7 +58,10 @@
 					console.log("Model not detected");
 					document.location.href = 'node.php';
 			  	}
-			 }
+			 } else {
+					console.log("Facebook app to Chrome");
+					document.location.href = 'node.php';
+			  	}
 		}	
 			});
 			};
