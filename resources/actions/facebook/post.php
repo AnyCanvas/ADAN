@@ -1,99 +1,65 @@
-<title>Fanbot</title>
+ <title>Haz Checkin</title>
 
-<?php 
-	if(isset($_SESSION['fnbt']['config']["bgcolor"])){
-		echo '<body style="background-color: '. $_SESSION['fnbt']['config']["bgcolor"] .'">';
-	} else {
-		echo '<body>';
-	}
-?>
-	
-	<div id="fb-root"></div>
-	<script>
-		
-		var finished_rendering = function() {
-			$('#actionModal').modal('show');
-			console.log("finished rendering plugins");
-		}
+   <body>
 
-		window.fbAsyncInit = function() {
-		    FB.init({
-		      appId      : '<?php echo $config["fbApp"]["appId"] ?>',
-		      xfbml      : true,
-		      version    : 'v2.5'
-		    });
-
-			FB.Event.subscribe('xfbml.render', finished_rendering);
-
-		  };
-		
-		  (function(d, s, id){
-		     var js, fjs = d.getElementsByTagName(s)[0];
-		     if (d.getElementById(id)) {return;}
-		     js = d.createElement(s); js.id = id;
-		     js.src = "//connect.facebook.net/es_LA/sdk.js";
-		     fjs.parentNode.insertBefore(js, fjs);
-		   }(document, 'script', 'facebook-jssdk'));
-
-			postclick = function () {
-					window.location = "<?php echo $postCodeUrl; ?>";										
-						}	
-  
+    <script>
+	    postclick = function () {
+			window.location = "<?php echo $postCodeUrl; ?>";										
+		}	
 	</script>
-	
-	<div class ="container-fluid">
+	<div class="container-fluid" style="height: 100%; width: 100%">
+		<div id="upper-div" style="height: 75%;" class="blue">
+		<div class="div-wrapper full" style="background-color: <?php echo $_SESSION['fnbt']['config']["bgcolor"] ?>;">
 
-	<span style="text-align: center"><h3>Obtén tu recompensa con un Check-in </h3> <h6> O selecciona saltar Check-in, tengo un codigo.</h6></span>
-	
-	<div class="clearfix visible-xs-block"></div>
-	
-	                <div class="fb_logo-row row bottom">
-	                    <div class="col-xs-4"></div>
-	                    <div class="col-xs-4">
-	                        <img class="img-responsive center-block"
-								 src="media/clients/logos/<?php  echo $_SESSION['fnbt']['config']['image']; ?>"
-	                             alt="fanbot"
-	                             width="200">
-	                    </div>
-	                    <div class="col-xs-4"></div>
-	                </div>
-	
-	<div id="actionModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="false" data-backdrop="static">
-	
-	  <div class="modal-dialog modal-sm">		
-			<!-- Informative image Columns-->
-	    <div class="modal-content">
-	      <div class="modal-body">
-			  <div class="fb_logo-row row">
-			    <div class="col-xs-4" ></div>
-			    <div class="col-xs-4" >
-				    <div class="center-block" >
-						<img id="fb_img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
-					</div>
-			    </div>
-			    <div class="col-xs-4" ></div>
+			<img class="center-img fbpage-img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture?type=large" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+			
+		<div class="center-align white-text" style="margin-top: 46%;">
+			Bienvenido a Wingman<br><span style="font-weight: lighter;">Obtén recomensas por cada visita.</span>
+		</div>
+
+		</div>
+		</div>
+	    <footer style="height: 25%;">
+		      <p class="fnbt-name-text grey-text">Comprueba tu visita con un Check-in<br>o introduce el código de tu recibo.<p>
+			  <div class="like-div" style="overflow: hidden;">
+		  			<a class="waves-effect waves-light btn fb-btn btn-centered" style=" background-color: #405A9F; font-size: 3vw;" onclick="postclick();">
+			  			<i class="mdi mdi-facebook left" style=" font-size: 4vw !important;"></i>Check-in
+			  		</a>
+			  		
+			  		<p style="font-size: x-small; text-decoration: underline;" onclick="$('#modal1').openModal();">Prefiero utilizar el código de mi recibo<p>
+
 			  </div>
-	
-	
-			<div class="clearfix visible-xs-block"></div>
-	
-			<div class="row mid-row">
-			    <div class="col-xs-3" ></div>
-			    <div class="col-xs-6"  style="padding: 10px 34px;">
-					<a id="post-btn" class="btn btn-block btn-xs btn-social btn-facebook" onclick="postclick();" style="padding-left: 20px;">
-		    			<i class="fa fa-facebook-official"></i> <span class="text-center" >Check-in</span>
-		  			</a>
-			    </div>
-			    <div class="col-xs-3" ></div>
-			    <div class="col-xs-12" >
-					<span style="font-size: 2vh; text-align: left;" ><a href="<?php echo $config["urls"]["baseUrl"] . '/node.php?step=2' ?>"> Saltar Check-in, tengo un codigo.<a></span>
-				</div>
-			</div>	
-	
-	      </div>
-	   </div>
-	  </div>
+	    </footer>
+
+		<!-- Modal Structure -->
+		  <div id="modal1" class="modal bottom-sheet">
+		    <div class="modal-content">
+		      <h5>Introduce tu código.</h5>
+			    <form class="col s12">
+			      <div class="row">
+			        <div class="input-field col s12">
+			          <input placeholder="xxx-xxx-xxx" id="first_name" type="text" class="validate">
+			          <label for="first_name">Codigo</label>
+			        </div>
+				  </div>
+				</form>
+
+		    </div>
+		    <div class="modal-footer">
+		      <a onclick="postclick();" class=" modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
+		      <a onclick="$('#modal1').closeModal();" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
+
+		    </div>
+		  </div>
 	</div>
-	
-	</div>
-</body>
+	<script>
+			var browserAgent = navigator.userAgent;
+			console.log(browserAgent);
+			if (browserAgent.indexOf("iPhone") > -1){
+				console.log("Changed class");
+				$( "#upper-div" ).addClass( "iphone-fix" );
+
+			}
+	</script>
+    </body>
+  </html>

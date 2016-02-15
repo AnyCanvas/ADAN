@@ -64,6 +64,7 @@
 					   data-show-faces="false" 
 					   data-share="false">
 				  </div>
+			  </div>
 	    </footer>
 
 	</div>

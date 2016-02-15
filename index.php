@@ -6,7 +6,9 @@
 	if( isset($_GET["name"]) ){
 			$_SESSION['fnbt']['name'] = $_GET["name"];
 	} else{
-		unset($_SESSION['fnbt']['name']);
+		if(isset($_SESSION['fnbt']['name'])){
+			unset($_SESSION['fnbt']['name']);
+		}
 	}
 	?>
 <!DOCTYPE html>
