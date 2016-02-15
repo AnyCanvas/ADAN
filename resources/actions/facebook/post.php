@@ -3,11 +3,6 @@
    <body>
 
 	<div class="container-fluid" style="height: 100%; width: 100%">
-		<div id="loader" style="display: block; width: 100%; height: 100%; z-index: 9; position: absolute; background-color: rgba(0, 0, 0, 0.51);">
-			<div class="wrapper vertical-center">
-				<div class="cssload-loader btn-centered" style="z-index: 10; top: 45vh; margin: auto;"></div>
-			</div>
-		</div>
 		<div id="upper-div" style="height: 75%;" class="blue">
 		<div class="div-wrapper full" style="background-color: <?php echo $_SESSION['fnbt']['config']["bgcolor"] ?>;">
 
@@ -18,9 +13,9 @@
 	    <footer style="height: 25%;">
 		      <p class="fnbt-name-text grey-text">Comprueba tu visita con un Check-in<br>o introduce el código de tu recibo.<p>
 			  <div class="like-div" style="overflow: hidden;">
-					<a id="post-btn" class="btn btn-block btn-xs btn-social btn-facebook" onclick="postclick();" style="padding-left: 20px;">
-		    			<i class="fa fa-facebook-official"></i> <span class="text-center" >Check-in</span>
-		  			</a>
+		  			<a class="waves-effect waves-light btn fb-btn btn-centered" style=" background-color: #405A9F; font-size: 3vw;" onclick="postclick();">
+			  			<i class="mdi mdi-facebook left" style=" font-size: 4vw !important;"></i>Check-in
+			  		</a>
 
 			  </div>
 	    </footer>
