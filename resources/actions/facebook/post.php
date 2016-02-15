@@ -34,7 +34,7 @@
 		<!-- Modal Structure -->
 		  <div id="modal1" class="modal bottom-sheet">
 		    <div class="modal-content">
-		      <h4>Introduce el código de tu recibo</h4>
+		      <h6>Introduce el código de tu recibo</h6>
 			    <form class="col s12">
 			      <div class="row">
 			        <div class="input-field col s12">
