@@ -13,8 +13,8 @@
 
 			<img class="center-img fbpage-img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture?type=large" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 			
-		<div class="center-align text-white">
-			<p>Bienvenido a Wingman<br>Obtén recomensas por cada visita.</p>
+		<div class="center-align" style="bottom: 10px;">
+			Bienvenido a Wingman<br>Obtén recomensas por cada visita.
 		<div>
 
 		</div>
