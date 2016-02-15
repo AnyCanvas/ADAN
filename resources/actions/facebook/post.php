@@ -13,8 +13,9 @@
 
 			<img class="center-img fbpage-img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture?type=large" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 			
+			<div class="centered">
 			<p>Bienvenido a Wingman<br>Obtén recomensas por cada visita.</p>
-
+			<div>
 
 		</div>
 		</div>
@@ -25,7 +26,7 @@
 			  			<i class="mdi mdi-facebook left" style=" font-size: 4vw !important;"></i>Check-in
 			  		</a>
 			  		
-			  		<p style="font-size: small; text-decoration: underline;">Prefiero utilizar el código de mi recibo<p>
+			  		<p style="font-size: x-small; text-decoration: underline;">Prefiero utilizar el código de mi recibo<p>
 
 			  </div>
 	    </footer>
