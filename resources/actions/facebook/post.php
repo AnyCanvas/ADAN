@@ -14,7 +14,7 @@
 			<img class="center-img fbpage-img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture?type=large" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 			
 		<div class="center-align white-text" style="margin-top: 46%;">
-			Bienvenido a Wingman<br><span style="font-weight: light;">Obtén recomensas por cada visita.</span>
+			Bienvenido a Wingman<br><span style="font-weight: lighter;">Obtén recomensas por cada visita.</span>
 		</div>
 
 		</div>
@@ -26,7 +26,7 @@
 			  			<i class="mdi mdi-facebook left" style=" font-size: 4vw !important;"></i>Check-in
 			  		</a>
 			  		
-			  		<p style="font-size: x-small; text-decoration: underline;">Prefiero utilizar el código de mi recibo<p>
+			  		<a><p style="font-size: x-small; text-decoration: underline;">Prefiero utilizar el código de mi recibo<p><a>
 
 			  </div>
 	    </footer>
