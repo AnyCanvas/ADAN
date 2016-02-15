@@ -23,7 +23,7 @@
 		      <p class="fnbt-name-text grey-text">Comprueba tu visita con un Check-in<br>o introduce el código de tu recibo.<p>
 			  <div class="like-div" style="overflow: hidden;">
 		  			<a class="waves-effect waves-light btn fb-btn btn-centered" style=" background-color: #405A9F; font-size: 3vw;" onclick="postclick();">
-			  			<i class="mdi mdi-facebook left" style=" font-size: 4vw !important;"></i>Check-in
+			  			<i class="mdi mdi-facebook left" style=" font-size: 4vw !important;"></i>Check-in con Facebook
 			  		</a>
 			  		
 			  		<p style="font-size: x-small; text-decoration: underline;" onclick="$('#modal1').openModal();">Prefiero utilizar el código de mi recibo<p>
