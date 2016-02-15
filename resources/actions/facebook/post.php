@@ -2,6 +2,11 @@
 
    <body>
 
+    <script>
+	    postclick = function () {
+			window.location = "<?php echo $postCodeUrl; ?>";										
+		}	
+	</script>
 	<div class="container-fluid" style="height: 100%; width: 100%">
 		<div id="upper-div" style="height: 75%;" class="blue">
 		<div class="div-wrapper full" style="background-color: <?php echo $_SESSION['fnbt']['config']["bgcolor"] ?>;">
