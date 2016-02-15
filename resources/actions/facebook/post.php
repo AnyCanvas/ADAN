@@ -27,7 +27,7 @@
 			  		</a>
 			  		
 			  		<a class="modal-trigger waves-effect waves-light btn" href="#modal1">
-				  		<p style="font-size: x-small; text-decoration: underline;" >Prefiero utilizar el código de mi recibo<p>
+				  		<p style="font-size: x-small; text-decoration: underline;" onclick="$('#modal1').openModal();">Prefiero utilizar el código de mi recibo<p>
 					</a>
 
 			  </div>
