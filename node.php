@@ -71,7 +71,7 @@
 									header("location: ./resources/library/error.php");
 								} else if( ! (fanbotStatus($_SESSION['fnbt']["deviceId"], $_SESSION['fnbt']['accesToken']) ) ){
 									$_SESSION['error'] = 1;
-									require_once("resources/html/error1.php");									
+									require_once("resources/html/error2.php");									
 								} else{	
 									$_SESSION['page'] = 3;
 									if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
