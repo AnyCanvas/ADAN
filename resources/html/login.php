@@ -29,7 +29,7 @@
 	
 	
 	
-	if( $centi ){ ?>
+	if( FALSE ){ ?>
 
 	<div class="container-fluid">		
 		<div id="upper-div" style="height: 74vh; width: 100vw; background-color: #004680;">
@@ -43,7 +43,7 @@
 
 	</div>
 	
-<?php	}else { ?>
+<?php	} else { ?>
 
 	<div class="container-fluid">		
 		<div id="upper-div" style="height: 74vh; width: 100vw;" class="blue">
