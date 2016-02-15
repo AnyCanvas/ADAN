@@ -63,7 +63,7 @@
 					   data-action="like" 
 					   data-show-faces="false" 
 					   data-share="false">
-				  </div>
+
 	    </footer>
 
 	</div>
