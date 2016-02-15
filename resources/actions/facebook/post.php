@@ -26,7 +26,7 @@
 			  			<i class="mdi mdi-facebook left" style=" font-size: 4vw !important;"></i>Check-in
 			  		</a>
 			  		
-			  		<a><p style="font-size: x-small; text-decoration: underline;">Prefiero utilizar el código de mi recibo<p><a>
+			  		<p style="font-size: x-small; text-decoration: underline;" onclick="alert('click');">Prefiero utilizar el código de mi recibo<p>
 
 			  </div>
 	    </footer>
