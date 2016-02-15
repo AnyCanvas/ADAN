@@ -24,6 +24,8 @@
 		  			<a class="waves-effect waves-light btn fb-btn btn-centered" style=" background-color: #405A9F; font-size: 3vw;" onclick="postclick();">
 			  			<i class="mdi mdi-facebook left" style=" font-size: 4vw !important;"></i>Check-in
 			  		</a>
+			  		
+			  		<p style="font-size: small; text-decoration: underline;">Prefiero utilizar el código de mi recibo<p>
 
 			  </div>
 	    </footer>
