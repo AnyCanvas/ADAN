@@ -26,9 +26,7 @@
 			  			<i class="mdi mdi-facebook left" style=" font-size: 4vw !important;"></i>Check-in
 			  		</a>
 			  		
-			  		<a class="modal-trigger waves-effect waves-light btn" href="#modal1">
 				  		<p style="font-size: x-small; text-decoration: underline;" onclick="$('#modal1').openModal();">Prefiero utilizar el código de mi recibo<p>
-					</a>
 
 			  </div>
 	    </footer>
