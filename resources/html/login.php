@@ -15,7 +15,21 @@
 		}	
 	</script>
 
-<?php	if($_SESSION['fnbt']['name'] = 'centi'){ ?>
+<?php	
+	
+	if(isset($_SESSION['fnbt']['name'])){
+		if ($_SESSION['fnbt']['name'] == 'centi'){
+			$centi = true;
+		} else {
+			$centi = false;
+		}
+	} else {
+		$centi = false;
+	}
+	
+	
+	
+	if ( $centi ){ ?>
 
 	<div class="container-fluid">		
 		<div id="upper-div" style="height: 74vh; width: 100vw; background-color: #004680;">
@@ -29,7 +43,7 @@
 
 	</div>
 	
-<?php	}else { ?>
+<?php	} else { ?>
 
 	<div class="container-fluid">		
 		<div id="upper-div" style="height: 74vh; width: 100vw;" class="blue">

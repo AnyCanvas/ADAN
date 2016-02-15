@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	$_SESSION['page'] = 0;
 	include 'resources/library/functions.php'; 
 
 	if( isset($_GET["name"]) ){
@@ -10,6 +9,7 @@
 			unset($_SESSION['fnbt']['name']);
 		}
 	}
+	$_SESSION['page'] = 0;
 	?>
 <!DOCTYPE html>
 <html>
