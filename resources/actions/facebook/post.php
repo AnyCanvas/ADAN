@@ -7,6 +7,9 @@
 		<div class="div-wrapper full" style="background-color: <?php echo $_SESSION['fnbt']['config']["bgcolor"] ?>;">
 
 			<img class="center-img fbpage-img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture?type=large" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+			
+			<p>Bienvenido a Wingman<br>Obtén recomensas por cada visita.</p>
+
 
 		</div>
 		</div>
