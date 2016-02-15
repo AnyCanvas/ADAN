@@ -67,8 +67,11 @@
 						    $fnbtName  = htmlspecialchars($_GET["name"]);								
 							if (findFnbt($fnbtName)) { 	
 								if($_SESSION['fnbt']['status'] == 0){
-									$_SESSION['error'] = 2;
+									$_SESSION['error'] = 3;
 									header("location: ./resources/library/error.php");
+								} else if(fanbotStatus($_SESSION['fnbt']["deviceId"], $_SESSION['fnbt']['accesToken'])){
+									$_SESSION['error'] = 2;
+									header("location: ./resources/library/error.php");									
 								} else{	
 									$_SESSION['page'] = 3;
 									if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
