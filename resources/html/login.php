@@ -18,7 +18,7 @@
 <?php	
 	
 	if(isset($_SESSION['fnbt']['name'])){
-		if ($_SESSION['fnbt']['name'] = 'centi'){
+		if ($_SESSION['fnbt']['name'] == 'centi'){
 			$centi = true;
 		} else {
 			$centi = false;
