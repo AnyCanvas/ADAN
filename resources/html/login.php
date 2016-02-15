@@ -29,7 +29,7 @@
 	
 	
 	
-	if( false ){ ?>
+	if ( 1 == 0 ){ ?>
 
 	<div class="container-fluid">		
 		<div id="upper-div" style="height: 74vh; width: 100vw; background-color: #004680;">
