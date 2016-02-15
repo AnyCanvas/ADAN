@@ -69,7 +69,7 @@
 								if($_SESSION['fnbt']['status'] == 0){
 									$_SESSION['error'] = 3;
 									header("location: ./resources/library/error.php");
-								} else if(fanbotStatus($_SESSION['fnbt']["deviceId"], $_SESSION['fnbt']['accesToken'])){
+								} else if( ! (fanbotStatus($_SESSION['fnbt']["deviceId"], $_SESSION['fnbt']['accesToken']) ) ){
 									$_SESSION['error'] = 2;
 									header("location: ./resources/library/error.php");									
 								} else{	
