@@ -101,7 +101,7 @@
 								if($_SESSION['fnbt']['config']['type'] == 'like'){	
 									require_once("resources/actions/facebook/like.php");
 								} else if ($_SESSION['fnbt']['config']['type'] == 'post'){
-									require_once("resources/actions/facebook/post.php?code=". $_GET["code"]);
+									require_once("resources/actions/facebook/confirm.php");
 								} else {
 									header("location: ./index.php");									
 								}
