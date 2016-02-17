@@ -4,7 +4,7 @@
 
     <script>
 	    postclick = function () {
-			window.location = "/confirm.php";										
+			window.location = "<?php echo $postCodeUrl; ?>";										
 		}	
 	</script>
 	<div class="container-fluid" style="height: 100%; width: 100%">
