@@ -88,9 +88,7 @@
 				    	if(isset($_GET["code"])){
 					    	$_SESSION['page'] = 4;
 							if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
-								if($_SESSION['fnbt']['config']['type'] == 'like'){	
-									require_once("resources/actions/facebook/like.php");
-								} else if ($_SESSION['fnbt']['config']['type'] == 'post'){
+								if ($_SESSION['fnbt']['config']['type'] == 'post'){
 									require_once("resources/actions/facebook/confirm.php");
 								} else {
 									header("location: ./index.php");									
