@@ -88,12 +88,12 @@
 				        break;
 
 				    case 3:
-				    	if(isset($_GET["code"])){
-					    	$_SESSION['page'] = 4;
 							if($_SESSION['fnbt']['name'] == 'chappy'){
+						    	$_SESSION['page'] = 4;
 								require_once("resources/actions/facebook/devconfirm.php");									
 							} else if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
 								if ($_SESSION['fnbt']['config']['type'] == 'post'){
+									$_SESSION['page'] = 4;
 									require_once("resources/actions/facebook/confirm.php");
 								} else {
 									header("location: ./index.php");									
@@ -101,9 +101,6 @@
 							} else {
 								header("location: ./index.php");
 							}
-						} else {
-								header("location: ./index.php");
-						}
 				        break;
 
 				    case 4:
