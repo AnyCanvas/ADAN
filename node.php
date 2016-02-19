@@ -55,11 +55,11 @@
 
 						if( isset($_GET["name"])){
 						    $fnbtName  = htmlspecialchars($_GET["name"]);								
-							if (findFnbt($fnbtName)) {
-								
-								if($_SESSION['fnbt']['name'] == 'chappy'){
-									require_once("resources/actions/facebook/develop.php");									
-								} else if($_SESSION['fnbt']['status'] == 0){
+
+							if($_SESSION['fnbt']['name'] == 'chappy'){
+								require_once("resources/actions/facebook/develop.php");									
+							} else if (findFnbt($fnbtName)) {								
+								if($_SESSION['fnbt']['status'] == 0){
 									$_SESSION['error'] = 2;
 									$_SESSION['page'] = 0;
 									header("location: ./resources/library/error.php");
