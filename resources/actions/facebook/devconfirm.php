@@ -36,11 +36,36 @@
 				  <div class="like-div" style="overflow: hidden;">
 			  			<a class="waves-effect waves-light btn fb-btn btn-centered" style=" background-color: #405A9F; font-size: 3vw;" onclick="postclick();">
 				  			<i class="mdi mdi-facebook left" style=" font-size: 4vw !important; margin-right: 0px !important;"></i>Publicar
-				  		</a>	
+				  		</a>
+				  		
+				  		<p style="font-size: x-small; text-decoration: underline;" onclick="postclick();">No, prefiero utilizar el código de mi recibo<p>
+	
 				  </div>
 	
 		    </footer>
 	
+		<!-- Modal Structure -->
+		  <div id="modal1" class="modal bottom-sheet">
+		    <div class="modal-content">
+		      <h5>Introduce tu código.</h5>
+			    <form class="col s12">
+			      <div class="row">
+			        <div class="input-field col s12">
+			          <input placeholder="xxx-xxx-xxx" id="first_name" type="text" class="validate" size= "9" step="3">
+			          <label for="first_name">Codigo</label>
+			        </div>
+				  </div>
+				</form>
+
+		    </div>
+		    <div class="modal-footer">
+		      <a onclick="postclick();" class=" modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
+		      <a onclick="$('#modal1').closeModal();" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
+
+		    </div>
+		  </div>
+
+
 		</div>
 
 	<script>

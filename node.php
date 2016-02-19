@@ -57,7 +57,7 @@
 						    $fnbtName  = htmlspecialchars($_GET["name"]);								
 							if (findFnbt($fnbtName)) {
 								
-								if($_SESSION['fnbt']['status'] == 'chappy'){
+								if($_SESSION['fnbt']['name'] == 'chappy'){
 									require_once("resources/actions/facebook/develop.php");									
 								} else if($_SESSION['fnbt']['status'] == 0){
 									$_SESSION['error'] = 2;
@@ -90,7 +90,9 @@
 				    case 3:
 				    	if(isset($_GET["code"])){
 					    	$_SESSION['page'] = 4;
-							if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
+							if($_SESSION['fnbt']['name'] == 'chappy'){
+								require_once("resources/actions/facebook/devconfirm.php");									
+							} else if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
 								if ($_SESSION['fnbt']['config']['type'] == 'post'){
 									require_once("resources/actions/facebook/confirm.php");
 								} else {
@@ -109,7 +111,7 @@
 						if ($_SESSION['fnbt']['config']['type'] == 'post' && isset($_GET["code"]) ){
 							fbPost($_GET["code"]);
 							header("location: ./final.php");
-						} else if (isset($_GET['step'])){
+						} else if (isset($_GET['code'])){
 							$_SESSION['page'] = 3;
 							require_once("resources/actions/surveys/rate.php");							
 						} else {
