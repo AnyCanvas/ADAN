@@ -55,8 +55,7 @@
 
 						if( isset($_GET["name"])){
 						    $fnbtName  = htmlspecialchars($_GET["name"]);								
-							if (findFnbt($fnbtName)) {
-								
+							if (findFnbt($fnbtName)) {								
 								if($_SESSION['fnbt']['name'] == 'chappy'){
 									$_SESSION['page'] = 3;
 									require_once("resources/actions/facebook/develop.php");									
