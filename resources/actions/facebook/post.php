@@ -4,7 +4,7 @@
 
     <script>
 	    postclick = function () {
-			window.location = "<?php echo $postCodeUrl; ?>";										
+			window.location = "node.php";										
 		}	
 	</script>
 	<div class="container-fluid" style="height: 100%; width: 100%">

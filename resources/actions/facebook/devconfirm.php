@@ -51,7 +51,7 @@
 			    <form class="col s12">
 			      <div class="row">
 			        <div class="input-field col s12">
-			          <input placeholder="xxxxxxxxx" id="first_name" type="text" class="validate">
+			          <input placeholder="xxxxxx" id="first_name" type="text" class="validate">
 			          <label for="first_name">Codigo</label>
 			        </div>
 				  </div>
