@@ -8,10 +8,10 @@
 		}	
 		
 		chekCode = function(){
-			if($('input').text() == 786065){
+			if($('#store-code').val() == 786065){
 				window.location = "final.php";
 			} else {
-				console.log($('input').text());
+				console.log($('#store-code').val());
 				alert('codigo incorreto');				
 			}
 		}
@@ -47,7 +47,7 @@
 			    <form class="col s12">
 			      <div class="row">
 			        <div class="input-field col s12">
-			          <input placeholder="xxxxxx" id="first_name" type="text" class="validate">
+			          <input id="store-code" placeholder="xxxxxx" id="first_name" type="text" class="validate">
 			          <label for="first_name">Codigo</label>
 			        </div>
 				  </div>
