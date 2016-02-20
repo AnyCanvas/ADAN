@@ -11,6 +11,7 @@
 			if($('.validate').text() == 786065){
 				window.location = "final.php";
 			} else {
+				console.log($('.validate').text());
 				alert('codigo incorreto');				
 			}
 		}
