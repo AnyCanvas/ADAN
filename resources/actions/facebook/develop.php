@@ -13,7 +13,7 @@
 
 			<img class="center-img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture?type=large" class="img-responsive img-thumbnail center-block" style="width: 30vh; top: 25% !important; position: relative;" alt="Cinque Terre">
 			
-		<div class="center-align white-text" style="margin-top: 46%;">
+		<div class="center-align white-text" style="margin-top: 40%;">
 			Bienvenido a Wingman<br><span style="font-weight: lighter;">Obtén recomensas por cada visita.</span>
 		</div>
 
