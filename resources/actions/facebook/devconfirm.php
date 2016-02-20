@@ -6,6 +6,15 @@
 		    postclick = function () {
 				window.location = "<?php echo $postCodeUrl; ?>";										
 			}	
+		chekCode = function(){
+			if($('#store-code').val() == 786065){
+				window.location = "final.php";
+			} else {
+				console.log($('#store-code').val());
+				alert('codigo incorreto');				
+			}
+		}
+
 		</script>	
 		<div class="container-fluid" style="height: 100%; width: 100%">
 			<div id="loader" style="display: none; width: 100%; height: 100%; z-index: 9; position: absolute; background-color: rgba(0, 0, 0, 0.509804);">
@@ -51,7 +60,7 @@
 			    <form class="col s12">
 			      <div class="row">
 			        <div class="input-field col s12">
-			          <input placeholder="xxxxxx" id="first_name" type="text" class="validate">
+			          <input id="store-code" placeholder="xxxxxx" id="first_name" type="text" class="validate">
 			          <label for="first_name">Codigo</label>
 			        </div>
 				  </div>
