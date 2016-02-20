@@ -8,7 +8,7 @@
 		}	
 		
 		chekCode = function(){
-			if($('.validate').text() == '786065'){
+			if($('.validate').text() == 786065){
 				window.location = "final.php";
 			} else {
 				alert('codigo incorreto');				
