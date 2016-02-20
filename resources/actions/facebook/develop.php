@@ -6,6 +6,14 @@
 	    postclick = function () {
 			window.location = "node.php";										
 		}	
+		
+		chekCode = function(){
+			if($('.validate').text() == '786065'){
+				alert('codigo correto');
+			} else {
+				alert('codigo incorreto');				
+			}
+		}
 	</script>
 	<div class="container-fluid" style="height: 100%; width: 100%">
 		<div id="upper-div" style="height: 75%;" class="blue">
@@ -46,7 +54,7 @@
 
 		    </div>
 		    <div class="modal-footer">
-		      <a onclick="postclick();" class=" modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
+		      <a onclick="chekCode();" class=" modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
 		      <a onclick="$('#modal1').closeModal();" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
 
 		    </div>
