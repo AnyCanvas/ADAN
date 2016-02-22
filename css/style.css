@@ -48,6 +48,10 @@ body {
     top: 50% !important;	
 }
 
+.p-fix{
+	bottom: 46% !important;		
+}
+
 .fnbt-name-input {
     width: 40vw !important;
     margin-left: 30vw !important;

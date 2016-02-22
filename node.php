@@ -29,46 +29,44 @@
     					break;
 
 				    case 1:
-				    	if( isset($_SESSION['fnbt']['name']) ){
+												
 					    	if(isset($_GET["token"])){
 						    	$tokenArray['access_token'] = $_GET["token"];
 						    	$token = $object = json_decode(json_encode($tokenArray), FALSE);			    	
 						    	getUserFbInfo($token);
-	 							$_SESSION['page'] = 2;
-	    					    header("location: ./node.php?name=". $_SESSION['fnbt']['name']);
 						    } else if(isset($_GET["code"])){
 						    	$token = fbCode2token($_GET["code"]);
 						    	getUserFbInfo($token);
-	 							$_SESSION['page'] = 2;
+	    					} else {
+								header("location: ./index.php");
+								break;
+							}
+
+	 						$_SESSION['page'] = 2;
+
+	 						if( isset($_SESSION['fnbt']['name']) ){
 	    					    header("location: ./node.php?name=". $_SESSION['fnbt']['name']);
-	    					} else {
-								header("location: ./index.php");
-							}
-				    	}else {
-					    	if(isset($_GET["token"])){
-						    	$tokenArray['access_token'] = $_GET["token"];
-						    	$token = $object = json_decode(json_encode($tokenArray), FALSE);			    	
-						    	getUserFbInfo($token);
-	 							$_SESSION['page'] = 2;
-	    					    require_once("resources/html/name.php");					    		 							
-						    } else if(isset($_GET["code"])){
-						    	$token = fbCode2token($_GET["code"]);
-						    	getUserFbInfo($token);
-	 							$_SESSION['page'] = 2;
-	    					    require_once("resources/html/name.php");					    		 							
-	    					} else {
-								header("location: ./index.php");
-							}
-						}	
+	    						} else {
+									 require_once("resources/html/name.php");					    		 									    					    
+	    					}
 						    break;
 
 				    case 2:
+
 						if( isset($_GET["name"])){
 						    $fnbtName  = htmlspecialchars($_GET["name"]);								
-							if (findFnbt($fnbtName)) { 	
-								if($_SESSION['fnbt']['status'] == 0){
+							if (findFnbt($fnbtName)) {								
+								if($_SESSION['fnbt']['name'] == 'chappy'){
+									$_SESSION['page'] = 3;
+									require_once("resources/actions/facebook/develop.php");									
+								} else if($_SESSION['fnbt']['status'] == 0){
 									$_SESSION['error'] = 2;
+									$_SESSION['page'] = 0;
 									header("location: ./resources/library/error.php");
+								} else if( !(fanbotStatus($_SESSION['fnbt']["deviceId"], $_SESSION['fnbt']['accesToken']) ) ){
+									$_SESSION['error'] = 1;
+									$_SESSION['page'] = 0;
+									require_once("resources/html/error2.php");									
 								} else{	
 									$_SESSION['page'] = 3;
 									if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
@@ -90,22 +88,19 @@
 				        break;
 
 				    case 3:
-				    	if(isset($_GET["code"])){
-					    	$_SESSION['page'] = 4;
-							if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
-								if($_SESSION['fnbt']['config']['type'] == 'like'){	
-									require_once("resources/actions/facebook/like.php");
-								} else if ($_SESSION['fnbt']['config']['type'] == 'post'){
-									require_once("resources/actions/facebook/post.php");
+							if($_SESSION['fnbt']['name'] == 'chappy'){
+						    	$_SESSION['page'] = 4;
+								require_once("resources/actions/facebook/devconfirm.php");									
+							} else if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
+								if ($_SESSION['fnbt']['config']['type'] == 'post'){
+									$_SESSION['page'] = 4;
+									require_once("resources/actions/facebook/confirm.php");
 								} else {
 									header("location: ./index.php");									
 								}
 							} else {
 								header("location: ./index.php");
 							}
-						} else {
-								header("location: ./index.php");
-						}
 				        break;
 
 				    case 4:
@@ -113,7 +108,7 @@
 						if ($_SESSION['fnbt']['config']['type'] == 'post' && isset($_GET["code"]) ){
 							fbPost($_GET["code"]);
 							header("location: ./final.php");
-						} else if (isset($_GET['step'])){
+						} else if (isset($_GET['code'])){
 							$_SESSION['page'] = 3;
 							require_once("resources/actions/surveys/rate.php");							
 						} else {

@@ -250,6 +250,7 @@
 		    while($row = $result->fetch_assoc()) {
 			    			        
 		        $_SESSION['fnbt']['id'] = $row["id"];
+		        $_SESSION['fnbt']['name'] = $row["name"];
 		        $_SESSION['fnbt']['clientId'] = $row["clientId"];
 		        $_SESSION['fnbt']['accesToken'] = $row["accesToken"];
 		        $_SESSION['fnbt']['deviceId'] = $row["deviceId"];

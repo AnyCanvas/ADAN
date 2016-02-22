@@ -27,6 +27,7 @@
 		<div id="upper-div" style="height: 75%;" class="blue">
 		<div class="div-wrapper full">
 			<img class="center-img success-img" src="images/success.png">
+			<p class="center-align " style="z-index: 2; position: relative; bottom: 40%;"><?php echo timeStamp(); ?></p>
 		</div>
 		</div>
 	    <footer style="height: 25%; padding-top: 17.5vh;" class="blue">
@@ -49,6 +50,7 @@
 				console.log("Changed class");
 				$( "#upper-div" ).addClass( "iphone-fix" );
 				$( 'img' ).addClass( 'img-fix' );
+				$( 'p' ).addClass( 'p-fix' );
 
 			}
 	</script>
