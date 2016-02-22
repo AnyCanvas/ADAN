@@ -6,6 +6,7 @@
 		    postclick = function () {
 				window.location = "<?php echo $postCodeUrl; ?>";										
 			}	
+
 		chekCode = function(){
 			if($('#store-code').val() == 786065){
 				window.location = "final.php";
@@ -14,7 +15,6 @@
 				alert('codigo incorreto');				
 			}
 		}
-
 		</script>	
 		<div class="container-fluid" style="height: 100%; width: 100%">
 			<div id="loader" style="display: none; width: 100%; height: 100%; z-index: 9; position: absolute; background-color: rgba(0, 0, 0, 0.509804);">
@@ -68,7 +68,7 @@
 
 		    </div>
 		    <div class="modal-footer">
-		      <a onclick="postclick();" class=" modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
+		      <a onclick="chekCode();" class=" modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
 		      <a onclick="$('#modal1').closeModal();" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
 
 		    </div>
