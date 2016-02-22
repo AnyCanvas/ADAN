@@ -47,9 +47,9 @@
 				  			<i class="mdi mdi-facebook left" style=" font-size: 4vw !important; margin-right: 0px !important;"></i>Publicar
 				  		</a>
 				  		
-				  		<p style="font-size: x-small; text-decoration: underline;" onclick="postclick();">No, prefiero utilizar el código de mi recibo<p>
+				  		<p style="font-size: x-small; text-decoration: underline;" onclick="$('#modal1').openModal();">Prefiero utilizar el código de mi recibo<p>
 	
-				  </div>
+			  	</div>
 	
 		    </footer>
 	
