@@ -36,7 +36,7 @@
 					console.log("Changed class");
 					$( 'img' ).addClass( 'img-fix' );
 					$( '#upper-div' ).addClass( 'iphone-fix' );
-					$( '#name-btn' ).addClass( 'button-div-iphone-fix' );
+//					$( '#name-btn' ).addClass( 'button-div-iphone-fix' );
 	
 				}
 			}
