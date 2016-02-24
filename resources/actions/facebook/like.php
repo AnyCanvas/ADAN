@@ -65,7 +65,7 @@
 					   data-share="false">
 				  </div>
 			  </div>
-			  <a style="font-size: x-small; text-decoration: underline;" href="http://fanbot.me/aviso-de-privacidad/" target="_blank">Prefiero utilizar el código de mi recibo</a>
+			  <span>Al continuar estarás aceptando el <a style="font-size: x-small; text-decoration: underline;" href="http://fanbot.me/aviso-de-privacidad/" target="_blank">Aviso de Privacidad</a></span>
 	    </footer>
 
 	</div>
