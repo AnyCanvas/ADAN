@@ -43,7 +43,7 @@
 					}
 			  	}	
 
-	$( document ).load(function() {
+	$( window ).load(function() {
 	  setTimeout(function(){ $('#app-btn').show('slow'); }, 3000);
 	});
 

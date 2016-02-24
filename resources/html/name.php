@@ -31,7 +31,7 @@
 				$( '#name-btn' ).addClass( 'button-div-iphone-fix' );
 			}
 			var makeSmall = function(){
-				$('#name-btn').hide('slow'); 
+//				$('#name-btn').hide('slow'); 
 				if (browserAgent.indexOf("iPhone") > -1){
 					console.log("Changed class");
 					$( 'img' ).addClass( 'img-fix' );
