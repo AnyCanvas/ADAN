@@ -65,6 +65,7 @@
 					   data-share="false">
 				  </div>
 			  </div>
+			  <p style="font-size: x-small; text-align: center; padding-top: 5px;">Al continuar estarás aceptando el <a href="http://fanbot.me/aviso-de-privacidad/" target="_blank">Aviso de Privacidad</a></p>
 	    </footer>
 
 	</div>
