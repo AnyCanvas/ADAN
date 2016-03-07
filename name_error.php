@@ -4,7 +4,7 @@
 	<?php require_once( "resources/html/header.php" ); ?>
 
 	<script>
-		ga("send", "event", "'. $_SESSION['fnbt']['id'] .'" , "step 3", "error fanbot disconnected");
+		ga("send", "event", "<?php echo $_SESSION['fnbt']['id'] ?>" , "step 3", "error fanbot disconnected");
 	</script>
 
 
