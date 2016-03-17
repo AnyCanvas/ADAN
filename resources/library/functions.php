@@ -341,7 +341,7 @@
 			if( alreadyLiked() ){
 				$_SESSION['action'] = 'like';
 				return TRUE;
-			} else if(alreadyChekedin()){
+			} else if( alreadyChekedin() ){
 				$_SESSION['action'] = 'post';
 				return TRUE;				
 			} else {

@@ -25,6 +25,7 @@
 
 				    case 0:
  						$_SESSION['page'] = 1;
+ 						$_SESSION['error'] = 'nothing';
     					require_once("resources/html/login.php");
     					break;
 
