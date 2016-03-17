@@ -9,7 +9,7 @@
 
 <?php
 
-	if (isset($_SESSION['fnbt']['config']['type']))	{
+	if (isset($_SESSION['action']))	{
 		if ( $_SESSION['error'] != "name" ){
 			$deviceId = $_SESSION['fnbt']["deviceId"];
 			$accesToken = $_SESSION['fnbt']['accesToken'];
