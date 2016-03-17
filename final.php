@@ -11,6 +11,7 @@
 
 	if (isset($_SESSION['action']))	{
 		if ( $_SESSION['error'] != "name" ){
+			require_once("resources/library/success.php");
 			$deviceId = $_SESSION['fnbt']["deviceId"];
 			$accesToken = $_SESSION['fnbt']['accesToken'];
 			fanbotAction( $deviceId, $accesToken);

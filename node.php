@@ -114,6 +114,7 @@
 							$_SESSION['error'] = 'no';
 							header("location: ./final.php");
 						} else {
+							$_SESSION['error'] = 'no';
 							header("location: ./final.php");
 						}						
 				        break;
