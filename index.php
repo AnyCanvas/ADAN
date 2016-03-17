@@ -10,6 +10,7 @@
 		}
 	}
 	$_SESSION['page'] = 0;
+	 $_SESSION['error'] = 'no';
 	?>
 <!DOCTYPE html>
 <html>
