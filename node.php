@@ -80,6 +80,7 @@
 										header("location: ./index.php");
 									}
 								} else {
+									$_SESSION['error'] = 0;
 									header("location: ./final.php");
 								}
 							} else {
