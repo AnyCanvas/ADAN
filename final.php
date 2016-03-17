@@ -10,15 +10,11 @@
 <?php
 
 	if (isset($_SESSION['fnbt']['config']['type']))	{
-		if ( $_SESSION['page'] == 0){
 			$deviceId = $_SESSION['fnbt']["deviceId"];
 			$accesToken = $_SESSION['fnbt']['accesToken'];
 			fanbotAction( $deviceId, $accesToken);
 			saveUserDataToDB();
 			saveInteractionToDB();
-		} else {
-				require_once("resources/html/error1.php");
-			}
 	} else {
 			$_SESSION['error'] = 1;
 			require_once("resources/html/error2.php");
