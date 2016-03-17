@@ -111,6 +111,7 @@
 					    $_SESSION['page'] = 0;						
 						if ($_SESSION['action'] == 'post' && isset($_GET["code"]) ){
 							fbPost($_GET["code"]);
+							$_SESSION['error'] = 'no';
 							header("location: ./final.php");
 						} else {
 							header("location: ./final.php");
