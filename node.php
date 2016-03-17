@@ -58,6 +58,7 @@
 							if (findFnbt($fnbtName)) {								
 								if($_SESSION['fnbt']['name'] == 'chappy'){
 									$_SESSION['page'] = 3;
+									$_SESSION['action'] = 'post';
 									require_once("resources/actions/facebook/develop.php");									
 								} else if($_SESSION['fnbt']['status'] == 0){
 									$_SESSION['error'] = 2;
@@ -67,19 +68,21 @@
 									$_SESSION['error'] = 1;
 									$_SESSION['page'] = 0;
 									require_once("resources/html/error2.php");									
-								} else{	
+								} else if (checkInteraction() ){	
 									$_SESSION['page'] = 3;
 									if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
-										if($_SESSION['fnbt']['config']['type'] == 'like'){	
+										if($_SESSION['action'] == 'like'){	
 											require_once("resources/actions/facebook/like.php");
-										} else if ($_SESSION['fnbt']['config']['type'] == 'post'){
+										} else if ($_SESSION['action'] == 'post'){
 											require_once("resources/actions/facebook/post.php");
 										}
 									} else {
 										header("location: ./index.php");
 									}
-								} 
-							}else {
+								} else {
+									header("location: ./final.php");
+								}
+							} else {
 								header("location: ./name_error.php");
 							}			
 						} else {
@@ -92,7 +95,7 @@
 						    	$_SESSION['page'] = 4;
 								require_once("resources/actions/facebook/devconfirm.php");									
 							} else if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
-								if ($_SESSION['fnbt']['config']['type'] == 'post'){
+								if ($_SESSION['action'] == 'post'){
 									$_SESSION['page'] = 4;
 									require_once("resources/actions/facebook/confirm.php");
 								} else {
@@ -105,12 +108,9 @@
 
 				    case 4:
 					    $_SESSION['page'] = 0;						
-						if ($_SESSION['fnbt']['config']['type'] == 'post' && isset($_GET["code"]) ){
+						if ($_SESSION['action'] == 'post' && isset($_GET["code"]) ){
 							fbPost($_GET["code"]);
 							header("location: ./final.php");
-						} else if (isset($_GET['code'])){
-							$_SESSION['page'] = 3;
-							require_once("resources/actions/surveys/rate.php");							
 						} else {
 							header("location: ./final.php");
 						}						

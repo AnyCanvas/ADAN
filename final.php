@@ -10,7 +10,7 @@
 <?php
 
 	if (isset($_SESSION['fnbt']['config']['type']))	{
-		if ( checkForDuplucatedLike() ){
+		if ( $_SESSION['page'] == 4){
 			$deviceId = $_SESSION['fnbt']["deviceId"];
 			$accesToken = $_SESSION['fnbt']['accesToken'];
 			fanbotAction( $deviceId, $accesToken);

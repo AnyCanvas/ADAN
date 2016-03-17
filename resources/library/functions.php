@@ -195,7 +195,7 @@
 				    die("Connection failed: " . $conn->connect_error);
 				} 
 
-				$sql = "INSERT INTO interactions  (fanbotId, userId, clientId, fbPage) VALUES ( '". $_SESSION['fnbt']['id']. "','".  $_SESSION['fbUser']['id']. "','". $_SESSION['fnbt']['clientId']. "','". $_SESSION['fnbt']['config']['link'] . "')";
+				$sql = "INSERT INTO interactions  (fanbotId, userId, clientId, fbPage, action) VALUES ( '". $_SESSION['fnbt']['id']. "','".  $_SESSION['fbUser']['id']. "','". $_SESSION['fnbt']['clientId']. "','". $_SESSION['fnbt']['config']['link'] . "', '". $_SESSION['action'] ."')";
 							
 				
 				if ($conn->query($sql) === TRUE) {
@@ -268,7 +268,38 @@
 			}
 	}		
 	
-	function checkForDuplucatedLike(){
+	function alreadyLiked(){
+
+		require(realpath(dirname(__FILE__) . "/../config.php"));		
+		$servername = $config["db"]["fanbot"]["host"];
+		$username = $config["db"]["fanbot"]["username"];
+		$password = $config["db"]["fanbot"]["password"];
+		$dbname = $config["db"]["fanbot"]["dbname"];
+
+		
+
+		// Create connection
+		$conn = new mysqli($servername, $username, $password, $dbname);
+		// Check connection
+		if ($conn->connect_error) {
+		    die("Connection failed: " . $conn->connect_error);
+		}
+		
+		$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUser']['id'] ." ' AND fbPage = '". $_SESSION['fnbt']['config']['link'] . "' AND action = 'like'";	
+		$result = $conn->query($sql);
+		
+		if ($result->num_rows > 0) {		    
+
+			    return FALSE;	
+			} else {
+				return TRUE;
+
+			}
+		$conn->close();
+
+	}	
+	
+	function alreadyChekedin(){
 
 		require(realpath(dirname(__FILE__) . "/../config.php"));		
 		$servername = $config["db"]["fanbot"]["host"];
@@ -285,15 +316,7 @@
 		    die("Connection failed: " . $conn->connect_error);
 		}
 		
-
-		if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){
-			if($_SESSION['fnbt']['config']['type'] == 'like'){
-				$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUser']['id'] ." ' AND fbPage = '". $_SESSION['fnbt']['config']['link'] . "'";				
-			} else if ($_SESSION['fnbt']['config']['type'] == 'post'){
-				return TRUE;	
-				exit();			
-			}
-		}
+		$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUser']['id'] ." ' AND fbPage = '". $_SESSION['fnbt']['config']['link'] . "' AND DATEDIFF(NOW(),date) >= 1 AND  action = 'post'";	
 		$result = $conn->query($sql);
 		
 		if ($result->num_rows > 0) {		    
@@ -303,9 +326,29 @@
 				return TRUE;
 
 			}
-		$conn->close();
-
-	}	
+		$conn->close();		
+	}
+	
+	function checkInteraction(){
+		if ($_SESSION['fnbt']['config']['type'] == 'like'){
+			if( alreadyLiked() ){
+				$_SESSION['action'] = 'like';
+				return TRUE;
+			} else{
+				return FALSE;
+			}			
+		} else if ($_SESSION['fnbt']['config']['type'] == 'post'){
+			if( alreadyLiked() ){
+				$_SESSION['action'] = 'like';
+				return TRUE;
+			} else if(alreadyChekedin()){
+				$_SESSION['action'] = 'post';
+				return TRUE;				
+			} else {
+				return FALSE;
+			}
+		}
+	}
 
 ////////////////////  DB functions end  ////////////////////
 
