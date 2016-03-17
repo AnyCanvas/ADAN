@@ -316,7 +316,7 @@
 		    die("Connection failed: " . $conn->connect_error);
 		}
 		
-		$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUser']['id'] ." ' AND fbPage = '". $_SESSION['fnbt']['config']['link'] . "' AND DATEDIFF(NOW(),date) >= 1 AND  action = 'post'";	
+		$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUser']['id'] ." ' AND fbPage = '". $_SESSION['fnbt']['config']['link'] . "' AND DATEDIFF(NOW(),date) >= 1";	
 		$result = $conn->query($sql);
 		
 		if ($result->num_rows > 0) {		    
