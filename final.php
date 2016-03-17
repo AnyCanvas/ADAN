@@ -10,7 +10,7 @@
 <?php
 
 	if (isset($_SESSION['fnbt']['config']['type']))	{
-		if ( $_SESSION['page'] == 4){
+		if ( $_SESSION['page'] == 0){
 			$deviceId = $_SESSION['fnbt']["deviceId"];
 			$accesToken = $_SESSION['fnbt']['accesToken'];
 			fanbotAction( $deviceId, $accesToken);
