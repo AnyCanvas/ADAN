@@ -12,10 +12,6 @@
 		<div class="div-wrapper full" style="background-color: <?php echo $_SESSION['fnbt']['config']["bgcolor"] ?>;">
 
 			<img class="center-img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture?type=large" class="img-responsive img-thumbnail center-block" style="width: 30vh; top: 25vh !important; position: relative;" alt="Cinque Terre">
-			
-		<div class="center-align white-text" style="margin-top: 46%;">
-			Bienvenido a Wingman<br><span style="font-weight: lighter;">Obtén recomensas por cada visita.</span>
-		</div>
 
 		</div>
 		</div>
