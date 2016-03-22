@@ -65,9 +65,10 @@
 					   data-share="false">
 				  </div>
 			  </div>
+			  <p style="font-size: x-small; text-align: center; padding-top: 5px;"><a onclick="changeToPost();">Ya le di like</a></p>
 			  <p style="font-size: x-small; text-align: center; padding-top: 5px;">Al continuar estarás aceptando el <a href="http://fanbot.me/aviso-de-privacidad/" target="_blank">Aviso de Privacidad</a></p>
 			
-			  <div style="visibility: hidden; display: none;">
+			  <div id="post-div" style="display: none;">
 			      <p class="fnbt-name-text grey-text">Comprueba tu visita con un Check-in.</p>
 				  <div class="like-div" style="overflow: hidden;">
 			  			<a class="waves-effect waves-light btn fb-btn btn-centered" style=" background-color: #405A9F; font-size: 3vw;" onclick="postclick();">
@@ -87,6 +88,10 @@
 				console.log("Changed class");
 				$( "#upper-div" ).addClass( "iphone-fix" );
 
+			}
+			
+			changeToPost(){
+				$("#por-div").visibility.show()
 			}
 	</script>
     </body>
