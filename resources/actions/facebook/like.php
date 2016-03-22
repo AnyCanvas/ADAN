@@ -3,7 +3,9 @@
     <body>
 	<div id="fb-root"></div>
 		<script>
-						
+	    postclick = function () {
+			window.location = "node.php";										
+		}						
 		var finished_rendering = function() {
 			$('#loader').hide();
 			console.log("finished rendering plugins");
