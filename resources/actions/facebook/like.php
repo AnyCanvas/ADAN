@@ -55,20 +55,23 @@
 		</div>
 		</div>
 	    <footer style="height: 25%;">
-		      <p class="fnbt-name-text grey-text">Presiona “Me Gusta”<br>para accionar la máquina.</p>
-			  <div class="like-div" style="overflow: hidden;">
-				  <div class="fb-like" 
-					   data-href="https://www.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>"
-					   data-layout="button" 
-					   data-action="like" 
-					   data-show-faces="false" 
-					   data-share="false">
+			  <div id="fblike-div" style="display: none;">
+			      <p class="fnbt-name-text grey-text">Presiona “Me Gusta”<br>para accionar la máquina.</p>
+				  <div class="like-div" style="overflow: hidden;">
+					  <div class="fb-like" 
+						   data-href="https://www.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>"
+						   data-layout="button" 
+						   data-action="like" 
+						   data-show-faces="false" 
+						   data-share="false">
+					  </div>
 				  </div>
-			  </div>
-			  <p style="font-size: x-small; text-align: center; padding-top: 5px;"><a onclick="changeToPost();">Ya le di like</a></p>
-			  <p style="font-size: x-small; text-align: center; padding-top: 5px;">Al continuar estarás aceptando el <a href="http://fanbot.me/aviso-de-privacidad/" target="_blank">Aviso de Privacidad</a></p>
-			
-			  <div id="post-div" style="display: none;">
+				  <p style="font-size: x-small; text-align: center; padding-top: 5px;"><a onclick="changeToPost();">Ya le di like</a></p>
+				  <p style="font-size: x-small; text-align: center; padding-top: 5px;">Al continuar estarás aceptando el <a href="http://fanbot.me/aviso-de-privacidad/" target="_blank">Aviso de Privacidad</a></p>			
+		      </div>
+
+
+			  <div id="fbpost-div" style="display: none;">
 			      <p class="fnbt-name-text grey-text">Comprueba tu visita con un Check-in.</p>
 				  <div class="like-div" style="overflow: hidden;">
 			  			<a class="waves-effect waves-light btn fb-btn btn-centered" style=" background-color: #405A9F; font-size: 3vw;" onclick="postclick();">
@@ -87,11 +90,11 @@
 			if (browserAgent.indexOf("iPhone") > -1){
 				console.log("Changed class");
 				$( "#upper-div" ).addClass( "iphone-fix" );
-
 			}
 			
 			function changeToPost(){
-				$("#port-div").visibility.show()
+				$("#port-div").show();
+				$("#blike-div").hide();
 			}
 	</script>
     </body>
