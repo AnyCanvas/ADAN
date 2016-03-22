@@ -96,12 +96,8 @@
 						    	$_SESSION['page'] = 4;
 								require_once("resources/actions/facebook/devconfirm.php");									
 							} else if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
-								if ($_SESSION['action'] == 'post'){
 									$_SESSION['page'] = 4;
 									require_once("resources/actions/facebook/confirm.php");
-								} else {
-									header("location: ./index.php");									
-								}
 							} else {
 								header("location: ./index.php");
 							}
