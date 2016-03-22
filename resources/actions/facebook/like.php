@@ -55,7 +55,7 @@
 		</div>
 		</div>
 	    <footer style="height: 25%;">
-			  <div id="fblike-div" style="display: none;">
+			  <div id="fblike-div">
 			      <p class="fnbt-name-text grey-text">Presiona “Me Gusta”<br>para accionar la máquina.</p>
 				  <div class="like-div" style="overflow: hidden;">
 					  <div class="fb-like" 
