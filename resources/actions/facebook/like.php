@@ -93,8 +93,8 @@
 			}
 			
 			function changeToPost(){
-				$("#port-div").show();
-				$("#blike-div").hide();
+				$("#fbpost-div").show();
+				$("#fblike-div").hide();
 			}
 	</script>
     </body>
