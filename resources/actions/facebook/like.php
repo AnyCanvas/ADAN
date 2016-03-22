@@ -90,8 +90,8 @@
 
 			}
 			
-			changeToPost(){
-				$("#por-div").visibility.show()
+			function changeToPost(){
+				$("#port-div").visibility.show()
 			}
 	</script>
     </body>
