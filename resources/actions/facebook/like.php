@@ -72,7 +72,7 @@
 				  <p style="font-size: x-small; text-align: center; padding-top: 5px;">Al continuar estarás aceptando el <a href="http://fanbot.me/aviso-de-privacidad/" target="_blank">Aviso de Privacidad</a></p>			
 		      </div>
 
-
+<?php if($_SESSION['fnbt']['config']["type"] = 'post'){ ?>
 			  <div id="fbpost-div" style="display: none;">
 			      <p class="fnbt-name-text grey-text">Comprueba tu visita con un Check-in.</p>
 				  <div class="like-div" style="overflow: hidden;">
@@ -82,7 +82,7 @@
 				  </div>
 				  <p style="font-size: x-small; text-align: center; padding-top: 5px;">Al continuar estarás aceptando el <a href="http://fanbot.me/aviso-de-privacidad/" target="_blank">Aviso de Privacidad</a></p>
 		      </div>
-
+<?php } ?>
 	    </footer>
 
 	</div>
