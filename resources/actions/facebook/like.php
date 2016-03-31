@@ -51,7 +51,7 @@
 
 		<img class="center-img fbpage-img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture?type=large" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 <?php if($_SESSION['fnbt']['config']["type"] == 'post'){ ?>
-		<p style="font-size: x-small; text-align: center; padding-top: 5px; background-color: grey; position: absolute; bottom: 0; left: 0; width: 100%; margin: 0; padding-bottom: 2px;">Al continuar estarás aceptando el <a href="http://fanbot.me/aviso-de-privacidad/" target="_blank">Aviso de Privacidad</a></p>			
+		<p style="font-size: x-small; text-align: center; padding-top: 5px; background-color: #CEC9C9; position: absolute; bottom: 0; left: 0; width: 100%; margin: 0; padding-bottom: 2px;">Al continuar estarás aceptando el <a href="http://fanbot.me/aviso-de-privacidad/" target="_blank">Aviso de Privacidad</a></p>			
 <?php } ?>
 
 		</div>
