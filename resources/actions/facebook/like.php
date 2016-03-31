@@ -48,12 +48,12 @@
 		</div>
 		<div id="upper-div" style="height: 75%;" class="blue">
 		<div class="div-wrapper full" style="background-color: <?php echo $_SESSION['fnbt']['config']["bgcolor"] ?>;">
-<?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ ?>
-			<img class="center-img fbpage-img" src="/media/clients/centinela/like.png" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
-<?php } else { ?>
-			<img class="center-img fbpage-img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture?type=large" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 
+		<img class="center-img fbpage-img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture?type=large" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+<?php if($_SESSION['fnbt']['config']["type"] == 'post'){ ?>
+		<p style="font-size: x-small; text-align: center; padding-top: 5px;">Al continuar estarás aceptando el <a href="http://fanbot.me/aviso-de-privacidad/" target="_blank">Aviso de Privacidad</a></p>			
 <?php } ?>
+
 		</div>
 		</div>
 	    <footer style="height: 25%;">
