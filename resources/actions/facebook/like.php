@@ -46,7 +46,7 @@
 				<div class="cssload-loader btn-centered" style="z-index: 10; top: 45vh; margin: auto;"></div>
 			</div>
 		</div>
-		<div id="upper-div" style="height: 75%;" class="blue">
+		<div id="upper-div" style="height: 75%; position: relative;" class="blue">
 		<div class="div-wrapper full" style="background-color: <?php echo $_SESSION['fnbt']['config']["bgcolor"] ?>;">
 
 		<img class="center-img fbpage-img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture?type=large" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
@@ -69,9 +69,8 @@
 					  </div>
 				  </div>
 <?php if($_SESSION['fnbt']['config']["type"] == 'post'){ ?>
-				  <p style="font-size: x-small; text-align: center; padding-top: 5px;"><a onclick="changeToPost();">Ya le di like</a></p>
+				  <p style="font-size: x-small; text-align: center; padding-top: 5px;">Ya di "Me Gusta", prefiero <a onclick="changeToPost();">hacer Check-in</a></p>
 <?php } ?>
-				  <p style="font-size: x-small; text-align: center; padding-top: 5px;">Al continuar estarás aceptando el <a href="http://fanbot.me/aviso-de-privacidad/" target="_blank">Aviso de Privacidad</a></p>			
 		      </div>
 
 <?php if($_SESSION['fnbt']['config']["type"] == 'post'){ ?>
