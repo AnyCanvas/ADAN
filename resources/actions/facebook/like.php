@@ -69,7 +69,7 @@
 					  </div>
 				  </div>
 <?php if($_SESSION['fnbt']['config']["type"] == 'post'){ ?>
-				  <p style="font-size: x-small; text-align: center; padding-top: 5px;"><a onclick="changeToPost();">Ya di "Me Gusta", prefiero hacer Check-in</a></p>
+				  <p style="font-size: smaller; text-align: center; padding-top: 5px;"><a onclick="changeToPost();">Ya di "Me Gusta", prefiero hacer Check-in</a></p>
 <?php } ?>
 		      </div>
 
