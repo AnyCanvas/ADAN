@@ -9,8 +9,9 @@
 
 <?php
 
-	if (isset($_SESSION['fnbt']['config']['type']))	{
-		if ( checkForDuplucatedLike() ){
+	if (isset($_SESSION['fnbt']['config']))	{
+		if ( $_SESSION['error'] != "name" ){
+			require_once("resources/library/success.php");
 			$deviceId = $_SESSION['fnbt']["deviceId"];
 			$accesToken = $_SESSION['fnbt']['accesToken'];
 			fanbotAction( $deviceId, $accesToken);
