@@ -96,6 +96,7 @@
 						    	$_SESSION['page'] = 4;
 								require_once("resources/actions/facebook/devconfirm.php");									
 							} else if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
+								    $_SESSION['action'] = 'post';
 									$_SESSION['page'] = 4;
 									require_once("resources/actions/facebook/confirm.php");
 							} else {
