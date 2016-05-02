@@ -337,9 +337,15 @@
 				return FALSE;
 			}			
 		} else if ($_SESSION['fnbt']['config']['type'] == 'post'){
-			if( alreadyLiked() ){
-				$_SESSION['action'] = 'like';
-				return TRUE;
+			if( alreadyLiked()){
+				if(alreadyChekedin()){
+					$_SESSION['action'] = 'like';
+					return TRUE;
+					
+				} else {
+					return FALSE;
+				}
+				
 			} else if( alreadyChekedin() ){
 				$_SESSION['action'] = 'post';
 				return TRUE;				
