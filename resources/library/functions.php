@@ -284,7 +284,7 @@
 		    die("Connection failed: " . $conn->connect_error);
 		}
 		
-		$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUser']['id'] ." ' AND fbPage = '". $_SESSION['fnbt']['config']['link'] . "';";	
+		$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUser']['id'] ."' AND fbPage = '". $_SESSION['fnbt']['config']['link'] . "';";	
 		$result = $conn->query($sql);
 		$conn->close();		
 
