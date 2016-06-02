@@ -287,7 +287,7 @@
 		$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUser']['id'] ." ' AND fbPage = '". $_SESSION['fnbt']['config']['link'] . "'";	
 		$result = $conn->query($sql);
 		
-		if ($result->num_rows > 0) {		    
+		if ($result->num_rows == 0) {		    
 			    return FALSE;	
 			} else {
 				return TRUE;
@@ -317,7 +317,7 @@
 		$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUser']['id'] ."' AND fbPage = '". $_SESSION['fnbt']['config']['link'] . "' AND TIMESTAMPDIFF(HOUR,date,NOW()) <= 18";	
 		$result = $conn->query($sql);
 		
-		if ($result->num_rows > 0) {		    
+		if ($result->num_rows == 0) {		    
 			    return FALSE;	
 			} else {
 				return TRUE;
