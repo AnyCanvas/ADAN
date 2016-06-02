@@ -286,14 +286,13 @@
 		
 		$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUser']['id'] ." ' AND fbPage = '". $_SESSION['fnbt']['config']['link'] . "';";	
 		$result = $conn->query($sql);
-
 		$conn->close();		
-		if ($result->num_rows > 0) {		    
-			    return FALSE;	
-			} else {
-				return TRUE;
 
-			}
+		if ($result->num_rows == 0) {		    
+			return FALSE;	
+		} else {
+			return TRUE;
+		}
 
 	}	
 	
@@ -322,34 +321,21 @@
 			    return FALSE;	
 			} else {
 				return TRUE;
-
 			}
 	}
 	
 	function checkInteraction(){
-		if ($_SESSION['fnbt']['config']['type'] == 'like'){
-			if( alreadyLiked() ){
-				$_SESSION['action'] = 'like';
-				return TRUE;
-			} else{
-				return FALSE;
-			}			
-		} else if ($_SESSION['fnbt']['config']['type'] == 'post'){
-			if( alreadyLiked()){
-				if(alreadyChekedin()){
-					$_SESSION['action'] = 'like';
-					return TRUE;
-					
-				} else {
-					return FALSE;
-				}
-				
-			} else if( alreadyChekedin() ){
-				$_SESSION['action'] = 'post';
-				return TRUE;				
-			} else {
-				return FALSE;
-			}
+		if ($_SESSION['fnbt']['config']['type'] == 'like' && alreadyLiked()){
+			$_SESSION['action'] = 'like';
+			return TRUE;		
+		} else if ($_SESSION['fnbt']['config']['type'] == 'post' && !( alreadyLiked() ) ){
+			$_SESSION['action'] = 'like';
+			return TRUE;					
+		} else if($_SESSION['fnbt']['config']['type'] == 'post' && !( alreadyLiked() ) && !( alreadyChekedin() ) ){
+			$_SESSION['action'] = 'post';
+			return TRUE;				
+		} else {
+			return FALSE;
 		}
 	}
 
