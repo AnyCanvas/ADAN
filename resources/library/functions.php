@@ -267,7 +267,7 @@
 			}
 	}		
 	
-	function alreadyLiked(){
+	function notLiked(){
 
 		require(realpath(dirname(__FILE__) . "/../config.php"));		
 		$servername = $config["db"]["fanbot"]["host"];
@@ -289,14 +289,14 @@
 		$conn->close();		
 
 		if ($result->num_rows == 0) {		    
-			return FALSE;	
+			return 1;	
 		} else {
-			return TRUE;
+			return 0;
 		}
 
 	}	
 	
-	function alreadyChekedin(){
+	function notChekedin(){
 
 		require(realpath(dirname(__FILE__) . "/../config.php"));		
 		$servername = $config["db"]["fanbot"]["host"];
@@ -318,20 +318,20 @@
 		$conn->close();		
 		
 		if ($result->num_rows == 0) {		    
-			    return FALSE;	
+			    return 1;	
 			} else {
-				return TRUE;
+				return 0;
 			}
 	}
 	
 	function checkInteraction(){
-		if ($_SESSION['fnbt']['config']['type'] == 'like' && !( alreadyLiked() ) ){
+		if ($_SESSION['fnbt']['config']['type'] == 'like' && notLiked() ){
 			$_SESSION['action'] = 'like';
 			return TRUE;		
-		} else if ($_SESSION['fnbt']['config']['type'] == 'post' && !( alreadyLiked() ) ){
+		} else if ($_SESSION['fnbt']['config']['type'] == 'post' && notLiked()  ){
 			$_SESSION['action'] = 'like';
 			return TRUE;					
-		} else if($_SESSION['fnbt']['config']['type'] == 'post' && !( alreadyLiked() ) && !( alreadyChekedin() ) ){
+		} else if($_SESSION['fnbt']['config']['type'] == 'post' && notLiked()  && notChekedin() ){
 			$_SESSION['action'] = 'post';
 			return TRUE;				
 		} else {
