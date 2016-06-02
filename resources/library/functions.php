@@ -331,7 +331,7 @@
 		} else if ($_SESSION['fnbt']['config']['type'] == 'post' && notLiked()  ){
 			$_SESSION['action'] = 'like';
 			return TRUE;					
-		} else if($_SESSION['fnbt']['config']['type'] == 'post' && notLiked()  && notChekedin() ){
+		} else if($_SESSION['fnbt']['config']['type'] == 'post' && notChekedin() ){
 			$_SESSION['action'] = 'post';
 			return TRUE;				
 		} else {
