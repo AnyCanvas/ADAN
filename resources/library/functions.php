@@ -325,7 +325,7 @@
 	}
 	
 	function checkInteraction(){
-		if ($_SESSION['fnbt']['config']['type'] == 'like' && alreadyLiked()){
+		if ($_SESSION['fnbt']['config']['type'] == 'like' && !( alreadyLiked() ) ){
 			$_SESSION['action'] = 'like';
 			return TRUE;		
 		} else if ($_SESSION['fnbt']['config']['type'] == 'post' && !( alreadyLiked() ) ){
