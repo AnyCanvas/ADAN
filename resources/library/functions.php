@@ -267,7 +267,7 @@
 			}
 	}		
 	
-	function alreadyLiked(){
+	function notLiked(){
 
 		require(realpath(dirname(__FILE__) . "/../config.php"));		
 		$servername = $config["db"]["fanbot"]["host"];
@@ -284,21 +284,19 @@
 		    die("Connection failed: " . $conn->connect_error);
 		}
 		
-		$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUser']['id'] ." ' AND fbPage = '". $_SESSION['fnbt']['config']['link'] . "' AND action = 'like'";	
+		$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUser']['id'] ."' AND fbPage = '". $_SESSION['fnbt']['config']['link'] . "';";	
 		$result = $conn->query($sql);
-		
-		if ($result->num_rows > 0) {		    
+		$conn->close();		
 
-			    return FALSE;	
-			} else {
-				return TRUE;
-
-			}
-		$conn->close();
+		if ($result->num_rows == 0) {		    
+			return 1;	
+		} else {
+			return 0;
+		}
 
 	}	
 	
-	function alreadyChekedin(){
+	function notChekedin(){
 
 		require(realpath(dirname(__FILE__) . "/../config.php"));		
 		$servername = $config["db"]["fanbot"]["host"];
@@ -315,43 +313,29 @@
 		    die("Connection failed: " . $conn->connect_error);
 		}
 		
-		$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUser']['id'] ."' AND fbPage = '". $_SESSION['fnbt']['config']['link'] . "' AND DATEDIFF(NOW(),date) <= 1";	
+		$sql = "SELECT * FROM interactions WHERE userId = '". $_SESSION['fbUser']['id'] ."' AND fbPage = '". $_SESSION['fnbt']['config']['link'] . "' AND TIMESTAMPDIFF(HOUR,date,NOW()) <= 18;";	
 		$result = $conn->query($sql);
-		
-		if ($result->num_rows > 0) {		    
-
-			    return FALSE;	
-			} else {
-				return TRUE;
-
-			}
 		$conn->close();		
+		
+		if ($result->num_rows == 0) {		    
+			    return 1;	
+			} else {
+				return 0;
+			}
 	}
 	
 	function checkInteraction(){
-		if ($_SESSION['fnbt']['config']['type'] == 'like'){
-			if( alreadyLiked() ){
-				$_SESSION['action'] = 'like';
-				return TRUE;
-			} else{
-				return FALSE;
-			}			
-		} else if ($_SESSION['fnbt']['config']['type'] == 'post'){
-			if( alreadyLiked()){
-				if(alreadyChekedin()){
-					$_SESSION['action'] = 'like';
-					return TRUE;
-					
-				} else {
-					return FALSE;
-				}
-				
-			} else if( alreadyChekedin() ){
-				$_SESSION['action'] = 'post';
-				return TRUE;				
-			} else {
-				return FALSE;
-			}
+		if ($_SESSION['fnbt']['config']['type'] == 'like' && notLiked() ){
+			$_SESSION['action'] = 'like';
+			return TRUE;		
+		} else if ($_SESSION['fnbt']['config']['type'] == 'post' && notLiked()  ){
+			$_SESSION['action'] = 'like';
+			return TRUE;					
+		} else if($_SESSION['fnbt']['config']['type'] == 'post' && notChekedin() ){
+			$_SESSION['action'] = 'post';
+			return TRUE;				
+		} else {
+			return FALSE;
 		}
 	}
 
