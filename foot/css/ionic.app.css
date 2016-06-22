@@ -9718,11 +9718,14 @@ a.button {
 .fb-login-bt {
   margin-left: 15%; }
 
-.top.img {
-  height: 70vh; }
+.top-img img {
+  height: 75 vh; }
 
 .bottom-list {
-  max-height: 30vh; }
+  max-height: 30 vh; }
+
+.bottom-text {
+  margin-bottom: 0px; }
 
 body.platform-ios {
   font-family: Roboto, sans-serif; }
