@@ -9722,7 +9722,7 @@ a.button {
   height: 75vh; }
 
 .bottom-list {
-  max-height: 30vh; }
+  min-height: 25vh; }
 
 .bottom-text {
   margin-bottom: 0px; }
