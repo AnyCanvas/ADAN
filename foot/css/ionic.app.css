@@ -9718,6 +9718,12 @@ a.button {
 .fb-login-bt {
   margin-left: 15%; }
 
+.top.img {
+  height: 70vh; }
+
+.bottom-list {
+  max-height: 30vh; }
+
 body.platform-ios {
   font-family: Roboto, sans-serif; }
 
