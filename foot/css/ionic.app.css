@@ -9722,7 +9722,11 @@ a.button {
   height: 75vh; }
 
 .bottom-list {
-  min-height: 25vh; }
+  min-height: 26vh; }
+
+.top-list {
+  min-height: 75vh;
+  background-color: #03a9f4; }
 
 .bottom-text {
   margin-bottom: 0px; }

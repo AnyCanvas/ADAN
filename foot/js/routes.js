@@ -16,6 +16,12 @@ angular.module('app.routes', [])
     controller: 'inicioDeSesionCtrl'
   })
 
+  .state('codigo', {
+    url: '/page3',
+    templateUrl: 'templates/codigo.html',
+    controller: 'codigoCtrl'
+  })
+
 $urlRouterProvider.otherwise('/page1')
 
   
