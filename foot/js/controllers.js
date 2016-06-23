@@ -7,4 +7,8 @@ angular.module('app.controllers', [])
 .controller('codigoCtrl', function($scope) {
 
 })
+   
+.controller('likeCtrl', function($scope) {
+
+})
  

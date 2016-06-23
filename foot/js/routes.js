@@ -22,6 +22,12 @@ angular.module('app.routes', [])
     controller: 'codigoCtrl'
   })
 
+  .state('like', {
+    url: '/page4',
+    templateUrl: 'templates/like.html',
+    controller: 'likeCtrl'
+  })
+
 $urlRouterProvider.otherwise('/page1')
 
   
