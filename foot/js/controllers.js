@@ -11,4 +11,20 @@ angular.module('app.controllers', [])
 .controller('likeCtrl', function($scope) {
 
 })
+   
+.controller('scoreCtrl', function($scope) {
+
+})
+   
+.controller('ganadorCtrl', function($scope) {
+
+})
+   
+.controller('perdedorCtrl', function($scope) {
+
+})
+   
+.controller('errorCtrl', function($scope) {
+
+})
  

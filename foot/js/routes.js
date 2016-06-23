@@ -28,6 +28,30 @@ angular.module('app.routes', [])
     controller: 'likeCtrl'
   })
 
+  .state('score', {
+    url: '/page6',
+    templateUrl: 'templates/score.html',
+    controller: 'scoreCtrl'
+  })
+
+  .state('ganador', {
+    url: '/page7',
+    templateUrl: 'templates/ganador.html',
+    controller: 'ganadorCtrl'
+  })
+
+  .state('perdedor', {
+    url: '/page8',
+    templateUrl: 'templates/perdedor.html',
+    controller: 'perdedorCtrl'
+  })
+
+  .state('error', {
+    url: '/page9',
+    templateUrl: 'templates/error.html',
+    controller: 'errorCtrl'
+  })
+
 $urlRouterProvider.otherwise('/page1')
 
   

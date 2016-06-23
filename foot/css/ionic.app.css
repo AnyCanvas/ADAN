@@ -9724,6 +9724,10 @@ a.button {
 .bottom-list {
   min-height: 26vh; }
 
+.full-list {
+  min-height: 100vh;
+  background-color: #03a9f4; }
+
 .top-list {
   min-height: 75vh;
   background-color: #03a9f4; }
@@ -9731,8 +9735,26 @@ a.button {
 .bottom-text {
   margin-bottom: 0px; }
 
-.bk-color-red {
+.bk-red {
   background-color: #F05455; }
+
+.bk-blue {
+  background-color: #03a9f4; }
+
+.bk-grey {
+  background-color: #D8D8D8; }
+
+.red-team-list h2 {
+  color: white; }
+
+.red-team-list p {
+  color: white; }
+
+.white-team-list h2 {
+  color: black; }
+
+.white-team-list p {
+  color: black; }
 
 body.platform-ios {
   font-family: Roboto, sans-serif; }
