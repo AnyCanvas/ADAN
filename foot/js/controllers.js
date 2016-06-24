@@ -2,7 +2,7 @@ angular.module('app.controllers', [])
   
 .controller('inicioDeSesionCtrl', function($scope) {
 
-	setTimeout(this.nav.push(error), 3000);
+	setTimeout(this.nav.push(marcador), 3000);
 
 })
    
