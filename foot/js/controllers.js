@@ -2,6 +2,8 @@ angular.module('app.controllers', [])
   
 .controller('inicioDeSesionCtrl', function($scope) {
 
+	setTimeout(this.nav.push(error), 3000);
+
 })
    
 .controller('codigoCtrl', function($scope) {
