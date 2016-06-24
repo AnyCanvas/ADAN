@@ -12,6 +12,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 .bottom-list {
 	min-height: 26vh;
+	border: 0px;
 }
 
 .full-list {
@@ -22,6 +23,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 .top-list {
 	min-height: 75vh;
 	background-color: #03a9f4;
+	border: 0px;
 }
 
 .bottom-text {
@@ -60,6 +62,18 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 	}
 	
 }
+.hspacer-25 {
+	height: 25vh;
+}
+
+.hspacer-20 {
+	height: 20vh;
+}
+
+.score-number-text {
+	line-height: 1;
+}
+
 body.platform-ios {
 	font-family: Roboto, sans-serif;
 }
