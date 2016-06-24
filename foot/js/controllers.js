@@ -12,7 +12,7 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('scoreCtrl', function($scope) {
+.controller('marcadorCtrl', function($scope) {
 
 })
    

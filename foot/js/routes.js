@@ -11,48 +11,48 @@ angular.module('app.routes', [])
   
 
       .state('inicioDeSesion', {
-    url: '/page1',
+    url: '/inicio',
     templateUrl: 'templates/inicioDeSesion.html',
     controller: 'inicioDeSesionCtrl'
   })
 
   .state('codigo', {
-    url: '/page3',
+    url: '/codigo',
     templateUrl: 'templates/codigo.html',
     controller: 'codigoCtrl'
   })
 
   .state('like', {
-    url: '/page4',
+    url: '/like',
     templateUrl: 'templates/like.html',
     controller: 'likeCtrl'
   })
 
-  .state('score', {
-    url: '/page6',
-    templateUrl: 'templates/score.html',
-    controller: 'scoreCtrl'
+  .state('marcador', {
+    url: '/marcador',
+    templateUrl: 'templates/marcador.html',
+    controller: 'marcadorCtrl'
   })
 
   .state('ganador', {
-    url: '/page7',
+    url: '/ganador',
     templateUrl: 'templates/ganador.html',
     controller: 'ganadorCtrl'
   })
 
   .state('perdedor', {
-    url: '/page8',
+    url: '/perdedor',
     templateUrl: 'templates/perdedor.html',
     controller: 'perdedorCtrl'
   })
 
   .state('error', {
-    url: '/page9',
+    url: '/error',
     templateUrl: 'templates/error.html',
     controller: 'errorCtrl'
   })
 
-$urlRouterProvider.otherwise('/page1')
+$urlRouterProvider.otherwise('/inicio')
 
   
 
