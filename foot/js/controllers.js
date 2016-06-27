@@ -46,9 +46,9 @@ angular.module('app.controllers', [])
 
 	sessionStorage.token = $location.search().token;
 
-	var conn = chat.connect();
+	var conn = chat();
 
-	chat.send($location.search().token, conn);	
+	chat.send($location.search().token);	
 
 })
    
