@@ -18,14 +18,8 @@ angular.module('app.services', [])
 		        console.log(msg);
 		    };
 
-			conn.send = function(msg){
-	            conn.send(msg);	    
-    		}
-
-//			return conn;
-
+			return conn;
    	}
-    
 
 })
 
