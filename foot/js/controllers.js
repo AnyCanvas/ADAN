@@ -41,7 +41,7 @@ angular.module('app.controllers', [])
 		
 })
    
-.controller('codigoCtrl', function($scope, $location, localStorageService) {
+.controller('codigoCtrl', function($scope, $location, LocalStorageModule) {
 	console.log($location.search().token);
 	// To add to local storage
 	  localStorageService.set('localStorageKey','Add this!');
