@@ -43,6 +43,16 @@ angular.module('app.controllers', [])
    
 .controller('codigoCtrl', function($scope, $location, localStorageService) {
 	console.log($location.search().token);
+	// To add to local storage
+	  localStorageService.set('localStorageKey','Add this!');
+	  // Read that value back
+	  var value = localStorageService.get('localStorageKey');
+	  // To remove a local storage
+	  localStorageService.remove('localStorageKey');
+	  // Removes all local storage
+	  localStorageService.clearAll();
+	  // You can also play with cookies the same way
+	  localStorageService.cookie.set('localStorageKey','I am a cookie value now');
 })
    
 .controller('likeCtrl', function($scope) {
