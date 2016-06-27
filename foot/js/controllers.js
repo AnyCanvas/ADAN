@@ -43,7 +43,7 @@ angular.module('app.controllers', [])
 })
    
 .controller('codigoCtrl', function($scope, $location) {
-	console.log($location.search().code);
+	console.log($location.search().token);
 })
    
 .controller('likeCtrl', function($scope) {
