@@ -22,7 +22,7 @@ angular.module('app.services', [])
 	            conn.send(msg);	    
     		}
 
-			return conn;
+//			return conn;
 
    	}
     
