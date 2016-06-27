@@ -48,8 +48,8 @@ angular.module('app.controllers', [])
 
 	chat.connect();
 
-
 	chat.send(location.search().token);	
+
 })
    
 .controller('likeCtrl', function($scope) {
