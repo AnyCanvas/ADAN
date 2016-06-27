@@ -20,7 +20,7 @@ angular.module('app.services', [])
 		return conn;
     }
     
-    this.send = function(text, conn){
+    this.send = function(msg, conn){
 	            conn.send(JSON.stringify(msg));	    
     }
 })
