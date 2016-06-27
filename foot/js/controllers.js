@@ -44,11 +44,12 @@ angular.module('app.controllers', [])
 .controller('codigoCtrl', function($scope, $location, chat) {
 	console.log($location.search().token);
 
-	sessionStorage.token = $location.search().token;
+	var token = $location.search().token
+	sessionStorage.token = token;
 
     var msg = {
         'user': 'text',
-        'text': 'text' + ' entered the room',
+        'text': token,
         'time': moment().format('hh:mm a')
     };
 	var conn = chat.connect(JSON.stringify(msg));	
