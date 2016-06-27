@@ -5,7 +5,9 @@ angular.module('app.services', [])
 }])
 
 .service('hexafy', function() {
+	this.myFunc = function () {
     alert('ooooh');
+    }
 })
 
 .service('BlankService', [function(){
