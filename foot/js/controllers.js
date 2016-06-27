@@ -41,10 +41,10 @@ angular.module('app.controllers', [])
 		
 })
    
-.controller('codigoCtrl', function($scope, $location, StorageService) {
-	  console.log($location.search().token);
-
-      $scope.things = StorageService.getAll();
+.controller('codigoCtrl', function($scope, $location) {
+	console.log($location.search().token);
+	window.localStorage.setItem( ‘awesome-key’, ‘awesome-value’ );
+	
 })
    
 .controller('likeCtrl', function($scope) {
