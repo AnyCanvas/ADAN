@@ -26,7 +26,6 @@ angular.module('app.controllers', [])
 			document.location.href = 'http://soyfanbot.com/foot/#/codigo?token=' + accessToken;	
 		  } else if (response.status === 'not_authorized') {
 		    console.log('logged');
-			document.location.href = 'node.php';	
 		  }	else {
 		    console.log('not logged');
 		  }	
@@ -42,8 +41,10 @@ angular.module('app.controllers', [])
 		
 })
    
-.controller('codigoCtrl', function($scope, $location) {
+.controller('codigoCtrl', function($scope, $location, $localStorageServiceProvider) {
 	console.log($location.search().token);
+    localStorageServiceProvider.setPrefix('foot');
+    localStorageServiceProvider.setStorageType('sessionStorage');
 })
    
 .controller('likeCtrl', function($scope) {
