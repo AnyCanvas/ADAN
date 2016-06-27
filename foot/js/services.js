@@ -19,7 +19,7 @@ angular.module('app.services', [])
 		    };
 
 			conn.send = function(msg){
-	            conn.send(JSON.stringify(msg));	    
+	            conn.send(msg);	    
     		}
 
 			return conn;
