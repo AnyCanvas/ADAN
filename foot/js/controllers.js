@@ -41,7 +41,7 @@ angular.module('app.controllers', [])
 		
 })
    
-.controller('codigoCtrl', function($scope, $location, Storage, LocalStorage) {
+.controller('codigoCtrl', function($scope, $location, , StorageService) {
 	console.log($location.search().token);
     this.local = new Storage(LocalStorage);
     this.local.set('didTutorial', 'true');
