@@ -4,10 +4,6 @@ angular.module('app.services', [])
 
 }])
 
-.service('BlankService', [function(){
-
-}])
-
 // create a new factory
 .factory (‘StorageService’, function ($localStorage) {
 var _getAll = function () {
@@ -24,6 +20,10 @@ return {
     add: _add,
     remove: _remove
   };
+})
 
-});
+
+.service('BlankService', [function(){
+
+}]);
 
