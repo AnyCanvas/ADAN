@@ -5,9 +5,7 @@ angular.module('app.services', [])
 }])
 
 .service('hexafy', function() {
-    this.myFunc = function (x) {
-        return x.toString(16);
-    }
+    alert('ooooh');
 })
 
 .service('BlankService', [function(){
