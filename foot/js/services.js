@@ -5,7 +5,7 @@ angular.module('app.services', [])
 }])
 
 // create a new factory
-.factory (‘StorageService’, [function ($localStorage) {
+.factory ('StorageService', [function ($localStorage) {
 var _getAll = function () {
   return $localStorage.things;
 };
