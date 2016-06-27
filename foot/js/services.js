@@ -15,8 +15,12 @@ angular.module('app.services', [])
 
 		    conn.onmessage = function(e) {
 		        var msg = JSON.parse(e.data);
-		        updateMessages(msg);
+		        console.log(msg);
 		    };
+    }
+    
+    this.send = function(text){
+	            conn.send(JSON.stringify(msg));	    
     }
 })
 
