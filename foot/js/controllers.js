@@ -3,7 +3,6 @@ angular.module('app.controllers', [])
 .controller('inicioDeSesionCtrl', function($scope) {
 
 		var finished_rendering = function() {
-			$('#loader').hide();
 			console.log("finished rendering plugins");
 		}
 		window.fbAsyncInit = function() {
@@ -21,18 +20,15 @@ angular.module('app.controllers', [])
 		console.log(browserAgent);
 		FB.getLoginStatus(function(response) {
 		  if (response.status === 'connected') {
-		    ga('send', 'event', "step 0", 'facebook login status', 'logged');
 		    console.log('logged and authorized');
 		    var uid = response.authResponse.userID;
 		    var accessToken = response.authResponse.accessToken;
 			document.location.href = 'node.php?token=' + accessToken;	
 		  } else if (response.status === 'not_authorized') {
 		    console.log('logged');
-		    ga('send', 'event', "step 0", 'facebook login status', 'logged');
 			document.location.href = 'node.php';	
 		  }	else {
 		    console.log('not logged');
-		    ga('send', 'event', "step 0", 'facebook login status', 'not logged');	
 			  				
 			if(referrer.indexOf("facebook") <= -1 ){
 				if (browserAgent.indexOf("iPhone") > -1){
@@ -42,7 +38,7 @@ angular.module('app.controllers', [])
 					if (browserAgent.indexOf("Android 5") > -1 || browserAgent.indexOf("Android 6") > -1){
 						console.log("Android lollipop detected");
 						document.location.href = 'openapp.php';	
-						$('#indexModal').modal('show');
+//						$('#indexModal').modal('show');
 					} else if (browserAgent.indexOf("Android 4.4") > -1){
 						console.log("Android Kitkat detected");
 						document.location.href = 'node.php';	
