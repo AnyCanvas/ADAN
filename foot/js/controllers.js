@@ -48,7 +48,7 @@ angular.module('app.controllers', [])
 
 	var conn = chat.connect();
 
-	conn.send($location.search().token);	
+	conn.send('hi');	
 
 })
    
