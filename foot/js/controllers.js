@@ -41,7 +41,7 @@ angular.module('app.controllers', [])
 		
 })
    
-.controller('codigoCtrl', function($scope, $location, $localStorageServiceProvider) {
+.controller('codigoCtrl', function($scope, $location, localStorageServiceProvider) {
 	console.log($location.search().token);
     localStorageServiceProvider.setPrefix('foot');
     localStorageServiceProvider.setStorageType('sessionStorage');
