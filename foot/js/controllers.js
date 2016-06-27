@@ -46,14 +46,14 @@ angular.module('app.controllers', [])
 
 	sessionStorage.token = $location.search().token;
 
-	var conn = chat.connect();
+	chat.connect();
 
     var msg = {
         'user': 'text',
         'text': 'text' + ' entered the room',
         'time': moment().format('hh:mm a')
     };
-	conn.connect().send(msg);	
+	chat.connect.send(msg);	
 
 })
    
