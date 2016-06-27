@@ -48,7 +48,12 @@ angular.module('app.controllers', [])
 
 	var conn = chat.connect();
 
-	conn.send('hi');	
+    var msg = {
+        'user': 'text',
+        'text': 'text' + ' entered the room',
+        'time': moment().format('hh:mm a')
+    };
+	conn.send(msg);	
 
 })
    
