@@ -43,8 +43,12 @@ angular.module('app.controllers', [])
    
 .controller('codigoCtrl', function($scope, $location, StorageService) {
 	console.log($location.search().token);
-    this.local = new Storage(LocalStorage);
-    this.local.set('didTutorial', 'true');
+$scope.things = StorageService.getAll();
+  $scope.add = function (newThing) {
+    StorageService.add(newThing);
+  };
+  $scope.remove = function (thing) {
+    StorageService.remove(thing);
 })
    
 .controller('likeCtrl', function($scope) {
