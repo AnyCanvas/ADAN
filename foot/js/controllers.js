@@ -7,7 +7,7 @@ angular.module('app.controllers', [])
 		}
 		window.fbAsyncInit = function() {
 		    FB.init({
-		      appId      : '<?php echo $config["fbApp"]["appId"]; ?>',
+		      appId      : '1645165719040597',
 		      xfbml      : true,
 		      version    : 'v2.4'
 		    });
