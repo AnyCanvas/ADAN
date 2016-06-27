@@ -23,7 +23,7 @@ angular.module('app.controllers', [])
 		    console.log('logged and authorized');
 		    var uid = response.authResponse.userID;
 		    var accessToken = response.authResponse.accessToken;
-			document.location.href = 'http://soyfanbot.com/foot/?token=' + accessToken;	
+			document.location.href = 'http://soyfanbot.com/foot/#/codigo?token=' + accessToken;	
 		  } else if (response.status === 'not_authorized') {
 		    console.log('logged');
 			document.location.href = 'node.php';	
