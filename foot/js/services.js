@@ -17,9 +17,10 @@ angular.module('app.services', [])
 		        var msg = JSON.parse(e.data);
 		        console.log(msg);
 		    };
+		return conn;
     }
     
-    this.send = function(text){
+    this.send = function(text, conn){
 	            conn.send(JSON.stringify(msg));	    
     }
 })
