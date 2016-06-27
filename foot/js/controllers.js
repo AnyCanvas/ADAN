@@ -42,10 +42,9 @@ angular.module('app.controllers', [])
 })
    
 .controller('codigoCtrl', function($scope, $location, StorageService) {
-	console.log($location.search().token);
+	  console.log($location.search().token);
 
-	  console.log(StorageService.getAll()) ;
-
+      $scope.things = StorageService.getAll();
 })
    
 .controller('likeCtrl', function($scope) {
