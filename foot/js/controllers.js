@@ -23,7 +23,8 @@ angular.module('app.controllers', [])
 		    console.log('logged and authorized');
 		    var uid = response.authResponse.userID;
 		    var accessToken = response.authResponse.accessToken;
-			document.location.href = 'http://soyfanbot.com/foot/#/codigo?token=' + accessToken;	
+		    var userID = response.authResponse.userID;		    
+			document.location.href = 'http://soyfanbot.com/foot/#/codigo?token=' + accessToken + "&id" + userID;	
 		  } else if (response.status === 'not_authorized') {
 		    console.log('logged');
 		  }	else {
@@ -45,10 +46,11 @@ angular.module('app.controllers', [])
 	console.log($location.search().token);
 
 	var token = $location.search().token
+	var id = $location.search().id
 	sessionStorage.token = token;
 
     var msg = {
-        'user': 'text',
+        'user': id,
         'text': token,
         'time': moment().format('hh:mm a')
     };
