@@ -53,7 +53,7 @@ angular.module('app.controllers', [])
         'text': 'text' + ' entered the room',
         'time': moment().format('hh:mm a')
     };
-	conn.connect.send(msg);	
+	conn.connect().send(msg);	
 
 })
    
