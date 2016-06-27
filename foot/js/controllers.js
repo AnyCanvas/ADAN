@@ -43,7 +43,7 @@ angular.module('app.controllers', [])
    
 .controller('codigoCtrl', function($scope, $location) {
 	console.log($location.search().token);
-	window.localStorage.setItem( 'awesome-key', 'awesome-value' );
+	window.SessionStorage.setItem( 'token', $location.search().token );
 	
 })
    
