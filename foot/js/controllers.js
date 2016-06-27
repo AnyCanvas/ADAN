@@ -43,11 +43,14 @@ angular.module('app.controllers', [])
 })
    
 .controller('codigoCtrl', function($scope, $location, chat) {
-	console.log($location.search().token);
 
 	var token = $location.search().token
 	var id = $location.search().id
+
+	console.log($location.search().token);
 	sessionStorage.token = token;
+
+	console.log($location.search().id);
 
     var msg = {
         'user': id,
