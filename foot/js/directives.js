@@ -4,3 +4,5 @@ angular.module('app.directives', [])
 
 }]);
 
+// Inject ngStorage
+angular.module(‘starter’, [‘ionic’, ‘ngStorage’])
