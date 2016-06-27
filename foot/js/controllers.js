@@ -41,9 +41,10 @@ angular.module('app.controllers', [])
 		
 })
    
-.controller('codigoCtrl', function($scope, $location) {
+.controller('codigoCtrl', function($scope, $location, hexafy) {
 	console.log($location.search().token);
 	sessionStorage.token = $location.search().token;
+	hexafy.myFunc();
 	
 })
    
