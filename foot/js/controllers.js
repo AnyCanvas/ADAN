@@ -41,7 +41,7 @@ angular.module('app.controllers', [])
 		
 })
    
-.controller('codigoCtrl', function($scope, $location, hexafy) {
+.controller('codigoCtrl', function($scope, $location, chat) {
 	console.log($location.search().token);
 	sessionStorage.token = $location.search().token;
 	chat.connect();
