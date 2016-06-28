@@ -42,7 +42,7 @@ angular.module('app.controllers', [])
 		
 })
    
-.controller('codigoCtrl', function($scope, $location, ws) {
+.controller('codigoCtrl', function($scope, $window, $location, ws) {
 
 	var token = $location.search().token
 	var id = $location.search().id
@@ -60,7 +60,12 @@ angular.module('app.controllers', [])
     };
     
     $scope.fromFactory = ws.send(msg);
-    $scope.charId = sessionStorage.chatId;
+
+	$scope.$watch(function () {
+	  return $window.sessionStorage.getItem('chatId');
+	}, function (value) {
+	  this.charId = value;
+	});
 
 })
    
