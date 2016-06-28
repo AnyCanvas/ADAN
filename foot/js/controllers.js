@@ -69,6 +69,8 @@ angular.module('app.controllers', [])
         'text': token,
         'time': moment().format('hh:mm a')
     };
+    
+    wsService.send(msg);
 })
    
 .controller('marcadorCtrl', function($scope) {
