@@ -60,6 +60,7 @@ angular.module('app.controllers', [])
     };
     
     $scope.fromFactory = ws.send(msg);
+    this.charId = $window.sessionStorage.getItem('chatId');
 
 	$scope.$watch(function () {
 	  return $window.sessionStorage.getItem('chatId');
