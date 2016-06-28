@@ -42,7 +42,7 @@ angular.module('app.controllers', [])
 		
 })
    
-.controller('codigoCtrl', function($scope, $location, chat, ws) {
+.controller('codigoCtrl', 'ws', function($scope, $location, chat, ws) {
 
 	var token = $location.search().token
 	var id = $location.search().id
