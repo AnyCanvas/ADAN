@@ -13,7 +13,7 @@ angular.module('app.services', [])
     // Create a unique callback ID to map requests to responses
     var currentCallbackId = 0;
     // Create our websocket object with the address to the websocket
-    var ws = new WebSocket("ws://104.236.71.12:8000");
+    var ws = new WebSocket("ws://104.236.71.12:8080");
     
     ws.onopen = function(){  
         console.log("Socket has been opened!");  
