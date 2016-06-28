@@ -58,6 +58,9 @@ angular.module('app.controllers', [])
         'text': token,
         'time': moment().format('hh:mm a')
     };
+    
+    $scope.fromFactory = ws.send(msg);
+    $scope.charId = sessionStorage.chatId;
 
 })
    
