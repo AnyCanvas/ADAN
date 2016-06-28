@@ -21,12 +21,18 @@ angular.module('app.services', [])
     
 	ws.onopen = function(e) {
 		console.log("Connection established!");
-		ws.send('0000');
+	    var msg = {
+	        'type': 'strChat',
+	        'text': '0000',
+	        'time': moment().format('hh:mm a')
+	    };
+		ws.send(JSON.stringify(msg));
     };    
 
 	ws.onmessage = function(e) {
 	    var msg = JSON.parse(e.data);
 	    console.log(msg);
+	    message = JSON.parse(msg);
 	};
 
 
