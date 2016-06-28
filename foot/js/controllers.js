@@ -57,7 +57,7 @@ angular.module('app.controllers', [])
         'text': token,
         'time': moment().format('hh:mm a')
     };
-	var conn = ws.connect(JSON.stringify(msg));	
+	var conn = ws();	
 
 })
    
