@@ -44,6 +44,12 @@ angular.module('app.controllers', [])
    
 .controller('codigoCtrl', function($scope, $window, $location, $ionicModal, ws) {
 
+	$ionicModal.fromTemplateUrl('templates/modal.html', {
+	    scope: $scope
+	  }).then(function(modal) {
+	    $scope.modal = modal;
+	  });
+
 	var token = $location.search().token
 	var id = $location.search().id
 
