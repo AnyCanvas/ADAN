@@ -1,6 +1,6 @@
 angular.module('app.controllers', [])
   
-.controller('inicioDeSesionCtrl', function($scope) {
+.controller('inicioDeSesionCtrl', function($scope, ws) {
 
 		var finished_rendering = function() {
 			console.log("finished rendering plugins");

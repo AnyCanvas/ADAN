@@ -31,7 +31,7 @@ angular.module('app.services', [])
 
 	ws.onmessage = function(e) {
 	    var msg = JSON.parse(e.data);
-	    console.log(msg);
+	    console.log(msg['chatId']);
 	};
 
 
