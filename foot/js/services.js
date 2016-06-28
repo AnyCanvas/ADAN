@@ -26,9 +26,10 @@ angular.module('app.services', [])
 	};
 
 
-	wsService.send(msg){
+	wsService.send = function(msg){
     	conn.send(JSON.stringify(msg));
 	}
+	
     function sendRequest(request) {
       var defer = $q.defer();
       var callbackId = getCallbackId();
