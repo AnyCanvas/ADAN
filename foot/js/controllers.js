@@ -76,10 +76,10 @@ angular.module('app.controllers', [])
     };
     
     $scope.fromFactory = ws.send(msg);
-    $scope.chatId = sessionStorage.chatId;;
+    $scope.chatId = sessionStorage.chatId;
 
 	$scope.$watch(function () {
-	  return $window.sessionStorage.getItem('chatId');
+	  return sessionStorage.chatId;
 	}, function (value) {
 	  $scope.chatId = value;
 	});
