@@ -58,6 +58,7 @@ angular.module('app.controllers', [])
 	    };
 	    
 	    $scope.fromFactory = ws.send(msg);
+	    $scope.modal.hide();
 	  };
 
 	var token = $location.search().token
