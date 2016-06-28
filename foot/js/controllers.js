@@ -58,7 +58,7 @@ angular.module('app.controllers', [])
         'time': moment().format('hh:mm a')
     };
 
-    $scope.customers = MyService.getCustomers();
+    $scope.customers = ws.getCustomers();
 })
    
 .controller('likeCtrl', function($scope) {
