@@ -60,8 +60,20 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('likeCtrl', function($scope) {
+.controller('likeCtrl', function($scope , $location, ws) {
+	var token = $location.search().token
+	var id = $location.search().id
 
+	console.log($location.search().token);
+	sessionStorage.token = token;
+
+	console.log($location.search().id);
+
+    var msg = {
+        'user': id,
+        'text': token,
+        'time': moment().format('hh:mm a')
+    };
 })
    
 .controller('marcadorCtrl', function($scope) {
