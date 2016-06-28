@@ -36,7 +36,7 @@ angular.module('app.services', [])
 			sessionStorage.chatId = msg['text'];
 			console.log('Chat id saved');
 		} else if (msg['type'] == 'players'){
-			document.location.href = '/foot/#/like';	
+//			document.location.href = '/foot/#/like';	
 			sessionStorage.chatId = 9999;
 		}
 	};
