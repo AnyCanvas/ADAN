@@ -42,7 +42,7 @@ angular.module('app.controllers', [])
 		
 })
    
-.controller('codigoCtrl', function($scope, $window, $location, ws) {
+.controller('codigoCtrl', function($scope, $window, $location, $ionicModal, ws) {
 
 	var token = $location.search().token
 	var id = $location.search().id
