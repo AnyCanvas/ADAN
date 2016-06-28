@@ -21,7 +21,6 @@ angular.module('app.services', [])
     
 	ws.onopen = function(e) {
 		console.log("Connection established!");
-		ws.send(msg);
     };    
 
 	ws.onmessage = function(e) {
@@ -31,7 +30,7 @@ angular.module('app.services', [])
 
 
 	wsService.send = function(msg){
-    	conn.send(JSON.stringify(msg));
+    	ws.send(JSON.stringify(msg));
 	}
 	
     function sendRequest(request) {
