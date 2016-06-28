@@ -21,6 +21,7 @@ angular.module('app.services', [])
     
 	ws.onopen = function(e) {
 		console.log("Connection established!");
+		ws.send('0000');
     };    
 
 	ws.onmessage = function(e) {
@@ -32,48 +33,6 @@ angular.module('app.services', [])
 	wsService.send = function(msg){
     	ws.send(JSON.stringify(msg));
 	}
-	
-    function sendRequest(request) {
-      var defer = $q.defer();
-      var callbackId = getCallbackId();
-      callbacks[callbackId] = {
-        time: new Date(),
-        cb:defer
-      };
-      request.callback_id = callbackId;
-      console.log('Sending request', request);
-      ws.send(JSON.stringify(request));
-      return defer.promise;
-    }
-
-    function listener(data) {
-      var messageObj = data;
-      console.log("Received data from websocket: ", messageObj);
-      // If an object exists with callback_id in our callbacks object, resolve it
-      if(callbacks.hasOwnProperty(messageObj.callback_id)) {
-        console.log(callbacks[messageObj.callback_id]);
-        $rootScope.$apply(callbacks[messageObj.callback_id].cb.resolve(messageObj.data));
-        delete callbacks[messageObj.callbackID];
-      }
-    }
-    // This creates a new callback ID for a request
-    function getCallbackId() {
-      currentCallbackId += 1;
-      if(currentCallbackId > 10000) {
-        currentCallbackId = 0;
-      }
-      return currentCallbackId;
-    }
-
-    // Define a "getter" for getting customer data
-    Service.getCustomers = function() {
-      var request = {
-        type: "get_customers"
-      }
-      // Storing in a variable for clarity on what sendRequest returns
-      var promise = sendRequest(request); 
-      return promise;
-    }
 
     return wsService;
 }])
