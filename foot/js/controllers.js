@@ -58,7 +58,7 @@ angular.module('app.controllers', [])
         'time': moment().format('hh:mm a')
     };
 
-	send(msg);
+	sendRequest(msg);
 })
    
 .controller('likeCtrl', function($scope) {
