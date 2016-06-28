@@ -49,7 +49,8 @@ angular.module('app.controllers', [])
 
 	console.log($location.search().token);
 	sessionStorage.token = token;
-
+	sessionStorage.id = id;
+	
 	console.log($location.search().id);
 
     var msg = {

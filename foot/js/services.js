@@ -31,7 +31,11 @@ angular.module('app.services', [])
 
 	ws.onmessage = function(e) {
 	    var msg = JSON.parse(e.data);
-	    console.log(msg['chatId']);
+	    console.log(msg);
+	    if (msg['chatId'] != 'undefined') {
+			sessionStorage.chatId = msg['chatId'];
+			console.log('Chat id saved');
+		}
 	};
 
 
