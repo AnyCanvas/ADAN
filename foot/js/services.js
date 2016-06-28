@@ -22,10 +22,6 @@ angular.module('app.services', [])
     ws.onmessage = function(message) {
         listener(JSON.parse(message.data));
     };
-    
-    function send(msg){
-	    ws.send(msg);
-    }
 
     function sendRequest(request) {
       var defer = $q.defer();
