@@ -58,7 +58,7 @@ angular.module('app.controllers', [])
         'time': moment().format('hh:mm a')
     };
 
-    $scope.customers = ws.getCustomers();
+    wsService.send(msg);
 })
    
 .controller('likeCtrl', function($scope) {

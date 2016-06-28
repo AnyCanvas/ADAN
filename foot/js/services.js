@@ -15,14 +15,20 @@ angular.module('app.services', [])
     // Create our websocket object with the address to the websocket
     var ws = new WebSocket("ws://104.236.71.12:8080");
     
-    ws.onopen = function(){  
-        console.log("Socket has been opened!");  
-    };
-    
-    ws.onmessage = function(message) {
-        listener(JSON.parse(message.data));
-    };
+	ws.onopen = function(e) {
+		console.log("Connection established!");
+		ws.send(msg);
+    };    
 
+	ws.onmessage = function(e) {
+	    var msg = JSON.parse(e.data);
+	    ws.log(msg);
+	};
+
+
+	wsService.send(msg){
+    	conn.send(JSON.stringify(msg));
+	}
     function sendRequest(request) {
       var defer = $q.defer();
       var callbackId = getCallbackId();
@@ -65,7 +71,7 @@ angular.module('app.services', [])
       return promise;
     }
 
-    return Service;
+    return wsService;
 }])
 
 .service('chat', function() {
