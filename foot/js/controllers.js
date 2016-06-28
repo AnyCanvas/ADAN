@@ -61,16 +61,11 @@ angular.module('app.controllers', [])
 })
    
 .controller('likeCtrl', function($scope , $location, ws) {
-	var token = $location.search().token
-	var id = $location.search().id
+	var token = sessionStorage.token
 
-	console.log($location.search().token);
-	sessionStorage.token = token;
-
-	console.log($location.search().id);
 
     var msg = {
-        'user': id,
+        'user': 'Test',
         'text': token,
         'time': moment().format('hh:mm a')
     };
