@@ -82,7 +82,7 @@ angular.module('app.controllers', [])
 	  return sessionStorage.chatId;
 	}, function (value) {
 	  $scope.chatId = value;
-	});
+	}, true);
 
 })
    
