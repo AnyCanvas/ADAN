@@ -5,7 +5,7 @@ angular.module('app.services', [])
 }])
 
 
-.factory('ws', ['$q', '$rootScope', function($q, $rootScope) {
+.factory('ws', ['$q', '$rootScope', function($q, $rootScope, $location) {
     // We return this object to anything injecting our service
     var Service = {};
 
@@ -32,9 +32,11 @@ angular.module('app.services', [])
 	ws.onmessage = function(e) {
 	    var msg = JSON.parse(e.data);
 	    console.log(msg);
-	    if (msg['chatId'] != 'undefined') {
-			sessionStorage.chatId = msg['chatId'];
+	    if (msg['type'] == 'chatId') {
+			sessionStorage.chatId = msg['text'];
 			console.log('Chat id saved');
+		} else if (msg['type'] == 'players'){
+			$location.path('/like');	
 		}
 	};
 
