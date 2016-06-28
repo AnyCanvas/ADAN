@@ -8,6 +8,10 @@ angular.module('app.services', [])
 .factory('ws', ['$q', '$rootScope', function($q, $rootScope) {
     // We return this object to anything injecting our service
     var Service = {};
+
+    // We return this object to anything injecting our service
+    var wsService = {};
+
     // Keep all pending requests here until they get responses
     var callbacks = {};
     // Create a unique callback ID to map requests to responses
