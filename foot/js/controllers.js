@@ -65,7 +65,7 @@ angular.module('app.controllers', [])
 	$scope.$watch(function () {
 	  return $window.sessionStorage.getItem('chatId');
 	}, function (value) {
-	  $scope.charId = value;
+	  $scope.chatId = value;
 	});
 
 })
