@@ -77,7 +77,7 @@ angular.module('app.controllers', [])
     
     $scope.fromFactory = ws.send(msg);
     $scope.chatId = sessionStorage.chatId;
-
+	sessionStorage.chatId = 9999;
 	$scope.$watch(function () {
 	  return sessionStorage.chatId;
 	}, function (value) {
