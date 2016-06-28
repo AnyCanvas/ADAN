@@ -32,7 +32,6 @@ angular.module('app.services', [])
 	ws.onmessage = function(e) {
 	    var msg = JSON.parse(e.data);
 	    console.log(msg);
-	    message = JSON.parse(msg);
 	};
 
 
