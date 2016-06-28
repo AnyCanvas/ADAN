@@ -42,7 +42,7 @@ angular.module('app.controllers', [])
 		
 })
    
-.controller('codigoCtrl', 'ws', function($scope, $location, chat, ws) {
+.controller('codigoCtrl', function($scope, $location, ws) {
 
 	var token = $location.search().token
 	var id = $location.search().id
@@ -57,7 +57,7 @@ angular.module('app.controllers', [])
         'text': token,
         'time': moment().format('hh:mm a')
     };
-	var conn = chat.connect(JSON.stringify(msg));	
+	var conn = ws.connect(JSON.stringify(msg));	
 
 })
    
