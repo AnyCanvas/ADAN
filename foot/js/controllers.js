@@ -50,6 +50,16 @@ angular.module('app.controllers', [])
 	    $scope.modal = modal;
 	  });
 
+	$scope.sendFriendId = function(u) {        
+	    var msg = {
+	        'type': 'friendChatId',
+	        'text': u.firstName,
+	        'time': moment().format('hh:mm a')
+	    };
+	    
+	    $scope.fromFactory = ws.send(msg);
+	  };
+
 	var token = $location.search().token
 	var id = $location.search().id
 
