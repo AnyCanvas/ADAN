@@ -54,7 +54,7 @@ angular.module('app.controllers', [])
 	console.log($location.search().id);
 
     var msg = {
-        'user': id,
+        'type': 'fbInfo',
         'text': token,
         'time': moment().format('hh:mm a')
     };
