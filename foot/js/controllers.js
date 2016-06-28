@@ -60,7 +60,7 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('likeCtrl', function($scope , $location, ws) {
+.controller('likeCtrl', ['ws',function($scope , $location, ws) {
 	var token = sessionStorage.token
 
 
@@ -71,7 +71,7 @@ angular.module('app.controllers', [])
     };
     
     wsService.send(msg);
-})
+}])
    
 .controller('marcadorCtrl', function($scope) {
 
