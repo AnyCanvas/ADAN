@@ -113,9 +113,7 @@
 								header("location: ./foot/");
 							} else {
 								header("location: ./final.php");																						
-							}
-
-							header("location: ./final.php");								
+							}								
 						} else {
 							$_SESSION['error'] = 'no';
 							if($_SESSION['fnbt']['name'] == 'futy'){
