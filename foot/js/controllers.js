@@ -78,7 +78,7 @@ angular.module('app.controllers', [])
 })
    
 .controller('likeCtrl', function($scope , $location, ws) {
-	$scope.modal.hide()
+	codigoCtrl.modal.hide()
 
     var msg = {
         'type': 'Test',
