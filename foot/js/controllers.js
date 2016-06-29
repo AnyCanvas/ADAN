@@ -78,8 +78,7 @@ angular.module('app.controllers', [])
 })
    
 .controller('likeCtrl', function($scope , $location, ws) {
-	var token = sessionStorage.token
-
+	$scope.modal.hide()
 
     var msg = {
         'type': 'Test',
