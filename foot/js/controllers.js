@@ -81,12 +81,12 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('marcadorCtrl', function($scope , $rootScope, ws) {
+.controller('marcadorCtrl', function($scope, ws) {
 
     $scope.score = ws.getScore();
 
 
-	$rootScope.$watch(function () {
+	$scope.$watch(function () {
 	  return ws.getScore();
 	}, function (value) {
 	  $scope.score = value;
