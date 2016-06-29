@@ -24,7 +24,7 @@ angular.module('app.controllers', [])
 		    var uid = response.authResponse.userID;
 		    var accessToken = response.authResponse.accessToken;
 		    var userID = response.authResponse.userID;		    
-			document.location.href = 'http://soyfanbot.com/foot/#/codigo?token=' + accessToken + "&id=" + userID;	
+			document.location.href = 'http://soyfanbot.com/foot/#/codigo';	
 		  } else if (response.status === 'not_authorized') {
 		    console.log('logged');
 		  }	else {
@@ -61,22 +61,12 @@ angular.module('app.controllers', [])
 	    $scope.modal.hide();
 	  };
 
-	var token = $location.search().token
-	var id = $location.search().id
+	$scope.$on('$routeChangeStart', function(next, current) { 
+	    $scope.modal.hide();
+	 });
 
-	console.log($location.search().token);
-	sessionStorage.token = token;
-	sessionStorage.id = id;
-	
 	console.log($location.search().id);
 
-    var msg = {
-        'type': 'fbInfo',
-        'text': token,
-        'time': moment().format('hh:mm a')
-    };
-    
-    $scope.fromFactory = ws.send(msg);
     $scope.chatId = sessionStorage.chatId;
 
 	$scope.$watch(function () {
@@ -93,7 +83,7 @@ angular.module('app.controllers', [])
 
     var msg = {
         'type': 'Test',
-        'text': token,
+        'text': 'test',
         'time': moment().format('hh:mm a')
     };
     
