@@ -60,9 +60,8 @@ angular.module('app.services', [])
 	};
 
 	wsService.getScore = function() {
-	    return $rootScope.score
 	    console.log($rootScope.score);			
-
+	    return $rootScope.score
 	  }
 	wsService.send = function(msg){
     	ws.send(JSON.stringify(msg));
