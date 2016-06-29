@@ -22,7 +22,12 @@
 
 				FB.Event.subscribe('edge.create', function(targetUrl) {
 					ga('send', 'event', 'action', 'facebook', 'like', 1);
+					<?php if ($_SESSION['fnbt']['name'] == 'futy'){ ?> 
+					window.location="/foot";
+					<?php }else { ?>
 					window.location="/final.php";
+					<?php } ?>
+
 				});
 				FB.Event.subscribe('edge.remove', function(targetUrl) {
 					ga('send', 'event', 'action', 'facebook', 'like', 0);
