@@ -83,10 +83,10 @@ angular.module('app.controllers', [])
    
 .controller('marcadorCtrl', function($scope) {
 
-    sessionStorage.score = 0;
+    $scope.score = Session.get('score');
 
 	$scope.$watch(function () {
-	  return sessionStorage.score;
+	  return Session.get('score');
 	}, function (value) {
 	  $scope.score = value;
 	}, true);
