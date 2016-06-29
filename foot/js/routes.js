@@ -8,7 +8,6 @@ angular.module('app.routes', [])
   // Each state's controller can be found in controllers.js
   $stateProvider
     
-  
 
       .state('inicioDeSesion', {
     url: '/inicio',
@@ -22,18 +21,28 @@ angular.module('app.routes', [])
     controller: 'codigoCtrl'
   })
 
-  .state('like', {
-    url: '/like',
-    templateUrl: 'templates/like.html',
+  .state('waitWhite', {
+    url: '/waitWhite',
+    templateUrl: 'templates/waitWhite.html',
     controller: 'likeCtrl'
   })
 
-  .state('marcador', {
-    url: '/marcador',
-    templateUrl: 'templates/marcador.html',
+  .state('waitRed', {
+    url: '/waitRed',
+    templateUrl: 'templates/waitRed.html',
+    controller: 'likeCtrl'
+  })
+  .state('marcadorWhite', {
+    url: '/marcadorWhite',
+    templateUrl: 'templates/marcadorWhite.html',
     controller: 'marcadorCtrl'
   })
 
+  .state('marcadorRed', {
+    url: '/marcadorRed',
+    templateUrl: 'templates/marcadorRed.html',
+    controller: 'marcadorCtrl'
+  })
   .state('ganador', {
     url: '/ganador',
     templateUrl: 'templates/ganador.html',
