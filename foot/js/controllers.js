@@ -79,6 +79,10 @@ angular.module('app.controllers', [])
    
 .controller('likeCtrl', function($scope , $location, $ionicModal, ws) {
 
+})
+   
+.controller('marcadorCtrl', function($scope) {
+
     $scope.score = sessionStorage.score;
 
 	$scope.$watch(function () {
@@ -86,10 +90,6 @@ angular.module('app.controllers', [])
 	}, function (value) {
 	  $scope.score = value;
 	}, true);
-})
-   
-.controller('marcadorCtrl', function($scope) {
-
 })
    
 .controller('ganadorCtrl', function($scope) {
