@@ -53,7 +53,7 @@ angular.module('app.services', [])
 		}else if (msg['type'] == 'final'){
 			if(msg['text'] == 'win'){
 				document.location.href = '/foot/#/ganador';
-			} else if (msg['lose'] == 'white'){
+			} else if (msg['text'] == 'lose'){
 			document.location.href = '/foot/#/perdedor';
 			}
 		}
