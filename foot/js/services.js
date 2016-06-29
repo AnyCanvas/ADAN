@@ -50,12 +50,13 @@ angular.module('app.services', [])
 			}
 		} else if(msg['type'] == 'goal'){
 			$rootScope.score++;
-			console.log($rootScope.score);			
 		}
 	};
 
 	wsService.getScore = function() {
 	    return $rootScope.score
+	    console.log($rootScope.score);			
+
 	  }
 	wsService.send = function(msg){
     	ws.send(JSON.stringify(msg));
