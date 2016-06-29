@@ -77,17 +77,17 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('likeCtrl', function($scope , $location, $ionicModal, ws) {
+.controller('likeCtrl', function($scope, $rootScope, $location, $ionicModal, ws) {
 
 })
    
 .controller('marcadorCtrl', function($scope) {
 
-    $scope.score = sessionStorage.score;
+    $scope.score = $rootScope.score;
 
 
 	$scope.$watch(function () {
-	  return sessionStorage.score;
+	  return $rootScope.score;
 	}, function (value) {
 	  $scope.score = value;
 	}, true);
