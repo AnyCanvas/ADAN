@@ -81,17 +81,14 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('marcadorCtrl', function($scope, ws) {
+.controller('marcadorCtrl', function($scope, $timeout, ws) {
 
     $scope.score = ws.getScore();
 
 
-	$scope.$watch(function () {
-	  return ws.getScore();
-	}, function (value) {
-	  $scope.score = value;
-	  console.log('change');
-	}, true);
+  $timeout(function(){
+    $scope.score = ws.getScore();
+  }, 1000);
 })
    
 .controller('ganadorCtrl', function($scope) {
