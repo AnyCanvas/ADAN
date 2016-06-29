@@ -53,7 +53,7 @@ angular.module('app.services', [])
 		}
 	};
 
-	factory.getScore = function() {
+	wsService.getScore = function() {
 	    return $rootScope.score
 	  }
 	wsService.send = function(msg){
