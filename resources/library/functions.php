@@ -133,7 +133,7 @@
 			  ];						
 		} else if ($_SESSION['fnbt']['config']['link'] == 'fanbot'){
 			$linkData = [
-			  'link' => 'https://www.facebook.com/'. $_SESSION['fnbt']['config']['link'],
+			  'link' => 'https://www.facebook.com/247746702276983',
 	//			  'message' => '',
 	//		  'place' => $pageId,
 	
