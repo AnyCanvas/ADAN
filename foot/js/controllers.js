@@ -88,7 +88,7 @@ angular.module('app.controllers', [])
 
   $interval(function(){
     $scope.score = ws.getScore();
-  }, 1000);
+  }, 500);
 })
    
 .controller('ganadorCtrl', function($scope) {
