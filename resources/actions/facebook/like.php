@@ -68,6 +68,7 @@
 					  <div class="fb-like" 
 						   data-href="https://www.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>"
 						   data-layout="button" 
+						   data-size="large"
 						   data-action="like" 
 						   data-show-faces="false" 
 						   data-share="false">
