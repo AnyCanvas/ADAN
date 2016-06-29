@@ -26,7 +26,7 @@ angular.module('app.services', [])
 	        'text': '0000',
 	        'time': moment().format('hh:mm a')
 	    };
-		sessionStorage.score = 0;			
+		$rootScope.score = 0;			
 		ws.send(JSON.stringify(msg));
     };    
 
@@ -49,7 +49,7 @@ angular.module('app.services', [])
 			document.location.href = '/foot/#/marcadorWhite';
 			}
 		} else if(msg['type'] == 'goal'){
-			$rootScope.score = sessionStorage.score++;			
+			$rootScope.score++;			
 		}
 	};
 
