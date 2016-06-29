@@ -79,13 +79,13 @@ angular.module('app.controllers', [])
    
 .controller('likeCtrl', function($scope , $location, $ionicModal, ws) {
 
-    var msg = {
-        'type': 'Test',
-        'text': 'test',
-        'time': moment().format('hh:mm a')
-    };
-    
-    $scope.fromFactory = ws.send(msg);
+    $scope.score = sessionStorage.score;
+
+	$scope.$watch(function () {
+	  return sessionStorage.score;
+	}, function (value) {
+	  $scope.score = value;
+	}, true);
 })
    
 .controller('marcadorCtrl', function($scope) {

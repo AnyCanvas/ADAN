@@ -47,6 +47,8 @@ angular.module('app.services', [])
 			} else if (msg['text'] == 'white'){
 			document.location.href = '/foot/#/marcadorWhite';
 			}
+		} else if(msg['type'] == 'goal'){
+			sessionStorage.score = msg['text'];			
 		}
 	};
 
