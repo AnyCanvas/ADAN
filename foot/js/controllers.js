@@ -86,7 +86,7 @@ angular.module('app.controllers', [])
     $scope.score = $rootScope.score;
 
 
-	$scope.$watch(function () {
+	$rootScope.$watch(function () {
 	  return $rootScope.score;
 	}, function (value) {
 	  $scope.score = value;
