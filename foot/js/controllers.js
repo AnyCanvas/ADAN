@@ -77,11 +77,11 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('likeCtrl', function($scope, $rootScope, $location, $ionicModal, ws) {
+.controller('likeCtrl', function($scope, $location, $ionicModal, ws) {
 
 })
    
-.controller('marcadorCtrl', function($scope) {
+.controller('marcadorCtrl', function($scope , $rootScope, ws) {
 
     $scope.score = $rootScope.score;
 
