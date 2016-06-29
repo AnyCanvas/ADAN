@@ -15,7 +15,7 @@
 		    FB.init({
 		      appId      : '<?php echo $config["fbApp"]["appId"] ?>',
 		      xfbml      : true,
-		      version    : 'v2.5'
+		      version    : 'v2.6'
 		    });
 
 				FB.Event.subscribe('xfbml.render', finished_rendering);
