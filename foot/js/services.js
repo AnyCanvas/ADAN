@@ -38,11 +38,15 @@ angular.module('app.services', [])
 		} else if (msg['type'] == 'team'){
 			if(msg['text'] == 'red'){
 				document.location.href = '/foot/#/waitRed';
-			} else if (msg['type'] == 'white'){
+			} else if (msg['text'] == 'white'){
 			document.location.href = '/foot/#/waitWhite';
 			}
-
-
+		} else if (msg['type'] == 'play'){
+			if(msg['text'] == 'red'){
+				document.location.href = '/foot/#/marcadorRed';
+			} else if (msg['text'] == 'white'){
+			document.location.href = '/foot/#/marcadorWhite';
+			}
 		}
 	};
 
