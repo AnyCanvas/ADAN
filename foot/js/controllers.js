@@ -90,6 +90,7 @@ angular.module('app.controllers', [])
 	  return ws.getScore();
 	}, function (value) {
 	  $scope.score = value;
+	  console.log('change');
 	}, true);
 })
    
