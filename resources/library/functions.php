@@ -124,7 +124,21 @@
 		$pageId = $page->getId();		
 		// fbPost array wiht the post info
 
-		if (isset( $pageArray['location']['latitude'])){
+		if($_SESSION['fnbt']['name'] == 'futy'){
+				$linkData = [
+			  'link' => 'https://www.facebook.com/277802179240254',
+	//			  'message' => '',
+	//		  'place' => $pageId,
+	
+			  ];						
+		} else if ($_SESSION['fnbt']['config']['link'] == 'fanbot'){
+			$linkData = [
+			  'link' => 'https://www.facebook.com/'. $_SESSION['fnbt']['config']['link'],
+	//			  'message' => '',
+	//		  'place' => $pageId,
+	
+			  ];				
+		} else if (isset( $pageArray['location']['latitude'])){
 			$linkData = [
 			  'place' => $pageId,
 	//			  'message' => '',
