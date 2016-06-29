@@ -35,11 +35,11 @@ angular.module('app.services', [])
 	    if (msg['type'] == 'chatId') {
 			sessionStorage.chatId = msg['text'];
 			console.log('Chat id saved');
-		} else if (msg['type'] == 'play'){
-			if(msg['text'] == 'wait'){
-				document.location.href = '/foot/#/like';
-			} else if (msg['type'] == 'play'){
-			document.location.href = '/foot/#/like?play=1';
+		} else if (msg['type'] == 'team'){
+			if(msg['text'] == 'red'){
+				document.location.href = '/foot/#/waitRed';
+			} else if (msg['type'] == 'white'){
+			document.location.href = '/foot/#/waitWhite';
 			}
 
 

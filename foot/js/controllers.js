@@ -78,7 +78,6 @@ angular.module('app.controllers', [])
 })
    
 .controller('likeCtrl', function($scope , $location, $ionicModal, ws) {
-//	$scope.modal.hide()
 
     var msg = {
         'type': 'Test',
