@@ -50,6 +50,12 @@ angular.module('app.services', [])
 			}
 		} else if(msg['type'] == 'goal'){
 			$rootScope.score++;
+		}else if (msg['type'] == 'final'){
+			if(msg['text'] == 'win'){
+				document.location.href = '/foot/#/ganador';
+			} else if (msg['lose'] == 'white'){
+			document.location.href = '/foot/#/perdedor';
+			}
 		}
 	};
 

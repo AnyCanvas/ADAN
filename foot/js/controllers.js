@@ -83,7 +83,7 @@ angular.module('app.controllers', [])
    
 .controller('marcadorCtrl', function($scope, $timeout, ws) {
 
-    $scope.score = ws.getScore();
+  $scope.score = ws.getScore();
 
 
   $timeout(function(){
