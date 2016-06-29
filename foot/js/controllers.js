@@ -92,7 +92,7 @@ angular.module('app.controllers', [])
 
 
     var msg = {
-        'user': 'Test',
+        'type': 'Test',
         'text': token,
         'time': moment().format('hh:mm a')
     };
