@@ -26,6 +26,7 @@ angular.module('app.services', [])
 	        'text': '0000',
 	        'time': moment().format('hh:mm a')
 	    };
+		sessionStorage.score = 0;			
 		ws.send(JSON.stringify(msg));
     };    
 
