@@ -62,7 +62,7 @@ angular.module('app.controllers', [])
 	  };
 
 	$scope.$on('$routeChangeStart', function(next, current) { 
-	    $scope.modal.hide();
+	    current.modal.hide();
 	 });
 
 	console.log($location.search().id);
@@ -78,7 +78,7 @@ angular.module('app.controllers', [])
 })
    
 .controller('likeCtrl', function($scope , $location, $ionicModal, ws) {
-	$scope.modal.hide()
+//	$scope.modal.hide()
 
     var msg = {
         'type': 'Test',
