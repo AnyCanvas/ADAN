@@ -86,7 +86,7 @@ angular.module('app.controllers', [])
   $scope.score = ws.getScore();
 
 
-  $timeout(function(){
+  $interval(function(){
     $scope.score = ws.getScore();
   }, 1000);
 })
