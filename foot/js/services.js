@@ -38,7 +38,7 @@ angular.module('app.services', [])
 		} else if (msg['type'] == 'play'){
 			if(msg['status'] == 'wait'){
 				document.location.href = '/foot/#/like';
-			} else if (msg['type'] == 'wait'){
+			} else if (msg['type'] == 'play'){
 			document.location.href = '/foot/#/like?play=1';
 			}
 
