@@ -109,10 +109,18 @@
 						if ($_SESSION['action'] == 'post' && isset($_GET["code"]) ){
 							fbPost($_GET["code"]);
 							$_SESSION['error'] = 'no';
-							header("location: ./final.php");
+							if($_SESSION['fnbt']['name'] == 'futy'){
+								header("location: ./foot/");
+							} else {
+								header("location: ./final.php");								
+							}
 						} else {
 							$_SESSION['error'] = 'no';
-							header("location: ./final.php");
+							if($_SESSION['fnbt']['name'] == 'futy'){
+								header("location: ./foot/");
+							} else {
+								header("location: ./final.php");								
+							}
 						}						
 				        break;
 
