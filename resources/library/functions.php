@@ -56,8 +56,7 @@
 		// Save user info to session array 'fbUser'
 		if (isset($session)) {
 
-		  $user = (new FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(GraphUser::className());
-		  
+		  $me = (new FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(GraphUser::className());
 
 
 		  $_SESSION['fbUser']['id'] = $me->getId();
