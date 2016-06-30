@@ -110,21 +110,17 @@
 							fbPost($_GET["code"]);
 							$_SESSION['error'] = 'no';
 							if($_SESSION['fnbt']['name'] == 'futy'){
-								if ( $_SESSION['error'] != "name" ){
 									saveUserDataToDB();
 									saveInteractionToDB();
 									header("location: ./foot/");
-								}
 							} else {
 								header("location: ./final.php");																						
 							}								
 						} else {
 							if($_SESSION['fnbt']['name'] == 'futy'){
-								if ( $_SESSION['error'] != "name" ){
 									saveUserDataToDB();
 									saveInteractionToDB();
 									header("location: ./foot/");
-								}
 							} else {
 								header("location: ./final.php");															
 							}
