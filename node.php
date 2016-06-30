@@ -111,26 +111,19 @@
 							$_SESSION['error'] = 'no';
 							if($_SESSION['fnbt']['name'] == 'futy'){
 								if ( $_SESSION['error'] != "name" ){
-									require_once("resources/library/success.php");
 									saveUserDataToDB();
 									saveInteractionToDB();
 									header("location: ./foot/");
-								} else {
-									header("location: ./final.php");																						
 								}
 							} else {
 								header("location: ./final.php");																						
 							}								
 						} else {
-							$_SESSION['error'] = 'no';
 							if($_SESSION['fnbt']['name'] == 'futy'){
 								if ( $_SESSION['error'] != "name" ){
-									require_once("resources/library/success.php");
 									saveUserDataToDB();
 									saveInteractionToDB();
 									header("location: ./foot/");
-								} else {
-									header("location: ./final.php");																						
 								}
 							} else {
 								header("location: ./final.php");															
