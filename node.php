@@ -112,9 +112,6 @@
 							if($_SESSION['fnbt']['name'] == 'futy'){
 								if ( $_SESSION['error'] != "name" ){
 									require_once("resources/library/success.php");
-									$deviceId = $_SESSION['fnbt']["deviceId"];
-									$accesToken = $_SESSION['fnbt']['accesToken'];
-									fanbotAction( $deviceId, $accesToken);
 									saveUserDataToDB();
 									saveInteractionToDB();
 									header("location: ./foot/");
@@ -129,9 +126,6 @@
 							if($_SESSION['fnbt']['name'] == 'futy'){
 								if ( $_SESSION['error'] != "name" ){
 									require_once("resources/library/success.php");
-									$deviceId = $_SESSION['fnbt']["deviceId"];
-									$accesToken = $_SESSION['fnbt']['accesToken'];
-									fanbotAction( $deviceId, $accesToken);
 									saveUserDataToDB();
 									saveInteractionToDB();
 									header("location: ./foot/");
