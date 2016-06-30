@@ -66,6 +66,7 @@
 		  $_SESSION['fbUser']['firstName'] = $me->getFirstName();
 		  $_SESSION['fbUser']['lastName'] = $me->getLastName();
 		  $_SESSION['fbUser']['gender'] = $me->getGender();
+		  $_SESSION['fbUser']['friends'] = $me->getFriendLists();		  
 		}
 	}
 
