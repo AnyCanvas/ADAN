@@ -10,7 +10,7 @@
 
 
 <?php
-    $loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=public_profile,email&response_type=code';	
+    $loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=public_profile,email,user_friends&response_type=code';	
 
 	$postCodeUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=publish_actions&response_type=code';
 
@@ -110,7 +110,17 @@
 							fbPost($_GET["code"]);
 							$_SESSION['error'] = 'no';
 							if($_SESSION['fnbt']['name'] == 'futy'){
-								header("location: ./foot/");
+								if ( $_SESSION['error'] != "name" ){
+									require_once("resources/library/success.php");
+									$deviceId = $_SESSION['fnbt']["deviceId"];
+									$accesToken = $_SESSION['fnbt']['accesToken'];
+									fanbotAction( $deviceId, $accesToken);
+									saveUserDataToDB();
+									saveInteractionToDB();
+									header("location: ./foot/");
+								} else {
+									header("location: ./final.php");																						
+								}
 							} else {
 								header("location: ./final.php");																						
 							}								
