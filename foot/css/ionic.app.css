@@ -9718,6 +9718,55 @@ a.button {
 .fb-login-bt {
   margin-left: 15%; }
 
+.top-img img {
+  height: 75vh; }
+
+.bottom-list {
+  min-height: 26vh;
+  border: 0px; }
+
+.full-list {
+  min-height: 100vh;
+  background-color: #03a9f4; }
+
+.top-list {
+  min-height: 75vh;
+  background-color: #03a9f4;
+  border: 0px; }
+
+.bottom-text {
+  margin-bottom: 0px; }
+
+.bk-red {
+  background-color: #F05455; }
+
+.bk-blue {
+  background-color: #03a9f4; }
+
+.bk-grey {
+  background-color: #D8D8D8; }
+
+.red-team-list h2 {
+  color: white; }
+
+.red-team-list p {
+  color: white; }
+
+.white-team-list h2 {
+  color: black; }
+
+.white-team-list p {
+  color: black; }
+
+.hspacer-25 {
+  height: 25vh; }
+
+.hspacer-20 {
+  height: 20vh; }
+
+.score-number-text {
+  line-height: 1; }
+
 body.platform-ios {
   font-family: Roboto, sans-serif; }
 

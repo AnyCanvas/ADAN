@@ -15,14 +15,19 @@
 		    FB.init({
 		      appId      : '<?php echo $config["fbApp"]["appId"] ?>',
 		      xfbml      : true,
-		      version    : 'v2.5'
+		      version    : 'v2.6'
 		    });
 
 				FB.Event.subscribe('xfbml.render', finished_rendering);
 
 				FB.Event.subscribe('edge.create', function(targetUrl) {
 					ga('send', 'event', 'action', 'facebook', 'like', 1);
+					<?php if ($_SESSION['fnbt']['name'] == 'futy'){ ?> 
+					window.location="/foot";
+					<?php }else { ?>
 					window.location="/final.php";
+					<?php } ?>
+
 				});
 				FB.Event.subscribe('edge.remove', function(targetUrl) {
 					ga('send', 'event', 'action', 'facebook', 'like', 0);
@@ -63,6 +68,7 @@
 					  <div class="fb-like" 
 						   data-href="https://www.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>"
 						   data-layout="button" 
+						   data-size="large"
 						   data-action="like" 
 						   data-show-faces="false" 
 						   data-share="false">

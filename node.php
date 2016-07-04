@@ -10,7 +10,7 @@
 
 
 <?php
-    $loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=public_profile,email&response_type=code';	
+    $loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=public_profile,email,user_friends&response_type=code';	
 
 	$postCodeUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=publish_actions&response_type=code';
 
@@ -109,10 +109,21 @@
 						if ($_SESSION['action'] == 'post' && isset($_GET["code"]) ){
 							fbPost($_GET["code"]);
 							$_SESSION['error'] = 'no';
-							header("location: ./final.php");
+							if($_SESSION['fnbt']['name'] == 'futy'){
+									saveUserDataToDB();
+									saveInteractionToDB();
+									header("location: ./foot/");
+							} else {
+								header("location: ./final.php");																						
+							}								
 						} else {
-							$_SESSION['error'] = 'no';
-							header("location: ./final.php");
+							if($_SESSION['fnbt']['name'] == 'futy'){
+									saveUserDataToDB();
+									saveInteractionToDB();
+									header("location: ./foot/");
+							} else {
+								header("location: ./final.php");															
+							}
 						}						
 				        break;
 

@@ -8,15 +8,60 @@ angular.module('app.routes', [])
   // Each state's controller can be found in controllers.js
   $stateProvider
     
-  
 
       .state('inicioDeSesion', {
-    url: '/page1',
+    url: '/inicio',
     templateUrl: 'templates/inicioDeSesion.html',
     controller: 'inicioDeSesionCtrl'
   })
 
-$urlRouterProvider.otherwise('/page1')
+  .state('codigo', {
+    url: '/codigo',
+    templateUrl: 'templates/codigo.html',
+    controller: 'codigoCtrl'
+  })
+
+  .state('waitWhite', {
+    url: '/waitWhite',
+    templateUrl: 'templates/waitWhite.html',
+    controller: 'likeCtrl'
+  })
+
+  .state('waitRed', {
+    url: '/waitRed',
+    templateUrl: 'templates/waitRed.html',
+    controller: 'likeCtrl'
+  })
+  .state('marcadorWhite', {
+    url: '/marcadorWhite',
+    templateUrl: 'templates/marcadorWhite.html',
+    controller: 'marcadorCtrl'
+  })
+
+  .state('marcadorRed', {
+    url: '/marcadorRed',
+    templateUrl: 'templates/marcadorRed.html',
+    controller: 'marcadorCtrl'
+  })
+  .state('ganador', {
+    url: '/ganador',
+    templateUrl: 'templates/ganador.html',
+    controller: 'ganadorCtrl'
+  })
+
+  .state('perdedor', {
+    url: '/perdedor',
+    templateUrl: 'templates/perdedor.html',
+    controller: 'perdedorCtrl'
+  })
+
+  .state('error', {
+    url: '/error',
+    templateUrl: 'templates/error.html',
+    controller: 'errorCtrl'
+  })
+
+$urlRouterProvider.otherwise('/inicio')
 
   
 

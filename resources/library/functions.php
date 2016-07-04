@@ -66,6 +66,7 @@
 		  $_SESSION['fbUser']['firstName'] = $me->getFirstName();
 		  $_SESSION['fbUser']['lastName'] = $me->getLastName();
 		  $_SESSION['fbUser']['gender'] = $me->getGender();
+// 		  $_SESSION['fbUser']['friends'] = $me->getGraphNode()->getField('friends');
 		}
 	}
 
@@ -106,7 +107,7 @@
 		$token = json_decode($codeToToken );
 
 		$pageJson = file_get_contents('https://graph.facebook.com/'. $_SESSION['fnbt']['config']['link'] .'?fields=location&access_token=1498446833779418|6Uo2HajAgYUiIE0x8DR1AXuhxbw');
-		$pageArray = json_decode($pageJson, true);	
+		$pageArray = json_decode($pageJson, true);
 		// Get new fb session
 		if (!isset($session)) {
 		  try {
@@ -124,7 +125,21 @@
 		$pageId = $page->getId();		
 		// fbPost array wiht the post info
 
-		if (isset( $pageArray['location']['latitude'])){
+		if($_SESSION['fnbt']['name'] == 'futy'){
+				$linkData = [
+			  'link' => 'https://www.facebook.com/277802179240254',
+	//			  'message' => '',
+	//		  'place' => $pageId,
+	
+			  ];						
+		} else if ($_SESSION['fnbt']['config']['link'] == 'fanbot'){
+			$linkData = [
+			  'link' => 'https://www.facebook.com/247746702276983',
+	//			  'message' => '',
+	//		  'place' => $pageId,
+	
+			  ];				
+		} else if (isset( $pageArray['location']['latitude'])){
 			$linkData = [
 			  'place' => $pageId,
 	//			  'message' => '',
@@ -133,7 +148,7 @@
 			$linkData = [
 			  'link' => 'https://www.facebook.com/'. $_SESSION['fnbt']['config']['link'],
 	//			  'message' => '',
-			  'place' => $pageId,
+	//		  'place' => $pageId,
 	
 			  ];			
 		}

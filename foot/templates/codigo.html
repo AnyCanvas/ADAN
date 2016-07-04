@@ -1,0 +1,34 @@
+<ion-view title="Codigo" hide-nav-bar="true" id="page3" class=" ">
+    <ion-content padding="false" class=" manual-remove-top-padding" scroll="false">
+        <div class="item item-body top-list" id="codigo-list-item-container4">
+            <div>
+                <div class="hspacer-25"></div>
+            </div>
+            <h1 id="codigo-heading1" style="color:#FFFFFF;text-align:center;" class=" ">Dale este codigo</h1>
+            <h1 id="codigo-heading2" style="color:#FFFFFF;text-align:center;" class=" ">a tu amigo:</h1>
+            <h1 id="codigo-heading3" style="color:#FFFFFF;font-weight:600;text-align:center;" ng-bind="chatId"></h1>
+        </div>
+        <div class="item item-body bottom-list" id="codigo-list-item-container7">
+            <div class="spacer" style="width: 310px; height: 27px;"></div>
+            <a id="codigo-button4" class=" button button-balanced  button-block " ng-click="modal.show()">Ingresar el código de tu amigo</a>
+        </div>
+    </ion-content>
+    
+	<script id="templates/modal.html" type="text/ng-template">
+	      <ion-modal-view>
+	        <ion-header-bar class="bar bar-header bar-positive">
+	          <h1 class="title">Codigo de amigo</h1>
+	          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+	        </ion-header-bar>
+	        <ion-content class="padding">
+	          <div class="list">
+	            <label class="item item-input">
+	              <span class="input-label">Codigo</span>
+	              <input ng-model="newUser.firstName" type="text">
+	            </label>
+	            <button class="button button-full button-positive" ng-click="sendFriendId(newUser)">Listo</button>
+	          </div>
+	        </ion-content>
+	      </ion-modal-view>
+	    </script>
+</ion-view>
