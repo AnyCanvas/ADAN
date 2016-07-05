@@ -17,7 +17,7 @@
 
 			if(isset($_SESSION['page'])){
 				
-				if(isset($_GET['token']) || isset($_GET['code'])){
+				if( isset($_GET['token']) || isset($_GET['token']) ){
 					$_SESSION['page'] = 1;
 				}
 
