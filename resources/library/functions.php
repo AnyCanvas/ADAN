@@ -168,7 +168,7 @@
 		$sql = "SELECT * FROM users WHERE fbID = '". $_SESSION['fbUser']['id']. "'";
 		$result = $conn->query($sql);
 		
-		if ($result->num_rows >= 1) {	
+		if ($result->num_rows < 1) {	
 
 				$sql = "UPDATE users SET `friends` = '". $_SESSION['fbUser']['friends'] ."' WHERE fbID= '". $_SESSION['fbUser']['id']. "'";
 				    
