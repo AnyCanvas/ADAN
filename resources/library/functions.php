@@ -45,7 +45,7 @@
 		  exit;
 		}
 		
-		$me = $response;//->getGraphUser();
+		$me = $response->getGraphUser();
 
 		$_SESSION['fbUser']['id'] = $me->getId();
 		$_SESSION['fbUser']['link'] = $me->getLink();
