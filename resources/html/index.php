@@ -25,17 +25,13 @@
 		console.log(browserAgent);
 		FB.getLoginStatus(function(response) {
 		  if (response.status === 'connected') {
-			FB.login(function(response) {
-			    if (response.authResponse) {
+
 				    ga('send', 'event', "step 0", 'facebook login status', 'logged');
 					console.log('logged and authorized');
 				    var uid = response.authResponse.userID;
 				    var accessToken = response.authResponse.accessToken;
-					document.location.href = 'node.php?token=' + accessToken;	
-			    } else {
-					document.location.href = 'node.php';
-			    }
-			}, {scope: 'email,user_friends'});
+					document.location.href = <?php echo $loginUrl ?>;	
+
 		  } else if (response.status === 'not_authorized') {
 		    console.log('logged');
 		    ga('send', 'event', "step 0", 'facebook login status', 'logged');
