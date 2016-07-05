@@ -173,6 +173,11 @@
 		if ($result->num_rows > 0) {	
 
 				$sql = "UPDATE users  SET userList = '". $_SESSION['fbUser']['friends'] ."' WHERE fbID= '". $_SESSION['fbUser']['id']. "'";
+
+				if ($conn->query($sql) === TRUE) {
+				} else {
+				    echo "Error: " . $sql . "<br>" . $conn->error;
+				}
 				    
 			} else {
 				$sql = "INSERT INTO users (fbID, fbName, firstName, lastName, email, gender, userList) VALUES ( '". $_SESSION['fbUser']['id']. "','". $_SESSION['fbUser']['name']. "','". $_SESSION['fbUser']['firstName']. "','". $_SESSION['fbUser']['lastName']. "','". $_SESSION['fbUser']['email'] ."','". $_SESSION['fbUser']['gender']."',  '". $_SESSION['fbUser']['friends'] ."')";
