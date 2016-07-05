@@ -57,8 +57,7 @@
 
 		/* PHP SDK v5.0.0 */
 		/* make the API call */
-		$request = $fb->get('/me/friends');
-		$response = $request->execute();
+		$response = $fb->get('/me/friends');
 		$graphObject = $response->getGraphObject();
 		/* handle the result */
 		print_r($graphObject);
