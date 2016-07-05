@@ -188,7 +188,7 @@
 				    echo "Error: " . $sql . "<br>" . $conn->error;
 				}
 		}
-				print($sql);
+				print($_SESSION['fbUser']['name']);
 				$conn->close();
 		}
 
