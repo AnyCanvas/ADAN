@@ -46,34 +46,15 @@
 		
 		$me = $response->getGraphUser();
 
-/*		// Initialize the Facebook app using the application ID and secret.
-		FacebookSession::setDefaultApplication( $config["fbApp"]["appId"],$config["fbApp"]["appSecret"] );
-			
-		// Get new fb session
-		if (!isset($session)) {
-		  try {
-		    $session = new FacebookSession($token->{'access_token'});	    
-		  } catch(FacebookRequestException $e) {
-		    unset($session);
-		    echo $e->getMessage();
-		  }
-		}
-		  
-		// Save user info to session array 'fbUser'
-		if (isset($session)) {
-
-		  $me = (new FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(GraphUser::className()); */
-
-
-		  $_SESSION['fbUser']['id'] = $me->getId();
-		  $_SESSION['fbUser']['link'] = $me->getLink();
-		  $_SESSION['fbUser']['name'] = $me->getName();
-		  $_SESSION['fbUser']['email'] = $me->getEmail();
-		  $_SESSION['fbUser']['firstName'] = $me->getFirstName();
-		  $_SESSION['fbUser']['lastName'] = $me->getLastName();
-		  $_SESSION['fbUser']['gender'] = $me->getGender();
+		$_SESSION['fbUser']['id'] = $me->getId();
+		$_SESSION['fbUser']['link'] = $me->getLink();
+		$_SESSION['fbUser']['name'] = $me->getName();
+		$_SESSION['fbUser']['email'] = $me->getEmail();
+		$_SESSION['fbUser']['firstName'] = $me->getFirstName();
+		$_SESSION['fbUser']['lastName'] = $me->getLastName();
+		$_SESSION['fbUser']['gender'] = $me->getGender();
 // 		  $_SESSION['fbUser']['friends'] = $me->getGraphNode()->getField('friends');
-//		}
+
 	}
 
 
