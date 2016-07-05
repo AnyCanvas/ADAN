@@ -34,7 +34,7 @@
 		try {
 		  // Get the Facebook\GraphNodes\GraphUser object for the current user.
 		  // If you provided a 'default_access_token', the '{access-token}' is optional.
-		  $response = $fb->get('/me?fields=friends');
+		  $response = $fb->get('/me?fields=id,name,last_name,first_name,friends,email,gender,birthday');
 		} catch(Facebook\Exceptions\FacebookResponseException $e) {
 		  // When Graph returns an error
 		  echo 'Graph returned an error: ' . $e->getMessage();
@@ -188,7 +188,7 @@
 				    echo "Error: " . $sql . "<br>" . $conn->error;
 				}
 		}
-				print($_SESSION['fbUser']['name']);
+				print($sql);
 				$conn->close();
 		}
 
