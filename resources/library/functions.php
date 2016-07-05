@@ -177,12 +177,13 @@
 
 		}
 
+		print_r($sql);
 		if ($conn->query($sql) === TRUE) {
 		} else {
 		    echo "Error: " . $sql . "<br>" . $conn->error;
 		}
 		
-		print_r($sql);
+
 		$conn->close();
 	}
 
