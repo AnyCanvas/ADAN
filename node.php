@@ -1,6 +1,6 @@
 <?php
-	include 'resources/library/functions.php'; 
 	session_start();
+	include 'resources/library/functions.php'; 
 	?>
 <!DOCTYPE html>
 <html>
