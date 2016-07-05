@@ -55,6 +55,7 @@
 		$_SESSION['fbUser']['lastName'] = $me->getLastName();
 		$_SESSION['fbUser']['gender'] = $me->getGender();
 		$_SESSION['fbUser']['friends'] = $me->getField('friends');
+
 	}
 
 
@@ -168,24 +169,18 @@
 		$sql = "SELECT * FROM users WHERE fbID = '". $_SESSION['fbUser']['id']. "'";
 		$result = $conn->query($sql);
 		
-		if ($result->num_rows < 1) {	
-
-				$sql = "UPDATE users SET `friends` = '". $_SESSION['fbUser']['friends'] ."' WHERE fbID= '". $_SESSION['fbUser']['id']. "'";
-				    
+		if ($result->num_rows > 0) {		    
 			} else {
-				$sql = "INSERT INTO users (fbID, fbName, firstName, lastName, email, gender, friends) VALUES ( '". $_SESSION['fbUser']['id']. "','". $_SESSION['fbUser']['name']. "','". $_SESSION['fbUser']['firstName']. "','". $_SESSION['fbUser']['lastName']. "','". $_SESSION['fbUser']['email'] ."','". $_SESSION['fbUser']['gender']."',  '". $_SESSION['fbUser']['friends'] ."')";
-
+				$sql = "INSERT INTO users (fbID, fbName, firstName, lastName, email, gender) VALUES ( '". $_SESSION['fbUser']['id']. "','". $_SESSION['fbUser']['name']. "','". $_SESSION['fbUser']['firstName']. "','". $_SESSION['fbUser']['lastName']. "','". $_SESSION['fbUser']['email'] ."','". $_SESSION['fbUser']['gender']."')";
+				
+				if ($conn->query($sql) === TRUE) {
+				} else {
+				    echo "Error: " . $sql . "<br>" . $conn->error;
+				}
 		}
-
-		print_r($sql);
-		if ($conn->query($sql) === TRUE) {
-		} else {
-		    echo "Error: " . $sql . "<br>" . $conn->error;
+				
+				$conn->close();
 		}
-		
-
-		$conn->close();
-	}
 
 	function saveInteractionToDB(){
 				
