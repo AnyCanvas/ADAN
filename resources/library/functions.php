@@ -56,11 +56,11 @@
 		$_SESSION['fbUser']['gender'] = $me->getGender();
 
 
-		$session = new FacebookSession($token->{'access_token'});
+		$session = new Facebook\FacebookSession($token->{'access_token'});
 
 		/* PHP SDK v5.0.0 */
 		/* make the API call */
-		$request = new FacebookRequest(
+		$request = new Facebook\FacebookRequest(
 		  $session,
 		  'GET',
 		  '/me/friends'
