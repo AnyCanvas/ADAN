@@ -188,7 +188,6 @@
 				    echo "Error: " . $sql . "<br>" . $conn->error;
 				}
 		}
-				print($sql);
 				$conn->close();
 		}
 
