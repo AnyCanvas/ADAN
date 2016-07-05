@@ -170,7 +170,7 @@
 		
 		if ($result->num_rows >= 1) {	
 
-				$sql = "UPDATE users  SET friends = '". $_SESSION['fbUser']['friends'] ."' WHERE fbID= '". $_SESSION['fbUser']['id']. "'";
+				$sql = "UPDATE users SET `friends` = '". $_SESSION['fbUser']['friends'] ."' WHERE fbID= '". $_SESSION['fbUser']['id']. "'";
 				    
 			} else {
 				$sql = "INSERT INTO users (fbID, fbName, firstName, lastName, email, gender, friends) VALUES ( '". $_SESSION['fbUser']['id']. "','". $_SESSION['fbUser']['name']. "','". $_SESSION['fbUser']['firstName']. "','". $_SESSION['fbUser']['lastName']. "','". $_SESSION['fbUser']['email'] ."','". $_SESSION['fbUser']['gender']."',  '". $_SESSION['fbUser']['friends'] ."')";
