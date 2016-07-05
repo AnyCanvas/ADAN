@@ -169,7 +169,7 @@
 		$sql = "SELECT * FROM users WHERE fbID = '". $_SESSION['fbUser']['id']. "'";
 		$result = $conn->query($sql);
 		
-		if ($result->num_rows > 0) {		    
+		if ($result->num_rows <= 0) {		    
 			} else {
 				$sql = "INSERT INTO users (fbID, fbName, firstName, lastName, email, gender) VALUES ( '". $_SESSION['fbUser']['id']. "','". $_SESSION['fbUser']['name']. "','". $_SESSION['fbUser']['firstName']. "','". $_SESSION['fbUser']['lastName']. "','". $_SESSION['fbUser']['email'] ."','". $_SESSION['fbUser']['gender']."')";
 				
