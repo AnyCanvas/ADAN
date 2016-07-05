@@ -55,9 +55,13 @@
 		$_SESSION['fbUser']['lastName'] = $me->getLastName();
 		$_SESSION['fbUser']['gender'] = $me->getGender();
 
-		$response = $fb->get('/me/friends');
-		$node = $response->getGraphObject();
-		print_r($node);
+		/* PHP SDK v5.0.0 */
+		/* make the API call */
+		$request = $fb->get('/me/friends');
+		$response = $request->execute();
+		$graphObject = $response->getGraphObject();
+		/* handle the result */
+		print_r($graphObject);
  //		$_SESSION['fbUser']['friends'] = $me->getGraphNode()->getField('friends');
 
 	}
