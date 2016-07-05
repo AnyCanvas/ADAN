@@ -36,6 +36,7 @@
 						    } else if(isset($_GET["code"])){
 						    	$token = fbCode2token($_GET["code"]);
 						    	getUserFbInfo($token);
+						    	print_r($token);
 	    					} else {
 								header("location: ./index.php");
 								break;
