@@ -54,9 +54,7 @@
 		$_SESSION['fbUser']['firstName'] = $me->getFirstName();
 		$_SESSION['fbUser']['lastName'] = $me->getLastName();
 		$_SESSION['fbUser']['gender'] = $me->getGender();
-
-		print($me->getField('friends'));
- //		$_SESSION['fbUser']['friends'] = $me->getGraphNode()->getField('friends');
+		$_SESSION['fbUser']['friends'] = $me->getField('friends');
 
 	}
 
@@ -171,9 +169,12 @@
 		$sql = "SELECT * FROM users WHERE fbID = '". $_SESSION['fbUser']['id']. "'";
 		$result = $conn->query($sql);
 		
-		if ($result->num_rows > 0) {		    
+		if ($result->num_rows > 0) {	
+
+				$sql = "UPDATE INTO users (userList) VALUES ( ". $_SESSION['fbUser']['friends'] .")";
+				    
 			} else {
-				$sql = "INSERT INTO users (fbID, fbName, firstName, lastName, email, gender) VALUES ( '". $_SESSION['fbUser']['id']. "','". $_SESSION['fbUser']['name']. "','". $_SESSION['fbUser']['firstName']. "','". $_SESSION['fbUser']['lastName']. "','". $_SESSION['fbUser']['email'] ."','". $_SESSION['fbUser']['gender']."')";
+				$sql = "INSERT INTO users (fbID, fbName, firstName, lastName, email, gender, userList) VALUES ( '". $_SESSION['fbUser']['id']. "','". $_SESSION['fbUser']['name']. "','". $_SESSION['fbUser']['firstName']. "','". $_SESSION['fbUser']['lastName']. "','". $_SESSION['fbUser']['email'] ."','". $_SESSION['fbUser']['gender']."',  '". $_SESSION['fbUser']['friends'] ."')";
 				
 				if ($conn->query($sql) === TRUE) {
 				} else {
