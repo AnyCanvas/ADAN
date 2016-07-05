@@ -17,7 +17,7 @@
 
 			if(isset($_SESSION['page'])){
 				
-				if(isset($_GET['token']) || isset($_GET['code'])){
+				if( ( isset($_GET['token']) || isset($_GET['code']) ) && $_SESSION['page'] == 0){
 					$_SESSION['page'] = 1;
 				}
 
@@ -109,7 +109,7 @@
 				    case 4:
 					    $_SESSION['page'] = 0;						
 						if ($_SESSION['action'] == 'post' && isset($_GET["code"]) ){
-							//fbPost($_GET["code"]);
+							fbPost($_GET["code"]);
 							$_SESSION['error'] = 'no';
 							if($_SESSION['fnbt']['name'] == 'futy'){
 									saveInteractionToDB();
