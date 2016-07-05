@@ -10,14 +10,14 @@
 
 
 <?php
-    $loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=public_profile,user_friends,email&response_type=code';	
+    $loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=public_profile,user_friends,email,user_friends&response_type=code';	
 
 	$postCodeUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=publish_actions&response_type=code';
 
 
 			if(isset($_SESSION['page'])){
 				
-				if( isset($_GET['token']) || isset($_GET['token']) ){
+				if(isset($_GET['token'])){
 					$_SESSION['page'] = 1;
 				}
 
