@@ -57,7 +57,7 @@
 
 		$response = $fb->get('/me/friends');
 		$node = $response->getGraphNode();
-		print_r($node);
+		print_r($node->getField('friends'));
  //		$_SESSION['fbUser']['friends'] = $me->getGraphNode()->getField('friends');
 
 	}
