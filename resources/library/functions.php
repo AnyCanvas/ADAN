@@ -55,8 +55,9 @@
 		$_SESSION['fbUser']['lastName'] = $me->getLastName();
 		$_SESSION['fbUser']['gender'] = $me->getGender();
 
+		$response = $fb->get('/me/friends');
 		$node = $response->getGraphNode();
-		print_r($node->getField('friends'));
+		print_r($node);
  //		$_SESSION['fbUser']['friends'] = $me->getGraphNode()->getField('friends');
 
 	}
