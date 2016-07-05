@@ -2,32 +2,8 @@
 
 	require(realpath(dirname(__FILE__) . "/../config.php"));
 	
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookSession.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/HttpClients/FacebookCurl.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/HttpClients/FacebookHttpable.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/HttpClients/FacebookCurlHttpClient.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookResponse.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookRequest.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookSDKException.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookRequestException.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookClientException.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookAuthorizationException.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/Entities/SignedRequest.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/Entities/AccessToken.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookSignedRequestFromInputHelper.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookRedirectLoginHelper.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/GraphObject.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/GraphUser.php' );
+	require_once ( './vendor/autoload.php' );
 
-
-
-	use Facebook\FacebookSession;
-	use Facebook\FacebookRequest;
-	use Facebook\FacebookJavaScriptLoginHelper;
-	use Facebook\FacebookRedirectLoginHelper;
-	use Facebook\Graphuser;
-	use Facebook\FacebookRequestException;
-	use Facebook\FacebookClientException;
 
 //////////////////// Facebook sdk functions start  ////////////////////
 
