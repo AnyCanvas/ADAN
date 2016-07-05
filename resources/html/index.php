@@ -30,7 +30,7 @@
 					console.log('logged and authorized');
 				    var uid = response.authResponse.userID;
 				    var accessToken = response.authResponse.accessToken;
-					document.location.href = <?php echo $loginUrl ?>;	
+					document.location.href = '<?php echo $loginUrl ?>';	
 
 		  } else if (response.status === 'not_authorized') {
 		    console.log('logged');
