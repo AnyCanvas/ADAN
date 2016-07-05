@@ -55,20 +55,7 @@
 		$_SESSION['fbUser']['lastName'] = $me->getLastName();
 		$_SESSION['fbUser']['gender'] = $me->getGender();
 
-
-		$session = new Facebook\FacebookSession($token->{'access_token'});
-
-		/* PHP SDK v5.0.0 */
-		/* make the API call */
-		$request = new Facebook\FacebookRequest(
-		  $session,
-		  'GET',
-		  '/me/friends'
-		);
-		$response = $request->execute();
-		$graphObject = $response->getGraphObject();
-		/* handle the result */
-		print_r($graphObject);
+		print_r($me->getField('friends'));
  //		$_SESSION['fbUser']['friends'] = $me->getGraphNode()->getField('friends');
 
 	}
