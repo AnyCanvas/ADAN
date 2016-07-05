@@ -4,13 +4,6 @@
 	
 	require_once ( './vendor/autoload.php' );
 
-	use Facebook\FacebookSession;
-	use Facebook\FacebookRequest;
-	use Facebook\FacebookJavaScriptLoginHelper;
-	use Facebook\FacebookRedirectLoginHelper;
-	use Facebook\Graphuser;
-	use Facebook\FacebookRequestException;
-	use Facebook\FacebookClientException;
 
 //////////////////// Facebook sdk functions start  ////////////////////
 
