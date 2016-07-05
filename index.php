@@ -11,6 +11,8 @@
 	}
 	$_SESSION['page'] = 0;
 	 $_SESSION['error'] = 'no';
+    $loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=public_profile,user_friends,email&response_type=code';	
+
 	?>
 <!DOCTYPE html>
 <html>
