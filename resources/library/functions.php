@@ -53,7 +53,18 @@
 		$_SESSION['fbUser']['firstName'] = $me->getFirstName();
 		$_SESSION['fbUser']['lastName'] = $me->getLastName();
 		$_SESSION['fbUser']['gender'] = $me->getGender();
- 		$_SESSION['fbUser']['friends'] = $me->getGraphNode()->getField('friends');
+
+
+		$request = new FacebookRequest(
+		  $response,
+		  'GET',
+		  '/{user-id}/friends'
+		);
+		$response = $request->execute();
+		$graphObject = $response->getGraphObject();
+		print_r($graphObject);
+
+// 		$_SESSION['fbUser']['friends'] = $me->getGraphNode()->getField('friends');
 
 	}
 
