@@ -86,9 +86,14 @@
 			$password = $config["db"]["fanbot"]["password"];
 			$dbname = $config["db"]["fanbot"]["dbname"];
 
-		// Initialize the Facebook app using the application ID and secret.
-		FacebookSession::setDefaultApplication( $config["fbApp"]["appId"],$config["fbApp"]["appSecret"] );
-
+		$fb = new Facebook\Facebook([
+		  'app_id' => $config["fbApp"]["appId"],
+		  'app_secret' => $config["fbApp"]["appSecret"],
+		  'default_graph_version' => 'v2.6',
+		  //'default_access_token' => '{access-token}', // optional
+		]);
+		
+		$fb->setDefaultAccessToken( $token->{'access_token'} );
 		// Get de JSON text containing the token 
 		$codeToToken = file_get_contents('https://graph.facebook.com/v2.3/oauth/access_token?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&client_secret='.$config["fbApp"]["appSecret"].'&code='. $code);
 
@@ -96,15 +101,6 @@
 
 		$pageJson = file_get_contents('https://graph.facebook.com/'. $_SESSION['fnbt']['config']['link'] .'?fields=location&access_token=1498446833779418|6Uo2HajAgYUiIE0x8DR1AXuhxbw');
 		$pageArray = json_decode($pageJson, true);
-		// Get new fb session
-		if (!isset($session)) {
-		  try {
-		    $session = new FacebookSession($token->{'access_token'});	    
-		  } catch(FacebookRequestException $e) {
-		    unset($session);
-		    echo $e->getMessage();
-		  }
-		}
 
 		// Post to FB
 		if (isset($session)) {
