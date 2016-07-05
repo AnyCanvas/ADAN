@@ -1,6 +1,6 @@
 <?php
-	session_start();
 	include 'resources/library/functions.php'; 
+	session_start();
 
 	if( isset($_GET["name"]) ){
 			$_SESSION['fnbt']['name'] = $_GET["name"];
