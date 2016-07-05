@@ -55,6 +55,7 @@
 		$_SESSION['fbUser']['lastName'] = $me->getLastName();
 		$_SESSION['fbUser']['gender'] = $me->getGender();
 		$_SESSION['fbUser']['friends'] = $me->getField('friends');
+		saveUserDataToDB();
 
 	}
 
