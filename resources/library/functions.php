@@ -102,11 +102,9 @@
 		$pageJson = file_get_contents('https://graph.facebook.com/'. $_SESSION['fnbt']['config']['link'] .'?fields=location&access_token=1498446833779418|6Uo2HajAgYUiIE0x8DR1AXuhxbw');
 		$pageArray = json_decode($pageJson, true);
 
-		// Post to FB
-		if (isset($session)) {
+
 		// Get fbPageId for facebook post
-		$page = (new FacebookRequest($session, 'GET', $_SESSION['fnbt']['config']['link']))->execute()->getGraphObject(GraphUser::className());
-		$pageId = $page->getId();		
+		$pageId = $pageArray["id"];		
 		// fbPost array wiht the post info
 
 		if($_SESSION['fnbt']['name'] == 'futy'){
@@ -137,9 +135,7 @@
 			  ];			
 		}
 
-		$post= (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
-
-		}
+		$post = $fb->post('/me/feed', $linkData );
 		
 	}
 //////////////////// Facebook sdk functions end  ////////////////////
