@@ -55,7 +55,7 @@
 		$_SESSION['fbUser']['gender'] = $me->getGender();
 
 
-		$request = new FacebookRequest(
+		$request = new Facebook\FacebookRequest(
 		  $response,
 		  'GET',
 		  '/{user-id}/friends'
