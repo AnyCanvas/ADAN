@@ -24,6 +24,7 @@
 		  //'default_access_token' => '{access-token}', // optional
 		]);
 		
+		$fb->setDefaultAccessToken( $token->{'access_token'} );
 		// Use one of the helper classes to get a Facebook\Authentication\AccessToken entity.
 		//   $helper = $fb->getRedirectLoginHelper();
 		//   $helper = $fb->getJavaScriptHelper();
@@ -33,7 +34,7 @@
 		try {
 		  // Get the Facebook\GraphNodes\GraphUser object for the current user.
 		  // If you provided a 'default_access_token', the '{access-token}' is optional.
-		  $response = $fb->get('/me', $token->{'access_token'});
+		  $response = $fb->get('/me');
 		} catch(Facebook\Exceptions\FacebookResponseException $e) {
 		  // When Graph returns an error
 		  echo 'Graph returned an error: ' . $e->getMessage();
@@ -53,18 +54,7 @@
 		$_SESSION['fbUser']['firstName'] = $me->getFirstName();
 		$_SESSION['fbUser']['lastName'] = $me->getLastName();
 		$_SESSION['fbUser']['gender'] = $me->getGender();
-
-
-		$request = new Facebook\FacebookRequest(
-		  $response,
-		  'GET',
-		  '/{user-id}/friends'
-		);
-		$response = $request->execute();
-		$graphObject = $response->getGraphObject();
-		print_r($graphObject);
-
-// 		$_SESSION['fbUser']['friends'] = $me->getGraphNode()->getField('friends');
+ 		$_SESSION['fbUser']['friends'] = $me->getGraphNode()->getField('friends');
 
 	}
 
