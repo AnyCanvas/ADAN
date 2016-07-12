@@ -1,6 +1,6 @@
 <?php
-	session_start();
 	include 'resources/library/functions.php'; 
+	session_start();
 
 	if( isset($_GET["name"]) ){
 			$_SESSION['fnbt']['name'] = $_GET["name"];
@@ -10,7 +10,9 @@
 		}
 	}
 	$_SESSION['page'] = 0;
-	 $_SESSION['error'] = 'no';
+	$_SESSION['error'] = 'no';
+    $loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=public_profile,user_friends,email&response_type=code';	
+
 	?>
 <!DOCTYPE html>
 <html>

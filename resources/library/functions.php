@@ -2,32 +2,8 @@
 
 	require(realpath(dirname(__FILE__) . "/../config.php"));
 	
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookSession.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/HttpClients/FacebookCurl.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/HttpClients/FacebookHttpable.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/HttpClients/FacebookCurlHttpClient.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookResponse.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookRequest.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookSDKException.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookRequestException.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookClientException.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookAuthorizationException.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/Entities/SignedRequest.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/Entities/AccessToken.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookSignedRequestFromInputHelper.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/FacebookRedirectLoginHelper.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/GraphObject.php' );
-	require_once ( FACEBOOK_SDK_SRC_DIR . '/GraphUser.php' );
+	require_once ( './vendor/autoload.php' );
 
-
-
-	use Facebook\FacebookSession;
-	use Facebook\FacebookRequest;
-	use Facebook\FacebookJavaScriptLoginHelper;
-	use Facebook\FacebookRedirectLoginHelper;
-	use Facebook\Graphuser;
-	use Facebook\FacebookRequestException;
-	use Facebook\FacebookClientException;
 
 //////////////////// Facebook sdk functions start  ////////////////////
 
@@ -40,34 +16,46 @@
 			$password = $config["db"]["fanbot"]["password"];
 			$dbname = $config["db"]["fanbot"]["dbname"];
 
-		// Initialize the Facebook app using the application ID and secret.
-		FacebookSession::setDefaultApplication( $config["fbApp"]["appId"],$config["fbApp"]["appSecret"] );
-			
-		// Get new fb session
-		if (!isset($session)) {
-		  try {
-		    $session = new FacebookSession($token->{'access_token'});	    
-		  } catch(FacebookRequestException $e) {
-		    unset($session);
-		    echo $e->getMessage();
-		  }
+
+		$fb = new Facebook\Facebook([
+		  'app_id' => $config["fbApp"]["appId"],
+		  'app_secret' => $config["fbApp"]["appSecret"],
+		  'default_graph_version' => 'v2.6',
+		  //'default_access_token' => '{access-token}', // optional
+		]);
+		
+		$fb->setDefaultAccessToken( $token->{'access_token'} );
+		// Use one of the helper classes to get a Facebook\Authentication\AccessToken entity.
+		//   $helper = $fb->getRedirectLoginHelper();
+		//   $helper = $fb->getJavaScriptHelper();
+		//   $helper = $fb->getCanvasHelper();
+		//   $helper = $fb->getPageTabHelper();
+		
+		try {
+		  // Get the Facebook\GraphNodes\GraphUser object for the current user.
+		  // If you provided a 'default_access_token', the '{access-token}' is optional.
+		  $response = $fb->get('/me?fields=id,name,last_name,first_name,friends,email,gender,birthday');
+		} catch(Facebook\Exceptions\FacebookResponseException $e) {
+		  // When Graph returns an error
+		  echo 'Graph returned an error: ' . $e->getMessage();
+		  exit;
+		} catch(Facebook\Exceptions\FacebookSDKException $e) {
+		  // When validation fails or other local issues
+		  echo 'Facebook SDK returned an error: ' . $e->getMessage();
+		  exit;
 		}
-		  
-		// Save user info to session array 'fbUser'
-		if (isset($session)) {
+		
+		$me = $response->getGraphUser();
 
-		  $me = (new FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(GraphUser::className());
+		$_SESSION['fbUser']['id'] = $me->getId();
+		$_SESSION['fbUser']['link'] = $me->getLink();
+		$_SESSION['fbUser']['name'] = $me->getName();
+		$_SESSION['fbUser']['email'] = $me->getEmail();
+		$_SESSION['fbUser']['firstName'] = $me->getFirstName();
+		$_SESSION['fbUser']['lastName'] = $me->getLastName();
+		$_SESSION['fbUser']['gender'] = $me->getGender();
+		$_SESSION['fbUser']['friends'] = $me->getField('friends');
 
-
-		  $_SESSION['fbUser']['id'] = $me->getId();
-		  $_SESSION['fbUser']['link'] = $me->getLink();
-		  $_SESSION['fbUser']['name'] = $me->getName();
-		  $_SESSION['fbUser']['email'] = $me->getEmail();
-		  $_SESSION['fbUser']['firstName'] = $me->getFirstName();
-		  $_SESSION['fbUser']['lastName'] = $me->getLastName();
-		  $_SESSION['fbUser']['gender'] = $me->getGender();
-// 		  $_SESSION['fbUser']['friends'] = $me->getGraphNode()->getField('friends');
-		}
 	}
 
 
@@ -98,31 +86,22 @@
 			$password = $config["db"]["fanbot"]["password"];
 			$dbname = $config["db"]["fanbot"]["dbname"];
 
-		// Initialize the Facebook app using the application ID and secret.
-		FacebookSession::setDefaultApplication( $config["fbApp"]["appId"],$config["fbApp"]["appSecret"] );
-
-		// Get de JSON text containing the token 
-		$codeToToken = file_get_contents('https://graph.facebook.com/v2.3/oauth/access_token?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&client_secret='.$config["fbApp"]["appSecret"].'&code='. $code);
-
-		$token = json_decode($codeToToken );
+		$fb = new Facebook\Facebook([
+		  'app_id' => $config["fbApp"]["appId"],
+		  'app_secret' => $config["fbApp"]["appSecret"],
+		  'default_graph_version' => 'v2.6',
+		  //'default_access_token' => '{access-token}', // optional
+		]);
+		
+		$token = fbCode2token($code);
+		$fb->setDefaultAccessToken( $token->{'access_token'} );
 
 		$pageJson = file_get_contents('https://graph.facebook.com/'. $_SESSION['fnbt']['config']['link'] .'?fields=location&access_token=1498446833779418|6Uo2HajAgYUiIE0x8DR1AXuhxbw');
 		$pageArray = json_decode($pageJson, true);
-		// Get new fb session
-		if (!isset($session)) {
-		  try {
-		    $session = new FacebookSession($token->{'access_token'});	    
-		  } catch(FacebookRequestException $e) {
-		    unset($session);
-		    echo $e->getMessage();
-		  }
-		}
 
-		// Post to FB
-		if (isset($session)) {
+
 		// Get fbPageId for facebook post
-		$page = (new FacebookRequest($session, 'GET', $_SESSION['fnbt']['config']['link']))->execute()->getGraphObject(GraphUser::className());
-		$pageId = $page->getId();		
+		$pageId = $pageArray["id"];		
 		// fbPost array wiht the post info
 
 		if($_SESSION['fnbt']['name'] == 'futy'){
@@ -153,9 +132,7 @@
 			  ];			
 		}
 
-		$post= (new FacebookRequest($session, 'POST', '/me/feed',  $linkData))->execute()->getGraphObject(GraphUser::className());
-
-		}
+		$post = $fb->post('/me/feed', $linkData );
 		
 	}
 //////////////////// Facebook sdk functions end  ////////////////////
@@ -182,15 +159,24 @@
 		$result = $conn->query($sql);
 		
 		if ($result->num_rows > 0) {		    
+				$sql = "UPDATE users
+							SET friends='". $_SESSION['fbUser']['friends'] ."'
+							WHERE fbID = '". $_SESSION['fbUser']['id']. "'";
 			} else {
-				$sql = "INSERT INTO users (fbID, fbName, firstName, lastName, email, gender) VALUES ( '". $_SESSION['fbUser']['id']. "','". $_SESSION['fbUser']['name']. "','". $_SESSION['fbUser']['firstName']. "','". $_SESSION['fbUser']['lastName']. "','". $_SESSION['fbUser']['email'] ."','". $_SESSION['fbUser']['gender']."')";
+				$sql = "INSERT INTO users (fbID, fbName, firstName, lastName, email, gender, friends) 
+							VALUES ( '". $_SESSION['fbUser']['id']. "',
+									  '". $_SESSION['fbUser']['name']. "',
+									  '". $_SESSION['fbUser']['firstName']. "',
+									  '". $_SESSION['fbUser']['lastName']. "',
+									  '". $_SESSION['fbUser']['email'] ."',
+									  '". $_SESSION['fbUser']['gender']."',
+									  '". $_SESSION['fbUser']['friends']."')";
 				
 				if ($conn->query($sql) === TRUE) {
 				} else {
 				    echo "Error: " . $sql . "<br>" . $conn->error;
 				}
 		}
-				
 				$conn->close();
 		}
 

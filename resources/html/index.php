@@ -25,11 +25,11 @@
 		console.log(browserAgent);
 		FB.getLoginStatus(function(response) {
 		  if (response.status === 'connected') {
-		    ga('send', 'event', "step 0", 'facebook login status', 'logged');
-		    console.log('logged and authorized');
-		    var uid = response.authResponse.userID;
-		    var accessToken = response.authResponse.accessToken;
-			document.location.href = 'node.php?token=' + accessToken;	
+				    ga('send', 'event', "step 0", 'facebook login status', 'logged');
+					console.log('logged and authorized');
+				    var uid = response.authResponse.userID;
+				    var accessToken = response.authResponse.accessToken;
+					document.location.href = '<?php echo $loginUrl ?>';	
 		  } else if (response.status === 'not_authorized') {
 		    console.log('logged');
 		    ga('send', 'event', "step 0", 'facebook login status', 'logged');
@@ -41,28 +41,22 @@
 			if(referrer.indexOf("facebook") <= -1 ){
 				if (browserAgent.indexOf("iPhone") > -1){
 					console.log("iPhone detected");
-					document.location.href = 'openapp.php';
 				} else if (browserAgent.indexOf("Android") > -1){
 					if (browserAgent.indexOf("Android 5") > -1 || browserAgent.indexOf("Android 6") > -1){
 						console.log("Android lollipop detected");
-						document.location.href = 'openapp.php';	
-						$('#indexModal').modal('show');
 					} else if (browserAgent.indexOf("Android 4.4") > -1){
 						console.log("Android Kitkat detected");
-						document.location.href = 'node.php';	
 					} else {
 						console.log("Old Android detected");
-						document.location.href = 'node.php';	
 				   	}
 			  	} else {
 					console.log("Model not detected");
-					document.location.href = 'node.php';
 			  	}
 			 } else {
 					console.log("Facebook app to Chrome");
-					document.location.href = 'node.php';
 			  	}
-		}	
+			document.location.href = 'node.php';
+			}
 			});
 			};
 		(function(d, s, id) {

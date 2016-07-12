@@ -1,6 +1,6 @@
 <?php
-	session_start();
 	require 'resources/library/functions.php';
+	session_start();
 
 ?>
 <!DOCTYPE html>
@@ -15,7 +15,6 @@
 			$deviceId = $_SESSION['fnbt']["deviceId"];
 			$accesToken = $_SESSION['fnbt']['accesToken'];
 			fanbotAction( $deviceId, $accesToken);
-			saveUserDataToDB();
 			saveInteractionToDB();
 		} else {
 				require_once("resources/html/error1.php");

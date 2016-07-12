@@ -1,6 +1,6 @@
 <?php
-	session_start();
 	include 'resources/library/functions.php'; 
+	session_start();
 
 	?>
 <!DOCTYPE html>
@@ -10,14 +10,14 @@
 
 
 <?php
-    $loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=public_profile,email,user_friends&response_type=code';	
+    $loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=public_profile,user_friends,email,user_friends&response_type=code';	
 
 	$postCodeUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=publish_actions&response_type=code';
 
 
 			if(isset($_SESSION['page'])){
 				
-				if(isset($_GET['token'])){
+				if( ( isset($_GET['token']) || isset($_GET['code']) ) && $_SESSION['page'] == 0){
 					$_SESSION['page'] = 1;
 				}
 
@@ -34,9 +34,11 @@
 						    	$tokenArray['access_token'] = $_GET["token"];
 						    	$token = $object = json_decode(json_encode($tokenArray), FALSE);			    	
 						    	getUserFbInfo($token);
+								saveUserDataToDB();
 						    } else if(isset($_GET["code"])){
 						    	$token = fbCode2token($_GET["code"]);
 						    	getUserFbInfo($token);
+								saveUserDataToDB();
 	    					} else {
 								header("location: ./index.php");
 								break;
@@ -110,7 +112,6 @@
 							fbPost($_GET["code"]);
 							$_SESSION['error'] = 'no';
 							if($_SESSION['fnbt']['name'] == 'futy'){
-									saveUserDataToDB();
 									saveInteractionToDB();
 									header("location: ./foot/");
 							} else {
@@ -118,7 +119,6 @@
 							}								
 						} else {
 							if($_SESSION['fnbt']['name'] == 'futy'){
-									saveUserDataToDB();
 									saveInteractionToDB();
 									header("location: ./foot/");
 							} else {
