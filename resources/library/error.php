@@ -3,8 +3,6 @@
 	<title>!Upss¡</title>
 	<?php require_once( "../html/header.php" ); ?>
 
-
-
 <body <?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ echo 'style="background-color: #004485;"'; }?>>
 
 	<script>
