@@ -113,7 +113,7 @@
 							$_SESSION['error'] = 'no';
 							if($_SESSION['fnbt']['name'] == 'futy'){
 									saveInteractionToDB();
-									header("location: ./foot/");
+									header("location: ./fut/");
 							} else {
 								header("location: ./final.php");																						
 							}								
