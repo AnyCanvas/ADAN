@@ -38,23 +38,23 @@ angular.module('app.services', [])
 			console.log('Chat id saved');
 		} else if (msg['type'] == 'team'){
 			if(msg['text'] == 'red'){
-				document.location.href = '/fut/#/waitRed';
+				document.location.href = '/foot/#/waitRed';
 			} else if (msg['text'] == 'white'){
-			document.location.href = '/fut/#/waitWhite';
+			document.location.href = '/foot/#/waitWhite';
 			}
 		} else if (msg['type'] == 'play'){
 			if(msg['text'] == 'red'){
-				document.location.href = '/fut/#/marcadorRed';
+				document.location.href = '/foot/#/marcadorRed';
 			} else if (msg['text'] == 'white'){
-			document.location.href = '/fut/#/marcadorWhite';
+			document.location.href = '/foot/#/marcadorWhite';
 			}
 		} else if(msg['type'] == 'goal'){
 			$rootScope.score++;
 		}else if (msg['type'] == 'final'){
 			if(msg['text'] == 'win'){
-				document.location.href = '/fut/#/ganador';
+				document.location.href = '/foot/#/ganador';
 			} else if (msg['text'] == 'lose'){
-			document.location.href = '/fut/#/perdedor';
+			document.location.href = '/foot/#/perdedor';
 			}
 		}
 	};
