@@ -73,7 +73,7 @@ angular.module('app.services', [])
 .service('chat', function() {
 
 	this.connect = function (msg) {
-		    var conn = new WebSocket('ws://104.236.71.12:8080');
+		    var conn = new WebSocket('ws://104.236.69.7:8080');
 
 			conn.onopen = function(e) {
 				console.log("Connection established!");
