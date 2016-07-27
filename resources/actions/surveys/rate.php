@@ -108,7 +108,7 @@
               min: 0,
               max: 5,
               step: 1,
-              size: 'lg',
+              size: 'md',
               showClear: false,
               showCaption: false
            });
