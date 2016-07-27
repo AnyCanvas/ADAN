@@ -113,7 +113,7 @@
               showCaption: false
            });
                    
-        $('#rating-input').on('rating.change', function() {
+        $('#rating-input').onclick('rating.change', function() {
             console.log($('#rating-input').val());
         });
         
