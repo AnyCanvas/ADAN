@@ -114,7 +114,7 @@
            });
                    
         $('#rating-input').on('rating.change', function() {
-            alert($('#rating-input').val());
+            console.log($('#rating-input').val());
         });
         
         
