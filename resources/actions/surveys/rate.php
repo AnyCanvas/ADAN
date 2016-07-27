@@ -1,65 +1,89 @@
-<body>
-	<script>
-			faceClick = function () {
-					window.location = "<?php echo $config["urls"]["baseUrl"] . '/node.php'?>";										
-						}	
+ <title>Dale like</title>
+<meta charset="UTF-8"/>
+<link rel="stylesheet"  href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/star-rating.css" media="all" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/star-rating.js" type="text/javascript"></script>
+    <body>
+	<div id="fb-root"></div>
+		<script>
+	    postclick = function () {
+			window.location = "node.php";										
+		}						
+		var finished_rendering = function() {
+			$('#loader').hide();
+			console.log("finished rendering plugins");
+		}
+			
+		window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '<?php echo $config["fbApp"]["appId"] ?>',
+		      xfbml      : true,
+		      version    : 'v2.6'
+		    });
 
-			var finished_rendering = function() {
-				$('#actionModal').modal('show');
-				console.log("finished rendering plugins");
+				FB.Event.subscribe('xfbml.render', finished_rendering);
+
+				FB.Event.subscribe('edge.create', function(targetUrl) {
+					ga('send', 'event', 'action', 'facebook', 'like', 1);
+					<?php if ($_SESSION['fnbt']['name'] == 'futy'){ ?> 
+					window.location="/foot";
+					<?php }else { ?>
+					window.location="/final.php";
+					<?php } ?>
+
+				});
+				FB.Event.subscribe('edge.remove', function(targetUrl) {
+					ga('send', 'event', 'action', 'facebook', 'like', 0);
+				});
+		  };
+		
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "//connect.facebook.net/es_LA/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+			
+
+		</script>
+
+	<div class="container-fluid" style="height: 100%; width: 100%">
+		<div id="loader" style="display: block; width: 100%; height: 100%; z-index: 9; position: absolute; background-color: rgba(0, 0, 0, 0.51);">
+			<div class="wrapper vertical-center">
+				<div class="cssload-loader btn-centered" style="z-index: 10; top: 45vh; margin: auto;"></div>
+			</div>
+		</div>
+		<div id="upper-div" style="height: 75%; position: relative;" class="blue">
+		<div class="div-wrapper full" style="background-color: <?php echo $_SESSION['fnbt']['config']["bgcolor"] ?>;">
+
+		<img class="center-img fbpage-img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture?type=large" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
+		</div>
+		</div>
+	    <footer style="height: 25%;">
+			  <div id="fblike-div">
+			      <p class="fnbt-name-text grey-text">Presiona “Me Gusta”<br>para accionar la máquina.</p>
+				  <div class="like-div" style="overflow: hidden;">
+				  		<input id="rating-input" type="number" value="3" />
+				  </div>
+		      </div>
+	    </footer>
+
+	</div>
+	<script>
+			var browserAgent = navigator.userAgent;
+			console.log(browserAgent);
+			if (browserAgent.indexOf("iPhone") > -1){
+				console.log("Changed class");
+				$( "#upper-div" ).addClass( "iphone-fix" );
+			}
+			
+			function changeToPost(){
+				$("#fbpost-div").show();
+				$("#fblike-div").hide();
 			}
 	</script>
-	
-	<div class ="container-fluid">
-	
-	<div class="wrapper vertical-center">
-		<div class="cssload-loader"></div>
-	</div>
-	
-	<div class="clearfix visible-xs-block"></div>
-	
-	                <div class="fb_logo-row row bottom">
-	                    <div class="col-xs-4"></div>
-	                    <div class="col-xs-4">
-	                        <img class="img-responsive center-block"
-								 src="media/clients/logos/<?php  echo $_SESSION['fnbt']['config']['image']; ?>"
-	                             alt="fanbot"
-	                             width="200">
-	                    </div>
-	                    <div class="col-xs-4"></div>
-	                </div>
-	
-	<div id="actionModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="false" data-backdrop="static">
-	
-	  <div class="modal-dialog modal-sm">		
-			<!-- Informative image Columns-->
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h4 class="modal-title text-center">Califica tu experiencia</h4>
-	      </div>
-	      <div class="modal-body">
-			<div class="row mid-row">
-			    <div class="col-xs-1" ></div>
-			    <div class="col-xs-10"  style="padding: 10px 34px;">
-		    			<span style="font-size: 300%; text-align: left; ">
-							<a onclick="faceClick();">&#128544;</a>
-							<a onclick="faceClick();">&#128528;</a>
-							<a onclick="faceClick();">&#128512;</a>
-	
-						</span>
-			    </div>
-			    <div class="col-xs-1" ></div>
-			</div>	
-	
-	      </div>
-	   </div>
-	  </div>
-	</div>
-	
-	</div>
-
-	<script>
-		finished_rendering();
-	</script>
-</body>
-
+    </body>
+  </html>
