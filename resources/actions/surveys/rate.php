@@ -64,7 +64,7 @@
 		</div>
 	    <footer style="height: 25%;">
 			  <div id="fblike-div">
-			      <p class="fnbt-name-text grey-text">Contesta para jugar<br>para accionar la máquina.</p>
+			      <p class="fnbt-name-text grey-text">Contesta para jugar<br>¿Como calificarías el servicio?</p>
 				  <div class="like-div" style="overflow: hidden;">
 				  		<input id="rating-input" type="number" value="3" />
 				  </div>
