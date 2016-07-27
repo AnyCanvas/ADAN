@@ -8,6 +8,11 @@
     <body>
 
 	<div class="container-fluid" style="padding-right: 0px; padding-left: 0px;">
+		<div id="loader" style="display: block; width: 100%; height: 100%; z-index: 9; position: absolute; background-color: rgba(0, 0, 0, 0.51);">
+			<div class="wrapper vertical-center">
+				<div class="cssload-loader btn-centered" style="z-index: 10; top: 45vh; margin: auto;"></div>
+			</div>
+		</div>
 		<div id="upper-div" style="height: 65%; position: relative;" class="blue">
 		<div class="div-wrapper full" style="background-color: <?php echo $_SESSION['fnbt']['config']["bgcolor"] ?>;">
 
@@ -38,6 +43,9 @@
 			}
 			
     jQuery(document).ready(function () {
+
+		$('#loader').hide();
+		console.log("finished rendering plugins");
 
         $('#rating-input').rating({
               min: 0,
