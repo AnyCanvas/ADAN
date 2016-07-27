@@ -1,4 +1,4 @@
- <title>Dale like</title>
+<title>Dale like</title>
 <meta charset="UTF-8"/>
 <link rel="stylesheet"  href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -50,7 +50,7 @@
 
 		</script>
 
-	<div class="container-fluid" style="height: 100%; width: 100%">
+	<div class="container-fluid" style="padding-right: 0px; padding-left: 0px;">
 		<div id="loader" style="display: block; width: 100%; height: 100%; z-index: 9; position: absolute; background-color: rgba(0, 0, 0, 0.51);">
 			<div class="wrapper vertical-center">
 				<div class="cssload-loader btn-centered" style="z-index: 10; top: 45vh; margin: auto;"></div>
