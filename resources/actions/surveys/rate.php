@@ -6,49 +6,6 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="js/star-rating.js" type="text/javascript"></script>
     <body>
-	<div id="fb-root"></div>
-		<script>
-	    postclick = function () {
-			window.location = "node.php";										
-		}						
-		var finished_rendering = function() {
-			$('#loader').hide();
-			console.log("finished rendering plugins");
-		}
-			
-		window.fbAsyncInit = function() {
-		    FB.init({
-		      appId      : '<?php echo $config["fbApp"]["appId"] ?>',
-		      xfbml      : true,
-		      version    : 'v2.6'
-		    });
-
-				FB.Event.subscribe('xfbml.render', finished_rendering);
-
-				FB.Event.subscribe('edge.create', function(targetUrl) {
-					ga('send', 'event', 'action', 'facebook', 'like', 1);
-					<?php if ($_SESSION['fnbt']['name'] == 'futy'){ ?> 
-					window.location="/foot";
-					<?php }else { ?>
-					window.location="/final.php";
-					<?php } ?>
-
-				});
-				FB.Event.subscribe('edge.remove', function(targetUrl) {
-					ga('send', 'event', 'action', 'facebook', 'like', 0);
-				});
-		  };
-		
-		  (function(d, s, id){
-		     var js, fjs = d.getElementsByTagName(s)[0];
-		     if (d.getElementById(id)) {return;}
-		     js = d.createElement(s); js.id = id;
-		     js.src = "//connect.facebook.net/es_LA/sdk.js";
-		     fjs.parentNode.insertBefore(js, fjs);
-		   }(document, 'script', 'facebook-jssdk'));
-			
-
-		</script>
 
 	<div class="container-fluid" style="padding-right: 0px; padding-left: 0px;">
 		<div id="loader" style="display: block; width: 100%; height: 100%; z-index: 9; position: absolute; background-color: rgba(0, 0, 0, 0.51);">
@@ -97,6 +54,7 @@
            });
                    
         $('#rating-input').on('rating.change', function() {
+			window.location="/final.php";
             console.log($('#rating-input').val());
         });
 
