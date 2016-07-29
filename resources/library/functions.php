@@ -346,7 +346,7 @@
 		} else if($_SESSION['fnbt']['config']['type'] == 'post' && notChekedin() ){
 			$_SESSION['action'] = 'post';
 			return TRUE;				
-		} else if ( $_SESSION['fnbt']['config']['type'] == 'rate' ){
+		} else if ( $_SESSION['fnbt']['config']['type'] == 'rate' && notChekedin()){
 			$_SESSION['action'] = 'rate';
 			return TRUE;		
 		} else {
