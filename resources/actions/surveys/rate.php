@@ -37,10 +37,10 @@
 				$( "#upper-div" ).addClass( "iphone-fix" );
 			}
 			
-			function changeToPost(){
-				$("#fbpost-div").show();
-				$("#fblike-div").hide();
+			function changePage(){
+				window.location="/final.php?a="+ $('#rating-input').val()
 			}
+			
 			
     jQuery(document).ready(function () {
 
@@ -59,7 +59,7 @@
                    
         $('#rating-input').on('rating.change', function() {
             console.log($('#rating-input').val());
-            setTimeout(window.location="/final.php?a="+ $('#rating-input').val(), 3000)
+            setTimeout(changePage(), 1000);
         });
 
     });
