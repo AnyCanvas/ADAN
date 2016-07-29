@@ -62,7 +62,7 @@
 		    $('#rating-input').rating('update', $('#rating-input').val());
 	        alert($('#rating-input').val());	        
             console.log($('#rating-input').val());
-            setTimeout(changePage(), 1000);
+ //           setTimeout(changePage(), 1000);
         });
 
     });
