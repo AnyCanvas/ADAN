@@ -54,11 +54,13 @@
               size: 'sm',
               showClear: false,
               showCaption: false,
-              overEnabled: false
+              overEnabled: false,
+              animate: false
            });
                    
         $('#rating-input').on('rating.change', function() {
-	        alert('end');
+		    $('#input-id').rating('update', $('#rating-input').val());
+	        alert('end');	        
             console.log($('#rating-input').val());
             setTimeout(changePage(), 1000);
         });
