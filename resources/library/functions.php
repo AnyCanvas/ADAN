@@ -272,16 +272,16 @@
 
 					switch ($n) {
 						case 0:
-							$_SESSION['q'] = $_SESSION['fnbt']['data']['1']. $n;
+							$_SESSION['q'] = $_SESSION['fnbt']['data']['1'];
 							break;
 						case 1:
-							$_SESSION['q'] = $_SESSION['fnbt']['data']['2']. $n;
+							$_SESSION['q'] = $_SESSION['fnbt']['data']['2'];
 							break;
 						case 2:
-							$_SESSION['q'] = $_SESSION['fnbt']['data']['3']. $n;
+							$_SESSION['q'] = $_SESSION['fnbt']['data']['3'];
 							break;
 						case 3:
-							$_SESSION['q'] = $_SESSION['fnbt']['data']['4']. $n;
+							$_SESSION['q'] = $_SESSION['fnbt']['data']['4'];
 							break;
 					}				
 				}
