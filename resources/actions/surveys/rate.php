@@ -44,8 +44,9 @@
 			$('#rating-input').rating('update', value);
 	        $('#rating-input').rating('refresh', {disabled: true});
 	        alert(value);	        
-            console.log(value);
-        });
+        }).then(function(){
+            console.log(value);	        
+        })
 			
 			
     jQuery(document).ready(function () {
