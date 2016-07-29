@@ -16,7 +16,7 @@
 			$accesToken = $_SESSION['fnbt']['accesToken'];
 			fanbotAction( $deviceId, $accesToken);
 			if($_SESSION['action'] == 'rate'){
-				$_SESSION['data'] == "{'q':.'". $_SESSION['q'] ."','a':'". $_GET['a'] ."'}";
+				$_SESSION['data'] = "{'q':.'". $_SESSION['q'] ."','a':'". $_GET['a'] ."'}";
 				print_r($_SESSION['data']);
 			}
 			saveInteractionToDB();
