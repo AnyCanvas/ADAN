@@ -58,9 +58,9 @@
               animate: false
            });
                    
-        $('#rating-input').on('rating.change', function(event, value) {
-	        alert(value);	        
-            console.log(value);
+        $('#rating-input').change(function(event, value) {
+	        alert($('#rating-input').val());	        
+            console.log($('#rating-input').val());
         });
 
     });
