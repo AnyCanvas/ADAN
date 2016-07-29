@@ -267,7 +267,7 @@
 
 				if ( $_SESSION['fnbt']['config']['type'] == 'rate' ){
 					$_SESSION['fnbt']['data'] = json_decode($row["data"], true);
-					$_SESSION['q'] = $_SESSION['fnbt']['data'][1];				
+					$_SESSION['q'] = $row['fnbt']['data'][1];				
 				}
 			    }
 
