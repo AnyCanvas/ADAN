@@ -44,10 +44,9 @@
 			$('#rating-input').rating('update', value);
 	        $('#rating-input').rating('refresh', {disabled: true});
 	        alert(value);	        
-        }).then(function(op3Result){
-  // do something even more
-  return syncOp4(op3Result);
-})
+        }).then(function(){
+            console.log(value);	        
+        });
 			
 			
     jQuery(document).ready(function () {
