@@ -59,7 +59,7 @@
            });
                    
         $('#rating-input').on('rating.change', function() {
-		    $('#input-id').rating('update', $('#rating-input').val());
+		    $('#rating-input').rating('update', $('#rating-input').val());
 	        alert($('#rating-input').val());	        
             console.log($('#rating-input').val());
             setTimeout(changePage(), 1000);
