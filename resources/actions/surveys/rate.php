@@ -21,7 +21,7 @@
 		</div>
 	    <footer style="height: 35%;">
 			  <div id="fblike-div">
-			      <p class="fnbt-name-text grey-text">Contesta para jugar<br><?php echo($_SESSION['q']) ?></p>
+			      <p class="fnbt-name-text grey-text">Contesta para jugar<br><?php echo($_SESSION['q']); print_r($_SESSION['fnbt']['data']); ?></p>
 				  <div class="like-div" style="overflow: hidden;">
 				  		<input id="rating-input" type="number" value="3" />
 				  </div>
