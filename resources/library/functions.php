@@ -266,7 +266,7 @@
 		        $_SESSION['fnbt']['config'] = json_decode($row["config"], true);
 
 				if ( $_SESSION['fnbt']['config']['type'] == 'rate' ){
-					$_SESSION['fnbt']['data'] = json_encode($row["data"]);
+					$_SESSION['fnbt']['data'] = json_decode($row["data"],true);
 					$_SESSION['q'] = $_SESSION['fnbt']['data']['2'];				
 				}
 			    }
