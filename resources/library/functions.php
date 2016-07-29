@@ -200,7 +200,7 @@
 					$sql = "INSERT INTO interactions  (fanbotId, userId, clientId, fbPage, action, data) VALUES ( '". $_SESSION['fnbt']['id']. "','".  $_SESSION['fbUser']['id']. "','". $_SESSION['fnbt']['clientId']. "','". $_SESSION['fnbt']['config']['link'] . "', '". $_SESSION['action'] ."', '". $_SESSION['data'] ."')";
 				} else {
 
-					$sql = "INSERT INTO interactions  (fanbotId, userId, clientId, fbPage, action) VALUES ( '". $_SESSION['fnbt']['id']. "','".  $_SESSION['fbUser']['id']. "','". $_SESSION['fnbt']['clientId']. "','". $_SESSION['fnbt']['config']['link'] . "', '". $_SESSION['action'] ."')";
+					$sql = "INSERT INTO interactions  (fanbotId, userId, clientId, fbPage, action) VALUES ( '". $_SESSION['fnbt']['id']. "','".  $_SESSION['fbUser']['id']. "','". $_SESSION['fnbt']['clientId']. "','". $_SESSION['fnbt']['config']['link'] . "', \"". $_SESSION['action'] ."\")";
 					
 				}
 							

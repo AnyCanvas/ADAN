@@ -12,7 +12,7 @@
 	if (isset($_SESSION['fnbt']['config']))	{
 		if ( $_SESSION['error'] != "name" ){
 			if($_SESSION['action'] == 'rate'){
-				$_SESSION['data'] = "{'q':.'". $_SESSION['q'] ."','a':'". $_GET['a'] ."'}";
+				$_SESSION['data'] = "{'q':'". $_SESSION['q'] ."','a':'". $_GET['a'] ."'}";
 //				print_r($_SESSION['data']);
 			}
 			require_once("resources/library/success.php");
