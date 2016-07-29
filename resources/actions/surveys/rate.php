@@ -58,7 +58,7 @@
            });
                    
         $('#rating-input').on('rating.change', function() {
-			window.location="/final.php?a="+ $('#rating-input').val();
+//			window.location="/final.php?a="+ $('#rating-input').val();
             console.log($('#rating-input').val());
         });
 
