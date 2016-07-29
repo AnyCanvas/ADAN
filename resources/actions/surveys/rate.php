@@ -58,6 +58,7 @@
            });
                    
         $('#rating-input').on('rating.change', function() {
+	        alert('end');
             console.log($('#rating-input').val());
             setTimeout(changePage(), 1000);
         });
