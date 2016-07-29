@@ -268,20 +268,20 @@
 				if ( $_SESSION['fnbt']['config']['type'] == 'rate' ){
 					$_SESSION['fnbt']['data'] = json_decode($row["survey"],true);
 					
-					$n = date("is") / 4;
+					$n = date("is") % 4;
 
 					switch ($n) {
 						case 0:
-							$_SESSION['q'] = $_SESSION['fnbt']['data'][1];
+							$_SESSION['q'] = $_SESSION['fnbt']['data']['1'];
 							break;
 						case 1:
-							$_SESSION['q'] = $_SESSION['fnbt']['data'][2];
+							$_SESSION['q'] = $_SESSION['fnbt']['data']['2'];
 							break;
 						case 2:
-							$_SESSION['q'] = $_SESSION['fnbt']['data'][3];
+							$_SESSION['q'] = $_SESSION['fnbt']['data']['3'];
 							break;
 						case 3:
-							$_SESSION['q'] = $_SESSION['fnbt']['data'][4];
+							$_SESSION['q'] = $_SESSION['fnbt']['data']['4'];
 							break;
 					}				
 				}
