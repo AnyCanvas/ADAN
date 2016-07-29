@@ -21,7 +21,7 @@
 		</div>
 	    <footer style="height: 35%;">
 			  <div id="fblike-div">
-			      <p class="fnbt-name-text grey-text">Contesta para jugar<br>¿Como calificarías el servicio?</p>
+			      <p class="fnbt-name-text grey-text">Contesta para jugar<br><?php echo $_SESSION['q'] ?></p>
 				  <div class="like-div" style="overflow: hidden;">
 				  		<input id="rating-input" type="number" value="3" />
 				  </div>
@@ -57,7 +57,7 @@
            });
                    
         $('#rating-input').on('rating.change', function() {
-			window.location="/final.php";
+			window.location="/final.php?a="+ $('#rating-input').val();
             console.log($('#rating-input').val());
         });
 

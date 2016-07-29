@@ -195,7 +195,14 @@
 				    die("Connection failed: " . $conn->connect_error);
 				} 
 
-				$sql = "INSERT INTO interactions  (fanbotId, userId, clientId, fbPage, action) VALUES ( '". $_SESSION['fnbt']['id']. "','".  $_SESSION['fbUser']['id']. "','". $_SESSION['fnbt']['clientId']. "','". $_SESSION['fnbt']['config']['link'] . "', '". $_SESSION['action'] ."')";
+				if($_SESSION['action'] == 'rate'){
+
+					$sql = "INSERT INTO interactions  (fanbotId, userId, clientId, fbPage, action, data) VALUES ( '". $_SESSION['fnbt']['id']. "','".  $_SESSION['fbUser']['id']. "','". $_SESSION['fnbt']['clientId']. "','". $_SESSION['fnbt']['config']['link'] . "', '". $_SESSION['action'] ."', '". $_SESSION['data'] ."')";
+				} else {
+
+					$sql = "INSERT INTO interactions  (fanbotId, userId, clientId, fbPage, action) VALUES ( '". $_SESSION['fnbt']['id']. "','".  $_SESSION['fbUser']['id']. "','". $_SESSION['fnbt']['clientId']. "','". $_SESSION['fnbt']['config']['link'] . "', '". $_SESSION['action'] ."')";
+					
+				}
 							
 				
 				if ($conn->query($sql) === TRUE) {
@@ -258,6 +265,10 @@
 		        $_SESSION['fnbt']['status'] = $row["estatus"];
 		        $_SESSION['fnbt']['config'] = json_decode($row["config"], true);
 
+				if ( $_SESSION['fnbt']['config']['type'] == 'rate' ){
+					$_SESSION['fnbt']['data'] = json_decode($row["data"], true);
+					$_SESSION['q'] = $_SESSION['fnbt']['data'][1];				
+				}
 			    }
 
 					return 1;
