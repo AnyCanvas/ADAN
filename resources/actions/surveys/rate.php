@@ -40,12 +40,11 @@
 			function changePage(){
 				window.location="/final.php?a="+ $('#rating-input').val()
 			}
+
 	    $('#rating-input').on('rating.change', function(event, value, caption) {
 			$('#rating-input').rating('update', value);
 	        $('#rating-input').rating('refresh', {disabled: true});
 	        alert(value);	        
-        }).then(function(){
-            console.log(value);	        
         });
 			
 			
