@@ -59,8 +59,7 @@
               size: 'sm',
               showClear: false,
               showCaption: false,
-              overEnabled: false,
-              animate: false
+              overEnabled: false
            });
     });
 	</script>
