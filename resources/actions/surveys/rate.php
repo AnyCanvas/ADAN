@@ -53,7 +53,8 @@
               step: 1,
               size: 'sm',
               showClear: false,
-              showCaption: false
+              showCaption: false,
+              overEnabled: false
            });
                    
         $('#rating-input').on('rating.change', function() {
