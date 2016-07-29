@@ -268,7 +268,7 @@
 				if ( $_SESSION['fnbt']['config']['type'] == 'rate' ){
 					$_SESSION['fnbt']['data'] = json_decode($row["survey"],true);
 					
-					$n = (int) date("is") % 4;
+					$n = idate("is") % 4;
 
 					switch ($n) {
 						case 0:
