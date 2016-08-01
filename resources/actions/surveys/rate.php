@@ -2,9 +2,9 @@
 <meta charset="UTF-8"/>
 <link rel="stylesheet"  href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/star-rating.css" media="all" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="css/rating.min.css" media="all" rel="stylesheet" type="text/css"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="js/star-rating.js" type="text/javascript"></script>
+<script src="js/rating.min.js" type="text/javascript"></script>
     <body>
 
 	<div class="container-fluid" style="padding-right: 0px; padding-left: 0px;">
@@ -23,7 +23,7 @@
 			  <div id="fblike-div">
 			      <p class="fnbt-name-text grey-text">Contesta para jugar<br><?php echo($_SESSION['q']); ?></p>
 				  <div class="like-div" style="overflow: hidden;">
-				  		<input id="rating-input" type="number" value="3" />
+				  		<div id="el"></div>
 				  </div>
 		      </div>
 	    </footer>
@@ -36,32 +36,24 @@
 				console.log("Changed class");
 				$( "#upper-div" ).addClass( "iphone-fix" );
 			}
-			
-			function changePage(){
-				window.location="/final.php?a="+ $('#rating-input').val()
-			}
-
-	    $('#rating-input').on('rating.change', function(event, value, caption) {
-			$('#rating-input').rating('update', value);
-	        $('#rating-input').rating('refresh', {disabled: true});
-	        alert(value);	        
-        });
-			
+						
 			
     jQuery(document).ready(function () {
 
-		$('#loader').hide();
-		console.log("finished rendering plugins");
-
-        $('#rating-input').rating({
-              min: 0,
-              max: 5,
-              step: 1,
-              size: 'sm',
-              showClear: false,
-              showCaption: false,
-              overEnabled: false
-           });
+		// target element
+		var el = document.querySelector('#el');
+		
+		// current rating, or initial rating
+		var currentRating = 0;
+		
+		// max rating, i.e. number of stars you want
+		var maxRating= 5;
+		
+		// callback to run after setting the rating
+		var callback = function(rating) { alert(rating); };
+		
+		// rating instance
+		var myRating = rating(el, currentRating, maxRating, callback);
     });
 	</script>
     </body>
