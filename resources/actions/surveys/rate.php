@@ -40,6 +40,9 @@
 			
     jQuery(document).ready(function () {
 
+		$('#loader').hide();
+		console.log("finished rendering plugins");
+
 		// target element
 		var el = document.querySelector('#el');
 		
