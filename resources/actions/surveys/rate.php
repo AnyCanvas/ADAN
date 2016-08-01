@@ -4,7 +4,6 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/rating.min.css" media="all" rel="stylesheet" type="text/css"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="js/rating.min.js" type="text/javascript"></script>
     <body>
 
 	<div class="container-fluid" style="padding-right: 0px; padding-left: 0px;">
@@ -29,6 +28,7 @@
 	    </footer>
 
 	</div>
+	<script src="js/rating.min.js" type="text/javascript"></script>
 	<script>
 			var browserAgent = navigator.userAgent;
 			console.log(browserAgent);
@@ -44,20 +44,17 @@
 		console.log("finished rendering plugins");
 
 		// target element
-		var el = document.querySelector('#el');
-		
+		var el = document.querySelector('#el');		
 		// current rating, or initial rating
-		var currentRating = 0;
-		
+		var currentRating = 0;		
 		// max rating, i.e. number of stars you want
-		var maxRating= 5;
-		
+		var maxRating= 5;		
 		// callback to run after setting the rating
-		var callback = function(rating) { alert(rating); };
-		
+		var callback = function(rating) { alert(rating); };		
 		// rating instance
 		var myRating = rating(el, currentRating, maxRating, callback);
     });
 	</script>
+
     </body>
   </html>
