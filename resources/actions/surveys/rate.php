@@ -6,13 +6,9 @@
   <style >
 	@import url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 	
-	fieldset, label { margin: 0; padding: 0; }
-	body{ margin: 20px; }
-	h1 { font-size: 1.5em; margin: 10px; }
-	
 	/****** Style Star Rating Widget *****/
 	
-	.rating { 
+	.rating.unstyled { 
 	  border: none;
 	  float: left;
 	}
