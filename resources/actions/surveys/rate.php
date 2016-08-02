@@ -6,9 +6,10 @@
   <style >
 	@import url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 	
+	fieldset, label { margin: 0; padding: 0; }
 	/****** Style Star Rating Widget *****/
 	
-	.rating.unstyled { 
+	.rating { 
 	  border: none;
 	  float: left;
 	}
@@ -77,6 +78,14 @@
 				console.log("Changed class");
 				$( "#upper-div" ).addClass( "iphone-fix" );
 			}
+						
+			
+    jQuery(document).ready(function () {
+
+		$('#loader').hide();
+		console.log("finished rendering plugins");
+
+    });
 	</script>
 
     </body>
