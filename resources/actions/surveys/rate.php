@@ -4,6 +4,17 @@
 	@import url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 	
 	fieldset, label { margin: 0; padding: 0; }
+
+	/****** Antimaterial *****/
+	[type="radio"]:not(:checked) + label:before {
+	    border: 0;
+	}
+
+	[type="radio"]:checked + label:after {
+	    border: 0;
+	    background-color: 0;
+
+	}
 	/****** Style Star Rating Widget *****/
 	
 	.rating { 
