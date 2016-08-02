@@ -1,8 +1,5 @@
 <title>Dale like</title>
 <meta charset="UTF-8"/>
-<link rel="stylesheet"  href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/rating.min.css" media="all" rel="stylesheet" type="text/css"/>
   <style >
 	@import url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 	
