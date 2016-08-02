@@ -1,6 +1,6 @@
 <title>Dale like</title>
-<meta charset="UTF-8"/>
-  <style >
+<meta charset="ISO-8859-1">
+<style >
 	@import url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 	
 	fieldset, label { margin: 0; padding: 0; }
