@@ -81,24 +81,6 @@
 				console.log("Changed class");
 				$( "#upper-div" ).addClass( "iphone-fix" );
 			}
-						
-			
-    jQuery(document).ready(function () {
-
-		$('#loader').hide();
-		console.log("finished rendering plugins");
-
-		// target element
-		var el = document.querySelector('#el');		
-		// current rating, or initial rating
-		var currentRating = 0;		
-		// max rating, i.e. number of stars you want
-		var maxRating= 5;		
-		// callback to run after setting the rating
-		var callback = function(rating) { alert(rating); };		
-		// rating instance
-		var myRating = rating(el, currentRating, maxRating, callback);
-    });
 	</script>
 
     </body>
