@@ -11,9 +11,45 @@
 	}
 
 	[type="radio"]:checked + label:after {
-	    border: 0;
-	    background-color: 0;
+	    border-radius: 50%;
+	    border: inherit;
+	    background-color: inherit;
+	    z-index: 0;
+	    -webkit-transform: scale(1.02);
+	    transform: inherit;
+	}
 
+	[type="radio"] + label:before, [type="radio"] + label:after {
+	    content: '';
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    margin: 4px;
+	    width: 16px;
+	    height: 16px;
+	    z-index: 0;
+	    transition: inherit;
+	    display: none;
+	}
+
+	[type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
+	    position: relative;
+	    padding-left: 37px;
+	    cursor: pointer;
+	    display: inline-block;
+	    height: 33px;
+	    line-height: 25px;
+	    font-size: 2rem;
+	    transition: inherit;
+	    -webkit-user-select: none;
+	    -moz-user-select: none;
+	    -ms-user-select: none;
+	    user-select: none;
+	}
+
+	[type="radio"]:checked + label:before {
+	    border-radius: 50%;
+	    border: inherit;
 	}
 	/****** Style Star Rating Widget *****/
 	
