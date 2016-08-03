@@ -21,6 +21,7 @@
 				FB.Event.subscribe('xfbml.render', finished_rendering);
 
 				FB.Event.subscribe('edge.create', function(targetUrl) {
+					$('#loader').show();
 					ga('send', 'event', 'action', 'facebook', 'like', 1);
 					<?php if ($_SESSION['fnbt']['name'] == 'futy'){ ?> 
 					window.location="/foot";
