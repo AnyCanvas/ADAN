@@ -134,6 +134,11 @@
 						
 		$('#loader').hide();
 		console.log("finished rendering plugins");
+		
+		var rate = function(value){
+			$('#loader').show();
+			window.location="/final.php?a="+ $('#rating-input').val()
+		}
 
 	</script>
 
