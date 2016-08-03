@@ -112,6 +112,10 @@
 			  <div id="fblike-div">
 			      <p class="fnbt-name-text grey-text" lang="es" >Contesta para jugar<br>&iquest;<?php echo($_SESSION['q']); ?>?</p>
 				  <div class="like-div" style="overflow: hidden;">
+
+    <div class="row">
+      <div class="grid-example col s12"><span class="flow-text">
+	      
 					<fieldset class="rating">
 					    <input type="radio" id="star5" name="rating" value="5" onclick="setTimeout(function() {rate('5')},500)" /><label for="star5" title="Awesome - 5 stars"></label>
 					    <input type="radio" id="star4" name="rating" value="4" onclick="setTimeout(function() {rate('4')},500)" /><label for="star4" title="Pretty good - 4 stars"></label>
@@ -119,6 +123,11 @@
 					    <input type="radio" id="star2" name="rating" value="2" onclick="setTimeout(function() {rate('2')},500)" /><label for="star2" title="Kinda bad - 2 stars"></label>
 					    <input type="radio" id="star1" name="rating" value="1" onclick="setTimeout(function() {rate('1')},500)" /><label for="star1" title="Sucks big time - 1 star"></label>
 					</fieldset>
+
+	      
+	  </span></div>
+      <div class="grid-example col s12 m6"><span class="flow-text">I am full-width on mobile (col s12 m6)</span></div>
+    </div>
 				  </div>
 		      </div>
 	    </footer>
