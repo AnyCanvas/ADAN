@@ -74,7 +74,7 @@
 									$_SESSION['page'] = 3;
 									if ($_SESSION['fnbt']['config']['socialnetwork'] == 'facebook'){	
 										if($_SESSION['action'] == 'like'){	
-											require_once("resources/actions/surveys/rate.php");
+											require_once("resources/actions/surveys/like.php");
 										} else if($_SESSION['action'] == 'rate'){
 											require_once("resources/actions/surveys/rate.php");
 										} else if($_SESSION['action'] == 'post'){
