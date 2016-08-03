@@ -34,12 +34,12 @@
 
 	[type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
 	    position: relative;
-	    padding-left: 37px;
+	    padding-left: 10vw;
 	    cursor: pointer;
 	    display: inline-block;
-	    height: 33px;
-	    line-height: 25px;
-	    font-size: 2rem;
+	    height: 10vw;
+	    line-height: 10vw;
+	    font-size: 7vw;
 	    transition: inherit;
 	    -webkit-user-select: none;
 	    -moz-user-select: none;
@@ -52,6 +52,8 @@
 	    border: inherit;
 	}
 	/****** Style Star Rating Widget *****/
+
+
 	
 	.rating { 
 	  border: none;
