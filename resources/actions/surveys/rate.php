@@ -112,7 +112,7 @@
 			  <div id="fblike-div">
 			      <p class="fnbt-name-text grey-text" lang="es" >Contesta para jugar<br>&iquest;<?php echo($_SESSION['q']); ?>?</p>
 				  <div class="like-div" style="overflow: hidden;">
-					<fieldset class="rating">
+					<fieldset class="rating btn-centered">
 					    <input type="radio" id="star5" name="rating" value="5" onclick="setTimeout(function() {rate('5')},500)" /><label for="star5" title="Awesome - 5 stars"></label>
 					    <input type="radio" id="star4" name="rating" value="4" onclick="setTimeout(function() {rate('4')},500)" /><label for="star4" title="Pretty good - 4 stars"></label>
 					    <input type="radio" id="star3" name="rating" value="3" onclick="setTimeout(function() {rate('3')},500)" /><label for="star3" title="Meh - 3 stars"></label>
