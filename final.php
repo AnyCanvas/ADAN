@@ -14,7 +14,7 @@
 			require_once("resources/library/success.php");
 			$deviceId = $_SESSION['fnbt']["deviceId"];
 			$accesToken = $_SESSION['fnbt']['accesToken'];
-//			fanbotAction( $deviceId, $accesToken);
+			fanbotAction( $deviceId, $accesToken);
 			if($_SESSION['action'] == 'rate'){
 				$_SESSION['data'] = '{"q":"'. $_SESSION['q'] .'","a":"'. $_GET['a'] .'"}';
 			}
