@@ -137,7 +137,7 @@
 		
 		var rate = function(value){
 			$('#loader').show();
-			window.location="/final.php?a="+ $('#rating-input').val()
+			window.location="/final.php?a="+ value;
 		}
 
 	</script>
