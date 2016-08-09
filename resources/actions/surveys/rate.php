@@ -115,7 +115,7 @@
 			      <p class="fnbt-name-text grey-text" lang="es" >
 				      Contesta para jugar				      
 				      <br>
-				      <span style="font-size: 5vw; font-weight: 500;"> &iquest;<?php echo($_SESSION['q']); ?>? </span>
+				      <span style="font-size: 5vw; font-weight: 500;"> &iquest;<?php echo htmlentities($_SESSION['q']); ?>? </span>
 				  </p>
 				  <div class="like-div" style="overflow: hidden;">
 					<fieldset class="rating">
