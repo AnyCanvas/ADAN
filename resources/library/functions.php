@@ -195,7 +195,14 @@
 				    die("Connection failed: " . $conn->connect_error);
 				} 
 
-				$sql = "INSERT INTO interactions  (fanbotId, userId, clientId, fbPage, action) VALUES ( '". $_SESSION['fnbt']['id']. "','".  $_SESSION['fbUser']['id']. "','". $_SESSION['fnbt']['clientId']. "','". $_SESSION['fnbt']['config']['link'] . "', '". $_SESSION['action'] ."')";
+				if($_SESSION['action'] == 'rate'){
+
+					$sql = "INSERT INTO interactions  (fanbotId, userId, clientId, fbPage, action, data) VALUES ( '". $_SESSION['fnbt']['id']. "','".  $_SESSION['fbUser']['id']. "','". $_SESSION['fnbt']['clientId']. "','". $_SESSION['fnbt']['config']['link'] . "', '". $_SESSION['action'] ."', '". $_SESSION['data'] ."')";
+				} else {
+
+					$sql = "INSERT INTO interactions  (fanbotId, userId, clientId, fbPage, action) VALUES ( '". $_SESSION['fnbt']['id']. "','".  $_SESSION['fbUser']['id']. "','". $_SESSION['fnbt']['clientId']. "','". $_SESSION['fnbt']['config']['link'] . "', '". $_SESSION['action'] ."')";
+					
+				}
 							
 				
 				if ($conn->query($sql) === TRUE) {
@@ -258,6 +265,26 @@
 		        $_SESSION['fnbt']['status'] = $row["estatus"];
 		        $_SESSION['fnbt']['config'] = json_decode($row["config"], true);
 
+				if ( $_SESSION['fnbt']['config']['type'] == 'rate' ){
+					$_SESSION['fnbt']['data'] = json_decode($row["survey"],true);
+					
+					$n = idate("U") % 4;
+
+					switch ($n) {
+						case 0:
+							$_SESSION['q'] = $_SESSION['fnbt']['data']['1'];
+							break;
+						case 1:
+							$_SESSION['q'] = $_SESSION['fnbt']['data']['2'];
+							break;
+						case 2:
+							$_SESSION['q'] = $_SESSION['fnbt']['data']['3'];
+							break;
+						case 3:
+							$_SESSION['q'] = $_SESSION['fnbt']['data']['4'];
+							break;
+					}				
+				}
 			    }
 
 					return 1;
@@ -335,6 +362,9 @@
 		} else if($_SESSION['fnbt']['config']['type'] == 'post' && notChekedin() ){
 			$_SESSION['action'] = 'post';
 			return TRUE;				
+		} else if ( $_SESSION['fnbt']['config']['type'] == 'rate' && notChekedin()){
+			$_SESSION['action'] = 'rate';
+			return TRUE;		
 		} else {
 			return FALSE;
 		}
