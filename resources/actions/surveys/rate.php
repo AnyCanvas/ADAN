@@ -104,13 +104,13 @@
 				<div class="cssload-loader btn-centered" style="z-index: 10; top: 45vh; margin: auto;"></div>
 			</div>
 		</div>
-		<div id="upper-div" style="height: 65%; position: relative;" class="blue">
+		<div id="upper-div" style="height: 55%; position: relative;" class="blue">
 		<div class="div-wrapper full" style="background-color: <?php echo $_SESSION['fnbt']['config']["bgcolor"] ?>;">
 
 		<img class="center-img fbpage-img" src="https://graph.facebook.com/<?php echo $_SESSION['fnbt']['config']['link'];?>/picture?type=large" class="img-responsive img-thumbnail center-block" alt="Cinque Terre">
 		</div>
 		</div>
-	    <footer style="height: 35%;">
+	    <footer style="height: 45%;">
 			  <div id="fblike-div">
 			      <p class="fnbt-name-text grey-text" lang="es" >
 				      Contesta para jugar				      
