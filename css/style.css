@@ -25,7 +25,7 @@ body {
 }
 
 .div-wrapper img {
-    top: 55%;
+    top: 45%;
 }
 
 .full{
@@ -36,12 +36,12 @@ body {
 .button-div{
     z-index: 5;
     left: 67%;
-    top: 88%;
+    top: 70%;
     position: absolute;
 }
 
 .button-div-iphone-fix{
-    top: 75vh !important;
+    top: 80vh !important;
 }
 
 .img-fix{
@@ -96,7 +96,7 @@ body {
 
 .fbpage-img{
 	width: 30vh;
-    top: 29vh !important;
+    top: 20vh !important;
     position: relative;
 }
 
