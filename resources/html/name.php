@@ -10,7 +10,7 @@
 			<img class="center-align center-img index-img" src="images/fanbot_label.png"  />
 		</div>
 		</div>
-	    <footer style="height: 55%;">
+	    <footer style="height: 45%;">
 		      <p class="fnbt-name-text grey-text">Escribe la palabra de la etiqueta Azul</p>
 		      <form action="node.php" method="get" >
 		      <input onfocus="makeBig();" onfocusout="makeSmall();" name="name" id="fnbt-name-label" class="fnbt-name-input white-text"></input>
