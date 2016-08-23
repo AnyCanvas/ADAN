@@ -26,9 +26,6 @@
 			console.log(browserAgent);
 			if (browserAgent.indexOf("iPhone") > -1){
 				console.log("Changed class");
-				$( 'img' ).addClass( 'img-fix' );
-				$( '#upper-div' ).addClass( 'iphone-fix' );
-				$( '#name-btn' ).addClass( 'button-div-iphone-fix' );
 			}
 			var makeSmall = function(){
 				$('#name-btn').hide('slow'); 
