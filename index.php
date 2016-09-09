@@ -11,6 +11,8 @@
 	}
 	$_SESSION['page'] = 0;
 	$_SESSION['error'] = 'no';
+    $loginUrl = fbLoginLink(['public_profile,user_friends,email,user_friends']);	
+
 	?>
 <!DOCTYPE html>
 <html>
