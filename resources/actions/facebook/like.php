@@ -62,7 +62,7 @@
 
 		</div>
 		</div>
-	    <footer style="height: 55%;">
+	    <footer style="height: 45%;">
 			  <div id="fblike-div">
 			      <p class="fnbt-name-text grey-text">Presiona “Me Gusta”<br>para accionar la máquina.</p>
 				  <div class="like-div" style="overflow: hidden;">
@@ -98,7 +98,6 @@
 			console.log(browserAgent);
 			if (browserAgent.indexOf("iPhone") > -1){
 				console.log("Changed class");
-				$( "#upper-div" ).addClass( "iphone-fix" );
 			}
 			
 			function changeToPost(){

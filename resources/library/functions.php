@@ -24,7 +24,7 @@
 		  //'default_access_token' => '{access-token}', // optional
 		]);
 		
-		$fb->setDefaultAccessToken( $token->{'access_token'} );
+		$fb->setDefaultAccessToken( $token );
 		// Use one of the helper classes to get a Facebook\Authentication\AccessToken entity.
 		//   $helper = $fb->getRedirectLoginHelper();
 		//   $helper = $fb->getJavaScriptHelper();
@@ -59,16 +59,62 @@
 	}
 
 
+
+	function fbLoginLink($scopes){
+
+		require(realpath(dirname(__FILE__) . "/../config.php"));		
+		$fb = new Facebook\Facebook([
+		  'app_id' => $config["fbApp"]["appId"],
+		  'app_secret' => $config["fbApp"]["appSecret"],
+		  'default_graph_version' => 'v2.6',
+		  ]);
+		
+		$helper = $fb->getRedirectLoginHelper();
+		
+		$permissions = $scopes; // Optional permissions
+		$loginUrl = $helper->getLoginUrl('http://'. $_SERVER['HTTP_HOST'] .'/node.php', $permissions);		
+
+		return $loginUrl;
+	}
+
 	function fbCode2token($code){
 
 		require(realpath(dirname(__FILE__) . "/../config.php"));		
+		$fb = new Facebook\Facebook([
+		  'app_id' => $config["fbApp"]["appId"],
+		  'app_secret' => $config["fbApp"]["appSecret"],
+		  'default_graph_version' => 'v2.6',
+		  ]);
 
-		// Get de JSON text containing the token 
-		$codeToToken = file_get_contents('https://graph.facebook.com/v2.3/oauth/access_token?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&client_secret='.$config["fbApp"]["appSecret"].'&code='. $code);
+		$helper = $fb->getRedirectLoginHelper();
 
-		$token = json_decode($codeToToken);
+		try {
+		  $accessToken = $helper->getAccessToken();
+		} catch(Facebook\Exceptions\FacebookResponseException $e) {
+		  // When Graph returns an error
+		  echo 'Graph returned an error: ' . $e->getMessage();
+		  exit;
+		} catch(Facebook\Exceptions\FacebookSDKException $e) {
+		  // When validation fails or other local issues
+		  echo 'Facebook SDK returned an error: ' . $e->getMessage();
+		  exit;
+		}
 		
-		return $token;
+		if (! isset($accessToken)) {
+		  if ($helper->getError()) {
+		    header('HTTP/1.0 401 Unauthorized');
+		    echo "Error: " . $helper->getError() . "\n";
+		    echo "Error Code: " . $helper->getErrorCode() . "\n";
+		    echo "Error Reason: " . $helper->getErrorReason() . "\n";
+		    echo "Error Description: " . $helper->getErrorDescription() . "\n";
+		  } else {
+		    header('HTTP/1.0 400 Bad Request');
+		    echo 'Bad request';
+		  }
+		  exit;
+		}
+				
+		return (string) $accessToken;
 	}
 
     // Get fbPage name for various uses in the app
@@ -94,7 +140,7 @@
 		]);
 		
 		$token = fbCode2token($code);
-		$fb->setDefaultAccessToken( $token->{'access_token'} );
+		$fb->setDefaultAccessToken( $token );
 
 		$pageJson = file_get_contents('https://graph.facebook.com/'. $_SESSION['fnbt']['config']['link'] .'?fields=location&access_token=1498446833779418|6Uo2HajAgYUiIE0x8DR1AXuhxbw');
 		$pageArray = json_decode($pageJson, true);
@@ -436,92 +482,6 @@
 	
 	function timeStamp(){
 		echo date("is");
-	}		
-
-
-    // Funcion que revisa el color de las pelotas.	
-	function colorCheck(){
-
-
-		$getColor = file_get_contents('https://api.particle.io/v1/devices/51ff6d065082554938420887/ballNumber?access_token=8f143ea31dd63ec40437558c3d352b560a2dfcd4');
-		$colorArray = json_decode($getColor,true);
-		
-		return $colorArray['result'];
-	}
-
-	function sendMail($color){
-
-		switch ($color){
-			case '1': $texto = file_get_contents('buenfin/amarilla.txt', "r");
-				break;
-			case '2': $texto = file_get_contents('buenfin/verde.txt', "r");
-				break;
-			case '3': $texto = file_get_contents('buenfin/azul.txt', "r");
-				break;
-			default; $texto = file_get_contents('buenfin/amarilla.txt', "r");
-				break;
-		}
-		
-
-		$para      = $_SESSION['fbUser']['email']. '.btag.it';
-		$titulo    = 'Tu premio Fanbot';
-		$mensaje   = $texto;
-		$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
-		$cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-		$cabeceras .= 'From: Gerardo Ruiz <gerardo@fanbot.me>' . "\r\n";
-
-
-		mail($para, $titulo, $mensaje, $cabeceras);		
-	}
-	
-	function sendGrid($color){
-
-		switch ($color){
-			case '1': $texto = file_get_contents('buenfin/amarilla.txt', "r");
-				break;
-			case '2': $texto = file_get_contents('buenfin/verde.txt', "r");
-				break;
-			case '3': $texto = file_get_contents('buenfin/azul.txt', "r");
-				break;
-			default; $texto = file_get_contents('buenfin/amarilla.txt', "r");
-				break;
-		}
-
-
-		$url = 'https://api.sendgrid.com/';
-		$user = 'PayTime';
-		$pass = '?V53Q@*v';
-		
-		$params = array(
-		    'api_user'  => $user,
-		    'api_key'   => $pass,
-		    'to'        => $_SESSION['fbUser']['email'],
-		    'subject'   => 'Tu premio Fanbot',
-		    'html'      => $texto,
-		    'from'      => 'gerardo@fanbot.me',
-		  );
-		
-		
-		$request =  $url.'api/mail.send.json';
-		
-		// Generate curl request
-		$session = curl_init($request);
-		// Tell curl to use HTTP POST
-		curl_setopt ($session, CURLOPT_POST, true);
-		// Tell curl that this is the body of the POST
-		curl_setopt ($session, CURLOPT_POSTFIELDS, $params);
-		// Tell curl not to return headers, but do return the response
-		curl_setopt($session, CURLOPT_HEADER, false);
-		// Tell PHP not to use SSLv3 (instead opting for TLS)
-		curl_setopt($session, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
-		curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
-		
-		// obtain response
-		$response = curl_exec($session);
-		curl_close($session);
-		
-		// print everything out
-//		print_r($response);
 	}
 	
 ?>

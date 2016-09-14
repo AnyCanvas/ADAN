@@ -10,9 +10,9 @@
 
 
 <?php
-    $loginUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=public_profile,user_friends,email,user_friends&response_type=code';	
+    $loginUrl = fbLoginLink(['public_profile,user_friends,email,user_friends']);	
 
-	$postCodeUrl = 'https://www.facebook.com/dialog/oauth?client_id='.$config["fbApp"]["appId"].'&redirect_uri='.$config["urls"]["baseUrl"].'/node.php&scope=publish_actions&response_type=code';
+	$postCodeUrl = fbLoginLink(['publish_actions']);
 
 
 			if(isset($_SESSION['page'])){
@@ -32,7 +32,7 @@
 												
 					    	if(isset($_GET["token"])){
 						    	$tokenArray['access_token'] = $_GET["token"];
-						    	$token = $object = json_decode(json_encode($tokenArray), FALSE);			    	
+						    	$token = $_GET["token"];			    	
 						    	getUserFbInfo($token);
 								saveUserDataToDB();
 						    } else if(isset($_GET["code"])){
@@ -65,7 +65,7 @@
 								} else if($_SESSION['fnbt']['status'] == 0){
 									$_SESSION['error'] = 2;
 									$_SESSION['page'] = 0;
-									header("location: ./resources/library/error.php");
+									require_once("resources/html/error3.php");									
 								} else if( !(fanbotStatus($_SESSION['fnbt']["deviceId"], $_SESSION['fnbt']['accesToken']) ) ){
 									$_SESSION['error'] = 1;
 									$_SESSION['page'] = 0;
