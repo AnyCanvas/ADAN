@@ -10,7 +10,7 @@
 		</div>
 	    <footer style="height: 25%;" class="red accent-2">
 		      <p class="error-text white-text">Esta Fanbot está suspendida,<br>puedes probar Fanbot en otro negocio.</p>
-			  <a class="waves-effect waves-light btn white black-text btn-centered" href="fanbot.me/radar
+			  <a class="waves-effect waves-light btn white black-text btn-centered" href="http://fanbot.me/radar
 ">BUSCAR OTROS NEGOCIOS</a>
 	    </footer>
 
@@ -20,8 +20,6 @@
 			console.log(browserAgent);
 			if (browserAgent.indexOf("iPhone") > -1){
 				console.log("Changed class");
-				$( "#upper-div" ).addClass( "iphone-fix" );
-				$( 'img' ).addClass( 'img-fix' );
 
 			}
 	</script>

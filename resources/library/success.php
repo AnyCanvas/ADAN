@@ -61,9 +61,6 @@
 			console.log(browserAgent);
 			if (browserAgent.indexOf("iPhone") > -1){
 				console.log("Changed class");
-				$( "#upper-div" ).addClass( "iphone-fix" );
-				$( 'img' ).addClass( 'img-fix' );
-				$( 'p' ).addClass( 'p-fix' );
 
 			}
 	</script>
