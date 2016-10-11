@@ -370,6 +370,33 @@
 
 	}	
 	
+	function likeThreshold($threshold){
+
+		require(realpath(dirname(__FILE__) . "/../config.php"));		
+		$servername = $config["db"]["fanbot"]["host"];
+		$username = $config["db"]["fanbot"]["username"];
+		$password = $config["db"]["fanbot"]["password"];
+		$dbname = $config["db"]["fanbot"]["dbname"];
+
+
+		// Create connection
+		$conn = new mysqli($servername, $username, $password, $dbname);
+		// Check connection
+		if ($conn->connect_error) {
+		    die("Connection failed: " . $conn->connect_error);
+		}
+
+		$sql = "SELECT * FROM interactions WHERE action = 'like' AND TIMESTAMPDIFF(HOUR,date,NOW()) <= 1;";	
+		$result = $conn->query($sql);
+		$conn->close();		
+		
+		if ($result->num_rows <= 10) {		    
+			    return 1;	
+			} else {
+				return 0;
+			}								
+	}
+	
 	function notChekedin(){
 
 		require(realpath(dirname(__FILE__) . "/../config.php"));		
@@ -402,10 +429,10 @@
 		if ($_SESSION['fnbt']['config']['type'] == 'like' && notLiked() ){
 			$_SESSION['action'] = 'like';
 			return TRUE;		
-		} else if ($_SESSION['fnbt']['config']['type'] == 'post' && notLiked()  ){
+		} else if ($_SESSION['fnbt']['config']['type'] == 'post' && notLiked() && likeThreshold(10)  ){
 			$_SESSION['action'] = 'like';
 			return TRUE;					
-		} else if($_SESSION['fnbt']['config']['type'] == 'post' && notChekedin() ){
+		} else if($_SESSION['fnbt']['config']['type'] == 'post' && notChekedin()){
 			$_SESSION['action'] = 'post';
 			return TRUE;				
 		} else if ( $_SESSION['fnbt']['config']['type'] == 'rate' && notChekedin()){
