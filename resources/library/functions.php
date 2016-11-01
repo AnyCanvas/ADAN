@@ -390,7 +390,7 @@
 		$result = $conn->query($sql);
 		$conn->close();		
 		
-		if ($result->num_rows <= 10) {		    
+		if ($result->num_rows < $threshold) {		    
 			    return 1;	
 			} else {
 				return 0;
