@@ -386,7 +386,7 @@
 		    die("Connection failed: " . $conn->connect_error);
 		}
 
-		$sql = "SELECT * FROM interactions WHERE action = 'like' AND TIMESTAMPDIFF(HOUR,date,NOW()) <= 1;";	
+		$sql = "SELECT * FROM interactions WHERE action = 'like' AND TIMESTAMPDIFF(MINUTE,date,NOW()) <= 60;";	
 		$result = $conn->query($sql);
 		$conn->close();		
 		
