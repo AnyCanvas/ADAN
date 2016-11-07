@@ -386,11 +386,11 @@
 		    die("Connection failed: " . $conn->connect_error);
 		}
 
-		$sql = "SELECT * FROM interactions WHERE action = 'like' AND TIMESTAMPDIFF(HOUR,date,NOW()) <= 1;";	
+		$sql = "SELECT * FROM interactions WHERE action = 'like' AND TIMESTAMPDIFF(MINUTE,date,NOW()) <= 60;";	
 		$result = $conn->query($sql);
 		$conn->close();		
 		
-		if ($result->num_rows <= 10) {		    
+		if ($result->num_rows < $threshold) {		    
 			    return 1;	
 			} else {
 				return 0;
@@ -426,11 +426,11 @@
 	}
 	
 	function checkInteraction(){
-		if ($_SESSION['fnbt']['config']['type'] == 'like' && notChekedin()){
-			$_SESSION['action'] = 'post';
-			return TRUE;		
-		} else if ($_SESSION['fnbt']['config']['type'] == 'post' && notLiked() && likeThreshold(10)  ){
+		if ($_SESSION['fnbt']['config']['type'] == 'like' && notChekedin() && likeThreshold(10)){
 			$_SESSION['action'] = 'like';
+			return TRUE;		
+		} else if ($_SESSION['fnbt']['config']['type'] == 'post' && notLiked() ){
+			$_SESSION['action'] = 'post';
 			return TRUE;					
 		} else if($_SESSION['fnbt']['config']['type'] == 'post' && notChekedin()){
 			$_SESSION['action'] = 'post';
