@@ -157,13 +157,6 @@
 	//		  'place' => $pageId,
 	
 			  ];						
-		} else if ($_SESSION['fnbt']['config']['link'] == 'fanbot'){
-			$linkData = [
-			  'link' => 'https://www.facebook.com/247746702276983',
-	//			  'message' => '',
-	//		  'place' => $pageId,
-	
-			  ];				
 		} else if (isset( $pageArray['location']['latitude'])){
 			$linkData = [
 			  'place' => $pageId,
@@ -220,7 +213,7 @@
 				
 				if ($conn->query($sql) === TRUE) {
 				} else {
-				    echo "Error: " . $sql . "<br>" . $conn->error;
+				    echo "Error";
 				}
 		}
 				$conn->close();
@@ -253,8 +246,9 @@
 				
 				if ($conn->query($sql) === TRUE) {
 				} else {
-				    echo "Error: " . $sql . "<br>" . $conn->error;
+				    echo "Error";
 				}
+
 				
 				if($_SESSION['fnbt']['plan'] == 1 || $_SESSION['fnbt']['plan'] == 2){
 
@@ -262,14 +256,14 @@
 					
 					if ($conn->query($sql) === TRUE) {
 					} else {
-					    echo "Error: " . $sql . "<br>" . $conn->error;
+					    echo "Error";
 					}
 
 					$sql = "UPDATE fanbot SET estatus = 0 WHERE credit = 0 AND id = '". $_SESSION['fnbt']['id'] ."'";
 
 					if ($conn->query($sql) === TRUE) {
 					} else {
-					    echo "Error: " . $sql . "<br>" . $conn->error;
+					    echo "Error";
 					}
 
 				}
