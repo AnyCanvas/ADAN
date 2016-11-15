@@ -6,10 +6,23 @@
 	  	ga("send", "event", "<?php echo $_SESSION['fnbt']['id']; ?>", "step 3", "<?php echo $_SESSION['fnbt']['config']['type'];?> success");
   	</script>
 
+	  <style type="text/css">
+		.ball {
+		    height: 25vh;
+		    background: red;
+		    -moz-border-radius: 100%;
+		    -webkit-border-radius: 100%;
+		    border-radius: 100%;
+		    background-position: center;
+		    /* background-size: 80px 60px; */
+		    background-clip: content-box;
+		    padding: 3vh 6vw !important;
+		}
+	  </style>
     <body>
 
 	<div class="container-fluid white" style="height: 100%; width: 100%">
-		<div id="upper-div" style="height: 100%; background-color: <?php echo $_SESSION['site']['bgcolor'] ?>;">
+		<div id="upper-div" style="height: 100%;">
 				  <script type="text/javascript">
 
 	$(document).ready(function(){
