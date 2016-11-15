@@ -2,6 +2,7 @@
 <html>
 	<title>¡Bravo!</title>
 	<?php require_once( "resources/html/header.php" ); ?>
+
   	<script>
 	  	ga("send", "event", "<?php echo $_SESSION['fnbt']['id']; ?>", "step 3", "<?php echo $_SESSION['fnbt']['config']['type'];?> success");
   	</script>
