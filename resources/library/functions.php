@@ -326,7 +326,7 @@
 					}				
 				}
 
-				if ( $row["price"] != 'NULL' ){
+				if ( $row["price"] != NULL ){
 					$_SESSION['fnbt']['price'] = json_decode($row["price"],true);					
 				} else {
 
