@@ -1,68 +1,124 @@
+<!DOCTYPE html>
+<html>
 	<title>¡Bravo!</title>
+	<?php require_once( "resources/html/header.php" ); ?>
   	<script>
 	  	ga("send", "event", "<?php echo $_SESSION['fnbt']['id']; ?>", "step 3", "<?php echo $_SESSION['fnbt']['config']['type'];?> success");
   	</script>
 
     <body>
 
+	<div class="container-fluid white" style="height: 100%; width: 100%">
+		<div id="upper-div" style="height: 100%; background-color: <?php echo $_SESSION['site']['bgcolor'] ?>;">
+				  <script type="text/javascript">
 
-	<!-- Facebook Pixel Code -->
-	<script>
-	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-	document,'script','//connect.facebook.net/en_US/fbevents.js');
-	
-	fbq('init', '1662475877300988');
-	fbq('track', "PageView");</script>
-	<noscript><img height="1" width="1" style="display:none"
-	src="https://www.facebook.com/tr?id=1662475877300988&ev=PageView&noscript=1"
-	/></noscript>
-	<!-- End Facebook Pixel Code -->
+	$(document).ready(function(){
+	    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+	    $('.modal').modal();
+	  });
 
-<?php if($_SESSION['fnbt']['id'] == "PF-B1-LTM-0001"){ ?>
+	  	function modalShow(number){
+		  	var price1 = "<?php $_SESSION['fnbt']['price']['1'] ?>";
+		  	var price2 = "<?php $_SESSION['fnbt']['price']['2'] ?>";
+		  	var price3 = "<?php $_SESSION['fnbt']['price']['3'] ?>";
+		  	var price4 = "<?php $_SESSION['fnbt']['price']['4'] ?>";
+		  	var price5 = "<?php $_SESSION['fnbt']['price']['5'] ?>";
+		  	var price6 = "<?php $_SESSION['fnbt']['price']['6'] ?>";
+		  	var price7 = "<?php $_SESSION['fnbt']['price']['7'] ?>";
+		  	var price8 = "<?php $_SESSION['fnbt']['price']['8'] ?>";
 
-		<div class="container-fluid" style="height: 100%; width: 100%; background-color: #004485">
-		<div id="upper-div" style="height: 75%;" class="blue">
-		<div class="div-wrapper full">
-			<img class="center-img success-img" src="/media/clients/centinela/done.jpg">
+		  	switch(number){
+			  	case 1:
+			  		$("#priceText").text(price1);
+			  		break;
+			  	case 2:
+			  		$("#priceText").text(price2);
+			  		break;
+			  	case 3:
+			  		$("#priceText").text(price3);
+			  		break;
+			  	case 4:
+			  		$("#priceText").text(price4);
+			  		break;
+			  	case 5:
+			  		$("#priceText").text(price5);
+			  		break;
+			  	case 6:
+			  		$("#priceText").text(price6);
+			  		break;
+			  	case 7:
+			  		$("#priceText").text(price7);
+			  		break;
+			  	case 8:
+			  		$("#priceText").text(price8);
+			  		break;
+
+		  	}
+		    $('#price').modal('open');
+		 }
+	  </script>
+      <div class="container">
+        <!-- Page Content goes here -->
+	    <div class="row">
+	      <div class="col s6 ball">
+	      	<div class="valign-wrapper" style="height: 100%;">
+			  <p class="valign" onclick="modalShow(1);" style="margin: auto auto; font-size: 8vh;color: white;">1</p>
+			</div>
+	      </div>
+
+	      <div class="col s6 ball">
+	      	<div class="valign-wrapper" style="height: 100%;">
+			  <p class="valign" onclick="modalShow(2);" style="margin: auto auto; font-size: 8vh;color: white;">2</p>
+			</div>
+	      </div>
+
+	      <div class="col s6 ball">
+	      	<div class="valign-wrapper" style="height: 100%;">
+			  <p class="valign" onclick="modalShow(3);" style="margin: auto auto; font-size: 8vh;color: white;">3</p>
+			</div>
+	      </div>
+
+	      <div class="col s6 ball">
+	      	<div class="valign-wrapper" style="height: 100%;">
+			  <p class="valign" onclick="modalShow(4);" style="margin: auto auto; font-size: 8vh;color: white;">4</p>
+			</div>
+	      </div>
+
+	      <div class="col s6 ball">
+	      	<div class="valign-wrapper" style="height: 100%;">
+			  <p class="valign" onclick="modalShow(5);" style="margin: auto auto; font-size: 8vh;color: white;">5</p>
+			</div>
+	      </div>
+
+	      <div class="col s6 ball">
+	      	<div class="valign-wrapper" style="height: 100%;">
+			  <p class="valign" onclick="modalShow(6);" style="margin: auto auto; font-size: 8vh;color: white;">6</p>
+			</div>
+	      </div>
+
+	      <div class="col s6 ball">
+	      	<div class="valign-wrapper" style="height: 100%;">
+			  <p class="valign" onclick="modalShow(7);" style="margin: auto auto; font-size: 8vh;color: white;">7</p>
+			</div>
+	      </div>
+	      <div class="col s6 ball">
+	      	<div class="valign-wrapper" style="height: 100%;">
+			  <p class="valign" onclick="modalShow(8);" style="margin: auto auto; font-size: 8vh;color: white;">8</p>
+			</div>
+	      </div>
+	    </div>
+     </div>
+		  <!-- Modal Structure -->
+		  <div id="price" class="modal bottom-sheet">
+		    <div class="modal-content">
+		      <h4>El premio es:</h4>
+		      <p id="priceText"></p>
+		    </div>
+		    <div class="modal-footer">
+		      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
+		    </div>
+		  </div>
 		</div>
-		</div>
-	    <footer style="height: 25%; padding-top: 17.5vh;" style="background-color: #004485;">
-	    </footer>
-
 	</div>
-
-<?php } else { ?>
-
-	<div class="container-fluid blue" style="height: 100%; width: 100%">
-		<div id="upper-div" style="height: 75%;" class="blue">
-		<div class="div-wrapper full">
-			<img class="center-img success-img" src="images/success.png">
-			<p class="center-align " style="z-index: 2; position: relative; bottom: 40%;"><?php echo timeStamp(); ?></p>
-		</div>
-		</div>
-	    <footer style="height: 25%; padding-top: 17.5vh;" class="blue">
-<!--		    <div class="btn-full-div">
-			  <a class="waves-effect waves-light btn white black-text btn-full teal accent-2" href="http://fanbot.me/">
-			<i class="material-icons left">arrow_forward</i>CONOCE FANBOT</a>
-		    </div> -->
-			  <a class="waves-effect waves-light btn white black-text btn-centered teal accent-2" href="http://facebook.com/fanbotme"><i class="material-icons left">arrow_forward</i>CONOCE FANBOT</a>
-
-	    </footer>
-
-	</div>
-
-<?php } ?>
-
-	<script>
-			var browserAgent = navigator.userAgent;
-			console.log(browserAgent);
-			if (browserAgent.indexOf("iPhone") > -1){
-				console.log("Changed class");
-
-			}
-	</script>
     </body>
   </html>
