@@ -15,7 +15,7 @@
 	$(document).ready(function(){
 	    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
 	    $('.modal').modal();
-	  });
+	});
 
 	  	function modalShow(number){
 		  	var price1 = "<?php $_SESSION['fnbt']['price']['1'] ?>";
@@ -101,6 +101,7 @@
 			  <p class="valign" onclick="modalShow(7);" style="margin: auto auto; font-size: 8vh;color: white;">7</p>
 			</div>
 	      </div>
+
 	      <div class="col s6 ball">
 	      	<div class="valign-wrapper" style="height: 100%;">
 			  <p class="valign" onclick="modalShow(8);" style="margin: auto auto; font-size: 8vh;color: white;">8</p>
@@ -108,6 +109,7 @@
 	      </div>
 	    </div>
      </div>
+
 		  <!-- Modal Structure -->
 		  <div id="price" class="modal bottom-sheet">
 		    <div class="modal-content">
