@@ -18,14 +18,14 @@
 	  });
 
 	  	function modalShow(number){
-		  	var price1 = $_SESSION['fnbt']['price1'];
-		  	var price2 = $_SESSION['fnbt']['price2'];
-		  	var price3 = $_SESSION['fnbt']['price3'];
-		  	var price4 = $_SESSION['fnbt']['price4'];
-		  	var price5 = $_SESSION['fnbt']['price5'];
-		  	var price6 = $_SESSION['fnbt']['price6'];
-		  	var price7 = $_SESSION['fnbt']['price7'];
-		  	var price8 = $_SESSION['fnbt']['price8'];
+		  	var price1 = "<?php $_SESSION['fnbt']['price']['1'] ?>";
+		  	var price2 = "<?php $_SESSION['fnbt']['price']['2'] ?>";
+		  	var price3 = "<?php $_SESSION['fnbt']['price']['3'] ?>";
+		  	var price4 = "<?php $_SESSION['fnbt']['price']['4'] ?>";
+		  	var price5 = "<?php $_SESSION['fnbt']['price']['5'] ?>";
+		  	var price6 = "<?php $_SESSION['fnbt']['price']['6'] ?>";
+		  	var price7 = "<?php $_SESSION['fnbt']['price']['7'] ?>";
+		  	var price8 = "<?php $_SESSION['fnbt']['price']['8'] ?>";
 
 		  	switch(number){
 			  	case 1:
