@@ -10,7 +10,6 @@
 	  <style type="text/css">
 		.ball {
 		    height: 25vh;
-		    background: red;
 		    -moz-border-radius: 100%;
 		    -webkit-border-radius: 100%;
 		    border-radius: 100%;
@@ -76,49 +75,49 @@
 	    <div class="row">
 	      <div class="col s6 ball">
 	      	<div class="valign-wrapper" style="height: 100%;">
-			  <p class="valign" onclick="modalShow(1);" style="margin: auto auto; font-size: 8vh;color: white;">1</p>
+			  <p class="valign" onclick="modalShow(1);" style="margin: auto auto; font-size: 8vh;color: white; background-color: #FDBF14;">1</p>
 			</div>
 	      </div>
 
 	      <div class="col s6 ball">
 	      	<div class="valign-wrapper" style="height: 100%;">
-			  <p class="valign" onclick="modalShow(2);" style="margin: auto auto; font-size: 8vh;color: white;">2</p>
+			  <p class="valign" onclick="modalShow(2);" style="margin: auto auto; font-size: 8vh;color: white; background-color: #124C9B;">2</p>
 			</div>
 	      </div>
 
 	      <div class="col s6 ball">
 	      	<div class="valign-wrapper" style="height: 100%;">
-			  <p class="valign" onclick="modalShow(3);" style="margin: auto auto; font-size: 8vh;color: white;">3</p>
+			  <p class="valign" onclick="modalShow(3);" style="margin: auto auto; font-size: 8vh;color: white; background-color: #EE4738;">3</p>
 			</div>
 	      </div>
 
 	      <div class="col s6 ball">
 	      	<div class="valign-wrapper" style="height: 100%;">
-			  <p class="valign" onclick="modalShow(4);" style="margin: auto auto; font-size: 8vh;color: white;">4</p>
+			  <p class="valign" onclick="modalShow(4);" style="margin: auto auto; font-size: 8vh;color: white; background-color: #A44498;">4</p>
 			</div>
 	      </div>
 
 	      <div class="col s6 ball">
 	      	<div class="valign-wrapper" style="height: 100%;">
-			  <p class="valign" onclick="modalShow(5);" style="margin: auto auto; font-size: 8vh;color: white;">5</p>
+			  <p class="valign" onclick="modalShow(5);" style="margin: auto auto; font-size: 8vh;color: white; background-color: #F37B22;">5</p>
 			</div>
 	      </div>
 
 	      <div class="col s6 ball">
 	      	<div class="valign-wrapper" style="height: 100%;">
-			  <p class="valign" onclick="modalShow(6);" style="margin: auto auto; font-size: 8vh;color: white;">6</p>
+			  <p class="valign" onclick="modalShow(6);" style="margin: auto auto; font-size: 8vh;color: white; background-color: #41B555;">6</p>
 			</div>
 	      </div>
 
 	      <div class="col s6 ball">
 	      	<div class="valign-wrapper" style="height: 100%;">
-			  <p class="valign" onclick="modalShow(7);" style="margin: auto auto; font-size: 8vh;color: white;">7</p>
+			  <p class="valign" onclick="modalShow(7);" style="margin: auto auto; font-size: 8vh;color: white; background-color: #9F3029;">7</p>
 			</div>
 	      </div>
 
 	      <div class="col s6 ball">
 	      	<div class="valign-wrapper" style="height: 100%;">
-			  <p class="valign" onclick="modalShow(8);" style="margin: auto auto; font-size: 8vh;color: white;">8</p>
+			  <p class="valign" onclick="modalShow(8);" style="margin: auto auto; font-size: 8vh;color: white; background-color: black">8</p>
 			</div>
 	      </div>
 	    </div>
