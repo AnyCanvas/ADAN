@@ -13,7 +13,7 @@
     <body>
 
 	<div class="container-fluid" style="height: 100%; width: 100%">
-		<div id="upper-div" class="red accent-2" style=" height: 75%; background-image: url(./images/error.png); background-repeat: no-repeat; background-position: center bottom; background-size: auto 60%; background-color: #ee5559;">
+		<div id="upper-div" style=" height: 75%; background-image: url(./images/error.png); background-repeat: no-repeat; background-position: center bottom; background-size: auto 60%; background-color: #ee5559;">
 		</div>
 	    <footer style="height: 25%; background-color: #ee5559;">
 		      <p class="error-text white-text">Esa palabra no coincide<br>con la de la etiqueta azul.<p>
