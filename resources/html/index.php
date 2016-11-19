@@ -76,7 +76,7 @@
 				<div class="cssload-loader btn-centered" style="z-index: 10; top: 45vh; margin: auto;"></div>
 			</div>
 		</div>	
-		<div id="upper-div" style="height: 100vh; width: 100vw;" class="blue">
+		<div id="upper-div" style="height: 100vh; width: 100vw; background-color: #F6F7F9;">
 		</div>
 
 
