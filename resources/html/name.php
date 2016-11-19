@@ -7,7 +7,7 @@
 	<div class="container-fluid" style="height: 100%; width: 100%">
 		<div id="upper-div" style="height: 55%;" class="blue">
 		<div class="div-wrapper full" style="padding-top: top: 40vh !important;">
-			<img class="center-align center-img index-img" src="images/fanbot_label.png"  />
+			<img class="center-align center-img index-img" src="images/fanbot.png"  />
 		</div>
 		</div>
 	    <footer style="height: 45%;">
