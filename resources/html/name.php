@@ -5,7 +5,7 @@
 		}
 	</script>
 	<div class="container-fluid" style="height: 100%; width: 100%">
-		<div id="upper-div" style="height: 55%; background-color: #ee5559 !important;">
+		<div id="upper-div" style="height: 55%; background-color: #F6F7F9 !important;">
 		<div class="div-wrapper full" style="padding-top: top: 40vh !important;">
 			<img class="center-align center-img index-img" src="images/fanbot.png"  />
 		</div>
