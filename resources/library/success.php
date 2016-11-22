@@ -128,7 +128,7 @@
 		  <!-- Modal Structure -->
 		  <div id="price" class="modal bottom-sheet">
 		    <div class="modal-content">
-		      <h4>El premio es:</h4>
+		      <h4 class="flow-text">El premio es:</h4>
 		      <p class="flow-text" id="priceText"></p>
 		      <p class="flow-text">Entrega la cápsula para canjear tu premio. </p>
 		    </div>
