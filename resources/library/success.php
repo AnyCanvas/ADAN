@@ -72,7 +72,7 @@
 	  </script>
       <div class="container">
 
-		<h6 class="center-align flow-text">Toca la cápsula que te salió para conocer tu premio. </h6>
+		<b class="center-align flow-text">Toca la cápsula que te salió para conocer tu premio. </b>
 
         <!-- Page Content goes here -->
 	    <div class="row" style="margin-bottom: 0;">
@@ -128,9 +128,8 @@
 		  <!-- Modal Structure -->
 		  <div id="price" class="modal bottom-sheet">
 		    <div class="modal-content">
-		      <h4 class="flow-text">El premio es:</h4>
 		      <p class="flow-text" id="priceText"></p>
-		      <p class="flow-text">Entrega la cápsula para canjear tu premio. </p>
+		      <p class="flow-text" style="color: #808285">Entrega la cápsula para canjear tu premio. </p>
 		    </div>
 		    <div class="modal-footer">
 		      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
