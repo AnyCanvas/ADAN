@@ -23,6 +23,7 @@
 
 	<div class="container-fluid white" style="height: 100%; width: 100%">
 		<div id="upper-div" style="height: 100%;">
+			<p>Toca la cápsula que te salió para conocer tu premio. </p>
 				  <script type="text/javascript">
 
 	$(document).ready(function(){
@@ -127,6 +128,7 @@
 		    <div class="modal-content">
 		      <h4>El premio es:</h4>
 		      <p id="priceText"></p>
+		      <p>Entrega la cápsula para canjear tu premio. </p>
 		    </div>
 		    <div class="modal-footer">
 		      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
