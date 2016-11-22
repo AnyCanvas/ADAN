@@ -75,7 +75,7 @@
 		<h6 class="center-align flow-text">Toca la cápsula que te salió para conocer tu premio. </h6>
 
         <!-- Page Content goes here -->
-	    <div class="row">
+	    <div class="row" style="margin-bottom: 0;">
 	      <div class="col s4 offset-s1 ball" style="background-color: #FDBF14;">
 	      	<div class="valign-wrapper" style="height: 100%;">
 			  <p class="valign" onclick="modalShow(1);" style="margin: auto auto; font-size: 8vh;color: white;">1</p>
