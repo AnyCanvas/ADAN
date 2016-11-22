@@ -72,7 +72,7 @@
 	  </script>
       <div class="container">
 
-		<h5 class="center-align">Toca la cápsula que te salió para conocer tu premio. </h5>
+		<h6 class="center-align flow-text">Toca la cápsula que te salió para conocer tu premio. </h6>
 
         <!-- Page Content goes here -->
 	    <div class="row">
