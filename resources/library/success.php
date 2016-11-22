@@ -23,7 +23,6 @@
 
 	<div class="container-fluid white" style="height: 100%; width: 100%">
 		<div id="upper-div" style="height: 100%;">
-			<p>Toca la cápsula que te salió para conocer tu premio. </p>
 				  <script type="text/javascript">
 
 	$(document).ready(function(){
@@ -72,6 +71,9 @@
 		 }
 	  </script>
       <div class="container">
+
+		<h5 class="center-align">Toca la cápsula que te salió para conocer tu premio. </h5>
+
         <!-- Page Content goes here -->
 	    <div class="row">
 	      <div class="col s4 offset-s1 ball" style="background-color: #FDBF14;">
