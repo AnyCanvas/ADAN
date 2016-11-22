@@ -129,8 +129,8 @@
 		  <div id="price" class="modal bottom-sheet">
 		    <div class="modal-content">
 		      <h4>El premio es:</h4>
-		      <p id="priceText"></p>
-		      <p>Entrega la cápsula para canjear tu premio. </p>
+		      <p class="flow-text" id="priceText"></p>
+		      <p class="flow-text">Entrega la cápsula para canjear tu premio. </p>
 		    </div>
 		    <div class="modal-footer">
 		      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
