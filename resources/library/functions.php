@@ -309,14 +309,8 @@
 				if ( $row["price"] != NULL ){
 					$_SESSION['fnbt']['price'] = json_decode($row["price"],true);					
 				} else {
-					$_SESSION['fnbt']['price']['1'] = "No se han configurado los premios para esta Fanbot";
-					$_SESSION['fnbt']['price']['2'] = "No se han configurado los premios para esta Fanbot";
-					$_SESSION['fnbt']['price']['3'] = "No se han configurado los premios para esta Fanbot";
-					$_SESSION['fnbt']['price']['4'] = "No se han configurado los premios para esta Fanbot";
-					$_SESSION['fnbt']['price']['5'] = "No se han configurado los premios para esta Fanbot";
-					$_SESSION['fnbt']['price']['6'] = "No se han configurado los premios para esta Fanbot";
-					$_SESSION['fnbt']['price']['7'] = "No se han configurado los premios para esta Fanbot";
-					$_SESSION['fnbt']['price']['8'] = "No se han configurado los premios para esta Fanbot";
+					$_SESSION['fnbt']['price']['1'] = NULL;
+
 				}
 				
 				if ( $_SESSION['fnbt']['config']['type'] == 'rate' ){
