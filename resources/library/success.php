@@ -140,16 +140,17 @@
 		  </div>
 
 <?php }  else { ?>
-<!DOCTYPE html>
+			<div id="upper-div" style="height: 75%;">
+			<div class="div-wrapper full">
+				<img class="center-img success-img" src="images/success.png">
+				<p class="center-align " style="z-index: 2; position: relative; bottom: 40%;"><?php echo timeStamp(); ?></p>
+			</div>
+			</div>
+		    <footer style="height: 25%; padding-top: 17.5vh;" class="blue">
+				  <a class="waves-effect waves-light btn white black-text btn-centered teal accent-2" href="http://facebook.com/fanbotme"><i class="material-icons left">arrow_forward</i>CONOCE FANBOT</a>
+	
+		    </footer>
 
-		<div id="upper-div" style="height: 100%; background-image: url(images/success.png); background-repeat: no-repeat; background-position: center top; background-size: 100% auto;">
-		</div>
-	    <footer style="height: 25%; padding-top: 17.5vh;" style="background-color: <?php echo $_SESSION['site']['bgcolor'] ?>;">
-<!--		    <div class="btn-full-div">
-			  <a class="waves-effect waves-light btn white black-text btn-full teal accent-2" href="http://fanbot.me/">
-			<i class="material-icons left">arrow_forward</i>CONOCE FANBOT</a>
-		    </div> -->
-	    </footer>
 
 
 <?php } ?>
