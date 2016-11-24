@@ -4,6 +4,9 @@
 			window.location = "node.php?name=" + $("#fnbt-name-label").val();;
 		}
 
+			var browserAgent = navigator.userAgent;
+			console.log(browserAgent);
+			
 			var makeSmall = function(){
 //				$('#name-btn').hide('slow'); 
 				if (browserAgent.indexOf("iPhone") > -1){
