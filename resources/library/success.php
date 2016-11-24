@@ -132,7 +132,7 @@
 
 		  <!-- Modal Structure -->
 		  <div id="price" class="modal">
-		    <div class="modal-content">
+		    <div class="modal-content" style="text-align: center;">
 		      <p class="flow-text" id="priceText"></p>
 		      <p class="flow-text" style="color: #808285">Entrega la cápsula para canjear tu premio. </br><i>Vuelve a jugar en tu próxima visita.</i></p>
 
@@ -150,7 +150,7 @@
 			</div>
 			</div>
 		    <footer style="height: 25%; padding-top: 17.5vh;">
-				  <a class="waves-effect waves-light btn white black-text btn-centered teal accent-2" href="http://facebook.com/fanbotme"><i class="material-icons left">arrow_forward</i>CONOCE FANBOT</a>
+				  <a class="waves-effect waves-light btn white black-text btn-centered teal accent-2 center-align" href="http://facebook.com/fanbotme" style="    width: 100%;"><i class="material-icons left">arrow_forward</i>CONOCE FANBOT</a>
 	
 		    </footer>
 
