@@ -72,7 +72,7 @@
 		    $('#price').modal('open');
 		 }
 	  </script>
-      <div class="container center-align flow-text">
+      <div class="container center-align flow-text" style="padding-top: 1vh;">
 
 		<b class="">Toca la cápsula que te salió para conocer tu premio. </b>
 
