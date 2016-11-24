@@ -3,6 +3,29 @@
 		function sendName(){
 			window.location = "node.php?name=" + $("#fnbt-name-label").val();;
 		}
+
+			var makeSmall = function(){
+//				$('#name-btn').hide('slow'); 
+				if (browserAgent.indexOf("iPhone") > -1){
+					console.log("Changed class");
+					$( 'img' ).addClass( 'img-fix' );
+					$( '#upper-div' ).addClass( 'iphone-fix' );
+					$( '#name-btn' ).addClass( 'button-div-iphone-fix' );
+	
+				}
+			}
+
+			var makeBig = function (){
+				$('#name-btn').show('slow');
+				if (browserAgent.indexOf("iPhone") > -1){
+					console.log("Changed class");
+					$( 'img' ).removeClass( 'img-fix' );
+					$( '#upper-div' ).removeClass( 'iphone-fix' );
+					$( '#name-btn' ).removeClass( 'button-div-iphone-fix' );
+	
+				}
+				
+			}
 	</script>
 	<div class="container-fluid" style="height: 100%; width: 100%">
 		<div id="upper-div" style="height: 55%; background-color: #F6F7F9 !important;">
