@@ -33,14 +33,14 @@
 	});
 
 	  	function modalShow(number){
-		  	var price1 = "<?php echo $_SESSION['fnbt']['price']['1'] ?>";
-		  	var price2 = "<?php echo $_SESSION['fnbt']['price']['2'] ?>";
-		  	var price3 = "<?php echo $_SESSION['fnbt']['price']['3'] ?>";
-		  	var price4 = "<?php echo $_SESSION['fnbt']['price']['4'] ?>";
-		  	var price5 = "<?php echo $_SESSION['fnbt']['price']['5'] ?>";
-		  	var price6 = "<?php echo $_SESSION['fnbt']['price']['6'] ?>";
-		  	var price7 = "<?php echo $_SESSION['fnbt']['price']['7'] ?>";
-		  	var price8 = "<?php echo $_SESSION['fnbt']['price']['8'] ?>";
+		  	var price1 = decodeURIComponent("<?php echo $_SESSION['fnbt']['price']['1'] ?>");
+		  	var price2 = decodeURIComponent("<?php echo $_SESSION['fnbt']['price']['2'] ?>");
+		  	var price3 = decodeURIComponent("<?php echo $_SESSION['fnbt']['price']['3'] ?>");
+		  	var price4 = decodeURIComponent("<?php echo $_SESSION['fnbt']['price']['4'] ?>");
+		  	var price5 = decodeURIComponent("<?php echo $_SESSION['fnbt']['price']['5'] ?>");
+		  	var price6 = decodeURIComponent("<?php echo $_SESSION['fnbt']['price']['6'] ?>");
+		  	var price7 = decodeURIComponent("<?php echo $_SESSION['fnbt']['price']['7'] ?>");
+		  	var price8 = decodeURIComponent("<?php echo $_SESSION['fnbt']['price']['8'] ?>");
 
 		  	switch(number){
 			  	case 1:
