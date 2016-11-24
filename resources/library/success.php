@@ -133,6 +133,8 @@
 		    <div class="modal-content">
 		      <p class="flow-text" id="priceText"></p>
 		      <p class="flow-text" style="color: #808285">Entrega la cápsula para canjear tu premio. </p>
+		      <p class="flow-text" style="color: #808285"><i>Entrega la cápsula para canjear tu premio.</i></p>
+
 		    </div>
 		    <div class="modal-footer">
 		      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
