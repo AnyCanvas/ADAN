@@ -72,9 +72,9 @@
 		    $('#price').modal('open');
 		 }
 	  </script>
-      <div class="container">
+      <div class="container center-align flow-text">
 
-		<b class="center-align flow-text" style="text-align: center; margin-top: 5px;">Toca la cápsula que te salió para conocer tu premio. </b>
+		<b class="">Toca la cápsula que te salió para conocer tu premio. </b>
 
         <!-- Page Content goes here -->
 	    <div class="row" style="margin-bottom: 0;">
