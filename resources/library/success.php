@@ -74,7 +74,7 @@
 	  </script>
       <div class="container">
 
-		<b class="center-align flow-text">Toca la cápsula que te salió para conocer tu premio. </b>
+		<b class="center-align flow-text" style="text-align: center; margin-top: 5px;">Toca la cápsula que te salió para conocer tu premio. </b>
 
         <!-- Page Content goes here -->
 	    <div class="row" style="margin-bottom: 0;">
