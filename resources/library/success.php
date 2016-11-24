@@ -29,7 +29,9 @@
 
 	$(document).ready(function(){
 	    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-	    $('#price').modal();
+	    $('#price').modal({
+		    dismissible: true
+	    });
 	});
 
 	  	function modalShow(number){
@@ -129,7 +131,7 @@
      </div>
 
 		  <!-- Modal Structure -->
-		  <div id="price" class="modal bottom-sheet">
+		  <div id="price" class="modal">
 		    <div class="modal-content">
 		      <p class="flow-text" id="priceText"></p>
 		      <p class="flow-text" style="color: #808285">Entrega la cápsula para canjear tu premio. </br><i>Vuelve a jugar en tu próxima visita.</i></p>
