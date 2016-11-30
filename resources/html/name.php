@@ -37,7 +37,7 @@
 		</div>
 		</div>
 	    <footer style="height: 45%;">
-		      <p class="fnbt-name-text grey-text">Escribe la palabra de la etiqueta</p>
+		      <p class="fnbt-name-text grey-text">Escribe la palabra de la etiqueta roja</p>
 		      <form action="node.php" method="get" >
 		      <input onfocus="makeBig();" onfocusout="makeSmall();" name="name" id="fnbt-name-label" class="fnbt-name-input white-text" style="background-color: #ee5559 !important;"></input>
 		      </form>

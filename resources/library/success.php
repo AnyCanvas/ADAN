@@ -140,7 +140,7 @@
 
 		    </div>
 		    <div class="modal-footer">
-		      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
+		      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" style=" width: 100%; text-align: center;">Ver otros premios</a>
 		    </div>
 		  </div>
 
