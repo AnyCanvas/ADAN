@@ -428,10 +428,10 @@
 	}
 	
 	function checkInteraction(){
-		if ($_SESSION['fnbt']['config']['type'] == 'like' && notLiked() && notChekedin() && likeThreshold(10)){
+		if ($_SESSION['fnbt']['config']['type'] == 'like' && notLiked() && notChekedin() && likeThreshold(20)){
 			$_SESSION['action'] = 'like';
 			return TRUE;		
-		} else if ($_SESSION['fnbt']['config']['type'] == 'like' && !(notLiked()) && notChekedin()){
+		} else if ($_SESSION['fnbt']['config']['type'] == 'like' && notChekedin()){
 			$_SESSION['action'] = 'post';
 			return TRUE;					
 		} else if($_SESSION['fnbt']['config']['type'] == 'post' && notChekedin()){
