@@ -362,7 +362,7 @@
 	}
 	
 	function checkInteraction(){
-		if ($_SESSION['fnbt']['config']['type'] == 'like' && notLiked() ){
+		if ($_SESSION['fnbt']['config']['type'] == 'like' && notLiked() && likeThreshold(20)){
 			$_SESSION['action'] = 'like';
 			return TRUE;		
 		} else if ($_SESSION['fnbt']['config']['type'] == 'post' && notLiked()  ){
