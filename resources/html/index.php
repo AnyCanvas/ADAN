@@ -55,7 +55,7 @@
 			 } else {
 					console.log("Facebook app to Chrome");
 			  	}
-			document.location.href = 'node.php';
+				document.location.href = '<?php echo $loginUrl ?>';	
 			}
 			});
 			};
