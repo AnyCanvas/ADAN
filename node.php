@@ -25,7 +25,6 @@
 
 				    case 0:
  						$_SESSION['page'] = 1;
-    					require_once("resources/html/login.php");
 						header("location: ". $loginUrl);
     					break;
 
