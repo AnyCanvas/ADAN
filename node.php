@@ -25,7 +25,7 @@
 
 				    case 0:
  						$_SESSION['page'] = 1;
-    					header("location: ".$loginUrl);
+						header("location: ". $loginUrl);
     					break;
 
 				    case 1:

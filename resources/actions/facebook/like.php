@@ -75,12 +75,9 @@
 						   data-share="false">
 					  </div>
 				  </div>
-<?php if($_SESSION['fnbt']['config']["type"] == 'post'){ ?>
 				  <p style="font-size: smaller; text-align: center; padding-top: 5px;"><a onclick="changeToPost();">Ya di "Me Gusta", prefiero hacer Check-in</a></p>
-<?php } ?>
 		      </div>
 
-<?php if($_SESSION['fnbt']['config']["type"] == 'post'){ ?>
 			  <div id="fbpost-div" style="display: none;">
 			      <p class="fnbt-name-text grey-text">Comprueba tu visita con un Check-in.</p>
 				  <div class="like-div" style="overflow: hidden;">
@@ -89,7 +86,6 @@
 				  		</a>
 				  </div>
 		      </div>
-<?php } ?>
 	    </footer>
 
 	</div>

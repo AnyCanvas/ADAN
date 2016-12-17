@@ -305,6 +305,14 @@
 		        $_SESSION['fnbt']['status'] = $row["estatus"];
 		        $_SESSION['fnbt']['config'] = json_decode($row["config"], true);
 
+
+				if ( $row["price"] != NULL ){
+					$_SESSION['fnbt']['price'] = json_decode($row["price"],true);					
+				} else {
+					$_SESSION['fnbt']['price']['1'] = NULL;
+
+				}
+				
 				if ( $_SESSION['fnbt']['config']['type'] == 'rate' ){
 					$_SESSION['fnbt']['data'] = json_decode($row["survey"],true);
 					
@@ -325,17 +333,8 @@
 							break;
 					}				
 				}
-
-				if ( $row["price"] != 'NULL' ){
-					$_SESSION['fnbt']['price'] = json_decode($row["price"],true);					
-				} else {
-
-					$_SESSION['fnbt']['price']['1'] = $_SESSION['fnbt']['price']['2'] = $_SESSION['fnbt']['price']['3'] = $_SESSION['fnbt']['price']['4'] = $_SESSION['fnbt']['price']['5'] = $_SESSION['fnbt']['price']['6'] = $_SESSION['fnbt']['price']['7'] = $_SESSION['fnbt']['price']['8'] = "No hay premio configurado";					
-					
-				}
 			    
 		}
-
 					return 1;
 
 			} else {
@@ -396,6 +395,14 @@
 		if ($result->num_rows < $threshold) {		    
 			    return 1;	
 			} else {
+				// the message
+				$msg = "Se desactivaron los likes en soyfanbot";
+				
+				// use wordwrap() if lines are longer than 70 characters
+				$msg = wordwrap($msg,70);
+				
+				// send email
+				mail("hello@fanbot.me","Aviso de Consola Fanbot",$msg);
 				return 0;
 			}								
 	}
@@ -429,13 +436,11 @@
 	}
 	
 	function checkInteraction(){
-<<<<<<< HEAD
-		if ($_SESSION['fnbt']['config']['type'] == 'like' && notLiked() && likeThreshold(20)){
+		if ($_SESSION['fnbt']['config']['type'] == 'like' && notLiked() && notChekedin() && likeThreshold(20)){
 			$_SESSION['action'] = 'like';
-=======
-		if ($_SESSION['fnbt']['config']['type'] == 'like'){
+			return TRUE;		
+		} else if ($_SESSION['fnbt']['config']['type'] == 'like' && notChekedin()){
 			$_SESSION['action'] = 'post';
->>>>>>> parent of 28496e8... Merge branch 'development'
 			return TRUE;		
 		} else if ($_SESSION['fnbt']['config']['type'] == 'post' && notLiked()  ){
 			$_SESSION['action'] = 'like';

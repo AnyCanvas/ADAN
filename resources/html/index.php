@@ -71,12 +71,12 @@
 
 	<div class="container-fluid">
 		
-		<div id="loader" style="display: block; width: 100vw; height: 100vh; z-index: 9; position: absolute; background-color: rgba(0, 0, 0, 0.51);">
+		<div id="loader" style="display: block; width: 100vw; height: 100vh; z-index: 9; position: absolute;">
 			<div class="wrapper vertical-center">
 				<div class="cssload-loader btn-centered" style="z-index: 10; top: 45vh; margin: auto;"></div>
 			</div>
 		</div>	
-		<div id="upper-div" style="height: 100vh; width: 100vw;" class="blue">
+		<div id="upper-div" style="height: 100vh; width: 100vw; background-color: #F6F7F9;">
 		</div>
 
 
