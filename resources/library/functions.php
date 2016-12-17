@@ -395,6 +395,14 @@
 		if ($result->num_rows < $threshold) {		    
 			    return 1;	
 			} else {
+				// the message
+				$msg = "Se desactivaron los likes en soyfanbot";
+				
+				// use wordwrap() if lines are longer than 70 characters
+				$msg = wordwrap($msg,70);
+				
+				// send email
+				mail("hello@fanbot.me","Aviso de Consola Fanbot",$msg);
 				return 0;
 			}								
 	}
