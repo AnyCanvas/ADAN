@@ -102,22 +102,6 @@
 			</div>
 	      </div>
 
-<<<<<<< HEAD
-	<script>
-			var browserAgent = navigator.userAgent;
-			console.log(browserAgent);
-			if (browserAgent.indexOf("iPhone") > -1){
-				console.log("Changed class");
-=======
-	      <div class="col s6 ball">
-	      	<div class="valign-wrapper" style="height: 100%;">
-			  <p class="valign" onclick="modalShow(8);" style="margin: auto auto; font-size: 8vh;color: white;">8</p>
-			</div>
-	      </div>
-	    </div>
-     </div>
->>>>>>> Develop
-
 		  <!-- Modal Structure -->
 		  <div id="price" class="modal bottom-sheet">
 		    <div class="modal-content">
