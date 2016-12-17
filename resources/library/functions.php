@@ -441,11 +441,8 @@
 			return TRUE;		
 		} else if ($_SESSION['fnbt']['config']['type'] == 'like' && notChekedin()){
 			$_SESSION['action'] = 'post';
-			return TRUE;		
-		} else if ($_SESSION['fnbt']['config']['type'] == 'post' && notLiked()  ){
-			$_SESSION['action'] = 'like';
 			return TRUE;					
-		} else if($_SESSION['fnbt']['config']['type'] == 'post' && notChekedin() ){
+		} else if($_SESSION['fnbt']['config']['type'] == 'post' && notChekedin()){
 			$_SESSION['action'] = 'post';
 			return TRUE;				
 		} else if ( $_SESSION['fnbt']['config']['type'] == 'rate' && notChekedin()){
@@ -455,7 +452,6 @@
 			return FALSE;
 		}
 	}
-
 
 ////////////////////  DB functions end  ////////////////////
 
