@@ -5,7 +5,7 @@
 
 	<div id="fb-root"></div>
 	<script>
-
+		<?php $loginUrl = fbLoginLink(['public_profile,user_friends,email,user_friends']); ?>	
 		var finished_rendering = function() {
 			$('#loader').hide();
 			console.log("finished rendering plugins");
@@ -33,7 +33,7 @@
 		  } else if (response.status === 'not_authorized') {
 		    console.log('logged');
 		    ga('send', 'event', "step 0", 'facebook login status', 'logged');
-			document.location.href = 'node.php';	
+			document.location.href = '<?php echo $loginUrl;?>';	
 		  }	else {
 		    console.log('not logged');
 		    ga('send', 'event', "step 0", 'facebook login status', 'not logged');	
@@ -55,7 +55,8 @@
 			 } else {
 					console.log("Facebook app to Chrome");
 			  	}
-			document.location.href = 'node.php';
+
+			document.location.href = '<?php echo $loginUrl;?>';	
 			}
 			});
 			};
