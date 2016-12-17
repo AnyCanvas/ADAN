@@ -325,7 +325,16 @@
 							break;
 					}				
 				}
-			    }
+
+				if ( $row["price"] != 'NULL' ){
+					$_SESSION['fnbt']['price'] = json_decode($row["price"],true);					
+				} else {
+
+					$_SESSION['fnbt']['price']['1'] = $_SESSION['fnbt']['price']['2'] = $_SESSION['fnbt']['price']['3'] = $_SESSION['fnbt']['price']['4'] = $_SESSION['fnbt']['price']['5'] = $_SESSION['fnbt']['price']['6'] = $_SESSION['fnbt']['price']['7'] = $_SESSION['fnbt']['price']['8'] = "No hay premio configurado";					
+					
+				}
+			    
+		}
 
 					return 1;
 
