@@ -429,8 +429,13 @@
 	}
 	
 	function checkInteraction(){
+<<<<<<< HEAD
 		if ($_SESSION['fnbt']['config']['type'] == 'like' && notLiked() && likeThreshold(20)){
 			$_SESSION['action'] = 'like';
+=======
+		if ($_SESSION['fnbt']['config']['type'] == 'like'){
+			$_SESSION['action'] = 'post';
+>>>>>>> parent of 28496e8... Merge branch 'development'
 			return TRUE;		
 		} else if ($_SESSION['fnbt']['config']['type'] == 'post' && notLiked()  ){
 			$_SESSION['action'] = 'like';
